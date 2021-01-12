@@ -1,0 +1,24 @@
+// .appHeader-nav {
+//   text-align: center;
+//   font-size: 1.5em;
+// }
+
+// .appHeader-nav a{
+//     margin-left: 50px;
+//     color: green;
+// }
+
+.appHeader-nav {
+  text-align: center;
+  font-family: 'caveat';
+  font-size: rem(50px);
+  a {
+    margin-left: 50px;
+    color: $clr1;
+    text-decoration: none;
+
+    &:hover{
+        color: $clr4;
+    }
+  }
+}

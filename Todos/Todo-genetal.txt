@@ -1,0 +1,21 @@
+
+
+
+Nice things to add (css):
+ 1.Make dark mode.
+ 2.custum scroll bar
+
+
+
+Nice things to add :
+ 1.Make a user profile.
+ 2.Add chat.
+
+
+
+
+
+Ask asi about :
+ 1.How to close modal with animation(only open works fine)
+ 2.How to close modal on body click(not working because it closes modal on click on input too)
+ 3.When oppening modal , strage(line-height: 1.43;) comes out
