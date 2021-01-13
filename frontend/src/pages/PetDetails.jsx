@@ -2,7 +2,7 @@ import { Component } from 'react'
 
 
 
-export class Signup extends Component {
+export class PetDetails extends Component {
 
     state = {
 
@@ -16,7 +16,7 @@ export class Signup extends Component {
     render(){
         return(
             <div>
-                <h1 className="page-signup-title">Signup</h1>
+                <h1 className="page-signup-title">PetDetails</h1>
             </div>
         )
     }
