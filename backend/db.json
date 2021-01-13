@@ -7,7 +7,7 @@
       "isAdmin": false,
       "username" : "user1",
       "password" : "secret",
-      "birthDate":"1999 05 12",
+      "birthDate":"1999/05/12",
       "familyStatus":"single",
       "contactInfo":{
         "email":"newone@hah.com",
@@ -116,18 +116,19 @@
     }
   ],
 
-  "request":[
+  "order":[
     {
       "_id":"19273481476",
       "status":"pending",
       "createdAt":"2020 05 11",
+      "pet":{
+        "name":"Margo",
+        "_id": "10006546",
+        "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"]
+      },
       "byUser":{
         "_id":"u101",
         "fullname": "User 1"
-      },
-      "host":{
-        "_id": "u102",
-        "fullname": "User 2"
       }
     }
   ]
