@@ -8,7 +8,7 @@ import {Link, withRouter} from 'react-router-dom'
         <nav className="appHeader-nav">
             <Link to="/">Home</Link>
             <Link to="/pet">Pet</Link>
-            <Link to="/signup">Signup</Link>
+            <Link to="/pet/:petId">PetDetails</Link>
         </nav>
     )
 }
