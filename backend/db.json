@@ -48,19 +48,11 @@
       "isHost": true,
       "pets": [
         {
-<<<<<<< HEAD
-          "_id": "10006546",
-          "imgUrls": [
-            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
-            "otherImg.jpg"
-          ],
-=======
           "_id": "10006546",
           "imgUrls": [
             "https://res.cloudinary.com/elnova/image/upload/v1610282791/sample.jpg",
             "otherImg.jpg"
           ],
->>>>>>> f3d9dff4af941e87ddca9fc94d92a5c2cf1045d0
           "name": "Margo"
         },
         {
