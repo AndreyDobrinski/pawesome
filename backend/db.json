@@ -48,11 +48,19 @@
       "isHost": true,
       "pets": [
         {
+<<<<<<< HEAD
           "_id": "10006546",
           "imgUrls": [
             "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
             "otherImg.jpg"
           ],
+=======
+          "_id": "10006546",
+          "imgUrls": [
+            "https://res.cloudinary.com/elnova/image/upload/v1610282791/sample.jpg",
+            "otherImg.jpg"
+          ],
+>>>>>>> f3d9dff4af941e87ddca9fc94d92a5c2cf1045d0
           "name": "Margo"
         },
         {
@@ -71,10 +79,11 @@
       "_id": "10006546",
       "name": "Margo",
       "imgUrls": [
-        "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+        "https://res.cloudinary.com/elnova/image/upload/v1610555795/photo-1610420389164-789fc4060fc4_tiy9mx.jpg",
         "otherImg.jpg"
       ],
-      "likers": "20",
+      "likes": "20",
+      "shortDesc": "A calm funny cat",
       "description": "A cute fluffy cat that loves eating and sleeping for 21 hours",
       "age": "young",
       "gender": "female",
@@ -110,11 +119,44 @@
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
       ],
-      "likes": "271", 
+      "likes": "271",
       "description": "Lollypop Farm Spirit Cats are like little ninjas in the night. You catch a glimpse of them and then quickly they dart out of view. Why are they like this? We don't always know what a cat's life was like before they were brought to the shelter. They may have had difficult or limited experiences with people. Whatever the reason, some cats are fearful and in need of a special family.",
       "age": "adult",
       "gender": "female",
       "kind": "cat",
+      "size": "big",
+      "specialities": [
+        "friendly with children",
+        "disability support"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id": "20006546",
+      "name": "Rozi",
+      "imgUrls": [
+        "https://res.cloudinary.com/elnova/image/upload/v1610555760/photo-1610353118401-8221b58aba9c_s7yvc8.jpg",
+        "otherImg.jpg"
+      ],
+      "likes": "276",
+      "shortDesc": "Very friendly dog",
+      "description": "Fluffy dog that likes ice cream",
+      "age": "adult",
+      "gender": "female",
+      "kind": "dog",
       "size": "big",
       "specialities": [
         "friendly with children",

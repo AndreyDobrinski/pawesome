@@ -1,4 +1,4 @@
-import { petServiceV } from "../services/petServiceV.js";
+import { petService } from "../services/petService.js";
 // import { PetReview } from '../cmps/PetReview'
 import { Component } from 'react'
 import { connect } from 'react-redux'
@@ -16,7 +16,7 @@ export class _PetDetails extends Component {
 
     loadPet = async (petId) => {
         try {
-            const pet = await petServiceV.getById(petId)
+            const pet = await petService.getById(petId)
             return this.setState({ pet })
         } catch (err) {
             console.log('Error catched in fronf2', err)

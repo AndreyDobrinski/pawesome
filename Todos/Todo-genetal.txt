@@ -4,6 +4,7 @@
 Nice things to add (css):
  1.Make dark mode.
  2.custum scroll bar
+ 3.make a custom loading
 
 
 
@@ -14,8 +15,34 @@ Nice things to add :
 
 
 
-
 Ask asi about :
  1.How to close modal with animation(only open works fine)
  2.How to close modal on body click(not working because it closes modal on click on input too)
- 3.When oppening modal , strage(line-height: 1.43;) comes out
+ 3.ask about the video
+
+
+
+
+Header:
+ 1.Add Paw svg icon next to the logo name
+
+
+
+
+BUGS FOUND:
+ 1.Problem with header:When clicking to pets then back to home , the header is doing  a strange movement
+ 2.When oppening modal , texts get additional font size
+
+
+
+
+
+
+
+
+
+
+TALK TO TEAM ABOUT:
+ 1.Header is now fixed , change div to something like margin-top 100px
+ 2.Talk about known bugs and if they know how to fix it .
+ 3.Ask abut home page.
