@@ -1,11 +1,14 @@
 const initialState = {
   pets: [],
-  filterBy: {
-      type: 'All',
-      inStock: false,
-      searchTxt: '',
-      sortBy: 'name'
-  }
+//   filterBy: {
+//       type: 'All',
+//       searchTxt: '',
+//       sortBy: 'name'
+//   }
+    filterBy: {
+        
+    }
+
 }
 
 export function petReducer(state = initialState, action) {

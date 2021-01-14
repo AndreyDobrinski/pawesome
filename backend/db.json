@@ -49,7 +49,7 @@
       "pets":[
         {
           "_id":"10006546",
-          "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+          "imgUrls": ["https://res.cloudinary.com/elnova/image/upload/v1610282791/sample.jpg", "otherImg.jpg"],
           "name": "Margo"
           },
         {
@@ -65,8 +65,9 @@
     {
       "_id": "10006546",
       "name": "Margo",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": ["https://res.cloudinary.com/elnova/image/upload/v1610555795/photo-1610420389164-789fc4060fc4_tiy9mx.jpg", "otherImg.jpg"],
       "likers":"20",
+      "shortDesc": "A calm funny cat",
       "description": "A cute fluffy cat that loves eating and sleeping for 21 hours",
       "age":"young",
       "gender":"female",
@@ -91,8 +92,9 @@
     {
       "_id": "20006546",
       "name": "Rozi",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+      "imgUrls": ["https://res.cloudinary.com/elnova/image/upload/v1610555760/photo-1610353118401-8221b58aba9c_s7yvc8.jpg", "otherImg.jpg"],
       "likers":"276",
+      "shortDesc": "Very friendly dog",
       "description": "Fluffy dog that likes ice cream",
       "age":"adult",
       "gender":"female",
