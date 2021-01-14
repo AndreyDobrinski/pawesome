@@ -39,7 +39,7 @@ function save(itemToSave) {
 
 async function getById(petId) {
     try {
-        const res = await axios.get(`${BASE_URL}/${petId}`)
+        const res = await axios.get(`${baseUrl}/${petId}`)
         return await res.data
     } catch (err) {
         console.log('FrontError: getting by Id', err)
