@@ -5,13 +5,13 @@
       "fullname": "User 1",
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
-      "username" : "user1",
-      "password" : "secret",
-      "birthDate":"1999/05/12",
-      "familyStatus":"single",
-      "contactInfo":{
-        "email":"newone@hah.com",
-        "phone":"054-111235"
+      "username": "user1",
+      "password": "secret",
+      "birthDate": "1999/05/12",
+      "familyStatus": "single",
+      "contactInfo": {
+        "email": "newone@hah.com",
+        "phone": "054-111235"
       },
       "loc": {
         "country": "Israel",
@@ -20,21 +20,21 @@
         "lat": -2.61308,
         "lng": 41.1413
       },
-      "houseStatus":"apartment",
-      "hasPets":true
+      "houseStatus": "apartment",
+      "hasPets": true
     },
     {
       "_id": "u102",
       "fullname": "User 2",
       "imgUrl": "/img/img2.jpg",
       "isAdmin": false,
-      "username" : "user2",
-      "password" : "secret",
-      "birthDate":"2001 02 21",
-      "familyStatus":"married",
-      "contactInfo":{
-        "email":"newtwo@hah.com",
-        "phone":"054-221235"
+      "username": "user2",
+      "password": "secret",
+      "birthDate": "2001 02 21",
+      "familyStatus": "married",
+      "contactInfo": {
+        "email": "newtwo@hah.com",
+        "phone": "054-221235"
       },
       "loc": {
         "country": "Russia",
@@ -43,36 +43,48 @@
         "lat": -7.61308,
         "lng": 41.1413
       },
-      "houseStatus":"house",
-      "hasPets":false,
-      "isHost":true,
-      "pets":[
+      "houseStatus": "house",
+      "hasPets": false,
+      "isHost": true,
+      "pets": [
         {
-          "_id":"10006546",
-          "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+          "_id": "10006546",
+          "imgUrls": [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+          ],
           "name": "Margo"
-          },
+        },
         {
-          "_id":"20006546",
-          "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
+          "_id": "20006546",
+          "imgUrls": [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+          ],
           "name": "Rozi"
-          }
-        ]  
+        }
+      ]
     }
   ],
-
   "pet": [
     {
       "_id": "10006546",
       "name": "Margo",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
-      "likers":"20",
+      "imgUrls": [
+        "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+        "otherImg.jpg"
+      ],
+      "likers": "20",
       "description": "A cute fluffy cat that loves eating and sleeping for 21 hours",
-      "age":"young",
-      "gender":"female",
-      "kind":"cat",
-      "size":"small",
-      "specialities":["friendly with children","friendly with other animals","disability support"],
+      "age": "young",
+      "gender": "female",
+      "kind": "cat",
+      "size": "small",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals",
+        "disability support"
+      ],
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -89,20 +101,29 @@
       }
     },
     {
-      "_id": "20006546",
-      "name": "Rozi",
-      "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"],
-      "likers":"276",
-      "description": "Fluffy dog that likes ice cream",
-      "age":"adult",
-      "gender":"female",
-      "kind":"dog",
-      "size":"big",
-      "specialities":["friendly with children","disability support"],
+      "_id": "20006547",
+      "name": "Frozi",
+      "imgUrls": [
+        "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/1/?bust=1610552215&width=720",
+        "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+        "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720",
+        "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+        "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
+      ],
+      "likes": "271", 
+      "description": "Lollypop Farm Spirit Cats are like little ninjas in the night. You catch a glimpse of them and then quickly they dart out of view. Why are they like this? We don't always know what a cat's life was like before they were brought to the shelter. They may have had difficult or limited experiences with people. Whatever the reason, some cats are fearful and in need of a special family.",
+      "age": "adult",
+      "gender": "female",
+      "kind": "cat",
+      "size": "big",
+      "specialities": [
+        "friendly with children",
+        "disability support"
+      ],
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
-        "imgUrl": "https://a0.muscache.com/im/pictures/fab79f25-2e10-4f0f-9711-663cb69dc7d8.jpg?aki_policy=profile_small",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
@@ -115,25 +136,23 @@
       }
     }
   ],
-
-  "order":[
+  "order": [
     {
-      "_id":"19273481476",
-      "status":"pending",
-      "createdAt":"2020 05 11",
-      "pet":{
-        "name":"Margo",
+      "_id": "19273481476",
+      "status": "pending",
+      "createdAt": "2020 05 11",
+      "pet": {
+        "name": "Margo",
         "_id": "10006546",
-        "imgUrls": ["https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large", "otherImg.jpg"]
+        "imgUrls": [
+          "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+          "otherImg.jpg"
+        ]
       },
-      "byUser":{
-        "_id":"u101",
+      "byUser": {
+        "_id": "u101",
         "fullname": "User 1"
       }
     }
   ]
-
-  
-
-
 }

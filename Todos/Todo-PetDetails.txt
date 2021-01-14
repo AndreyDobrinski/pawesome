@@ -1,0 +1,14 @@
+Todo:
+-order store
+-functions (onchange, save...)
+-map
+
+
+UI:
+Is correct width 1200px?
+Need common design(buttons, fonts, colors)
+elements/tags - how exactly display?
+
+
+Qs:
+Communication on Adopt btn?
