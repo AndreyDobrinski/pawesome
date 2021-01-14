@@ -1,0 +1,4 @@
+
+
+Bugs found:
+ 1.video sometimes dosent start
