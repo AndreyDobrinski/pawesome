@@ -3,7 +3,7 @@
 
 Nice things to add (css):
  1.Make dark mode.
- 2.custum scroll bar
+X 2.custum scroll bar
  3.make a custom loading
 
 
@@ -17,8 +17,9 @@ Nice things to add :
 
 Ask asi about :
  1.How to close modal with animation(only open works fine)
- 2.How to close modal on body click(not working because it closes modal on click on input too)
- 3.ask about the video
+X 2.How to close modal on body click(not working because it closes modal on click on input too)
+X 3.ask about the video
+ 4. Ask about how to add SVG(font awesome)
 
 
 
@@ -30,12 +31,16 @@ Header:
 
 
 BUGS FOUND:
- 1.Problem with header:When clicking to pets then back to home , the header is doing  a strange movement
- 2.When oppening modal , texts get additional font size
+X 1.Problem with header:When clicking to pets then back to home , the header is doing  a strange movement
+X 2.When oppening modal , texts get additional font size
 
 
 
-
+For header:
+ 1.Type
+ 2.age
+ 3.gender
+ 4.location
 
 
 
@@ -43,6 +48,6 @@ BUGS FOUND:
 
 
 TALK TO TEAM ABOUT:
- 1.Header is now fixed , change div to something like margin-top 100px
- 2.Talk about known bugs and if they know how to fix it .
- 3.Ask abut home page.
+X 1.Header is now fixed , change div to something like margin-top 100px
+X 2.Talk about known bugs and if they know how to fix it .
+X 3.Ask abut home page.

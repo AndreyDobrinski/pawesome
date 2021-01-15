@@ -7,16 +7,20 @@ import { Link, withRouter } from 'react-router-dom'
 export class _Home extends Component {
 
   state = {
+ 
 
   }
 
 
   componentDidMount() {
 
+
   }
 
+ 
 
   render() {
+ 
     return (
       <div>
 
@@ -27,11 +31,11 @@ export class _Home extends Component {
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
 
+
           <div className="page-home-hero-content">
             Find your furry best friend.
             <Link to="/pet"><button>Go to pets</button></Link>  
           </div>
-
 
 
 

@@ -1,4 +1,5 @@
 .page-home-hero {
+
 }
 
 .ms-slide-bgvideo {
@@ -13,18 +14,20 @@
 }
 
 .page-home-hero-content {
+  position: absolute;
   color: white;
   font-size: rem(70px);
-  position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   max-width: 900px;
+  // padding: 0 10px;
+  // width: 100%;
+  // margin: auto;
 }
 
-
-.text-test{
+.text-test {
   font-size: rem(30px);
   padding: 20px;
 }
