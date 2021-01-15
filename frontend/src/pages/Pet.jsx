@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 
 import {loadPets} from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
+import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
 
 export class _Pet extends Component {
 
@@ -21,6 +22,11 @@ export class _Pet extends Component {
     return (
       <div className="pet-list container">
         {/* <h1 className="page-pet-title">Pets</h1> */}
+        <div className="flex">
+
+          <FilterBtn filterValue="cats"/>
+          <FilterBtn filterValue="dogs"/>
+        </div>
         <PetList pets={pets}/>
       </div>
     )
