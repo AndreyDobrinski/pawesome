@@ -10,8 +10,43 @@
 
 .appHeader-container {
   top: 0;
+    // background-color: inherit;
   background-color: rgb(231, 242, 243);
   // background-color: inherit;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  font-size: rem(50px);
+  a {
+    // margin-left: 50px;
+    color: black;
+    text-decoration: none;
+    
+  }
+  
+  
+}
+.header-for-home{
+  background-color: inherit ;
+  color: white;
+  transition: .1s;
+  
+  a{
+    color: white;
+
+  }
+
+  // .appHeader-filter-container{
+  //   margin-top: 100px;
+  // }
+}
+
+.appHeader-container-scrolled {
+  background-color: rgb(231, 242, 243);
+  color: black;
+
+  // background-color: rgb(6, 164, 179);
   text-align: center;
   position: fixed;
   width: 100%;
@@ -24,7 +59,9 @@
     
   }
 
-
+  // .appHeader-filter-container{
+  //   margin-top: 0;
+  // }
 
 }
 

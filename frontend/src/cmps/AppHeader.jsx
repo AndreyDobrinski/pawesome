@@ -8,13 +8,15 @@ import { login, logout, signup, removeUser, loadUsers } from '../store/actions/u
 
 
 import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+
+
+
 
 
 
@@ -34,14 +36,65 @@ export class _AppHeader extends Component {
             username: '',
             password: '',
             fullname: ''
-        }
+        },
+        isScrolled: false,
+        isHomePage: false,
     }
+
 
 
     componentDidMount() {
         this.props.loadUsers()
+        window.addEventListener('scroll', this.handleScroll)
+        // console.log('Looking for routes', this);
+        if(this.isHomePage()){
+            this.setState({
+                isHomePage: true,
+            })
+        }
 
+    } 
+
+    componentDidUpdate(prevProps) {
+        // console.log('prevProps.match:',prevProps.location);
+        // console.log('this.props.match:',this.props.location);
+
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            if (this.isHomePage()) {
+                this.setState({
+                    isHomePage: true,
+                })
+            }else{
+                this.setState({
+                    isHomePage: false,
+                })
+            }
+        }
     }
+
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll)
+    }
+
+
+    isHomePage=() =>{
+        return this.props.location.pathname === '/'
+    }
+
+    handleScroll = () => {
+        if (window.pageYOffset > 0 && window.location.href === 'http://localhost:3000/#/') {
+            // console.log('test',window.pageYOffset);
+            this.setState({
+                isScrolled: true
+            })
+        } else {
+            this.setState({
+                isScrolled: false
+            })
+        }
+    }
+
 
 
     doSignup = async (ev) => {
@@ -145,11 +198,11 @@ export class _AppHeader extends Component {
 
 
         let signupSection = (
-            <div className="modal-content">
+
+            <div className="modal-content" onClick={(ev) => ev.stopPropagation()}>
                 <span className="close" onClick={() => this.onCloseSignModal()}>&times;</span>
 
                 <Container component="main" maxWidth="xs" >
-                    <CssBaseline />
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
                         <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
                             <LockOutlinedIcon />
@@ -173,7 +226,7 @@ export class _AppHeader extends Component {
 
                                 <Button type="submit" fullWidth variant="contained" color="primary" style={{ marginTop: '10px' }}>
                                     Sign In
-                      </Button>
+                                </Button>
 
                                 <Grid container>
                                     <Grid item>
@@ -197,12 +250,11 @@ export class _AppHeader extends Component {
 
 
         let loginSection = (
-            <div className="modal-content" >
+            <div className="modal-content" onClick={(ev) => ev.stopPropagation()} >
 
                 <span className="close" onClick={() => this.onCloseSignModal()}>&times;</span>
 
                 <Container component="main" maxWidth="xs" >
-                    <CssBaseline />
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
 
                         <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
@@ -246,11 +298,17 @@ export class _AppHeader extends Component {
 
         )
 
+
+
         const { loggedInUser } = this.props
         const { isNewUser } = this.state
 
         return (
-            <nav className="appHeader-container ">
+            // <nav className="appHeader-container ">
+            // <nav className={!this.state.isScrolled && "appHeader-container" } {this.state.isScrolled && "appHeader-container-scrolled" }>
+            // <nav className={`appHeader-container${this.state.isScrolled ? '-scrolled' : ''}`}>
+            <nav className={`appHeader-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} `}>
+
                 <div className="appHeader-content flex align-center justify-between container">
 
                     <Link to="/">
@@ -262,7 +320,7 @@ export class _AppHeader extends Component {
                         </div>
                     </Link>
 
-                    <div>Search</div>
+                    <div className="appHeader-filter-container">Search</div>
 
                     <div className="appHeader-link-container flex">
 
@@ -270,7 +328,7 @@ export class _AppHeader extends Component {
                         <div className="appHeader-link-login" onClick={this.onOpenSignModal}>
                             {!loggedInUser && "Signup"}
                             {loggedInUser && `Welcome ${loggedInUser.name}`}
-                            </div>
+                        </div>
 
                     </div>
 
@@ -278,7 +336,7 @@ export class _AppHeader extends Component {
                 </div>
 
 
-                {this.state.modalSignClicked && <div className="modal"  >
+                {this.state.modalSignClicked && <div className="modal" onClick={() => this.onCloseSignModal()}>
 
                     {!loggedInUser && !isNewUser && loginSection}
                     {!loggedInUser && isNewUser && signupSection}
@@ -308,5 +366,5 @@ const mapDispatchToProps = {
 
 
 
-export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
+export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(withRouter(_AppHeader))
 
