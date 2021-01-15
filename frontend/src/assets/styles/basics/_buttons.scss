@@ -1,0 +1,17 @@
+.btn1{
+    padding: rem(10px);
+    border: none;
+    background-color: $clr1;
+    margin-right: rem(10px);
+    
+    
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    &:hover{
+        background-color: $clr5;
+        cursor: pointer;
+    }
+}
