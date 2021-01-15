@@ -28,6 +28,10 @@
     &.justify-between {
         justify-content: space-between
     }
+
+    &.wrapper {
+        flex-wrap:wrap
+    }
 }
 
 // Media helpers

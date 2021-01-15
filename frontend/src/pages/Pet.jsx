@@ -11,7 +11,7 @@ export class _Pet extends Component {
   }
   
   componentDidMount(){
-    console.log('mount pet component --- before load pets')
+    
     this.props.loadPets({})
   }
 
@@ -19,14 +19,12 @@ export class _Pet extends Component {
     const {pets} = this.props
 
     return (
-      <div>
-        <h1 className="page-pet-title">Pets</h1>
+      <div className="pet-list container">
+        {/* <h1 className="page-pet-title">Pets</h1> */}
         <PetList pets={pets}/>
       </div>
     )
   }
-
-
 }
 
 const mapStateToProps = (state) => {

@@ -110,8 +110,10 @@
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
+        
       ],
       "likes": "271",
+      "shortDesc":"Curious young cat",
       "description": "Lollypop Farm Spirit Cats are like little ninjas in the night. You catch a glimpse of them and then quickly they dart out of view. Why are they like this? We don't always know what a cat's life was like before they were brought to the shelter. They may have had difficult or limited experiences with people. Whatever the reason, some cats are fearful and in need of a special family.",
       "age": "adult",
       "gender": "female",
@@ -153,6 +155,152 @@
       "specialities": [
         "friendly with children",
         "disability support"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id": "20006548",
+      "name" : "Rex",
+      "imgUrls" : ["https://images.unsplash.com/photo-1609880854647-4ea668d5700b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "likes": "6",
+      "shortDesc": "Very friendly dog",
+      "description": "Vey firendly, lovely dog that love to play with children",
+      "age": "adult",
+      "gender": "male",
+      "kind": "dog",
+      "size": "big",
+      "specialities": [
+        "friendly with children",
+        "disability support"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id" : "20006549",
+      "name": "Miki",
+      "imgUrls": ["https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80&h=300&q=80"],
+      "likes": "25",
+      "shortDesc": "Sweet kitty",
+      "description": "Sweet kitten, 1 month old, waiting for its new friends...",
+      "age": "young",
+      "gender": "male",
+      "kind": "cat",
+      "size": "small",
+      "specialities": [
+        "friendly with children"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id": "20006550",
+      "name": "Gross",
+      "imgUrls": ["https://images.unsplash.com/photo-1610366018121-cf9fad4e89aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "likes": "25",
+      "shortDesc": "A brave dog",
+      "description": "Real friend, 1 year old dog, love play with children",
+      "age": "young",
+      "gender": "male",
+      "kind": "dog",
+      "size": "big",
+      "specialities": [
+        "friendly with children"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id": "20006551",
+      "name": "Lord",
+      "imgUrls": ["https://images.unsplash.com/photo-1610555770410-5d746dd977c1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "likes": "25",
+      "shortDesc": "A strong, healthy dog",
+      "description": "Real friend, 1.5 year old dog, love play with children",
+      "age": "young",
+      "gender": "male",
+      "kind": "dog",
+      "size": "big",
+      "specialities": [
+        "friendly with children"
+      ],
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "country": "Portugal",
+          "countryCode": "PT",
+          "address": "Porto, Portugal",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      }
+    },
+    {
+      "_id": "20006552",
+      "name": "Silky",
+      "imgUrls": ["https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "likes": "14",
+      "shortDesc": "Nice cat",
+      "description": "Real friend, 1.5 year old cat",
+      "age": "young",
+      "gender": "female",
+      "kind": "cat",
+      "size": "big",
+      "specialities": [
+        "friendly with children"
       ],
       "host": {
         "_id": "51399391",

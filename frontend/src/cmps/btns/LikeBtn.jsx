@@ -12,18 +12,18 @@ export class LikeButton extends Component {
         liked: !this.state.liked
       })
 
+      !this.state.liked&&this.props.liked(1)
+      this.state.liked&&this.props.liked(-1)
     }
     
     render() {
 
     //   const text = this.state.liked ? 'liked' : 'haven\'t liked';
       const label = this.state.liked ? '💗' : '🤍'
-      const numberOfLikes = (+this.props.pet.likers) + 1
 
       return (
-        <div >
+        <div>
           <button  onClick={this.onClick}>{label}</button>
-          <span>{`(${numberOfLikes})`}</span>
           {/* <p>
             you {text} this. Click to toggle.
           </p> */}
