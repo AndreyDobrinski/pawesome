@@ -29,7 +29,7 @@ import { orderService } from '../../services/orderService.js'
 //     }
 // }
 
-export function savePet(pet) {
+export function saveOrder(pet) {
     return async (dispatch) => {
         const res = await orderService.saveOrder(pet)
         if (!res) {

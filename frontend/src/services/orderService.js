@@ -3,7 +3,7 @@ const axios = Axios.create({
     withCredentials: true
 })
 
-export const petServiceV = {
+export const orderService = {
     saveOrder
 }
 const BASE_URL = 'http://localhost:3030/order'
@@ -28,6 +28,8 @@ async function saveOrder(newOrder) {
         await axios.put(`${BASE_URL}/${newOrder._id}`, newOrder)
         return null
     }
+    newOrder.createdAt = new Date().toLocaleString()
+    console.log('order in orderService', newOrder)
     const res = await axios.post(`${BASE_URL}`, newOrder)
     return await res.data
 }

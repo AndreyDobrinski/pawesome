@@ -1,7 +1,8 @@
 Todo:
--order store
--functions (onchange, save...)
+vorder store
+vfunctions (onchange, save...)
 -map
+-add user to order
 
 
 UI:
@@ -12,3 +13,4 @@ elements/tags - how exactly display?
 
 Qs:
 Communication on Adopt btn?
+?users?

@@ -1,4 +1,15 @@
+//////////////////////////////////////// WORK ON SEARCH BAR FOR HEADER ////////////////////////////////////////
+
+
+
+
+
+
+Nice things to add:
+ 1.at the end of the video , add a small arrow in the middle bottom to indicate the scroll bar lower
+
 
 
 Bugs found:
- 1.video sometimes dosent start
+ 1.video sometimes dosent start(When we will have heroku , cheak if this bug still exists)
+ 2.the title and button on video are not aliged to middle properly
