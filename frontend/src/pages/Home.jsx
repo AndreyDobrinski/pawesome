@@ -34,7 +34,7 @@ export class _Home extends Component {
 
           <div className="page-home-hero-content">
             Find your furry best friend.
-            <Link to="/pet"><button>Go to pets</button></Link>  
+            <Link to="/pet"><button className="btn1">Go to pets</button></Link>  
           </div>
 
 
