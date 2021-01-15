@@ -10,10 +10,10 @@
 
 .appHeader-container {
   top: 0;
-    // background-color: inherit;
+  // background-color: inherit;
   background-color: rgb(231, 242, 243);
   // background-color: inherit;
-  text-align: center;
+  // text-align: center;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -22,19 +22,15 @@
     // margin-left: 50px;
     color: black;
     text-decoration: none;
-    
   }
-  
-  
 }
-.header-for-home{
-  background-color: inherit ;
+.header-for-home {
+  background-color: inherit;
   color: white;
-  transition: .1s;
-  
-  a{
-    color: white;
+  transition: 0.1s;
 
+  a {
+    color: white;
   }
 
   // .appHeader-filter-container{
@@ -47,7 +43,7 @@
   color: black;
 
   // background-color: rgb(6, 164, 179);
-  text-align: center;
+  // text-align: center;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -56,47 +52,39 @@
     // margin-left: 50px;
     color: $clr2;
     text-decoration: none;
-    
   }
 
   // .appHeader-filter-container{
   //   margin-top: 0;
   // }
-
 }
 
-
-
-.appHeader-logo-img{
+.appHeader-logo-img {
   margin-right: 10px;
 }
 
-.appHeader-name-paw{
+.appHeader-name-paw {
   color: $clr1;
 
-  &:hover{
+  &:hover {
     color: $clr1;
   }
-
 }
 
-.appHeader-content{
-   
+.appHeader-content {
   font-size: rem(34px);
   padding: 20px;
-  
 }
 
-.appHeader-link-container{
+.appHeader-link-container {
   font-size: rem(20px);
-  
-  .appHeader-link-pets{
+
+  .appHeader-link-pets {
     margin-right: 20px;
   }
 
-  .appHeader-link-login{
-
-    &:hover{
+  .appHeader-link-login {
+    &:hover {
       cursor: pointer;
     }
   }
@@ -105,10 +93,147 @@
 
 
 
+////////////////////////////////// FILTER ////////////////////////////////////////
+.appHeader-filter-container {
+  border-radius: 50px;
+  background-color: #fff;
+  // background-color:inherit;
+  color: black;
+  font-size: rem(17px);
+  margin: 0px 10px 0px 10px;
+  overflow: hidden;
+ 
 
+  .appHeader-filte-box {
+    width: 840px;
+    // padding: 10px;
+
+    
+    .appHeader-filte-box-type {
+      padding: 10px;
+      margin-left: 10px;
+      // margin-left: 10px;
+      &:hover{
+        background-color: #eee;
+      }
+      
+      .type-title {
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 2px;
+        padding-inline-end: 60px;
+      }
+      
+      .type-text {
+        // color: #afafaf;
+        font-size: 14px;
+        line-height: 18px;
+        border: none;
+        outline: none;
+        background-color: inherit;
+      }
+    }
+    
+    .appHeader-filte-box-age {
+      padding: 10px;
+      &:hover{
+        background-color: #eee;
+      }
+      
+      .age-title {
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 2px;
+        padding-inline-end: 60px;
+      }
+      
+      .age-text {
+        // color: #afafaf;
+        font-size: 14px;
+        line-height: 18px;
+        border: none;
+        outline: none;
+        background-color: inherit;
+
+      }
+    }
+    
+    .appHeader-filte-box-gender {
+      padding: 10px;
+      &:hover{
+        background-color: #eee;
+      }
+      
+      .gender-title {
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 2px;
+        padding-inline-end: 60px;
+      }
+      
+      .gender-text {
+        // color: #afafaf;
+        font-size: 14px;
+        line-height: 18px;
+        border: none;
+        outline: none;
+        background-color: inherit;
+
+      }
+    }
+    .appHeader-filte-box-location {
+      padding: 10px;
+      &:hover{
+        background-color: #eee;
+      }
+
+      .location-title {
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 16px;
+        padding-bottom: 2px;
+        padding-inline-end: 60px;
+      }
+
+      .location-text {
+        // color: #afafaf;
+        font-size: 14px;
+        line-height: 18px;
+        border: none;
+        outline: none;
+        background-color: inherit;
+
+      }
+    }
+
+    .appHeader-filte-box-Search {
+      
+      
+      .search-btn{
+        background-color: #ff385c;
+        border-radius: 50%;
+        width: 40px!important;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+      
+    }
+
+
+
+
+
+  }
+}
 
 ////////////////////////////////////////// MODAL ///////////////////////////////
-
 
 .modal {
   font-size: rem(20px);
@@ -193,4 +318,3 @@
     cursor: pointer;
   }
 }
-

@@ -32,6 +32,12 @@
     &.wrapper {
         flex-wrap:wrap
     }
+    &.row{
+        flex-direction: row
+    }
+    &.column{
+        flex-direction: column
+    }
 }
 
 // Media helpers
