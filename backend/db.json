@@ -175,6 +175,7 @@
       "_id": "19273481476",
       "status": "pending",
       "createdAt": "2020 05 11",
+      "message": "Hello SuperFerm, I'd like to adopt Bobby. What documents I should prepear?",
       "pet": {
         "name": "Margo",
         "_id": "10006546",
@@ -187,6 +188,6 @@
         "_id": "u101",
         "fullname": "User 1"
       }
-    }
+    }   
   ]
 }
