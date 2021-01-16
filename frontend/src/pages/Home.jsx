@@ -14,7 +14,7 @@ export class _Home extends Component {
 
   componentDidMount() {
 
-
+    console.log('HOME LOC---',this.props.location)
   }
 
  

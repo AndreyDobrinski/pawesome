@@ -2,10 +2,11 @@
   "user": [
     {
       "_id": "u101",
-      "fullname": "User 1",
+      "fullname": "Vika Gord",
       "imgUrl": "/img/img1.jpg",
       "isAdmin": false,
-      "username": "user1",
+      "isHost": false,
+      "username": "vika",
       "password": "secret",
       "birthDate": "1999/05/12",
       "familyStatus": "single",
@@ -14,9 +15,7 @@
         "phone": "054-111235"
       },
       "loc": {
-        "country": "Israel",
-        "countryCode": "Ils",
-        "address": "Tel-Aviv dizingov",
+        "address": "Haifa",
         "lat": -2.61308,
         "lng": 41.1413
       },
@@ -25,26 +24,20 @@
     },
     {
       "_id": "u102",
-      "fullname": "User 2",
+      "fullname": "Freedom Farm Sanctuary",
       "imgUrl": "/img/img2.jpg",
       "isAdmin": false,
-      "username": "user2",
+      "username": "shelter1",
       "password": "secret",
-      "birthDate": "2001 02 21",
-      "familyStatus": "married",
       "contactInfo": {
         "email": "newtwo@hah.com",
         "phone": "054-221235"
       },
       "loc": {
-        "country": "Russia",
-        "countryCode": "Rus",
-        "address": "Chita lenin",
+        "address": "Haifa",
         "lat": -7.61308,
         "lng": 41.1413
       },
-      "houseStatus": "house",
-      "hasPets": false,
       "isHost": true,
       "pets": [
         {
@@ -86,6 +79,7 @@
         "friendly with other animals",
         "disability support"
       ],
+      "address": "Haifa",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -93,9 +87,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Raanana",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -123,6 +115,7 @@
         "friendly with children",
         "disability support"
       ],
+      "address": "Raanana",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -130,9 +123,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Raanana",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -156,6 +147,7 @@
         "friendly with children",
         "disability support"
       ],
+      "address": "Haifa",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -163,9 +155,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Haifa",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -186,6 +176,7 @@
         "friendly with children",
         "disability support"
       ],
+      "address": "Haifa",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -193,9 +184,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Haifa",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -215,6 +204,7 @@
       "specialities": [
         "friendly with children"
       ],
+      "address": "Raanana",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -224,7 +214,7 @@
         "loc": {
           "country": "Portugal",
           "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Raanana",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -244,6 +234,7 @@
       "specialities": [
         "friendly with children"
       ],
+      "address": "Haifa",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -251,9 +242,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Haifa",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -273,6 +262,7 @@
       "specialities": [
         "friendly with children"
       ],
+      "address": "Ranana",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -280,9 +270,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Ranana",
           "lat": -8.61308,
           "lng": 41.1413
         }
@@ -302,6 +290,7 @@
       "specialities": [
         "friendly with children"
       ],
+      "address": "Haifa",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -309,9 +298,7 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
-          "address": "Porto, Portugal",
+          "address": "Haifa",
           "lat": -8.61308,
           "lng": 41.1413
         }

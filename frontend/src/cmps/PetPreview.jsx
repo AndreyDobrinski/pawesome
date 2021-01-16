@@ -1,6 +1,6 @@
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
 import {Component} from 'react'
-import { LikeButton } from './btns/LikeBtn';
+import { LikeButton } from './btns/LikeBtn'
 
 export class PetPreview extends Component {
 

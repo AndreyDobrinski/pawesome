@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login, logout, signup, removeUser, loadUsers } from '../store/actions/userActions'
 
-
+import {SearchFilterBar} from './SearchFilterBar'
 
 
 
@@ -320,53 +320,7 @@ export class _AppHeader extends Component {
                         </div>
                     </Link>
 
-
-
-
-
-
-
-
-                                     {/* /////////////////////////////////////////////🢃///////////////////////////////////////////// */}
-                    <form className="appHeader-filter-container flex" onSubmit={this.onSearchPet}>
-                        <div className="appHeader-filte-box flex">
-                            <div className="appHeader-filte-box-type flex column">
-                                <span className="type-title">Type</span>
-                                      {/* //////////////////////////////////////////////////////////////////////////////🢃////////// */}
-                                <input type="text" className="type-text" placeholder="What kind of pet" onChange={this.handleInput}/>
-                            </div>
-                            <div className="appHeader-filte-box-age flex column">
-                                <span className="age-title">Age</span>
-                                      {/* /////////////////////////////////////////////////////////////////////////🢃////////////// */}
-                                <input type="text" className="age-text" placeholder="Age of pet" onChange={this.handleInput}/>
-                            </div>
-                            <div className="appHeader-filte-box-gender flex column">
-                                <span className="gender-title">Gender</span>
-                                      {/* ////////////////////////////////////////////////////////////////////////////🢃///////// */}
-                                <input type="text" className="gender-text" placeholder="Gender of pet" onChange={this.handleInput}/>
-                            </div>
-                            <div className="appHeader-filte-box-location flex column">
-                                <span className="location-title">Location</span>
-                                      {/* /////////////////////////////////////////////////////////////////////////////////🢃///// */}
-                                <input type="text" className="location-text" placeholder="Location of pet" onChange={this.handleInput}/>
-                            </div>
-                            <div className="appHeader-filte-box-Search flex justify-center align-center ">
-                                      {/* ////////////🢃//////////////////////////////////////////////////////////////////////// */}
-                                <button className="search-btn btn1">+</button>
-                            </div>
-                        </div>
-                    </form>
-
-
-
-
-
-
-
-
-
-
-
+                    <SearchFilterBar />
 
                     <div className="appHeader-link-container flex">
 

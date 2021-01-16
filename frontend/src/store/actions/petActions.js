@@ -1,6 +1,7 @@
 import { petService } from '../../services/petService.js'
 
 export function loadPets(newFilterBy) {
+    console.log('petActions... --- filterBy --- ', newFilterBy)
     return async (dispatch) => {
         const pets = await petService.query(newFilterBy)
         const action = {
@@ -42,6 +43,16 @@ export function savePet(pet) {
     }
 }
 
+export function setFilter(filterBy) {
+    console.log('Actions... setFilter... filter ', filterBy)
+    return (dispatch) => {
+        const action = {
+            type: 'SET_FILTER',
+            filterBy
+        }
+        dispatch(action)
+    }
+}
 
 // export function setFilter(newFilterBy) {
 //     return (dispatch) => {
