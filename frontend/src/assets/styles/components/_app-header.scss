@@ -101,7 +101,7 @@
   color: black;
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
-  overflow: hidden;
+  // overflow: hidden;
  
 
   .appHeader-filte-box {
@@ -230,6 +230,20 @@
 
 
 
+  }
+
+  .options{
+    position: absolute !important;
+    left: 0px !important;
+    top: 100% !important;
+    z-index: 1 !important;
+    background: rgb(255, 255, 255) !important;
+    border-radius: 32px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
+    margin-top: 12px !important;
+    // max-height: calc(100vh - 220px) !important;
+    overflow: hidden auto !important;
+    padding: 16px 32px !important;
   }
 }
 
