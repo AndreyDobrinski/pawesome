@@ -3,7 +3,7 @@ import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login, logout, signup, removeUser, loadUsers } from '../store/actions/userActions'
 
-
+import {SearchFilterBar} from './SearchFilterBar'
 
 
 
@@ -322,6 +322,7 @@ export class _AppHeader extends Component {
                         </div>
                     </Link>
 
+<<<<<<< HEAD
 
 
 
@@ -369,6 +370,9 @@ export class _AppHeader extends Component {
 
 
 
+=======
+                    <SearchFilterBar />
+>>>>>>> a40c45727eb4bb9427b88aa08952b414518051b8
 
                     <div className="appHeader-link-container flex">
 

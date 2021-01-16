@@ -1,17 +1,15 @@
 import { orderService } from '../../services/orderService.js'
 
-// export function loadPets(newFilterBy) {
-//     return async (dispatch) => {
-//         const pets = await petService.query(newFilterBy)
-//         const action = {
-//             type: 'SET_PETS',
-//             pets,
-//             newFilterBy
-//         }
-//         console.log('action', action)
-//         return await dispatch(action)
-//     }
-// }
+export function loadOrders() {
+    return async (dispatch) => {
+        const orders = await orderService.query()
+        const action = {
+            type: 'SET_ORDERS',
+            orders
+        }
+        return await dispatch(action)
+    }
+}
 
 // export function deletePet(petId) {
 //     return async (dispatch) => {

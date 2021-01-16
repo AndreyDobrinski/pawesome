@@ -4,6 +4,15 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder } from '../store/actions/orderActions.js'
 import { MapContainer } from "../cmps/MapContainer.jsx";
+import { ReactComponent as Gender } from "../assets/imgs/sex.svg"
+import { ReactComponent as Age } from "../assets/imgs/age.svg"
+import { ReactComponent as Size } from "../assets/imgs/size.svg"
+import { ReactComponent as Child } from "../assets/imgs/child.svg"
+import { ReactComponent as Disability } from "../assets/imgs/disability.svg"
+import { ReactComponent as Animals } from "../assets/imgs/animals.svg"
+import { ReactComponent as Pawprint } from "../assets/imgs/pawprint.svg"
+
+
 
 
 export class _PetDetails extends Component {
@@ -57,26 +66,54 @@ export class _PetDetails extends Component {
         if (!pet) return <h2>Loading...</h2>
         return <div className="pet-details container">
             {/* <h1 className="page-signup-title">PetDetails</h1> */}
+            <div className="pet-details-main-title">
+                <h3>{pet.name}</h3>
+                <h5>😊 {pet.likes}</h5>
+                <h5>{pet.host.loc.address}</h5>
+            </div>
             <div className="pet-details-imgs">
                 {pet.imgUrls.map((img, idx) => {
-                    // return <div className="img-container">
                     return <img src={img} alt="" key={idx} className='pet-details-img' />
                 })
                 }
-                {/* className={`pet-details-img-${idx}`} */}
             </div>
             <div className="pet-details-main">
                 <div className="pet-details-pet">
                     <div className="pet-details-title">
-                        <h3>Title: {pet.name}</h3>
-                        <h5>{pet.likes}😊</h5>
+                        <h3>{pet.shortDesc}</h3>
                     </div>
                     <div className="pet-details-info">
-                        <h5>{pet.gender}</h5>
-                        <h5>{pet.age}</h5>
-                        <h5>{pet.size}</h5>
+                        <div className="pet-char">
+                            <Gender />
+                            <h5>{pet.gender}</h5>
+                        </div>
+                        <div className="pet-char">
+                            <Age />
+                            <h5>{pet.age}</h5>
+                        </div>
+                        <div className="pet-char">
+                            <Size />
+                            <h5>{pet.size}</h5>
+                        </div>
                         {pet.specialities && pet.specialities.map((spec, idx) => {
-                            return <h5 key={idx}>{spec}</h5>
+                            switch (spec) {
+                                case 'friendly with children':
+                                    var res = <Child />
+                                    break
+                                case 'disability support':
+                                    var res = <Disability />
+                                    break
+                                case 'friendly with other animals':
+                                    var res = <Animals />
+                                    break
+                                default:
+                                    res = <Pawprint />
+                                    break
+                            }
+                            return <div key={idx} className="pet-char">
+                                {res}
+                                <h5>{spec}</h5>
+                            </div>
                         })}
                     </div>
                     <p>{pet.description}</p>
