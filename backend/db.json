@@ -57,6 +57,48 @@
           "name": "Rozi"
         }
       ]
+    },
+    {
+      "_id": "51399391",
+      "fullname": "Freedom Farm Sanctuary",
+      "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+      "isAdmin": false,
+      "username": "user3",
+      "password": "secret",
+      "birthDate": "1990-02-21",
+      "familyStatus": "married",
+      "contactInfo": {
+        "email": "ffsanctuary@save.com",
+        "phone": "054-1122334"
+      },
+      "loc": {
+        "country": "Portugal",
+        "countryCode": "PT",
+        "address": "Porto, Portugal",
+        "lat": -8.61308,
+        "lng": 41.1413
+      },
+      "houseStatus": "",
+      "hasPets": false,
+      "isHost": true,
+      "pets": [
+        {
+          "_id": "10006546",
+          "imgUrls": [
+            "https://res.cloudinary.com/elnova/image/upload/v1610282791/sample.jpg",
+            "otherImg.jpg"
+          ],
+          "name": "Margo"
+        },
+        {
+          "_id": "20006546",
+          "imgUrls": [
+            "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
+            "otherImg.jpg"
+          ],
+          "name": "Rozi"
+        }
+      ]
     }
   ],
   "pet": [
@@ -102,10 +144,9 @@
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
-        
       ],
       "likes": "271",
-      "shortDesc":"Curious young cat",
+      "shortDesc": "Curious young cat",
       "description": "Lollypop Farm Spirit Cats are like little ninjas in the night. You catch a glimpse of them and then quickly they dart out of view. Why are they like this? We don't always know what a cat's life was like before they were brought to the shelter. They may have had difficult or limited experiences with people. Whatever the reason, some cats are fearful and in need of a special family.",
       "age": "adult",
       "gender": "female",
@@ -163,8 +204,10 @@
     },
     {
       "_id": "20006548",
-      "name" : "Rex",
-      "imgUrls" : ["https://images.unsplash.com/photo-1609880854647-4ea668d5700b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "name": "Rex",
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1609880854647-4ea668d5700b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+      ],
       "likes": "6",
       "shortDesc": "Very friendly dog",
       "description": "Vey firendly, lovely dog that love to play with children",
@@ -191,9 +234,11 @@
       }
     },
     {
-      "_id" : "20006549",
+      "_id": "20006549",
       "name": "Miki",
-      "imgUrls": ["https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80&h=300&q=80"],
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80&h=300&q=80"
+      ],
       "likes": "25",
       "shortDesc": "Sweet kitty",
       "description": "Sweet kitten, 1 month old, waiting for its new friends...",
@@ -223,7 +268,9 @@
     {
       "_id": "20006550",
       "name": "Gross",
-      "imgUrls": ["https://images.unsplash.com/photo-1610366018121-cf9fad4e89aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1610366018121-cf9fad4e89aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+      ],
       "likes": "25",
       "shortDesc": "A brave dog",
       "description": "Real friend, 1 year old dog, love play with children",
@@ -251,7 +298,9 @@
     {
       "_id": "20006551",
       "name": "Lord",
-      "imgUrls": ["https://images.unsplash.com/photo-1610555770410-5d746dd977c1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1610555770410-5d746dd977c1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+      ],
       "likes": "25",
       "shortDesc": "A strong, healthy dog",
       "description": "Real friend, 1.5 year old dog, love play with children",
@@ -279,7 +328,9 @@
     {
       "_id": "20006552",
       "name": "Silky",
-      "imgUrls": ["https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"],
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+      ],
       "likes": "14",
       "shortDesc": "Nice cat",
       "description": "Real friend, 1.5 year old cat",
@@ -317,12 +368,31 @@
         "imgUrls": [
           "https://a0.muscache.com/im/pictures/e83e702f-ef49-40fb-8fa0-6512d7e26e9b.jpg?aki_policy=large",
           "otherImg.jpg"
-        ]
+        ],
+        "host_id": "51399391"
       },
       "byUser": {
         "_id": "u101",
         "fullname": "User 1"
       }
-    }   
+    },
+    {
+      "status": "pending",
+      "message": "Koooo!",
+      "pet": {
+        "name": "Frozi",
+        "_id": "20006547",
+        "imgUrls": [
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/1/?bust=1610552215&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
+        ],
+        "host_id": "51399391"
+      },
+      "createdAt": "1/16/2021, 1:38:08 PM",
+      "_id": "7uBaQgM"
+    }
   ]
 }

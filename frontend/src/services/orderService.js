@@ -4,12 +4,17 @@ const axios = Axios.create({
 })
 
 export const orderService = {
+    query,
     saveOrder
 }
 const BASE_URL = 'http://localhost:3030/order'
 // const BASE_URL = (process.env.NODE_ENV !== 'development')
 //     ? '/api/pet'
 //     : '//localhost:3030/api/pet';
+function query() {
+    return axios.get(BASE_URL)
+        .then(res => res.data)
+}
 
 
 // async function getById(petId) {
