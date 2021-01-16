@@ -122,7 +122,7 @@ export class _PetDetails extends Component {
                     <div className="pet-details-order">
                         <form className="add-order" onSubmit={this.onAddOrder}>
                             <textarea placeholder={`Hello! I want to adopt ${pet.name} ...`} onChange={this.onInputChange} value={message} name="order-txt" rows="8"></textarea>
-                            <button className="add-order-btn">Adopt {pet.name}</button>
+                            <button className="add-order-btn btn2">Adopt {pet.name}</button>
                         </form>
                     </div>
                     <div className="pet-details-owner">

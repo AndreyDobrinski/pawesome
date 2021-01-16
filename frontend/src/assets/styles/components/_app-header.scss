@@ -64,7 +64,9 @@
 }
 
 .appHeader-name-paw {
-  color: $clr1;
+  // color:#f90;
+    color: $clr9;
+
 
   &:hover {
     color: $clr1;
@@ -105,8 +107,18 @@
  
 
   .appHeader-filte-box {
-    width: 840px;
+    width: 530px;
     // padding: 10px;
+
+    select{
+      border: none;
+      outline: none;
+      background-color: inherit;
+      // &:hover{
+      //   background-color: #eee;
+
+      // }
+    }
     
     
     .appHeader-filte-box-type {
