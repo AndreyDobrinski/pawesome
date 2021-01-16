@@ -1,15 +1,5 @@
-<<<<<<< HEAD
 import { storageService } from './asyncStorageService'
 // import { httpService } from './httpService'
-=======
-// import { storageService } from './asyncStorageService'
-import { httpService } from './httpService'
-import Axios from 'axios';
-const axios = Axios.create({
-    withCredentials: true
-})
-const baseUrl = 'http://localhost:3030/user';
->>>>>>> a40c45727eb4bb9427b88aa08952b414518051b8
 
 
 export const userService = {
@@ -35,25 +25,9 @@ function getUsers() {
     // return httpService.get(`user`)
 }
 
-<<<<<<< HEAD
 function getById(userId) {
     return storageService.get('user', userId)
     // return httpService.get(`user/${userId}`)
-=======
-// function getById(userId) {
-//     // return storageService.get('user', userId)
-//     // return httpService.get(`user/${userId}`)
-// }
-
-async function getById(userId) {
-    try {
-        const res = await axios.get(`${baseUrl}/${userId}`)
-        return await res.data
-    } catch (err) {
-        console.log('FrontError: getting by Id', err)
-        throw err
-    }
->>>>>>> a40c45727eb4bb9427b88aa08952b414518051b8
 }
 
 function remove(userId) {
