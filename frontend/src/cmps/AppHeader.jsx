@@ -47,13 +47,13 @@ export class _AppHeader extends Component {
         this.props.loadUsers()
         window.addEventListener('scroll', this.handleScroll)
         // console.log('Looking for routes', this);
-        if(this.isHomePage()){
+        if (this.isHomePage()) {
             this.setState({
                 isHomePage: true,
             })
         }
 
-    } 
+    }
 
     componentDidUpdate(prevProps) {
         // console.log('prevProps.match:',prevProps.location);
@@ -64,7 +64,7 @@ export class _AppHeader extends Component {
                 this.setState({
                     isHomePage: true,
                 })
-            }else{
+            } else {
                 this.setState({
                     isHomePage: false,
                 })
@@ -78,7 +78,7 @@ export class _AppHeader extends Component {
     }
 
 
-    isHomePage=() =>{
+    isHomePage = () => {
         return this.props.location.pathname === '/'
     }
 
@@ -110,8 +110,10 @@ export class _AppHeader extends Component {
                 username: '',
                 password: '',
                 fullname: ''
-            }
+            },
+            modalSignClicked:false
         })
+        // this.onCloseSignModal()
 
     }
 
@@ -207,18 +209,18 @@ export class _AppHeader extends Component {
                         <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
                             <LockOutlinedIcon />
                         </Avatar>
-                        <Typography component="h2" variant="h5">
+                        <Typography component="h2" variant="h5" className="modal-header">
                             Sign up
-                </Typography>
+                        </Typography>
 
-                        <div className="modal-body">
+                        <div className="modal-body-signup">
 
                             <form onSubmit={this.doSignup} style={{ width: '100%', marginTop: '5px' }} noValidate>
 
-                                <TextField variant="filled" margin="normal" value={this.state.signupCred.username} required
+                                <TextField variant="outlined" margin="normal" value={this.state.signupCred.username} required
                                     onChange={this.signupHandleChange} fullWidth label="Username" name="username" autoFocus />
 
-                                <TextField variant="filled" margin="normal" value={this.state.signupCred.fullname} required
+                                <TextField variant="outlined" margin="normal" value={this.state.signupCred.fullname} required
                                     onChange={this.signupHandleChange} fullWidth label="Fullname" name="fullname" />
 
                                 <TextField variant="outlined" margin="normal" required fullWidth value={this.state.signupCred.password}
@@ -260,27 +262,27 @@ export class _AppHeader extends Component {
                         <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
                             <LockOutlinedIcon />
                         </Avatar>
-                        <Typography component="h2" variant="h5">
+                        <Typography component="h2" variant="h5" className="modal-header">
                             Log in
-                </Typography>
+                        </Typography>
 
-                        <div className="modal-body">
+                        <div className="modal-body-login">
 
                             <form onSubmit={this.doLogin} style={{ width: '100%', marginTop: '5px' }} noValidate>
 
-                                <TextField variant="filled" margin="normal" value={this.state.loginCred.username} required
+                                <TextField variant="outlined" margin="normal" value={this.state.loginCred.username} required
                                     onChange={this.loginHandleChange} fullWidth label="Username" name="username" autoFocus />
 
                                 <TextField variant="outlined" margin="normal" required fullWidth value={this.state.loginCred.password}
                                     onChange={this.loginHandleChange} name="password" label="Password" type="password" autoComplete="current-password" />
 
-                                <Button type="submit" fullWidth variant="contained" color="primary" style={{ marginTop: '10px' }}>
+                                <Button type="submit" fullWidth variant="contained" color="primary" style={{ marginTop: '30px' }}>
                                     Log In
                       </Button>
 
                                 <Grid container>
                                     <Grid item>
-                                        <Button type="submit" fullWidth variant="contained" color="primary" style={{ marginTop: '10px' }} onClick={this.newUser}>
+                                        <Button type="submit" fullWidth variant="contained" color="primary" style={{ marginTop: '30px' }} onClick={this.newUser}>
                                             {"Don't have an account? Sign Up"}
                                         </Button>
                                     </Grid>
@@ -327,31 +329,31 @@ export class _AppHeader extends Component {
 
 
 
-                                     {/* /////////////////////////////////////////////🢃///////////////////////////////////////////// */}
+                    {/* /////////////////////////////////////////////🢃///////////////////////////////////////////// */}
                     <form className="appHeader-filter-container flex" onSubmit={this.onSearchPet}>
                         <div className="appHeader-filte-box flex">
                             <div className="appHeader-filte-box-type flex column">
                                 <span className="type-title">Type</span>
-                                      {/* //////////////////////////////////////////////////////////////////////////////🢃////////// */}
-                                <input type="text" className="type-text" placeholder="What kind of pet" onChange={this.handleInput}/>
+                                {/* //////////////////////////////////////////////////////////////////////////////🢃////////// */}
+                                <input type="text" className="type-text" placeholder="What kind of pet" onChange={this.handleInput} />
                             </div>
                             <div className="appHeader-filte-box-age flex column">
                                 <span className="age-title">Age</span>
-                                      {/* /////////////////////////////////////////////////////////////////////////🢃////////////// */}
-                                <input type="text" className="age-text" placeholder="Age of pet" onChange={this.handleInput}/>
+                                {/* /////////////////////////////////////////////////////////////////////////🢃////////////// */}
+                                <input type="text" className="age-text" placeholder="Age of pet" onChange={this.handleInput} />
                             </div>
                             <div className="appHeader-filte-box-gender flex column">
                                 <span className="gender-title">Gender</span>
-                                      {/* ////////////////////////////////////////////////////////////////////////////🢃///////// */}
-                                <input type="text" className="gender-text" placeholder="Gender of pet" onChange={this.handleInput}/>
+                                {/* ////////////////////////////////////////////////////////////////////////////🢃///////// */}
+                                <input type="text" className="gender-text" placeholder="Gender of pet" onChange={this.handleInput} />
                             </div>
                             <div className="appHeader-filte-box-location flex column">
                                 <span className="location-title">Location</span>
-                                      {/* /////////////////////////////////////////////////////////////////////////////////🢃///// */}
-                                <input type="text" className="location-text" placeholder="Location of pet" onChange={this.handleInput}/>
+                                {/* /////////////////////////////////////////////////////////////////////////////////🢃///// */}
+                                <input type="text" className="location-text" placeholder="Location of pet" onChange={this.handleInput} />
                             </div>
                             <div className="appHeader-filte-box-Search flex justify-center align-center ">
-                                      {/* ////////////🢃//////////////////////////////////////////////////////////////////////// */}
+                                {/* ////////////🢃//////////////////////////////////////////////////////////////////////// */}
                                 <button className="search-btn btn1">+</button>
                             </div>
                         </div>
@@ -373,7 +375,9 @@ export class _AppHeader extends Component {
                         <Link to="/pet"><div className="appHeader-link-pets">Pets</div></Link>
                         <div className="appHeader-link-login" onClick={this.onOpenSignModal}>
                             {!loggedInUser && "Signup"}
-                            {loggedInUser && `Welcome ${loggedInUser.name}`}
+                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link> }
+                            {/* {loggedInUser && `Welcome ${loggedInUser.fullname}`} */}
+                            
                         </div>
 
                     </div>

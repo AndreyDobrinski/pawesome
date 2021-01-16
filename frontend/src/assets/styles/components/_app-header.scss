@@ -101,13 +101,13 @@
   color: black;
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
-  overflow: hidden;
- 
-
+  // overflow: hidden;
+  
+  
   .appHeader-filte-box {
     width: 840px;
     // padding: 10px;
-
+    
     
     .appHeader-filte-box-type {
       padding: 10px;
@@ -266,12 +266,14 @@
 }
 
 .modal-header {
-  padding: 2px 16px;
-  background-color: #5ca9b8;
-  color: white;
+  color: black;
 }
 
-.modal-body {
+.modal-body-login {
+  padding: 2px 16px;
+  height: 35vh;
+}
+.modal-body-signup {
   padding: 2px 16px;
   height: 40vh;
 }

@@ -1,0 +1,145 @@
+.profile-container{
+    margin-top: 130px;
+}
+
+.profile-img{
+    text-align: center;
+
+    img{
+        width: 70%;
+        height: 100%;
+    }
+
+    .file{
+        position: relative;
+        overflow: hidden;
+        margin-top: -20%;
+        width: 70%;
+        border: none;
+        border-radius: 0;
+        font-size: 15px;
+        background: #212529b8;
+        
+
+    }
+    
+    .profile-btn {
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        color: #fff;
+        padding: .5rem 1rem;
+        line-height: 1.5;
+        input{
+            position: absolute;
+            opacity: 0;
+            right: 0;
+            top: 0;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    
+}
+
+
+.profile-head{
+    h5{
+        color: #333;
+        font-size: 1.25rem;
+
+    }
+    h6{
+        color: #0062cc;
+        font-size: 1rem;
+
+    }
+    .profile-about{
+        margin-top: 50px;
+        text-align: center;
+        font-size: rem(30px);
+    }
+}
+
+
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+    p{
+        font-size: 12px;
+        color: #818182;
+        font-weight: 600;
+        margin-top: 10%;
+    }
+}
+
+.profile-tab{
+    label{
+        font-weight: 600;
+    }
+
+    p{
+        font-weight: 600;
+        color: #0062cc;
+    }
+}
+
+
+.profile-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+
+
+    .profile-col-md-2 {
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
+    }
+
+    .profile-col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+
+
+    .profile-col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .profile-col-md-8 {
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+    
+    .profile-edit-btn{
+        outline: none;
+        border: none;
+        border-radius: 1.5rem;
+        width: 70%;
+        padding: 2%;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .profile-logout-btn{
+        outline: none;
+        border: none;
+        border-radius: 1.5rem;
+        width: 70%;
+        padding: 2%;
+        font-weight: 600;
+        color: #6c757d;
+        cursor: pointer;
+    }
+}

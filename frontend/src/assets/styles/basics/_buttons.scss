@@ -1,17 +1,37 @@
-.btn1{
-    padding: rem(10px);
-    border: none;
-    background-color: $clr1;
-    margin-right: rem(10px);
-    
-    
-    a{
-        text-decoration: none;
-        color: black;
-    }
-    
-    &:hover{
-        background-color: $clr5;
-        cursor: pointer;
-    }
+.btn1 {
+  padding: rem(10px);
+  border: none;
+  background-color: $clr1;
+  margin-right: rem(10px);
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:hover {
+    background-color: $clr5;
+    cursor: pointer;
+  }
 }
+
+.btn2 {
+  // padding: rem(10px);
+  padding: 18px 50px;
+  border: none;
+  background-image: linear-gradient(to right, #bbdb7f, #86cb77);
+  margin-right: rem(10px);
+  font-size: rem(22px);
+  border-radius: 30px;
+  color: white;
+  font-weight: 500;
+
+  a {
+    text-decoration: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+

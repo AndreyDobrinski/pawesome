@@ -32,9 +32,9 @@ export class _Home extends Component {
           </video>
 
 
-          <div className="page-home-hero-content">
-            Find your furry best friend.
-            <Link to="/pet"><button className="btn1">Go to pets</button></Link>  
+          <div className="page-home-hero-content ">
+            <div>Find your furry best friend</div>
+            <Link to="/pet"><button className="btn2">Go to pets</button></Link>  
           </div>
 
 

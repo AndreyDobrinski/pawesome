@@ -21,6 +21,9 @@ X 2.How to close modal on body click(not working because it closes modal on clic
 X 3.ask about the video
  4. Ask about how to add SVG(font awesome)
 
+ASK Or about:
+ 1.gitignore cant ignore the eslintcache
+
 
 
 
@@ -36,14 +39,9 @@ X 2.When oppening modal , texts get additional font size
 
 
 
-For header:
- 1.Type
- 2.age
- 3.gender
- 4.location
 
-
-
+Needs to be added:
+ 1.When logging in successful , do an event bus with a nice massege saying 'Logged in successful , Welcome Username'
 
 
 

@@ -1,14 +1,10 @@
 .page-home-hero {
-
+  position: relative;
 }
 
 .ms-slide-bgvideo {
   opacity: 1;
   width: 100%;
-  // height: 900px;
-  // background-color: green;
-  // width: 588px;
-  // height: 310.078px;
   margin-top: -13.5px;
   margin-left: 0px;
 }
@@ -22,9 +18,6 @@
   transform: translate(-50%, -50%);
   text-align: center;
   max-width: 900px;
-  // padding: 0 10px;
-  // width: 100%;
-  // margin: auto;
 }
 
 .text-test {

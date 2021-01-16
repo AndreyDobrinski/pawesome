@@ -1,12 +1,19 @@
 
 
-export const AsyncStorageService = {
+export const storageService = {
     query,
     get,
     post,
     put,
     remove,
 }
+// export const AsyncStorageService = {
+//     query,
+//     get,
+//     post,
+//     put,
+//     remove,
+// }
 
 function query(entityType) {
     var entities = JSON.parse(localStorage.getItem(entityType)) || []

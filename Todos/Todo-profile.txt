@@ -1,0 +1,23 @@
+
+Needs to be done:
+ 1.Whats the function for redirect ?(for user profile)
+
+
+
+Bugs found:
+ 1.On click on the Profile , the modal grey color stays
+
+
+
+
+ TALK TO TEAM ABOUT:
+ 1.to what can we change the WORK LINK and skills?
+ 2.What other stuff goes to About me
+ 3. near the name of user , 'Web Developer and Designer' what can we replace it or should we just delete it
+
+
+
+
+
+Needs to change :
+ 1.change the edit & logout btn to green
