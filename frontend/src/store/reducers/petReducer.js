@@ -11,10 +11,6 @@ const initialState = {
 
 export function petReducer(state = initialState, action) {
     switch (action.type) {
-        case 'SET_FILTER':
-            console.log('SET FILTER ', action.filterBy)
-            return  { ...state, filterBy: action.filterBy }
-            
         case 'SET_PETS':
             return { ...state, filterBy: action.newFilterBy, pets: action.pets }
         case 'DELETE_PET':

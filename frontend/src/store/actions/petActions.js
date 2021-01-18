@@ -32,7 +32,7 @@ export function deletePet(petId) {
 
 export function savePet(pet) {
     return async (dispatch) => {
-        const res = await petService.savePet(pet)
+        const res = await petService.save(pet)
         if (!res) {
             const action = { type: 'UPD_PET', newPet: pet }
             return await dispatch(action)

@@ -66,20 +66,15 @@
       "username": "user3",
       "password": "secret",
       "birthDate": "1990-02-21",
-      "familyStatus": "married",
       "contactInfo": {
         "email": "ffsanctuary@save.com",
         "phone": "054-1122334"
       },
       "loc": {
-        "country": "Portugal",
-        "countryCode": "PT",
-        "address": "Porto, Portugal",
+        "address": "Haifa",
         "lat": -8.61308,
         "lng": 41.1413
       },
-      "houseStatus": "",
-      "hasPets": false,
       "isHost": true,
       "pets": [
         {
@@ -121,7 +116,7 @@
         "friendly with other animals",
         "disability support"
       ],
-      "address": "Haifa",
+      "address": "Raanana",
       "host": {
         "_id": "51399391",
         "fullname": "Freedom Farm Sanctuary",
@@ -133,7 +128,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "23-Aug-2020",
+      "status": "waiting"
     },
     {
       "_id": "20006547",
@@ -168,7 +165,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "5-Jan-2021",
+      "status": "waiting"
     },
     {
       "_id": "20006546",
@@ -177,7 +176,7 @@
         "https://res.cloudinary.com/elnova/image/upload/v1610555760/photo-1610353118401-8221b58aba9c_s7yvc8.jpg",
         "otherImg.jpg"
       ],
-      "likes": "276",
+      "likes": 279,
       "shortDesc": "Very friendly dog",
       "description": "Fluffy dog that likes ice cream",
       "age": "adult",
@@ -200,7 +199,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "16-Jan-2021",
+      "status": "waiting"
     },
     {
       "_id": "20006548",
@@ -231,7 +232,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "16-Jan-2021",
+      "status": "waiting"
     },
     {
       "_id": "20006549",
@@ -257,13 +260,13 @@
         "phone": "054-1122334",
         "email": "ffsanctuary@save.com",
         "loc": {
-          "country": "Portugal",
-          "countryCode": "PT",
           "address": "Raanana",
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "3-Jan-2021",
+      "status": "waiting"
     },
     {
       "_id": "20006550",
@@ -293,7 +296,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "16-Nov-2020",
+      "status": "waiting"
     },
     {
       "_id": "20006551",
@@ -323,7 +328,10 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "16-Nov-2020",
+      "status": "adopted",
+      "adoptionDate": "5-Jan-2021"
     },
     {
       "_id": "20006552",
@@ -353,7 +361,9 @@
           "lat": -8.61308,
           "lng": 41.1413
         }
-      }
+      },
+      "recordDate": "1-Oct-2020",
+      "status": "waiting"
     }
   ],
   "order": [

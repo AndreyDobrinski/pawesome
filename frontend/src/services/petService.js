@@ -37,11 +37,11 @@ function save(itemToSave) {
     if (itemToSave._id) {
         //IF it has id , UPDATE
         return axios.put(`${baseUrl}/${itemToSave._id}`, itemToSave)
-            .then(res => res.data)
+            .then(res => { console.log('result of update pet --- ', res.data); return res.data})
     } else {
         // THEN , CREATE
         return axios.post(baseUrl, itemToSave)
-            .then(res => res.data)
+            .then(res => { console.log('result of add pet --- ', res.data); return res.data})
     }
 }
 

@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {loadPets} from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
 import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
+import { PreviewContainer } from '../cmps/PreviewContainer.jsx'
 
 export class _Pet extends Component {
 
@@ -26,7 +27,7 @@ export class _Pet extends Component {
         <FilterBtn field="kind" value="cat"/>
         <FilterBtn field="kind" value="dog"/>
       </div> */}
-      <div className="pet-list container" style={{"margin-top": "200px"}}>
+      <div className="pet-list container" style={{"marginTop": "200px"}}>
         <PetList pets={pets}/>
       </div>
       </React.Fragment>

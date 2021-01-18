@@ -1,8 +1,11 @@
 import {Link} from 'react-router-dom'
 import {Component} from 'react'
+import {connect} from 'react-redux'
 import { LikeButton } from './btns/LikeBtn'
 
-export class PetPreview extends Component {
+import {savePet} from '../store/actions/petActions'
+
+export class _PetPreview extends Component {
 
     state = {
         pet: this.props.pet
@@ -19,7 +22,7 @@ export class PetPreview extends Component {
         const pet = {...this.state.pet, likes}
         this.setState( {...this.state, pet} )
 
-        // this.props.updatePetData(pet) --- TODO --- petActions.js
+        this.props.savePet(pet)
     }
 
     render() {
@@ -45,3 +48,15 @@ export class PetPreview extends Component {
             </li>)
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+      pets: state.petModule.pets
+    }
+  }
+  
+  const mapDispatchToProps = {
+      savePet
+  }
+  
+  export const PetPreview = connect(mapStateToProps, mapDispatchToProps)(_PetPreview)

@@ -2,6 +2,7 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
+import {PreviewContainer} from '../cmps/PreviewContainer'
 
 
 export class _Home extends Component {
@@ -41,15 +42,17 @@ export class _Home extends Component {
 
         </div>
 
-        <div className="text-test container">
+        {/* <div className="text-test container">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro consequuntur a asperiores inventore cupiditate? Dignissimos nemo hic, sint magni sequi consequuntur tenetur repellendus placeat libero quasi quaerat perferendis culpa.
-        </div>
+        </div> */}
+        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="2" clsName="container  pets-preview-container new-pets-preview"/>
 
 
-        <div className="text-test container">
+        {/* <div className="text-test container">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro consequuntur a asperiores inventore cupiditate? Dignissimos nemo hic, sint magni sequi consequuntur tenetur repellendus placeat libero quasi quaerat perferendis culpa.
-        </div>
+        </div> */}
 
+        <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview"/>
 
         <div className="text-test container">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro consequuntur a asperiores inventore cupiditate? Dignissimos nemo hic, sint magni sequi consequuntur tenetur repellendus placeat libero quasi quaerat perferendis culpa.
