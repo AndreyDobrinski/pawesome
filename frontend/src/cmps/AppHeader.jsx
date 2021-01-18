@@ -2,6 +2,11 @@ import { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login, logout, signup, removeUser, loadUsers } from '../store/actions/userActions'
+import { ReactComponent as Paw } from "../assets/imgs/paw-black-shape.svg"
+import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
+import { ReactComponent as User } from "../assets/imgs/user.svg"
+
+
 
 import {SearchFilterBar} from './SearchFilterBar'
 
@@ -14,6 +19,9 @@ import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+
+
+
 
 
 
@@ -39,6 +47,8 @@ export class _AppHeader extends Component {
         },
         isScrolled: false,
         isHomePage: false,
+        smallSearchClicked: false
+
     }
 
 
@@ -192,6 +202,13 @@ export class _AppHeader extends Component {
 
     }
 
+    onOpenBigSearch = () => {
+        this.setState({
+            smallSearchClicked: true
+        })
+
+    }
+
 
 
 
@@ -206,7 +223,7 @@ export class _AppHeader extends Component {
 
                 <Container component="main" maxWidth="xs" >
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
-                        <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
+                        <Avatar style={{ margin: '10px', backgroundColor: '#86cb77', }}>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h2" variant="h5" className="modal-header">
@@ -259,7 +276,7 @@ export class _AppHeader extends Component {
                 <Container component="main" maxWidth="xs" >
                     <div style={{ marginTop: '10px', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
 
-                        <Avatar style={{ margin: '10px', backgroundColor: 'blue', }}>
+                        <Avatar style={{ margin: '10px', backgroundColor: '#86cb77', }}>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h2" variant="h5" className="modal-header">
@@ -316,19 +333,35 @@ export class _AppHeader extends Component {
                     <Link to="/">
                         <div className="appHeader-logo flex">
 
-                            <div className="appHeader-logo-img">&</div>
+                            <div className="appHeader-logo-img"><Paw/></div>
                             <div><span className="appHeader-name-paw">Paw</span>eSome</div>
 
                         </div>
                     </Link>
 
-                    <SearchFilterBar />
+                     {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
+             
+
+                     <div className={`appHeader-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''}`} onClick={this.onOpenBigSearch}>
+                        <div className="appHeader-filte-box-small flex">
+                            <div className="appHeader-filte-box-search-small flex column">
+                                <span className="small-search-title">Start your search</span>
+                            </div>
+                        </div>
+
+                        <div className="appHeader-filte-box-Search flex justify-center align-center ">
+                            <button className="search-btn btn1"><Search/></button>
+                        </div>
+                    </div>
+                    {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
+
+
 
                     <div className="appHeader-link-container flex">
 
                         <Link to="/pet"><div className="appHeader-link-pets">Pets</div></Link>
                         <div className="appHeader-link-login" onClick={this.onOpenSignModal}>
-                            {!loggedInUser && "Signup"}
+                            {!loggedInUser && <User/>}
                             {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link> }
                             {/* {loggedInUser && `Welcome ${loggedInUser.fullname}`} */}
                             
@@ -338,6 +371,14 @@ export class _AppHeader extends Component {
 
 
                 </div>
+
+                {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
+
+                {this.state.smallSearchClicked && <div className={`${this.state.isHomePage ? 'appHeader-filter-home ' : 'appHeader-filter-normal '} flex align-center justify-center ${this.state.isScrolled ? 'filter-scrolled' : ''}`}>
+                    <SearchFilterBar />
+                </div>}
+                {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
+
 
 
                 {this.state.modalSignClicked && <div className="modal" onClick={() => this.onCloseSignModal()}>

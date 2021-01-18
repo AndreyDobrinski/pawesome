@@ -8,12 +8,31 @@
 //     color: green;
 // }
 
+.appHeader-filter-home{
+  // display: none;
+  // margin-bottom: 60px;
+  margin-top: 100px;
+  transition: 0.1s;
+  
+}
+.appHeader-filter-normal{
+  // display: none;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  
+}
+
+.filter-scrolled{
+  margin-top: 0px;
+  margin-bottom: 20px;
+
+}
+
 .appHeader-container {
   top: 0;
-  // background-color: inherit;
   background-color: rgb(231, 242, 243);
-  // background-color: inherit;
-  // text-align: center;
+  // background-color: white;
+
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -61,6 +80,8 @@
 
 .appHeader-logo-img {
   margin-right: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 .appHeader-name-paw {
@@ -68,9 +89,9 @@
     color: $clr9;
 
 
-  &:hover {
-    color: $clr1;
-  }
+  // &:hover {
+  //   color: $clr1;
+  // }
 }
 
 .appHeader-content {
@@ -83,9 +104,13 @@
 
   .appHeader-link-pets {
     margin-right: 20px;
+    font-size: 25px;
+    
   }
-
+  
   .appHeader-link-login {
+    margin-left: 15px;
+    font-size: 25px;
     &:hover {
       cursor: pointer;
     }
@@ -225,6 +250,7 @@
       
       
       .search-btn{
+        margin-left: 10px;
         background-color: #ff385c;
         border-radius: 50%;
         width: 40px!important;
@@ -258,6 +284,72 @@
     padding: 16px 32px !important;
   }
 }
+
+
+
+
+
+
+
+
+
+////////////////////////////////// SMALL FILTER  ////////////////////////////////////////
+
+
+.appHeader-filter-container-small {
+  border-radius: 50px;
+  background-color: #fff;
+  // background-color:inherit;
+  color: black;
+  // font-size: rem(22px);
+  margin: 0px 10px 0px 10px;
+  // overflow: hidden;
+  cursor: pointer;
+
+  .appHeader-filte-box-small {
+    width: 270px;
+    padding: 5px;
+      
+    .appHeader-filte-box-search-small {
+      padding: 10px;
+      margin-left: 10px;
+      // margin-left: 10px;
+
+      .small-search-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 16px;
+        padding-bottom: 2px;
+        padding-inline-end: 60px;
+      }
+    }
+    
+  }
+  .appHeader-filte-box-Search {
+    .search-btn{
+      margin-left: 10px;
+      background-color: #ff385c;
+      border-radius: 50%;
+      width: 40px!important;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+
+    }
+  }
+}
+
+.hide-small-search{
+  display: none;
+}
+
+
+
+
+
+
 
 ////////////////////////////////////////// MODAL ///////////////////////////////
 

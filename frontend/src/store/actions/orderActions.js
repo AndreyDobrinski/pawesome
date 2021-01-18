@@ -1,8 +1,9 @@
 import { orderService } from '../../services/orderService.js'
 
-export function loadOrders() {
+export function loadOrders(ownerId) {
     return async (dispatch) => {
-        const orders = await orderService.query()
+        const allOrders = await orderService.query()
+        var orders = allOrders.filter(order => order.pet.host_id === ownerId)
         const action = {
             type: 'SET_ORDERS',
             orders
@@ -27,14 +28,15 @@ export function loadOrders() {
 //     }
 // }
 
-export function saveOrder(pet) {
+export function saveOrder(order) {
     return async (dispatch) => {
-        const res = await orderService.saveOrder(pet)
+        const res = await orderService.saveOrder(order)
         if (!res) {
-            const action = { type: 'UPD_ORDER', newPet: pet }
+            console.log('RIGHT!')
+            const action = { type: 'UPD_ORDER', newOrder: order }
             return await dispatch(action)
         } else {
-            const action = { type: 'SAVE_ORDER', newPet: res }
+            const action = { type: 'SAVE_ORDER', newOrder: res }
             return await dispatch(action)
         }
     }

@@ -34,7 +34,7 @@ export class _MapContainer extends Component {
         initialCenter={{ lat: hostCreds.lat, lng: hostCreds.lng }}
         onClick={this.onMapClicked}
         zoom={13}
-        style={{ position: 'relative', width: '100%', height: 200, margin: 'auto' }}>
+        style={{ position: 'relative', width: '100%', height: '300px', margin: 'auto' }}>
 
         <Marker
           onClick={this.onMarkerClick}

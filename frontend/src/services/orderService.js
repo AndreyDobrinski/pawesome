@@ -5,7 +5,8 @@ const axios = Axios.create({
 
 export const orderService = {
     query,
-    saveOrder
+    saveOrder,
+    isOrderDone
 }
 const BASE_URL = 'http://localhost:3030/order'
 // const BASE_URL = (process.env.NODE_ENV !== 'development')
@@ -26,6 +27,14 @@ function query() {
 //         throw err
 //     }
 // }
+async function isOrderDone(petId, userId) {
+    var orders = await this.query()
+    var res = orders.filter(order => {
+        return order.pet._id === petId && order.byUser._id === userId
+    })
+    if (res.length > 0) return true
+    else return false
+}
 
 
 async function saveOrder(newOrder) {

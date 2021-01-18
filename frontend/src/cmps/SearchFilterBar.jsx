@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { Link, withRouter } from 'react-router-dom'
 
 import { loadPets, setFilter} from '../store/actions/petActions.js'
+import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
+
 
 class _SearchFilterBar extends Component {
 
@@ -81,7 +83,7 @@ class _SearchFilterBar extends Component {
                     <Link to="/pet"><button className="search-btn btn1">+</button></Link>}
                     {this.props.location.pathname !== "/" &&
                     <button className="search-btn btn1">+</button>} */}
-                    <button className="search-btn btn1">+</button>
+                    <button className="search-btn btn1"><Search/></button>
                 </div>
             </div>
         </form>

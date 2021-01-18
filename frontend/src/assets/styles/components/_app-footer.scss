@@ -1,0 +1,44 @@
+.app-footer {
+  // width: 100%;
+  height: 100px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ddd;
+  // position: fixed;
+  // bottom: 0;
+  // width: 100%;
+
+
+
+
+  .app-footer-container{
+    height: 100%;
+
+    .app-footer-logo-img {
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+    }
+
+    .app-footer-name-pawesome{
+      font-size: 26px;
+      
+      .app-footer-name-paw {
+          color: $clr9;
+      }
+    }
+
+    .app-footer-social-container{
+      .social-twitter{
+        margin-left: 10px;
+      }
+      .social-instagram{
+        margin-left: 10px;
+      }
+    }
+
+  }
+  
+}
+
+
+
