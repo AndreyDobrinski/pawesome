@@ -8,7 +8,7 @@ export const orderService = {
     saveOrder,
     isOrderDone
 }
-const BASE_URL = 'http://localhost:3030/order'
+const BASE_URL = 'http://localhost:3030/api/order'
 // const BASE_URL = (process.env.NODE_ENV !== 'development')
 //     ? '/api/pet'
 //     : '//localhost:3030/api/pet';
