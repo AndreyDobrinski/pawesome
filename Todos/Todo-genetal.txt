@@ -11,6 +11,7 @@ X 2.custum scroll bar
 Nice things to add :
  1.Make a user profile.
  2.Add chat.
+ 3.at pet lists , have a nice carusela for each img
 
 
 
@@ -29,6 +30,8 @@ ASK Or about:
 
 Header:
  1.Add Paw svg icon next to the logo name
+ 2.Add SEARCH svg icon next to the filter search
+ 3.change the sighup modal hight and width to vw and vh
 
 
 

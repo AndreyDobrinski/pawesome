@@ -37,9 +37,10 @@ export class _Home extends Component {
             <Link to="/pet"><button className="btn2">Go to pets</button></Link>  
           </div>
 
-
-
         </div>
+
+
+        
 
         <div className="text-test container">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro consequuntur a asperiores inventore cupiditate? Dignissimos nemo hic, sint magni sequi consequuntur tenetur repellendus placeat libero quasi quaerat perferendis culpa.

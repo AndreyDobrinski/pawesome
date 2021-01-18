@@ -11,13 +11,13 @@ Bugs found:
 
 
  TALK TO TEAM ABOUT:
- 1.to what can we change the WORK LINK and skills?
- 2.What other stuff goes to About me
- 3. near the name of user , 'Web Developer and Designer' what can we replace it or should we just delete it
+ X 1.to what can we change the WORK LINK and skills?
+ X 2.What other stuff goes to About me
+ X 3. near the name of user , 'Web Developer and Designer' what can we replace it or should we just delete it
 
 
 
 
 
 Needs to change :
- 1.change the edit & logout btn to green
+ X 1.change the edit & logout btn to green
