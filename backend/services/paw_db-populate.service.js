@@ -65,7 +65,10 @@ async function saveUsers(petMap=null) {
                 const miniUser = {
                     _id: savedUser._id.toString(),
                     fullname: savedUser.fullname,
-                    imgUrl: savedUser.imgUrl
+                    imgUrl: savedUser.imgUrl,
+                    phone: savedUser.phone,
+                    email: savedUser.email,
+                    loc: {...savedUser.loc}
                 }
                 accUserMap[localUserIds[idx]] = miniUser
                 return accUserMap
