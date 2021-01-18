@@ -1,11 +1,11 @@
 
 Needs to be done:
- 1.Whats the function for redirect ?(for user profile)
+ X 1.Whats the function for redirect ?(for user profile)
 
 
 
 Bugs found:
- 1.On click on the Profile , the modal grey color stays
+ X 1.On click on the Profile , the modal grey color stays
 
 
 

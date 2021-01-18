@@ -20,6 +20,12 @@ export class _Profile extends Component {
     }
 
 
+    onLogOut = ()=>{
+        this.props.logout()
+        this.props.history.push('/')
+    }
+
+
     onModalEditClicked = () => {
         console.log('Edit modal opend');
     }
@@ -56,7 +62,8 @@ export class _Profile extends Component {
 
                     <div className="profile-col-md-2">
                         <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
-                        <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button>
+                        {/* <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button> */}
+                        <button className="profile-logout-btn" onClick={this.onLogOut}>LogOut</button>
                     </div>
 
                 </div>

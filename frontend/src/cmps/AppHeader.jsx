@@ -47,7 +47,8 @@ export class _AppHeader extends Component {
         },
         isScrolled: false,
         isHomePage: false,
-        smallSearchClicked: false
+        smallSearchClicked: true,
+        isDarkMode: false
 
     }
 
@@ -93,14 +94,17 @@ export class _AppHeader extends Component {
     }
 
     handleScroll = () => {
-        if (window.pageYOffset > 0 && window.location.href === 'http://localhost:3000/#/') {
+        if (window.pageYOffset === 0 && this.isHomePage()) {
             // console.log('test',window.pageYOffset);
             this.setState({
-                isScrolled: true
+                isScrolled: false,
+                smallSearchClicked:true
             })
         } else {
             this.setState({
-                isScrolled: false
+                isScrolled: true,
+                smallSearchClicked:false
+
             })
         }
     }
@@ -189,6 +193,7 @@ export class _AppHeader extends Component {
 
 
     onOpenSignModal = () => {
+        if(this.props.loggedInUser) return
         this.setState({
             modalSignClicked: true
         })
@@ -207,6 +212,20 @@ export class _AppHeader extends Component {
             smallSearchClicked: true
         })
 
+    }
+
+
+    setMode = () =>{
+        if(this.state.isDarkMode === false){
+            this.setState({
+                isDarkMode: true
+            })
+        }else{
+            this.setState({
+                isDarkMode: false
+            })
+            
+        }
     }
 
 
@@ -323,18 +342,18 @@ export class _AppHeader extends Component {
         const { isNewUser } = this.state
 
         return (
-            // <nav className="appHeader-container ">
-            // <nav className={!this.state.isScrolled && "appHeader-container" } {this.state.isScrolled && "appHeader-container-scrolled" }>
-            // <nav className={`appHeader-container${this.state.isScrolled ? '-scrolled' : ''}`}>
-            <nav className={`appHeader-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} `}>
+            // <nav className="app-header-container ">
+            // <nav className={!this.state.isScrolled && "app-header-container" } {this.state.isScrolled && "app-header-container-scrolled" }>
+            // <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''}`}>
+            <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} ${this.state.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}>
 
-                <div className="appHeader-content flex align-center justify-between container">
+                <div className="app-header-content flex align-center justify-between container">
 
                     <Link to="/">
-                        <div className="appHeader-logo flex">
+                        <div className="app-header-logo flex">
 
-                            <div className="appHeader-logo-img"><Paw/></div>
-                            <div><span className="appHeader-name-paw">Paw</span>eSome</div>
+                            <div className="app-header-logo-img"><Paw/></div>
+                            <div className={`app-header-name-pawesome ${this.state.isDarkMode? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>eSome</div>
 
                         </div>
                     </Link>
@@ -342,14 +361,14 @@ export class _AppHeader extends Component {
                      {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
              
 
-                     <div className={`appHeader-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''}`} onClick={this.onOpenBigSearch}>
-                        <div className="appHeader-filte-box-small flex">
-                            <div className="appHeader-filte-box-search-small flex column">
+                     <div className={`app-header-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''} ${this.state.isDarkMode? 'dark-mode-small-search' : ''}`} onClick={this.onOpenBigSearch}>
+                        <div className="app-header-filte-box-small flex">
+                            <div className="app-header-filte-box-search-small flex column">
                                 <span className="small-search-title">Start your search</span>
                             </div>
                         </div>
 
-                        <div className="appHeader-filte-box-Search flex justify-center align-center ">
+                        <div className="app-header-filte-box-Search flex justify-center align-center ">
                             <button className="search-btn btn1"><Search/></button>
                         </div>
                     </div>
@@ -357,15 +376,15 @@ export class _AppHeader extends Component {
 
 
 
-                    <div className="appHeader-link-container flex">
+                    <div className="app-header-link-container flex">
 
-                        <Link to="/pet"><div className="appHeader-link-pets">Pets</div></Link>
-                        <div className="appHeader-link-login" onClick={this.onOpenSignModal}>
+                        <Link to="/pet"><div className={`app-header-link-pets ${this.state.isDarkMode? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
+                        <div className="app-header-link-login" onClick={this.onOpenSignModal}>
                             {!loggedInUser && <User/>}
                             {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link> }
                             {/* {loggedInUser && `Welcome ${loggedInUser.fullname}`} */}
-                            
                         </div>
+                        <div className="app-header-mode" onClick={this.setMode}>{this.state.isDarkMode? 'Dark':'Light'}</div>
 
                     </div>
 
@@ -374,7 +393,8 @@ export class _AppHeader extends Component {
 
                 {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
 
-                {this.state.smallSearchClicked && <div className={`${this.state.isHomePage ? 'appHeader-filter-home ' : 'appHeader-filter-normal '} flex align-center justify-center ${this.state.isScrolled ? 'filter-scrolled' : ''}`}>
+                {this.state.smallSearchClicked && <div className={`${this.state.isHomePage ? 'app-header-filter-home ' : 'app-header-filter-normal '}
+                 flex align-center justify-center ${this.state.isScrolled ? 'filter-scrolled' : ''}`}>
                     <SearchFilterBar />
                 </div>}
                 {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}

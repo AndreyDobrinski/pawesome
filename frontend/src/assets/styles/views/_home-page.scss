@@ -22,6 +22,33 @@
   max-width: 900px;
 }
 
+.learn-more-btn{
+    padding: 15px 50px;
+    border: 2px solid #86cb77;
+    background-image: none;
+    background-color: white ;
+    margin-right: rem(10px);
+    font-size: rem(17px);
+    border-radius: 30px;
+    color: #86cb77;
+    font-weight: 500;
+    transition: 0.1s;
+    outline: none;
+    margin-bottom: 30px;
+    
+    
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+      border: 2px solid #86cb77;
+      cursor: pointer;
+      background-image: linear-gradient(to right, #bbdb7f, #86cb77);
+      color: white;
+
+    }
+}
+
 .text-test {
   font-size: rem(30px);
   padding: 20px;
@@ -44,4 +71,88 @@
 .long-waiting-pets-preview {
  
   background-color: $clr1;
+}
+
+
+
+
+////////////////////////////// PLAN ADOPT ///////////////////////////////
+
+
+.plan-adopt {
+  background-color: #efeef1;
+  border-bottom: 1px solid  #efeef1;
+
+  .plan-adopt-header {
+    color: rgb(70, 68, 68);
+    padding-top: 60px;
+    .plan-adopt-header-inner{
+      margin-bottom: 40px;
+      .plan-adopt-header-txt{
+        font-weight: 100;
+        font-size: rem(26px);
+      }
+    }
+  }
+
+  .plan-adopt-body{
+
+    
+    .plan-adopt-body-box1{
+   
+      .plan-adopt-body-header1{
+        font-size: rem(22px);
+        padding: 0px 30px 10px 30px;
+        color: #86cb77;
+
+      }
+      .plan-adopt-body-txt1{
+        color: $clr4;
+        font-size: rem(14px);
+      }
+
+    }
+
+    .plan-adopt-body-box2{
+   
+      .plan-adopt-body-header2{
+        font-size: rem(22px);
+        padding: 0px 30px 10px 30px;
+        color: #86cb77;
+
+      }
+      .plan-adopt-body-txt2-holder{
+        margin: 5px 0px 20px 0px;
+
+        .plan-adopt-body-txt2{
+          color: $clr4;
+          font-size: rem(14px);
+          margin: 5px;
+        }
+      }
+
+    }
+
+    .plan-adopt-body-box3{
+   
+      .plan-adopt-body-header3{
+        font-size: rem(22px);
+        padding: 0px 30px 10px 30px;
+        color: #86cb77;
+
+      }
+      .plan-adopt-body-txt3{
+        color: $clr4;
+        font-size: rem(14px);
+        margin: 5px 0px 20px 0px;
+
+      }
+
+    }
+
+  }
+
+
+
+
 }

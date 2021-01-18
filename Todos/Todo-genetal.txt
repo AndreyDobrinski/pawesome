@@ -20,7 +20,9 @@ Ask asi about :
  1.How to close modal with animation(only open works fine)
 X 2.How to close modal on body click(not working because it closes modal on click on input too)
 X 3.ask about the video
- 4. Ask about how to add SVG(font awesome)
+X 4. Ask about how to add SVG(font awesome)
+ 5.how to do nice animation for search bar 
+ 6.how to add scroll bar to modal sighup
 
 ASK Or about:
  1.gitignore cant ignore the eslintcache
@@ -29,9 +31,9 @@ ASK Or about:
 
 
 Header:
- 1.Add Paw svg icon next to the logo name
- 2.Add SEARCH svg icon next to the filter search
- 3.change the sighup modal hight and width to vw and vh
+X 1.Add Paw svg icon next to the logo name
+X 2.Add SEARCH svg icon next to the filter search
+X 3.change the sighup modal hight and width to vw and vh
 
 
 

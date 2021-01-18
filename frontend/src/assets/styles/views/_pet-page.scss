@@ -3,7 +3,9 @@
 }
 
 .pet-list {
-    margin-top: rem(95px)
+    margin-top: rem(95px);
+    // flex-grow: 1;
+    // min-height: calc(100vh - 256px);
 }
 
 .pet-preview {
