@@ -1,48 +1,48 @@
-// .appHeader-nav {
+// .app-header-nav {
 //   text-align: center;
 //   font-size: 1.5em;
 // }
 
-// .appHeader-nav a{
+// .app-header-nav a{
 //     margin-left: 50px;
 //     color: green;
 // }
 
-.appHeader-filter-home{
+.app-header-filter-home {
   // display: none;
   // margin-bottom: 60px;
   margin-top: 100px;
   transition: 0.1s;
-  
+  // height: 88px;
+  // transform-origin: 50% 0 !important;
+  // transform: scale(0.42, 0.69) translateY(-58px) !important;
+  // transition: transform 0.25s ease, opacity 50ms ease 20ms, visibility 0ms 0.15s !important;
 }
-.appHeader-filter-normal{
+.app-header-filter-normal {
   // display: none;
+  // height: 88px;
   margin-top: 0px;
   margin-bottom: 20px;
-  
 }
 
-.filter-scrolled{
+.filter-scrolled {
   margin-top: 0px;
   margin-bottom: 20px;
-
 }
 
-.appHeader-container {
+.app-header-container {
   top: 0;
   background-color: rgb(231, 242, 243);
-  // background-color: white;
-
   position: fixed;
   width: 100%;
   z-index: 1;
   font-size: rem(50px);
   a {
-    // margin-left: 50px;
     color: black;
     text-decoration: none;
   }
 }
+
 .header-for-home {
   background-color: inherit;
   color: white;
@@ -51,77 +51,79 @@
   a {
     color: white;
   }
-
-  // .appHeader-filter-container{
-  //   margin-top: 100px;
-  // }
 }
 
-.appHeader-container-scrolled {
+.app-header-container-scrolled {
+  transition: 0.4s;
+  top: 0;
   background-color: rgb(231, 242, 243);
   color: black;
-
-  // background-color: rgb(6, 164, 179);
-  // text-align: center;
   position: fixed;
   width: 100%;
   z-index: 1;
   font-size: rem(50px);
   a {
-    // margin-left: 50px;
     color: $clr2;
     text-decoration: none;
   }
-
-  // .appHeader-filter-container{
-  //   margin-top: 0;
-  // }
 }
 
-.appHeader-logo-img {
-  margin-right: 10px;
-  width: 40px;
-  height: 40px;
+.app-header-logo {
+  .app-header-logo-img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .app-header-name-pawesome {
+    transition: 0.4s;
+  }
 }
 
-.appHeader-name-paw {
+.app-header-name-paw {
   // color:#f90;
-    color: $clr9;
-
+  color: $clr9;
 
   // &:hover {
   //   color: $clr1;
   // }
 }
 
-.appHeader-content {
+.app-header-content {
   font-size: rem(34px);
   padding: 20px;
 }
 
-.appHeader-link-container {
+.app-header-link-container {
   font-size: rem(20px);
 
-  .appHeader-link-pets {
+  .app-header-link-pets {
+    transition: 0.4s;
     margin-right: 20px;
     font-size: 25px;
-    
   }
-  
-  .appHeader-link-login {
+
+  .app-header-link-login {
     margin-left: 15px;
     font-size: 25px;
     &:hover {
       cursor: pointer;
     }
   }
+
+  .app-header-mode {
+    cursor: pointer;
+    margin-left: 15px;
+    font-size: 25px;
+    user-select: none; 
+  }
 }
 
-
-
-
 ////////////////////////////////// FILTER ////////////////////////////////////////
-.appHeader-filter-container {
+.app-header-filter-container {
+  overflow: hidden;
+
+  
   border-radius: 50px;
   background-color: #fff;
   // background-color:inherit;
@@ -129,13 +131,12 @@
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
   // overflow: hidden;
- 
 
-  .appHeader-filte-box {
+  .app-header-filte-box {
     width: 530px;
     // padding: 10px;
 
-    select{
+    select {
       border: none;
       outline: none;
       background-color: inherit;
@@ -144,16 +145,15 @@
 
       // }
     }
-    
-    
-    .appHeader-filte-box-type {
+
+    .app-header-filte-box-type {
       padding: 10px;
       margin-left: 10px;
       // margin-left: 10px;
-      &:hover{
+      &:hover {
         background-color: #eee;
       }
-      
+
       .type-title {
         font-weight: 800;
         font-size: 12px;
@@ -161,7 +161,7 @@
         padding-bottom: 2px;
         padding-inline-end: 60px;
       }
-      
+
       .type-text {
         // color: #afafaf;
         font-size: 14px;
@@ -171,13 +171,13 @@
         background-color: inherit;
       }
     }
-    
-    .appHeader-filte-box-age {
+
+    .app-header-filte-box-age {
       padding: 10px;
-      &:hover{
+      &:hover {
         background-color: #eee;
       }
-      
+
       .age-title {
         font-weight: 800;
         font-size: 12px;
@@ -185,7 +185,7 @@
         padding-bottom: 2px;
         padding-inline-end: 60px;
       }
-      
+
       .age-text {
         // color: #afafaf;
         font-size: 14px;
@@ -193,16 +193,15 @@
         border: none;
         outline: none;
         background-color: inherit;
-
       }
     }
-    
-    .appHeader-filte-box-gender {
+
+    .app-header-filte-box-gender {
       padding: 10px;
-      &:hover{
+      &:hover {
         background-color: #eee;
       }
-      
+
       .gender-title {
         font-weight: 800;
         font-size: 12px;
@@ -210,7 +209,7 @@
         padding-bottom: 2px;
         padding-inline-end: 60px;
       }
-      
+
       .gender-text {
         // color: #afafaf;
         font-size: 14px;
@@ -218,12 +217,11 @@
         border: none;
         outline: none;
         background-color: inherit;
-
       }
     }
-    .appHeader-filte-box-location {
+    .app-header-filte-box-location {
       padding: 10px;
-      &:hover{
+      &:hover {
         background-color: #eee;
       }
 
@@ -242,35 +240,24 @@
         border: none;
         outline: none;
         background-color: inherit;
-
       }
     }
 
-    .appHeader-filte-box-Search {
-      
-      
-      .search-btn{
+    .app-header-filte-box-Search {
+      .search-btn {
         margin-left: 10px;
         background-color: #ff385c;
         border-radius: 50%;
-        width: 40px!important;
+        width: 40px !important;
         height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-
       }
-
-      
     }
-
-
-
-
-
   }
 
-  .options{
+  .options {
     position: absolute !important;
     left: 0px !important;
     top: 100% !important;
@@ -285,18 +272,11 @@
   }
 }
 
-
-
-
-
-
-
-
-
 ////////////////////////////////// SMALL FILTER  ////////////////////////////////////////
 
+.app-header-filter-container-small {
+  transition: 0.4s;
 
-.appHeader-filter-container-small {
   border-radius: 50px;
   background-color: #fff;
   // background-color:inherit;
@@ -306,11 +286,11 @@
   // overflow: hidden;
   cursor: pointer;
 
-  .appHeader-filte-box-small {
+  .app-header-filte-box-small {
     width: 270px;
     padding: 5px;
-      
-    .appHeader-filte-box-search-small {
+
+    .app-header-filte-box-search-small {
       padding: 10px;
       margin-left: 10px;
       // margin-left: 10px;
@@ -323,33 +303,25 @@
         padding-inline-end: 60px;
       }
     }
-    
   }
-  .appHeader-filte-box-Search {
-    .search-btn{
+  .app-header-filte-box-Search {
+    .search-btn {
       margin-left: 10px;
       background-color: #ff385c;
       border-radius: 50%;
-      width: 40px!important;
+      width: 40px !important;
       height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
       outline: none;
-
     }
   }
 }
 
-.hide-small-search{
+.hide-small-search {
   display: none;
 }
-
-
-
-
-
-
 
 ////////////////////////////////////////// MODAL ///////////////////////////////
 
@@ -361,8 +333,8 @@
   padding-top: 200px; /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
@@ -375,7 +347,7 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 30%;
+  width: 30vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -421,7 +393,7 @@
 
 /* The Close Button */
 .close {
-  color: $clr1;
+  color: $clr8;
 
   // color: rgb(117, 114, 114);
   // color: $clr1;
@@ -437,4 +409,28 @@
     text-decoration: none;
     cursor: pointer;
   }
+}
+
+/////////////////////////////////////////////////////////DARK MODE//////////////////////////////////////////
+
+.dark-mode-small-search {
+  transition: 0.4s;
+  background-color: #afafaf;
+  color: white;
+}
+
+.dark-mode-header-container {
+  transition: 0.4s;
+  background-color: #222223;
+  color: white;
+}
+
+.dark-mode-name-pawesome {
+  transition: 0.4s;
+  color: white;
+}
+
+.dark-mode-link-pets {
+  transition: 0.4s;
+  color: white;
 }
