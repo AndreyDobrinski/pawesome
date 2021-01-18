@@ -54,18 +54,19 @@
     }
     .pet-details-info {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        // grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
-        text-align: center;
         align-items: center;
         padding: 30px 0px;
         border-top: 1px solid rgb(221, 221, 221);
         .pet-char{
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            gap: 10px;
             :first-child{
-                flex-basis: 30%;
+                flex-basis: 8%;
                 line-height: 1.2;
             }
             :last-child{
@@ -112,6 +113,9 @@
                 margin: auto;
             }
         }
+        .order-empty {
+            text-align: center;
+        }
     }
     .pet-details-owner {
         padding: 20px;
@@ -138,8 +142,8 @@
 }
 
 .pet-details-map {
-    height: 200px;
-    width: 100%;
+    border-top: 1px solid rgb(221, 221, 221);
+    padding: 30px 0px;
     > * {
         position: relative;
     }

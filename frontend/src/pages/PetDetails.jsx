@@ -1,5 +1,4 @@
 import { petService } from "../services/petService.js";
-// import { PetReview } from '../cmps/PetReview'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder } from '../store/actions/orderActions.js'
@@ -11,14 +10,14 @@ import { ReactComponent as Child } from "../assets/imgs/child.svg"
 import { ReactComponent as Disability } from "../assets/imgs/disability.svg"
 import { ReactComponent as Animals } from "../assets/imgs/animals.svg"
 import { ReactComponent as Pawprint } from "../assets/imgs/pawprint.svg"
+import { OrderCreator } from "../cmps/OrderCreator.jsx";
 
 
 
 
 export class _PetDetails extends Component {
     state = {
-        pet: null,
-        message: ''
+        pet: null
     };
 
     componentDidMount() {
@@ -37,32 +36,11 @@ export class _PetDetails extends Component {
         // this.setState({ pet })
     }
 
-    onAddOrder = (ev) => {
-        ev.preventDefault()
-        let { pet, message } = this.state
-        var order = {
-            status: "pending",
-            message: message,
-            pet: {
-                name: pet.name,
-                _id: pet._id,
-                imgUrls: pet.imgUrls
-            },
-            // byUser: {
-            //     "_id": "u101",
-            //     "fullname": "User 1"
-            // }
-        }
-        this.props.saveOrder(order)
-            .then(() => { this.setState({ message: '' }) })
-    }
 
-    onInputChange = ({ target }) => {
-        this.setState({ message: target.value }, () => console.log(this.state.message))
-    }
 
     render() {
-        const { pet, message } = this.state
+        const { pet } = this.state
+        const { loggedInUser } = this.props
         if (!pet) return <h2>Loading...</h2>
         return <div className="pet-details container">
             {/* <h1 className="page-signup-title">PetDetails</h1> */}
@@ -119,16 +97,11 @@ export class _PetDetails extends Component {
                     <p>{pet.description}</p>
                 </div>
                 <div className="pet-details-nav">
-                    <div className="pet-details-order">
-                        <form className="add-order" onSubmit={this.onAddOrder}>
-                            <textarea placeholder={`Hello! I want to adopt ${pet.name} ...`} onChange={this.onInputChange} value={message} name="order-txt" rows="8"></textarea>
-                            <button className="add-order-btn btn2">Adopt {pet.name}</button>
-                        </form>
-                    </div>
+                    <OrderCreator pet={pet} userId={loggedInUser._id} />
                     <div className="pet-details-owner">
-                        <div className="pet-details-map" >
+                        {/* <div className="pet-details-map" >
                             <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
-                        </div>
+                        </div> */}
                         <div className="pet-details-owner-info">
                             <h6>{pet.host.fullname}</h6>
                             <img src={pet.host.imgUrl} alt="" />
@@ -138,12 +111,12 @@ export class _PetDetails extends Component {
                     </div>
                 </div>
             </div>
-            {/* <img className="pet-img" src={pet.imgUrl} alt="" />
-            <h3>Price: {pet.price}</h3>
-            <h3>Type: {pet.type}</h3>
-            <h3>{pet.inStock ? 'IN' : 'NOT IN'} stock</h3> */}
-            {/* <PetReview petId={pet._id} /> */}
-            {/* <button onClick={() => this.props.history.push('/pet')}>Go Back</button> */}
+            <div className="pet-details-map" >
+                <h3>Location</h3>
+                <p>{pet.host.loc.address}</p>
+                <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
+            </div>
+
         </div>
     }
 }
@@ -152,6 +125,7 @@ const mapGlobalStateToProps = (state) => {
     return {
         // pets: state.petModule.pets,
         currPet: state.petModule.currPet,
+        loggedInUser: state.userModule.loggedInUser,
     }
 }
 

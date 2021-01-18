@@ -1,16 +1,21 @@
 Todo:
 vorder store
 vfunctions (onchange, save...)
--map
+vmap
 -add user to order
 
 
 UI:
-Is correct width 1200px?
 Need common design(buttons, fonts, colors)
-elements/tags - how exactly display?
-
+-Check if fonts are correct (on PD)
 
 Qs:
-Communication on Adopt btn?
 ?users?
+*building of order in frontend?
+
+
+Andrey: 
+-UserProfile: need to get id from query? not loggedInUser => set in Query loggedInUser._id <== for link in order
+
+Bug: 
+-every-time-rendering of map??

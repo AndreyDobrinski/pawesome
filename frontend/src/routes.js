@@ -7,10 +7,6 @@ import { OwnerProfile } from './pages/OwnerProfile'
 
 export const routes = [
     {
-        path: '/profile/:ownerId',
-        component: OwnerProfile
-    },
-    {
         path: '/pet/:petId',
         component: PetDetails
     },
@@ -21,6 +17,10 @@ export const routes = [
     {
         path: '/profile/:userId',
         component: Profile
+    },
+    {
+        path: '/profile/owner/:ownerId',
+        component: OwnerProfile
     },
     {
         path: '/',

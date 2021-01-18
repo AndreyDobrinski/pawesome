@@ -7,7 +7,7 @@
       "isAdmin": false,
       "isHost": false,
       "username": "vika",
-      "password": "secret",
+      "password": "123",
       "birthDate": "1999/05/12",
       "familyStatus": "single",
       "contactInfo": {
@@ -359,8 +359,8 @@
   "order": [
     {
       "_id": "19273481476",
-      "status": "pending",
       "createdAt": "2020 05 11",
+      "status": "denied",
       "message": "Hello SuperFerm, I'd like to adopt Bobby. What documents I should prepear?",
       "pet": {
         "name": "Margo",
@@ -377,7 +377,7 @@
       }
     },
     {
-      "status": "pending",
+      "status": "requested",
       "message": "Koooo!",
       "pet": {
         "name": "Frozi",
@@ -392,7 +392,32 @@
         "host_id": "51399391"
       },
       "createdAt": "1/16/2021, 1:38:08 PM",
-      "_id": "7uBaQgM"
+      "_id": "7uBaQgM",
+      "byUser": {
+        "_id": "u102",
+        "fullname": "User 2"
+      }
+    },
+    {
+      "status": "pending",
+      "message": "Very Very",
+      "pet": {
+        "name": "Frozi",
+        "_id": "20006547",
+        "imgUrls": [
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/1/?bust=1610552215&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
+          "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
+        ]
+      },
+      "createdAt": "1/17/2021, 9:43:03 PM",
+      "_id": "WVOwB5y",
+      "byUser": {
+        "_id": "UaABN",
+        "fullname": "User 2"
+      }
     }
   ]
 }
