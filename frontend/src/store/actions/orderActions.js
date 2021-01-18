@@ -4,7 +4,7 @@ export function loadOrders(ownerId) {
     return async (dispatch) => {
         const allOrders = await orderService.query()
         var orders = allOrders.filter(order => order.pet.host_id === ownerId)
-        const action = {
+        const action = { 
             type: 'SET_ORDERS',
             orders
         }
