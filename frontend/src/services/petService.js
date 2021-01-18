@@ -9,21 +9,22 @@ export const petService = {
     getById
 }
 
-const baseUrl = 'http://localhost:3030/pet';
+const baseUrl = 'http://localhost:3030/api/pet';
 
 
 function query(filterBy) {
     console.log('petService --- get pets query, filter -- ', filterBy)
     
-    let filter = {}
+    // let filter = {}
 
-    for ( var key in filterBy ) {
-      if (filterBy[key] !== 'all') filter[key] = filterBy[key] 
-    }
-
-    return (!filterBy) ? axios.get(baseUrl).then(res => res.data) :
-                         axios.get(baseUrl, { params: filter })
-                         .then(res => { console.log('result of filtered query --- ', res.data); return res.data })
+    // for ( var key in filterBy ) {
+    //   if (filterBy[key] !== 'all') filter[key] = filterBy[key] 
+    // }
+    return axios.get(baseUrl).then(res => res.data)
+    // return (!filterBy) ? axios.get(baseUrl).then(res => res.data)
+                        //  :
+                        //  axios.get(baseUrl, { params: filter })
+                        //  .then(res => { console.log('result of filtered query --- ', res.data); return res.data })
                          
 }
 
