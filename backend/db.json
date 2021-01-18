@@ -104,7 +104,7 @@
         "https://res.cloudinary.com/elnova/image/upload/v1610555795/photo-1610420389164-789fc4060fc4_tiy9mx.jpg",
         "otherImg.jpg"
       ],
-      "likes": "20",
+      "likes": 21,
       "shortDesc": "A calm funny cat",
       "description": "A cute fluffy cat that loves eating and sleeping for 21 hours",
       "age": "young",
@@ -176,7 +176,7 @@
         "https://res.cloudinary.com/elnova/image/upload/v1610555760/photo-1610353118401-8221b58aba9c_s7yvc8.jpg",
         "otherImg.jpg"
       ],
-      "likes": 279,
+      "likes": 280,
       "shortDesc": "Very friendly dog",
       "description": "Fluffy dog that likes ice cream",
       "age": "adult",
@@ -209,7 +209,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1609880854647-4ea668d5700b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": "6",
+      "likes": 6,
       "shortDesc": "Very friendly dog",
       "description": "Vey firendly, lovely dog that love to play with children",
       "age": "adult",
@@ -274,7 +274,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1610366018121-cf9fad4e89aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": "25",
+      "likes": 26,
       "shortDesc": "A brave dog",
       "description": "Real friend, 1 year old dog, love play with children",
       "age": "young",
@@ -306,7 +306,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1610555770410-5d746dd977c1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": "25",
+      "likes": 26,
       "shortDesc": "A strong, healthy dog",
       "description": "Real friend, 1.5 year old dog, love play with children",
       "age": "young",
@@ -339,7 +339,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": "14",
+      "likes": 23,
       "shortDesc": "Nice cat",
       "description": "Real friend, 1.5 year old cat",
       "age": "young",
@@ -425,7 +425,7 @@
       "createdAt": "1/17/2021, 9:43:03 PM",
       "_id": "WVOwB5y",
       "byUser": {
-        "_id": "UaABN",
+        "_id": "wRPLB",
         "fullname": "User 2"
       }
     }

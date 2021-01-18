@@ -3,14 +3,17 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder } from '../store/actions/orderActions.js'
 import { MapContainer } from "../cmps/MapContainer.jsx";
-import { ReactComponent as Gender } from "../assets/imgs/sex.svg"
+import { ReactComponent as Female } from "../assets/imgs/female.svg"
+import { ReactComponent as Male } from "../assets/imgs/male.svg"
 import { ReactComponent as Age } from "../assets/imgs/age.svg"
 import { ReactComponent as Size } from "../assets/imgs/size.svg"
 import { ReactComponent as Child } from "../assets/imgs/child.svg"
 import { ReactComponent as Disability } from "../assets/imgs/disability.svg"
 import { ReactComponent as Animals } from "../assets/imgs/animals.svg"
 import { ReactComponent as Pawprint } from "../assets/imgs/pawprint.svg"
+import { ReactComponent as Whatsapp } from "../assets/imgs/whatsapp.svg"
 import { OrderCreator } from "../cmps/OrderCreator.jsx";
+import { Reviews } from "../cmps/Reviews.jsx";
 
 
 
@@ -40,14 +43,16 @@ export class _PetDetails extends Component {
 
     render() {
         const { pet } = this.state
-        const { loggedInUser } = this.props
         if (!pet) return <h2>Loading...</h2>
         return <div className="pet-details container">
             {/* <h1 className="page-signup-title">PetDetails</h1> */}
             <div className="pet-details-main-title">
-                <h3>{pet.name}</h3>
-                <h5>😊 {pet.likes}</h5>
-                <h5>{pet.host.loc.address}</h5>
+                <h2>{pet.name}</h2>
+                <div className="pet-details-block flex center">
+                    <h5>😊 {pet.likes}</h5>
+                    <h5>·</h5>
+                    <h5>{pet.host.fullname}</h5>
+                </div>
             </div>
             <div className="pet-details-imgs">
                 {pet.imgUrls.map((img, idx) => {
@@ -62,16 +67,16 @@ export class _PetDetails extends Component {
                     </div>
                     <div className="pet-details-info">
                         <div className="pet-char">
-                            <Gender />
-                            <h5>{pet.gender}</h5>
+                            {pet.gender === 'female' ? <Female /> : <Male />}
+                            <h4>{pet.gender}</h4>
                         </div>
                         <div className="pet-char">
                             <Age />
-                            <h5>{pet.age}</h5>
+                            <h4>{pet.age}</h4>
                         </div>
                         <div className="pet-char">
                             <Size />
-                            <h5>{pet.size}</h5>
+                            <h4>{pet.size}</h4>
                         </div>
                         {pet.specialities && pet.specialities.map((spec, idx) => {
                             switch (spec) {
@@ -90,30 +95,26 @@ export class _PetDetails extends Component {
                             }
                             return <div key={idx} className="pet-char">
                                 {res}
-                                <h5>{spec}</h5>
+                                <h4>{spec}</h4>
                             </div>
                         })}
                     </div>
                     <p>{pet.description}</p>
                 </div>
                 <div className="pet-details-nav">
-                    <OrderCreator pet={pet} userId={loggedInUser._id} />
-                    <div className="pet-details-owner">
-                        {/* <div className="pet-details-map" >
-                            <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
-                        </div> */}
-                        <div className="pet-details-owner-info">
-                            <h6>{pet.host.fullname}</h6>
-                            <img src={pet.host.imgUrl} alt="" />
-                            <h6>{pet.host.phone}</h6>
-                            <h6>{pet.host.email}</h6>
-                        </div>
-                    </div>
+                    <OrderCreator pet={pet} />
                 </div>
             </div>
+
+            <Reviews />
+
             <div className="pet-details-map" >
                 <h3>Location</h3>
                 <p>{pet.host.loc.address}</p>
+                <div className="map-contact flex">
+                    <Whatsapp />
+                    <h6>{pet.host.phone}</h6>
+                </div>
                 <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
             </div>
 
@@ -125,7 +126,6 @@ const mapGlobalStateToProps = (state) => {
     return {
         // pets: state.petModule.pets,
         currPet: state.petModule.currPet,
-        loggedInUser: state.userModule.loggedInUser,
     }
 }
 

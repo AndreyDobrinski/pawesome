@@ -42,9 +42,9 @@ class _SearchFilterBar extends Component {
     render() {
         const { filterBy } = this.state
 
-        return <form className="appHeader-filter-container flex" onSubmit={this.onSearchPet}>
-            <div className="appHeader-filte-box flex">
-                <div className="appHeader-filte-box-type flex column">
+        return <form className="app-header-filter-container flex" onSubmit={this.onSearchPet}>
+            <div className="app-header-filte-box flex">
+                <div className="app-header-filte-box-type flex column">
                     <span className="type-title">Type</span>
                     <select name="kind" value={filterBy.kind} onChange={this.handleInput}>
                         <option value="all">ALL</option>
@@ -53,7 +53,7 @@ class _SearchFilterBar extends Component {
                         <option value="bird">BIRDS</option>
                     </select>
                 </div>
-                <div className="appHeader-filte-box-age flex column">
+                <div className="app-header-filte-box-age flex column">
                     <span className="age-title">Age</span>
                     <select name="age" value={filterBy.age} onChange={this.handleInput}>
                         <option value="all">ALL</option>
@@ -62,7 +62,7 @@ class _SearchFilterBar extends Component {
                         <option value="senior">SENIOR</option>
                     </select>
                 </div>
-                <div className="appHeader-filte-box-gender flex column">
+                <div className="app-header-filte-box-gender flex column">
                     <span className="gender-title">Gender</span>
                     <select name="gender" value={filterBy.gender} onChange={this.handleInput}>
                         <option value="all">ALL</option>
@@ -70,7 +70,7 @@ class _SearchFilterBar extends Component {
                         <option value="female">GIRL</option>
                     </select>
                 </div>
-                <div className="appHeader-filte-box-location flex column">
+                <div className="app-header-filte-box-location flex column">
                     <span className="location-title">Location</span>
                     <select name="address" value={filterBy.address} onChange={this.handleInput}>
                         <option value="all">ALL</option>
@@ -78,7 +78,7 @@ class _SearchFilterBar extends Component {
                         <option value="Raanana">Raanana</option>
                     </select>
                 </div>
-                <div className="appHeader-filte-box-Search flex justify-center align-center ">
+                <div className="app-header-filte-box-Search flex justify-center align-center ">
                     {/* {this.props.location.pathname === "/" &&
                     <Link to="/pet"><button className="search-btn btn1">+</button></Link>}
                     {this.props.location.pathname !== "/" &&

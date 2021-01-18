@@ -12,7 +12,7 @@ import '../src/assets/styles/styles.scss'
 export class App extends React.Component {
   render(){
     return (
-      <main>
+      <main >
           <AppHeader />
           <Switch>
             {routes.map(route => <Route key={route.path} exact component={route.component} path={route.path} />)}
