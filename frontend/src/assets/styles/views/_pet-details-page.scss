@@ -127,6 +127,8 @@
             outline: none;
             resize: none;
             padding: 10px;
+            font-family: 'roboto';
+            font-size: rem(16px);
         }
 
         .add-order {
@@ -184,5 +186,9 @@
         > :first-child {
             width: 1rem;
         }
+        margin: 0.5rem 0em;
+    }
+    p {
+        margin: 0.5rem 0em;
     }
 }

@@ -723,4 +723,216 @@
 >>>>>>> 33a815724b7f760cd2711458a536a6a2f4479bd0
 18.01.2021, 19:03:14 - INFO - Server is running on port: 3030 
 18.01.2021, 19:09:39 - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 1/19/2021, 6:05:08 PM - INFO - Server is running on port: 3030 
+=======
+18.01.2021, 19:22:07 - INFO - Server is running on port: 3030 
+18.01.2021, 23:05:56 - INFO - Server is running on port: 3030 
+19.01.2021, 10:54:19 - INFO - Server is running on port: 3030 
+19.01.2021, 14:03:41 - INFO - Server is running on port: 3030 
+19.01.2021, 14:17:34 - DEBUG - auth.service - login with username: vika (sid: EfpnYBUhAKnGXmETP2cXZvw5Rlm7W4I9)
+19.01.2021, 14:17:50 - INFO - Req from: Vika Gord (sid: EfpnYBUhAKnGXmETP2cXZvw5Rlm7W4I9)
+19.01.2021, 14:17:53 - ERROR - Failed to add order | {} (sid: EfpnYBUhAKnGXmETP2cXZvw5Rlm7W4I9)
+19.01.2021, 14:19:42 - INFO - Server is running on port: 3030 
+19.01.2021, 14:19:47 - ERROR - Failed to add order | {} (sid: nRndcZl9CM6ATA2azlbwvKWbDLFdl6JM)
+19.01.2021, 14:20:32 - INFO - Server is running on port: 3030 
+19.01.2021, 14:20:37 - ERROR - Failed to add order | {} (sid: ZHchZ4so0_7KhIcyMwSNDty-6AQ9LT7S)
+19.01.2021, 14:21:24 - INFO - Server is running on port: 3030 
+19.01.2021, 14:21:28 - ERROR - Failed to add order | {} (sid: 3gSiSfjaJr2eUW0DiIjUrhhhEYagLT7I)
+19.01.2021, 14:21:44 - INFO - Server is running on port: 3030 
+19.01.2021, 14:22:08 - INFO - Server is running on port: 3030 
+19.01.2021, 14:22:12 - ERROR - Failed to add order | {} (sid: A0lQ_jjLhNC1D2kwjLuKNC2GP9Y7fJxH)
+19.01.2021, 14:23:58 - INFO - Server is running on port: 3030 
+19.01.2021, 14:24:25 - DEBUG - auth.service - login with username: vika (sid: 2UysEbp7tKOORLUYzURmK1eVIRUdzDCP)
+19.01.2021, 14:27:06 - INFO - Server is running on port: 3030 
+19.01.2021, 14:27:17 - DEBUG - auth.service - login with username: vika (sid: 5fpa8hOjvr5f65ClSMcx1iHp4fc2h0tw)
+19.01.2021, 14:28:40 - INFO - Req from: Vika Gord (sid: 5fpa8hOjvr5f65ClSMcx1iHp4fc2h0tw)
+19.01.2021, 14:28:43 - ERROR - Failed to add order | {} (sid: 5fpa8hOjvr5f65ClSMcx1iHp4fc2h0tw)
+19.01.2021, 14:30:21 - INFO - Server is running on port: 3030 
+19.01.2021, 14:30:25 - ERROR - Failed to add order | {} (sid: sp6YaQCv1xA-6X6nM6TjMRU9f76a96QD)
+19.01.2021, 14:30:54 - DEBUG - auth.service - login with username: vika (sid: sp6YaQCv1xA-6X6nM6TjMRU9f76a96QD)
+19.01.2021, 14:31:03 - INFO - Req from: Vika Gord (sid: sp6YaQCv1xA-6X6nM6TjMRU9f76a96QD)
+19.01.2021, 14:31:09 - ERROR - Failed to add order | {} (sid: sp6YaQCv1xA-6X6nM6TjMRU9f76a96QD)
+19.01.2021, 14:32:14 - INFO - Req from: Vika Gord (sid: sp6YaQCv1xA-6X6nM6TjMRU9f76a96QD)
+19.01.2021, 14:32:50 - DEBUG - auth.service - login with username: vika (sid: yvrqkxKTQg1B_X3BrJ0RZsi8d-pLTNCG)
+19.01.2021, 14:32:56 - INFO - Req from: Vika Gord (sid: yvrqkxKTQg1B_X3BrJ0RZsi8d-pLTNCG)
+19.01.2021, 14:33:41 - INFO - Req from: Vika Gord (sid: yvrqkxKTQg1B_X3BrJ0RZsi8d-pLTNCG)
+19.01.2021, 14:34:20 - INFO - Server is running on port: 3030 
+19.01.2021, 14:34:34 - INFO - Server is running on port: 3030 
+19.01.2021, 14:38:50 - INFO - Server is running on port: 3030 
+19.01.2021, 14:42:27 - DEBUG - auth.service - signup with username: puki, fullname: puki (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:42:27 - DEBUG - auth.route - new account created: {"username":"puki","password":"$2b$10$SBH8pbU0Gvq4pUYPzZXVyua1Y1imSBTEpyRZKpyQLMeXlNLP5iTKO","fullname":"puki","_id":"6006d3b378c40b305cf07e37"} (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:42:27 - DEBUG - auth.service - login with username: puki (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:03 - DEBUG - auth.service - login with username: vika (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:03 - ERROR - Failed to Login Invalid username or password (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:11 - DEBUG - auth.service - login with username: vika (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:11 - ERROR - Failed to Login Invalid username or password (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:29 - DEBUG - auth.service - login with username: puki (sid: gLYMuXRYQZnpa-TCKptJLjVbaBn0kCZg)
+19.01.2021, 14:43:42 - DEBUG - auth.service - login with username: vika (sid: 7n7CpA3OjyfOhWkBuNbvld2cnDsCAzyZ)
+19.01.2021, 14:43:42 - ERROR - Failed to Login Invalid username or password (sid: 7n7CpA3OjyfOhWkBuNbvld2cnDsCAzyZ)
+19.01.2021, 14:44:34 - DEBUG - auth.service - login with username: vika (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:44:34 - ERROR - Failed to Login Invalid username or password (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:44:42 - DEBUG - auth.service - login with username: vka (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:44:42 - ERROR - Failed to Login Invalid username or password (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:44:48 - DEBUG - auth.service - login with username: vika (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:44:48 - ERROR - Failed to Login Invalid username or password (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:45:20 - DEBUG - auth.service - login with username: vika (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:45:20 - ERROR - Failed to Login Invalid username or password (sid: a2_U2Q0Re4Poq4BbEq6g2c8lEaV9Vkq_)
+19.01.2021, 14:47:13 - INFO - Server is running on port: 3030 
+19.01.2021, 14:47:23 - DEBUG - auth.service - login with username: vika (sid: QKKkB9-dIp_YwUAZlZi395y5gdSswbbD)
+19.01.2021, 14:47:30 - INFO - Req from: Vika Gord (sid: QKKkB9-dIp_YwUAZlZi395y5gdSswbbD)
+19.01.2021, 14:48:41 - DEBUG - auth.service - login with username: vika (sid: Lq7dEosN247G7-MeBqsHT0KfIt_I5wcw)
+19.01.2021, 14:48:46 - INFO - Req from: Vika Gord (sid: Lq7dEosN247G7-MeBqsHT0KfIt_I5wcw)
+19.01.2021, 14:56:19 - INFO - Req from: Vika Gord (sid: Lq7dEosN247G7-MeBqsHT0KfIt_I5wcw)
+19.01.2021, 14:56:53 - INFO - Server is running on port: 3030 
+19.01.2021, 14:58:13 - INFO - Server is running on port: 3030 
+19.01.2021, 15:00:17 - ERROR - Cannot get orders | {} (sid: DtFYWW9iI5Ha6KC5PNd53H_Qn6NkJ9k4)
+19.01.2021, 15:00:53 - DEBUG - auth.service - login with username: shelter1 (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:01:05 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:01:05 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:01:35 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:01:35 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:03 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:03 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:05 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:05 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:15 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:03:15 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:31 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:31 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:33 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:33 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:47 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:47 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:57 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:04:57 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:05:29 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:05:30 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:05:33 - INFO - Req from: Freedom Farm Sanctuary (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:05:33 - ERROR - Cannot get orders | {} (sid: YHl8stkUQs_8FYRPoDaCFccXFB1jozOo)
+19.01.2021, 15:06:51 - INFO - Server is running on port: 3030 
+19.01.2021, 15:06:56 - ERROR - Cannot get orders | {} (sid: x1B33X9kPhYOvc4AnzAkhhUUJ5ijZsRq)
+19.01.2021, 15:07:08 - ERROR - Cannot get orders | {} (sid: x1B33X9kPhYOvc4AnzAkhhUUJ5ijZsRq)
+19.01.2021, 15:07:27 - INFO - Server is running on port: 3030 
+19.01.2021, 15:09:16 - INFO - Server is running on port: 3030 
+19.01.2021, 15:09:18 - ERROR - Cannot get orders | {} (sid: glGOETzs5DMULVQYktKdAV_XXyhV4wA5)
+19.01.2021, 15:09:20 - ERROR - Cannot get orders | {} (sid: glGOETzs5DMULVQYktKdAV_XXyhV4wA5)
+19.01.2021, 15:09:28 - ERROR - Cannot get orders | {} (sid: glGOETzs5DMULVQYktKdAV_XXyhV4wA5)
+19.01.2021, 15:09:54 - ERROR - Cannot get orders | {} (sid: glGOETzs5DMULVQYktKdAV_XXyhV4wA5)
+19.01.2021, 15:09:56 - ERROR - Failed to add order | {} (sid: glGOETzs5DMULVQYktKdAV_XXyhV4wA5)
+19.01.2021, 15:10:40 - DEBUG - auth.service - login with username: shelter1 (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:45 - INFO - Req from: Freedom Farm Sanctuary (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:45 - ERROR - Cannot get orders | {} (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:48 - INFO - Req from: Freedom Farm Sanctuary (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:48 - ERROR - Cannot get orders | {} (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:49 - INFO - Req from: Freedom Farm Sanctuary (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:10:49 - ERROR - Cannot get orders | {} (sid: Q14M9wD31JGyFuSq7xC7XBiCrq9jEhIu)
+19.01.2021, 15:13:04 - DEBUG - auth.service - login with username: user3 (sid: SNXwZ2bXlBtB-7YTfW2jmSLI8btvfjVB)
+19.01.2021, 15:13:08 - INFO - Req from: Freedom Farm Sanctuary (sid: SNXwZ2bXlBtB-7YTfW2jmSLI8btvfjVB)
+19.01.2021, 15:13:08 - ERROR - Cannot get orders | {} (sid: SNXwZ2bXlBtB-7YTfW2jmSLI8btvfjVB)
+19.01.2021, 15:13:12 - INFO - Req from: Freedom Farm Sanctuary (sid: SNXwZ2bXlBtB-7YTfW2jmSLI8btvfjVB)
+19.01.2021, 15:13:12 - ERROR - Cannot get orders | {} (sid: SNXwZ2bXlBtB-7YTfW2jmSLI8btvfjVB)
+19.01.2021, 15:16:30 - INFO - Server is running on port: 3030 
+19.01.2021, 15:16:34 - ERROR - Cannot get orders | {} (sid: KmITI7xTWPuSCxpuynBCPR77KxlhuqSG)
+19.01.2021, 15:17:05 - INFO - Server is running on port: 3030 
+19.01.2021, 15:17:07 - ERROR - Cannot get orders | {} (sid: 9AqO_weMsDIw_nnCiJZLk1GGrOQz01so)
+19.01.2021, 15:17:29 - INFO - Server is running on port: 3030 
+19.01.2021, 15:18:25 - INFO - Server is running on port: 3030 
+19.01.2021, 15:18:53 - ERROR - Cannot get orders | {} (sid: nwvFQ9I6dvJLrCO2rfnRA58fyMEI-bqb)
+19.01.2021, 15:19:26 - ERROR - Cannot get orders | {} (sid: nwvFQ9I6dvJLrCO2rfnRA58fyMEI-bqb)
+19.01.2021, 15:19:46 - INFO - Server is running on port: 3030 
+19.01.2021, 15:21:54 - INFO - Server is running on port: 3030 
+19.01.2021, 15:21:56 - ERROR - Cannot get orders | {} (sid: glvU-JIt05c6dByz7uWqbDFRqxNOgN-L)
+19.01.2021, 15:23:19 - INFO - Server is running on port: 3030 
+19.01.2021, 15:23:22 - ERROR - Cannot get orders | {} (sid: dyQsszfJVOd3TUshj3F7zvwapvaYwjxe)
+19.01.2021, 15:24:06 - INFO - Server is running on port: 3030 
+19.01.2021, 15:24:10 - ERROR - Cannot get orders | {} (sid: Sf9p7oc-MHP7sewlApNXFUxRwKd01Twh)
+19.01.2021, 15:24:11 - ERROR - Cannot get orders | {} (sid: Sf9p7oc-MHP7sewlApNXFUxRwKd01Twh)
+19.01.2021, 15:24:51 - INFO - Server is running on port: 3030 
+19.01.2021, 15:24:58 - INFO - Server is running on port: 3030 
+19.01.2021, 15:25:00 - ERROR - Cannot get orders | {} (sid: kbI7bPcPpntelPw2VrNXGZadSgrIhe3Y)
+19.01.2021, 15:25:39 - INFO - Server is running on port: 3030 
+19.01.2021, 15:25:41 - ERROR - Cannot get orders | {} (sid: j6R--ROHtIieL3NVLf-ViikvT1xOwMj8)
+19.01.2021, 15:26:55 - INFO - Server is running on port: 3030 
+19.01.2021, 15:27:33 - INFO - Server is running on port: 3030 
+19.01.2021, 15:27:35 - ERROR - Cannot get orders | {} (sid: u1iqiVkhO0pAZVvNtIJ87iKUXydZxqkN)
+19.01.2021, 15:27:43 - INFO - Server is running on port: 3030 
+19.01.2021, 15:27:45 - ERROR - Cannot get orders | {} (sid: sYXVBLoqxeWnlYXHab4pUy96S81foVxH)
+19.01.2021, 15:27:51 - INFO - Server is running on port: 3030 
+19.01.2021, 15:29:09 - INFO - Server is running on port: 3030 
+19.01.2021, 15:29:10 - ERROR - Cannot get orders | {} (sid: -bVJDzjfbQ7_ger6eFDoB0jMMwNJR9Bf)
+19.01.2021, 15:29:31 - DEBUG - auth.service - login with username: vika (sid: 2Ylo3Qn-foJOHWkH0vRFX3a1BnQIYLNQ)
+19.01.2021, 15:29:36 - INFO - Req from: Vika Gord (sid: 2Ylo3Qn-foJOHWkH0vRFX3a1BnQIYLNQ)
+19.01.2021, 15:29:36 - ERROR - Cannot get orders | {} (sid: 2Ylo3Qn-foJOHWkH0vRFX3a1BnQIYLNQ)
+19.01.2021, 15:30:08 - DEBUG - auth.service - login with username: user3 (sid: HyMUMhn8RB4SxahfCSkSgU_pbRgWxZdZ)
+19.01.2021, 15:30:13 - INFO - Req from: Freedom Farm Sanctuary (sid: HyMUMhn8RB4SxahfCSkSgU_pbRgWxZdZ)
+19.01.2021, 15:30:13 - ERROR - Cannot get orders | {} (sid: HyMUMhn8RB4SxahfCSkSgU_pbRgWxZdZ)
+19.01.2021, 15:30:28 - DEBUG - auth.service - login with username: shelter1 (sid: o1E97vli3vzSYf5nUKJ_4pFwCD9zj4YR)
+19.01.2021, 15:30:32 - INFO - Req from: Freedom Farm Sanctuary (sid: o1E97vli3vzSYf5nUKJ_4pFwCD9zj4YR)
+19.01.2021, 15:30:32 - ERROR - Cannot get orders | {} (sid: o1E97vli3vzSYf5nUKJ_4pFwCD9zj4YR)
+19.01.2021, 15:30:33 - INFO - Req from: Freedom Farm Sanctuary (sid: o1E97vli3vzSYf5nUKJ_4pFwCD9zj4YR)
+19.01.2021, 15:30:33 - ERROR - Cannot get orders | {} (sid: o1E97vli3vzSYf5nUKJ_4pFwCD9zj4YR)
+19.01.2021, 15:36:50 - DEBUG - auth.service - login with username: vika (sid: NsxjLP2cU3zv9ltt1q88y0G_OUiGIvF1)
+19.01.2021, 15:37:40 - DEBUG - auth.service - login with username: shelter1 (sid: dmEYuqh1g3dxEVbkM-TnTsECnHdmXBoQ)
+19.01.2021, 15:37:45 - INFO - Req from: Freedom Farm Sanctuary (sid: dmEYuqh1g3dxEVbkM-TnTsECnHdmXBoQ)
+19.01.2021, 15:37:45 - ERROR - Cannot get orders | {} (sid: dmEYuqh1g3dxEVbkM-TnTsECnHdmXBoQ)
+19.01.2021, 15:37:52 - INFO - Req from: Freedom Farm Sanctuary (sid: dmEYuqh1g3dxEVbkM-TnTsECnHdmXBoQ)
+19.01.2021, 15:37:52 - ERROR - Cannot get orders | {} (sid: dmEYuqh1g3dxEVbkM-TnTsECnHdmXBoQ)
+19.01.2021, 15:39:19 - INFO - Server is running on port: 3030 
+19.01.2021, 15:39:25 - ERROR - Cannot get orders | {} (sid: YI3PI8XaH3VZsybBdSexoQjGXTpF6zIg)
+19.01.2021, 15:39:43 - INFO - Server is running on port: 3030 
+19.01.2021, 15:40:28 - INFO - Server is running on port: 3030 
+19.01.2021, 15:40:30 - ERROR - Cannot get orders | {} (sid: NYPDabfaf7YL123-n8hL_-57dIU4rsRE)
+19.01.2021, 15:41:11 - DEBUG - auth.service - login with username: shelter1 (sid: 8A9Z3Cv4htqa_ljRbPlJ6-eq_Dcd39UB)
+19.01.2021, 15:41:15 - INFO - Req from: Freedom Farm Sanctuary (sid: 8A9Z3Cv4htqa_ljRbPlJ6-eq_Dcd39UB)
+19.01.2021, 15:41:15 - ERROR - Cannot get orders | {} (sid: 8A9Z3Cv4htqa_ljRbPlJ6-eq_Dcd39UB)
+19.01.2021, 15:41:43 - INFO - Server is running on port: 3030 
+19.01.2021, 15:41:45 - ERROR - Cannot get orders | {} (sid: uCakDC1Ob0aZH18TNN6YOlCnGp3EbaLF)
+19.01.2021, 15:41:56 - INFO - Server is running on port: 3030 
+19.01.2021, 16:02:45 - INFO - Server is running on port: 3030 
+19.01.2021, 16:04:26 - DEBUG - auth.service - login with username: vika (sid: KBoXVBPUpI5suc3lWfexIunMhLVy1Mk5)
+19.01.2021, 16:04:34 - INFO - Req from: Vika Gord (sid: KBoXVBPUpI5suc3lWfexIunMhLVy1Mk5)
+19.01.2021, 16:04:58 - DEBUG - auth.service - login with username: vika (sid: yFjikY1N7I3ZGS1jopG856Xs0LzOmJ1v)
+19.01.2021, 16:05:03 - INFO - Req from: Vika Gord (sid: yFjikY1N7I3ZGS1jopG856Xs0LzOmJ1v)
+19.01.2021, 16:05:18 - DEBUG - auth.service - login with username: puki (sid: Uo8D7SK_CeEpv2YazIF8464YmdX1sZNT)
+19.01.2021, 16:05:22 - INFO - Req from: puki (sid: Uo8D7SK_CeEpv2YazIF8464YmdX1sZNT)
+19.01.2021, 16:05:48 - DEBUG - auth.service - login with username: shelter1 (sid: rRkxpKZFGk7AnC_PwCYLrBiNOVEM1z_q)
+19.01.2021, 16:05:54 - INFO - Req from: Freedom Farm Sanctuary (sid: rRkxpKZFGk7AnC_PwCYLrBiNOVEM1z_q)
+19.01.2021, 16:06:46 - INFO - Req from: Freedom Farm Sanctuary (sid: rRkxpKZFGk7AnC_PwCYLrBiNOVEM1z_q)
+19.01.2021, 16:17:14 - INFO - Server is running on port: 3030 
+19.01.2021, 16:18:33 - INFO - Server is running on port: 3030 
+19.01.2021, 16:18:50 - INFO - Server is running on port: 3030 
+19.01.2021, 16:21:34 - INFO - Server is running on port: 3030 
+19.01.2021, 16:21:50 - INFO - Server is running on port: 3030 
+19.01.2021, 16:22:14 - INFO - Server is running on port: 3030 
+19.01.2021, 16:24:44 - INFO - Server is running on port: 3030 
+19.01.2021, 16:24:51 - ERROR - Cannot get orders | {} (sid: lwMWIJoQHSbyr9TN_0gZ0PamVLCzlgAP)
+19.01.2021, 16:25:37 - INFO - Server is running on port: 3030 
+19.01.2021, 16:25:40 - ERROR - Cannot get orders | {} (sid: JfK7amNEKIffUydqKC-AjoKakYz0b5ol)
+19.01.2021, 16:26:14 - INFO - Server is running on port: 3030 
+19.01.2021, 16:26:16 - ERROR - Cannot get orders | {} (sid: RYbSvXixPBCF31RXNk9GjRH_v4vPNTSp)
+19.01.2021, 16:26:17 - ERROR - Cannot get orders | {} (sid: RYbSvXixPBCF31RXNk9GjRH_v4vPNTSp)
+19.01.2021, 16:26:23 - INFO - Server is running on port: 3030 
+19.01.2021, 16:26:45 - DEBUG - auth.service - login with username: shelter1 (sid: zE62SNtKYIYO8ExGI0AhF0PDC0Oin-OJ)
+19.01.2021, 16:27:05 - INFO - Server is running on port: 3030 
+19.01.2021, 16:27:08 - ERROR - Cannot get orders | {} (sid: YYKYb_VdHoMRWJtmwsKsGBkhOGzQdODx)
+19.01.2021, 16:27:28 - DEBUG - auth.service - login with username: shelter1 (sid: ZIRf99o8B6hx3041s7toN5Q0J12RCnIL)
+19.01.2021, 16:27:33 - INFO - Req from: Freedom Farm Sanctuary (sid: ZIRf99o8B6hx3041s7toN5Q0J12RCnIL)
+19.01.2021, 16:27:33 - ERROR - Cannot get orders | {} (sid: ZIRf99o8B6hx3041s7toN5Q0J12RCnIL)
+19.01.2021, 16:27:50 - INFO - Server is running on port: 3030 
+19.01.2021, 16:27:51 - ERROR - Cannot get orders | {} (sid: 7CVzqjR2u_IFUY0mgJqWM7SFfhtts1-8)
+19.01.2021, 16:28:09 - INFO - Server is running on port: 3030 
+19.01.2021, 16:28:33 - INFO - Server is running on port: 3030 
+19.01.2021, 16:32:01 - ERROR - Cannot get orders | {} (sid: XxCMmC9Gaaq9oj1RnwJkca5wvAFqryTd)
+19.01.2021, 16:32:18 - INFO - Server is running on port: 3030 
+19.01.2021, 17:02:55 - INFO - Server is running on port: 3030 
+19.01.2021, 17:04:36 - INFO - Server is running on port: 3030 
+19.01.2021, 17:43:28 - DEBUG - auth.service - login with username: puki (sid: JlTAxJSCq5cRGcL1YDFs4F0vsxurRZT4)
+19.01.2021, 17:43:35 - INFO - Req from: puki (sid: JlTAxJSCq5cRGcL1YDFs4F0vsxurRZT4)
+19.01.2021, 17:44:01 - DEBUG - auth.service - login with username: puki (sid: sYokvXsnzYjlczRJMKtXx0LQRt9QL-YM)
+19.01.2021, 17:44:06 - INFO - Req from: puki (sid: sYokvXsnzYjlczRJMKtXx0LQRt9QL-YM)
+19.01.2021, 17:44:15 - INFO - Req from: puki (sid: sYokvXsnzYjlczRJMKtXx0LQRt9QL-YM)
+19.01.2021, 17:44:38 - INFO - Req from: puki (sid: sYokvXsnzYjlczRJMKtXx0LQRt9QL-YM)
+19.01.2021, 18:04:42 - INFO - Server is running on port: 3030 
+19.01.2021, 19:47:17 - INFO - Server is running on port: 3030 
+>>>>>>> 8ad9ddd1bcbf017c3586f3c1b44f21a140075b91

@@ -14,29 +14,59 @@
             color: $clr3;
         }
     }
+    h5 {
+        font-size: rem(14px);
+        font-weight: 400;
+        color: $clr7;
+    }
 }
 .reviews {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
+    gap: 75px;
+    @include for-mobile-layout {
+        display: block;
+    }
     .review {
+        @include for-mobile-layout {
+            margin-bottom: 25px;
+        }
         .review-author {
             display: grid;
             grid-template-columns: 1fr 5fr;
             grid-template-rows: repeat(2, 1fr);
             align-items: center;
+            margin-bottom: 10px;
+            column-gap: 10px;
+            .review-name-mark {
+                display: flex;
+                justify-content: space-between;
+                .stars {
+                    height: rem(14px);
+                    display: flex;
+                    // display: inline
+                    > * {
+                        width: auto;
+                    }
+                }
+            }
             .review-img {
                 grid-row: span 2;
                 margin-right: 10px;
+                width: 100%;
                 img {
                     border-radius: 50%;
                 }
             }
-            > :last-child {
-                // margin: 0;
-                // color: red;
+            >:last-child{
+                align-self: start;
             }
+        }
+        .review-txt {
+            font-size: rem(16px);
+            font-weight: 400;
+            color: $clr3;
         }
     }
 }
