@@ -6,7 +6,7 @@ import { orderService } from "../services/orderService.js";
 
 
 
-export class _OrderCreator extends Component {
+export class _OrderAdd extends Component {
 
     state = {
         message: '',
@@ -14,7 +14,7 @@ export class _OrderCreator extends Component {
     }
 
     async componentDidMount() {
-        if(!this.props.loggedInUser) return
+        if(!this.props.loggedInUser) return 
         let { pet } = this.props
         let res = await orderService.isOrderDone(pet._id, this.props.loggedInUser._id)
         this.setState({ isOrderDone: res })
@@ -22,22 +22,10 @@ export class _OrderCreator extends Component {
 
     onAddOrder = (ev) => {
         ev.preventDefault()
-        let { pet } = this.props
+        let { pet, loggedInUser } = this.props
+        if(!loggedInUser) return ///request to login
         let { message } = this.state
-        var order = {
-            status: "pending",
-            message: message,
-            pet: {
-                name: pet.name,
-                _id: pet._id,
-                imgUrls: pet.imgUrls
-            },
-            // byUser: {
-            //     "_id": "u101",
-            //     "fullname": "User 1"
-            // }
-        }
-        this.props.saveOrder(order)
+        this.props.saveOrder(pet, message)
             .then(() => { this.setState({ isOrderDone: true }) })
     }
 
@@ -46,8 +34,6 @@ export class _OrderCreator extends Component {
     }
 
     render() {
-        const { loggedInUser } = this.props
-
         var { message, isOrderDone } = this.state
         var { pet } = this.props
         return <div className="pet-details-order">
@@ -70,4 +56,4 @@ const mapDispatchToProps = {
     saveOrder
 }
 
-export const OrderCreator = connect(mapStateToProps, mapDispatchToProps)(_OrderCreator)
+export const OrderAdd = connect(mapStateToProps, mapDispatchToProps)(_OrderAdd)

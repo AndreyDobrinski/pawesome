@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { saveOrder } from '../store/actions/orderActions.js'
+import { saveOrder, updOrder } from '../store/actions/orderActions.js'
 
 
 
@@ -22,14 +22,16 @@ export class _OrderPreview extends Component {
     updStatus = ({ target }) => {
         this.setState({ status: target.value }, () => {
             var { order } = this.props
-            order.status = target.value
-            this.props.saveOrder(order)
+            var newOrder = {...order, status: target.value}
+            this.props.updOrder(newOrder)
         })
     }
 
     render() {
         var { moreInfo, status } = this.state
         var { order } = this.props
+        console.log('ORDER', order)
+        if(!order) return <div className="order"></div>
         return <div className="order">
             <div className="order-short">
                 <Link className="order-pet" to={`/pet/${order.pet._id}`}>
@@ -73,7 +75,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    saveOrder
+    saveOrder,
+    updOrder
 }
 
 export const OrderPreview = connect(mapStateToProps, mapDispatchToProps)(_OrderPreview)

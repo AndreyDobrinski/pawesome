@@ -6,7 +6,8 @@ const axios = Axios.create({
 export const orderService = {
     query,
     saveOrder,
-    isOrderDone
+    isOrderDone,
+    updOrder
 }
 const BASE_URL = 'http://localhost:3030/api/order'
 // const BASE_URL = (process.env.NODE_ENV !== 'development')
@@ -38,12 +39,13 @@ async function isOrderDone(petId, userId) {
 
 
 async function saveOrder(newOrder) {
-    if (newOrder._id) {
-        await axios.put(`${BASE_URL}/${newOrder._id}`, newOrder)
-        return null
-    }
-    newOrder.createdAt = new Date().toLocaleString()
-    console.log('order in orderService', newOrder)
+    // newOrder.createdAt = new Date().toLocaleString() !!!!!!!!
+    console.log('order tosave in orderService', newOrder)
     const res = await axios.post(`${BASE_URL}`, newOrder)
+    return await res.data
+}
+
+async function updOrder(newOrder) {
+    const res = await axios.put(`${BASE_URL}/${newOrder._id}`, newOrder)
     return await res.data
 }
