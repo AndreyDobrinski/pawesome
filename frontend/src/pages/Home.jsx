@@ -46,7 +46,7 @@ export class _Home extends Component {
         {/* <div className="text-test container">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque porro consequuntur a asperiores inventore cupiditate? Dignissimos nemo hic, sint magni sequi consequuntur tenetur repellendus placeat libero quasi quaerat perferendis culpa.
         </div> */}
-        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="2" clsName="container  pets-preview-container new-pets-preview" />
+        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="15" clsName="container  pets-preview-container new-pets-preview" />
 
 
         {/* <div className="text-test container">

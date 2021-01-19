@@ -4,7 +4,8 @@ import {connect} from 'react-redux'
 import {loadPets} from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
 import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
-import { PreviewContainer } from '../cmps/PreviewContainer.jsx'
+import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
+import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
 
 export class _Pet extends Component {
 
@@ -22,13 +23,14 @@ export class _Pet extends Component {
 
     return (
       <React.Fragment>
-
-      {/* <div className="pet-list container flex">
-        <FilterBtn field="kind" value="cat"/>
-        <FilterBtn field="kind" value="dog"/>
-      </div> */}
       <div className="pet-list container" style={{"marginTop": "200px"}}>
-        <PetList pets={pets}/>
+        <div className="flex">
+          <FilterBtn field="size" value="big"/>
+          <FilterBtn field="size" value="small"/>
+          <FilterNameInput />
+          <SortByInput />
+        </div>
+          <PetList pets={pets}/>
       </div>
       </React.Fragment>
     )

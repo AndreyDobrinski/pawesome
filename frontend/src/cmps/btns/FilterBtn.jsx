@@ -6,7 +6,10 @@ export class _FilterBtn extends Component {
 
     onFilter = () => {
         const {field, value} = this.props
-        this.props.loadPets({[field]: value})
+
+        const filterBy = {...this.props.filterBy, [field]: value }
+        // this.props.setFilter(filterBy)
+        this.props.loadPets(filterBy)
     }
 
     render() {
@@ -18,7 +21,8 @@ export class _FilterBtn extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      pets: state.petModule.pets
+      pets: state.petModule.pets,
+      filterBy: state.petModule.filterBy
     }
   }
   

@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link, withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom'
 
 import { loadPets, setFilter} from '../store/actions/petActions.js'
 import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
@@ -45,7 +45,7 @@ class _SearchFilterBar extends Component {
         return <form className="app-header-filter-container flex" onSubmit={this.onSearchPet}>
             <div className="app-header-filte-box flex">
                 <div className="app-header-filte-box-type flex column">
-                    <span className="type-title">Type</span>
+                    <span className="type-title">Pet</span>
                     <select name="kind" value={filterBy.kind} onChange={this.handleInput}>
                         <option value="all">ALL</option>
                         <option value="cat">CATS</option>
@@ -79,10 +79,6 @@ class _SearchFilterBar extends Component {
                     </select>
                 </div>
                 <div className="app-header-filte-box-Search flex justify-center align-center ">
-                    {/* {this.props.location.pathname === "/" &&
-                    <Link to="/pet"><button className="search-btn btn1">+</button></Link>}
-                    {this.props.location.pathname !== "/" &&
-                    <button className="search-btn btn1">+</button>} */}
                     <button className="search-btn btn1"><Search/></button>
                 </div>
             </div>
