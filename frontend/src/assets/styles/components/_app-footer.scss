@@ -1,8 +1,9 @@
 .app-footer {
-  // width: 100%;
+  transition: 0.4s;
+  // width: 100vw;
   height: 100px;
   background-color: #f7f7f7;
-  border-top: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
   // position: fixed;
   // bottom: 0;
   // width: 100%;
@@ -42,3 +43,12 @@
 
 
 
+/////////////////////////////////////////////////////////DARK MODE//////////////////////////////////////////
+ 
+
+
+.dark-mode-footer{
+  background-color: #222223;
+  color: white;
+  transition: 0.4s;
+}
