@@ -14,9 +14,9 @@ export class _OrderCreator extends Component {
     }
 
     async componentDidMount() {
-        let { pet, userId } = this.props
-        console.log('data', pet._id, userId)
-        let res = await orderService.isOrderDone(pet._id, userId)
+        if(!this.props.loggedInUser) return
+        let { pet } = this.props
+        let res = await orderService.isOrderDone(pet._id, this.props.loggedInUser._id)
         this.setState({ isOrderDone: res })
     }
 
@@ -46,6 +46,8 @@ export class _OrderCreator extends Component {
     }
 
     render() {
+        const { loggedInUser } = this.props
+
         var { message, isOrderDone } = this.state
         var { pet } = this.props
         return <div className="pet-details-order">
@@ -60,7 +62,7 @@ export class _OrderCreator extends Component {
 
 const mapStateToProps = (state) => {
     return {
-
+        loggedInUser: state.userModule.loggedInUser
     }
 }
 
