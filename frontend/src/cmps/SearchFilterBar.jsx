@@ -3,7 +3,10 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import { loadPets, setFilter} from '../store/actions/petActions.js'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
 import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
+
 
 
 class _SearchFilterBar extends Component {
@@ -42,7 +45,7 @@ class _SearchFilterBar extends Component {
     render() {
         const { filterBy } = this.state
 
-        return <form className="app-header-filter-container flex" onSubmit={this.onSearchPet}>
+        return <form className="app-header-filter-container flex " onSubmit={this.onSearchPet}>
             <div className="app-header-filte-box flex">
                 <div className="app-header-filte-box-type flex column">
                     <span className="type-title">Pet</span>
@@ -89,13 +92,16 @@ class _SearchFilterBar extends Component {
 const mapStateToProps = (state) => {
     return {
         pets: state.petModule.pets,
-        filterBy: state.petModule.filterBy
+        filterBy: state.petModule.filterBy,
+        isDarkMode: state.appSettingsModule.isDarkMode
+
     }
 }
 
 const mapDispatchToProps = {
     loadPets,
-    setFilter
+    setFilter,
+    toggleDarkMode
 }
 
 export const SearchFilterBar = connect(mapStateToProps, mapDispatchToProps)(withRouter(_SearchFilterBar))

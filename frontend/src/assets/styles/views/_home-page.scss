@@ -1,3 +1,8 @@
+.page-home {
+  // background-color: aqua;
+  transition: 0.4s;
+}
+
 .page-home-hero {
   position: relative;
 }
@@ -11,7 +16,7 @@
 
 .page-home-hero-content {
   position: absolute;
-  
+
   color: white;
   // color: $clr8;
   font-size: rem(70px);
@@ -22,137 +27,322 @@
   max-width: 900px;
 }
 
-.learn-more-btn{
-    padding: 15px 50px;
+.learn-more-btn {
+  transition: 0.4s;
+  padding: 15px 50px;
+  border: 2px solid #86cb77;
+  background-image: none;
+  background-color: white;
+  margin-right: rem(10px);
+  font-size: rem(17px);
+  border-radius: 30px;
+  color: #86cb77;
+  font-weight: 500;
+  transition: 0.1s;
+  outline: none;
+  margin-bottom: 30px;
+
+  a {
+    text-decoration: none;
+  }
+  &:hover {
     border: 2px solid #86cb77;
-    background-image: none;
-    background-color: white ;
-    margin-right: rem(10px);
-    font-size: rem(17px);
-    border-radius: 30px;
-    color: #86cb77;
-    font-weight: 500;
-    transition: 0.1s;
-    outline: none;
-    margin-bottom: 30px;
-    
-    
-    a {
-      text-decoration: none;
-    }
-    &:hover {
-      border: 2px solid #86cb77;
-      cursor: pointer;
-      background-image: linear-gradient(to right, #bbdb7f, #86cb77);
-      color: white;
-
-    }
+    cursor: pointer;
+    background-image: linear-gradient(to right, #bbdb7f, #86cb77);
+    color: white;
+  }
 }
 
-.text-test {
-  font-size: rem(30px);
-  padding: 20px;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.page-home-please-adopt {
+  // margin-top: 50px;
+  // margin-bottom: 10px;
+  img {
+    height: 600px;
+    object-fit: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+  .page-home-adopt-circle {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 50%;
+    background-color: #fff5ee;
+    color: $clr8;
+    margin: auto 0;
+    font-size: 2rem;
+    margin-top: 10px;
+    line-height: 1.3;
+
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .adopt-reasons {
+    color: white;
+    font-size: rem(26px);
+
+    .adopt-reasons-box1 {
+      position: absolute;
+      top: 145%;
+      left: 15%;
+
+      li {
+        list-style: circle;
+      }
+    }
+
+    .adopt-reasons-box2 {
+      position: absolute;
+      top: 145%;
+      left: 50%;
+      li {
+        list-style: circle;
+      }
+    }
+  }
 }
-
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 .pets-preview-container {
   margin-top: 100px;
+  h1 {
+    color: $clr8;
+    font-size: rem(25px);
+    margin-left: 40px;
+    user-select: none;
+    margin-bottom: 30px;
+  }
+  &.new-pets-preview {
+    .pet-preview {
+      background-color: inherit;
+      .square-ratio {
+        margin-bottom: 10px;
+        user-select: none;
+      }
+
+      .pet-preview-pet-name {
+        transition: 0.4s;
+        user-select: none;
+        color: black;
+        font-size: rem(18px);
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+      .dark-mode-pet-name {
+        transition: 0.4s;
+        color: white;
+      }
+
+      p {
+        transition: 0.4s;
+        user-select: none;
+        margin-bottom: 10px;
+        color: #535353;
+      }
+      .dark-mode-pet-short-desc{
+        transition: 0.4s;
+        color: #949494;
+        
+      }
+      .pet-preview-host-and-likes {
+        .pet-preview-host {
+          transition: 0.4s;
+          color: #727272;
+          user-select: none;
+          font-size: rem(13px);
+        }
+        .dark-mode-pet-host{
+          transition: 0.4s;
+          color: #c7c2c2;
+        }
+        .pet-preview-likes {
+          .pet-preview-likes-amount {
+            transition: 0.4s;
+
+            margin-left: 10px;
+            font-size: rem(18px);
+            user-select: none;
+          }
+          .dark-mode-pet-likes-amount{
+            transition: 0.4s;
+            color: #e7e4e4;
+          }
+          .pet-preview-like-btn {
+            cursor: pointer;
+            background-image: none;
+            // background-color: white;
+            // font-size: rem(20px);
+          }
+        }
+      }
+    }
+  }
+
+  &.long-waiting-pets-preview {
+    margin-bottom: 100px;
+    .pet-preview {
+      background-color: inherit;
+
+      .square-ratio {
+        margin-bottom: 10px;
+        user-select: none;
+      }
+
+      .pet-preview-pet-name {
+        user-select: none;
+        color: black;
+        font-size: rem(18px);
+        margin-bottom: 10px;
+        margin-right: 10px;
+      }
+      .dark-mode-pet-name {
+        transition: 0.4s;
+        color: white;
+      }
+
+      p {
+        transition: 0.4s;
+        user-select: none;
+        margin-bottom: 10px;
+        color: #535353;
+      }
+      .dark-mode-pet-short-desc{
+        transition: 0.4s;
+        color: #949494;
+        
+      }
+      .pet-preview-host-and-likes {
+        .pet-preview-host {
+          transition: 0.4s;
+          color: #727272;
+          user-select: none;
+          font-size: rem(13px);
+        }
+        .dark-mode-pet-host{
+          transition: 0.4s;
+          color: #c7c2c2;
+        }
+        .pet-preview-likes {
+          .pet-preview-likes-amount {
+            transition: 0.4s;
+
+            margin-left: 10px;
+            font-size: rem(18px);
+            user-select: none;
+          }
+          .dark-mode-pet-likes-amount{
+            transition: 0.4s;
+            color: #e7e4e4;
+
+          }
+          .pet-preview-like-btn {
+            cursor: pointer;
+            background-image: none;
+            background-color: inherit;
+            // font-size: rem(20px);
+          }
+        }
+      }
+    }
+  }
 }
-
-.pets-preview-container h1 {
-  color: whitesmoke
-}
-
-.new-pets-preview {
-  background-color: $clr8;
-}
-
-.long-waiting-pets-preview {
- 
-  background-color: $clr1;
-}
-
-
-
 
 ////////////////////////////// PLAN ADOPT ///////////////////////////////
 
-
 .plan-adopt {
   background-color: #efeef1;
-  border-bottom: 1px solid  #efeef1;
+  // border-bottom: 1px solid #efeef1;
+  border-bottom: 1px solid #ddd;
+
+  transition: 0.4s;
 
   .plan-adopt-header {
     color: rgb(70, 68, 68);
     padding-top: 60px;
-    .plan-adopt-header-inner{
+    .plan-adopt-header-inner {
       margin-bottom: 40px;
-      .plan-adopt-header-txt{
+      .plan-adopt-header-txt {
+        transition: 0.4s;
+
         font-weight: 100;
         font-size: rem(26px);
       }
     }
   }
 
-  .plan-adopt-body{
-
-    
-    .plan-adopt-body-box1{
-   
-      .plan-adopt-body-header1{
+  .plan-adopt-body {
+    .plan-adopt-body-box1 {
+      .plan-adopt-body-header1 {
         font-size: rem(22px);
         padding: 0px 30px 10px 30px;
         color: #86cb77;
-
       }
-      .plan-adopt-body-txt1{
+      .plan-adopt-body-txt1 {
         color: $clr4;
         font-size: rem(14px);
       }
-
     }
 
-    .plan-adopt-body-box2{
-   
-      .plan-adopt-body-header2{
+    .plan-adopt-body-box2 {
+      .plan-adopt-body-header2 {
         font-size: rem(22px);
         padding: 0px 30px 10px 30px;
         color: #86cb77;
-
       }
-      .plan-adopt-body-txt2-holder{
+      .plan-adopt-body-txt2-holder {
         margin: 5px 0px 20px 0px;
 
-        .plan-adopt-body-txt2{
+        .plan-adopt-body-txt2 {
           color: $clr4;
           font-size: rem(14px);
           margin: 5px;
         }
       }
-
     }
 
-    .plan-adopt-body-box3{
-   
-      .plan-adopt-body-header3{
+    .plan-adopt-body-box3 {
+      .plan-adopt-body-header3 {
         font-size: rem(22px);
         padding: 0px 30px 10px 30px;
         color: #86cb77;
-
       }
-      .plan-adopt-body-txt3{
+      .plan-adopt-body-txt3 {
         color: $clr4;
         font-size: rem(14px);
         margin: 5px 0px 20px 0px;
-
       }
-
     }
-
   }
-
-
-
-
 }
+
+/////////////////////////////////// DARM MODE ///////////////////////////
+
+.dark-mode-page-home {
+  transition: 0.4s;
+  background-color: #323233;
+}
+
+.dark-mode-plan-adopt {
+  transition: 0.4s;
+  background-color: #3f3f41;
+  border-bottom: 1px solid #000000;
+}
+
+.dark-mode-plan-adopt-header {
+  transition: 0.4s;
+  color: white;
+}
+
+.dark-mode-plan-adopt-btn {
+  transition: 0.4s;
+  border: 2px solid #3a3a3a;
+  // background-color: rgb(77, 75, 75);
+  background-color: rgb(104, 101, 101);
+  color: #86cb77;
+}
+
+

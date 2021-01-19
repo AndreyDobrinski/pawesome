@@ -142,7 +142,7 @@
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/2/?bust=1610552217&width=720",
         "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/50266808/3/?bust=1610552219&width=720"
       ],
-      "likes": "271",
+      "likes": 273,
       "shortDesc": "Curious young cat",
       "description": "Lollypop Farm Spirit Cats are like little ninjas in the night. You catch a glimpse of them and then quickly they dart out of view. Why are they like this? We don't always know what a cat's life was like before they were brought to the shelter. They may have had difficult or limited experiences with people. Whatever the reason, some cats are fearful and in need of a special family.",
       "age": "adult",
@@ -176,7 +176,7 @@
         "https://res.cloudinary.com/elnova/image/upload/v1610555760/photo-1610353118401-8221b58aba9c_s7yvc8.jpg",
         "otherImg.jpg"
       ],
-      "likes": 280,
+      "likes": 282,
       "shortDesc": "Very friendly dog",
       "description": "Fluffy dog that likes ice cream",
       "age": "adult",
@@ -209,7 +209,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1609880854647-4ea668d5700b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": 6,
+      "likes": 7,
       "shortDesc": "Very friendly dog",
       "description": "Vey firendly, lovely dog that love to play with children",
       "age": "adult",
@@ -242,7 +242,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80&h=300&q=80"
       ],
-      "likes": "25",
+      "likes": 25,
       "shortDesc": "Sweet kitty",
       "description": "Sweet kitten, 1 month old, waiting for its new friends...",
       "age": "young",
@@ -274,7 +274,7 @@
       "imgUrls": [
         "https://images.unsplash.com/photo-1610366018121-cf9fad4e89aa?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
       ],
-      "likes": 26,
+      "likes": 28,
       "shortDesc": "A brave dog",
       "description": "Real friend, 1 year old dog, love play with children",
       "age": "young",

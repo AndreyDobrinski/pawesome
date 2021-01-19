@@ -2,13 +2,17 @@ import { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { login, logout, signup, removeUser, loadUsers } from '../store/actions/userActions'
-import { ReactComponent as Paw } from "../assets/imgs/paw-black-shape.svg"
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+import { ReactComponent as PawBlack } from "../assets/imgs/paw-black-shape.svg"
+import { ReactComponent as PawWhite } from "../assets/imgs/paw-white-shape.svg"
 import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
 import { ReactComponent as User } from "../assets/imgs/user.svg"
+import { ReactComponent as Light } from "../assets/imgs/sun.svg"
+import { ReactComponent as Dark } from "../assets/imgs/moon.svg"
 
 
 
-import {SearchFilterBar} from './SearchFilterBar'
+import { SearchFilterBar } from './SearchFilterBar'
 
 
 
@@ -98,12 +102,12 @@ export class _AppHeader extends Component {
             // console.log('test',window.pageYOffset);
             this.setState({
                 isScrolled: false,
-                smallSearchClicked:true
+                smallSearchClicked: true
             })
         } else {
             this.setState({
                 isScrolled: true,
-                smallSearchClicked:false
+                smallSearchClicked: false
 
             })
         }
@@ -125,7 +129,7 @@ export class _AppHeader extends Component {
                 password: '',
                 fullname: ''
             },
-            modalSignClicked:false
+            modalSignClicked: false
         })
         // this.onCloseSignModal()
 
@@ -193,7 +197,7 @@ export class _AppHeader extends Component {
 
 
     onOpenSignModal = () => {
-        if(this.props.loggedInUser) return
+        if (this.props.loggedInUser) return
         this.setState({
             modalSignClicked: true
         })
@@ -215,17 +219,21 @@ export class _AppHeader extends Component {
     }
 
 
-    setMode = () =>{
-        if(this.state.isDarkMode === false){
-            this.setState({
-                isDarkMode: true
-            })
-        }else{
-            this.setState({
-                isDarkMode: false
-            })
-            
-        }
+    // setMode = () =>{
+    //     if(this.state.isDarkMode === false){
+    //         this.setState({
+    //             isDarkMode: true
+    //         })
+    //     }else{
+    //         this.setState({
+    //             isDarkMode: false
+    //         })
+
+    //     }
+    // }
+
+    setMode =  () => {
+         this.props.toggleDarkMode()
     }
 
 
@@ -237,7 +245,7 @@ export class _AppHeader extends Component {
 
         let signupSection = (
 
-            <div className="modal-content" onClick={(ev) => ev.stopPropagation()}>
+            <div className={`modal-content ${this.props.isDarkMode ? 'dark-mode-modal-content' : ''}`} onClick={(ev) => ev.stopPropagation()}>
                 <span className="close" onClick={() => this.onCloseSignModal()}>&times;</span>
 
                 <Container component="main" maxWidth="xs" >
@@ -288,7 +296,7 @@ export class _AppHeader extends Component {
 
 
         let loginSection = (
-            <div className="modal-content" onClick={(ev) => ev.stopPropagation()} >
+            <div className={`modal-content ${this.props.isDarkMode ? 'dark-mode-modal-content' : ''}`} onClick={(ev) => ev.stopPropagation()} >
 
                 <span className="close" onClick={() => this.onCloseSignModal()}>&times;</span>
 
@@ -345,23 +353,25 @@ export class _AppHeader extends Component {
             // <nav className="app-header-container ">
             // <nav className={!this.state.isScrolled && "app-header-container" } {this.state.isScrolled && "app-header-container-scrolled" }>
             // <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''}`}>
-            <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} ${this.state.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}>
+            <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} ${this.props.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}>
 
                 <div className="app-header-content flex align-center justify-between container">
 
                     <Link to="/">
                         <div className="app-header-logo flex">
 
-                            <div className="app-header-logo-img"><Paw/></div>
-                            <div className={`app-header-name-pawesome ${this.state.isDarkMode? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>eSome</div>
+                            {/* <div className="app-header-logo-img"><PawBlack/></div> */}
+                            <div className="app-header-logo-img">{!this.props.isDarkMode ? <PawBlack /> : <PawWhite />}</div>
+                            {/* <div className="app-header-logo-img">{!this.state.isDarkMode? <PawWhite/> : ''}</div> */}
+                            <div className={`app-header-name-pawesome ${this.props.isDarkMode ? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>eSome</div>
 
                         </div>
                     </Link>
 
-                     {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
-             
+                    {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
 
-                     <div className={`app-header-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''} ${this.state.isDarkMode? 'dark-mode-small-search' : ''}`} onClick={this.onOpenBigSearch}>
+
+                    <div className={`app-header-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''} ${this.props.isDarkMode ? 'dark-mode-small-search' : ''}`} onClick={this.onOpenBigSearch}>
                         <div className="app-header-filte-box-small flex">
                             <div className="app-header-filte-box-search-small flex column">
                                 <span className="small-search-title">Start your search</span>
@@ -369,7 +379,7 @@ export class _AppHeader extends Component {
                         </div>
 
                         <div className="app-header-filte-box-Search flex justify-center align-center ">
-                            <button className="search-btn btn1"><Search/></button>
+                            <button className="search-btn btn1"><Search /></button>
                         </div>
                     </div>
                     {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
@@ -378,13 +388,13 @@ export class _AppHeader extends Component {
 
                     <div className="app-header-link-container flex">
 
-                        <Link to="/pet"><div className={`app-header-link-pets ${this.state.isDarkMode? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
-                        <div className="app-header-link-login" onClick={this.onOpenSignModal}>
-                            {!loggedInUser && <User/>}
-                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link> }
+                        <Link to="/pet"><div className={`app-header-link-pets ${this.props.isDarkMode ? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
+                        <div className={`app-header-link-login ${this.props.isDarkMode ? 'dark-mode-link-login' : ''}`} onClick={this.onOpenSignModal}>
+                            {!loggedInUser && <User />}
+                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link>}
                             {/* {loggedInUser && `Welcome ${loggedInUser.fullname}`} */}
                         </div>
-                        <div className="app-header-mode" onClick={this.setMode}>{this.state.isDarkMode? 'Dark':'Light'}</div>
+                        <div className="app-header-mode" onClick={this.setMode}>{this.props.isDarkMode ? <Dark /> : <Light />}</div>
 
                     </div>
 
@@ -419,6 +429,7 @@ const mapStateToProps = state => {
     return {
         users: state.userModule.users,
         loggedInUser: state.userModule.loggedInUser,
+        isDarkMode: state.appSettingsModule.isDarkMode
     }
 }
 const mapDispatchToProps = {
@@ -426,7 +437,8 @@ const mapDispatchToProps = {
     logout,
     signup,
     removeUser,
-    loadUsers
+    loadUsers,
+    toggleDarkMode
 }
 
 

@@ -4,6 +4,7 @@ import thunk from 'redux-thunk'
 import { userReducer } from './reducers/userReducer'
 import { petReducer } from './reducers/petReducer'
 import { orderReducer } from './reducers/orderReducer'
+import { appSettingsReducer } from './reducers/appSettingsReducer'
 
 
 // const { createStore, applyMiddleware, combineReducers, compose } = Redux
@@ -13,9 +14,9 @@ import { orderReducer } from './reducers/orderReducer'
 const rootReducer = combineReducers({
     userModule: userReducer,
     petModule: petReducer,
-    orderModule: orderReducer
-
-
+    orderModule: orderReducer,
+    appSettingsModule: appSettingsReducer
+    
 
 })
 
