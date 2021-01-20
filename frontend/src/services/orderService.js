@@ -16,6 +16,7 @@ function query() {
 
 async function isOrderDone(petId, userId) {
     var orders = await this.query()
+    console.log("orders service --- orders: ", orders)
     var res = orders.filter(order => {
         return order.pet._id === petId && order.byUser._id === userId
     })

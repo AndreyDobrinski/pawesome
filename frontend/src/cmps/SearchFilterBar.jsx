@@ -53,33 +53,33 @@ class _SearchFilterBar extends Component {
                 <div className="app-header-filte-box-type flex column">
                     <span className="type-title">Pet</span>
                     <select name="kind" value={filterBy.kind} onChange={this.handleInput}>
-                        <option value="all">ALL</option>
-                        <option value="cat">CATS</option>
-                        <option value="dog">DOGS</option>
-                        <option value="bird">BIRDS</option>
+                        <option value="all">all</option>
+                        <option value="cat">cats</option>
+                        <option value="dog">dogs</option>
+                        <option value="bird">birds</option>
                     </select>
                 </div>
                 <div className="app-header-filte-box-age flex column">
                     <span className="age-title">Age</span>
                     <select name="age" value={filterBy.age} onChange={this.handleInput}>
-                        <option value="all">ALL</option>
-                        <option value="young">YOUNG</option>
-                        <option value="adult">ADULT</option>
-                        <option value="senior">SENIOR</option>
+                        <option value="all">all</option>
+                        <option value="young">young</option>
+                        <option value="adult">adult</option>
+                        <option value="senior">senior</option>
                     </select>
                 </div>
                 <div className="app-header-filte-box-gender flex column">
                     <span className="gender-title">Gender</span>
                     <select name="gender" value={filterBy.gender} onChange={this.handleInput}>
-                        <option value="all">ALL</option>
-                        <option value="male">BOY</option>
-                        <option value="female">GIRL</option>
+                        <option value="all">both</option>
+                        <option value="male">boy</option>
+                        <option value="female">girl</option>
                     </select>
                 </div>
                 <div className="app-header-filte-box-location flex column">
                     <span className="location-title">Location</span>
                     <select name="address" value={filterBy.address} onChange={this.handleInput}>
-                        <option value="all">ALL</option>
+                        <option value="all">all</option>
                         <option value="Haifa">Haifa</option>
                         <option value="Raanana">Raanana</option>
                     </select>

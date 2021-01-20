@@ -19,7 +19,7 @@ class _SortByInput extends Component {
 
     render() {
 
-        return (<div>
+        return (<div className="flex align-center">
                 <h4>Sort by:</h4>
                 <select name="sortBy" value={this.state.value} onChange={this.handleInput}>
                     <option value="likes">Popularity</option>
