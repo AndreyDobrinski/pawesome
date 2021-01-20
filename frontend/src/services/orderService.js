@@ -1,7 +1,4 @@
-import Axios from 'axios';
-const axios = Axios.create({
-    withCredentials: true
-})
+import { httpService } from './httpService'
 
 export const orderService = {
     query,
@@ -14,20 +11,9 @@ const BASE_URL = 'http://localhost:3030/api/order'
 //     ? '/api/pet'
 //     : '//localhost:3030/api/pet';
 function query() {
-    return axios.get(BASE_URL)
-        .then(res => res.data)
+    return httpService.get(`order`)
 }
 
-
-// async function getById(petId) {
-//     try {
-//         const res = await axios.get(`${BASE_URL}/${petId}`)
-//         return await res.data
-//     } catch (err) {
-//         console.log('FrontError: getting by Id', err)
-//         throw err
-//     }
-// }
 async function isOrderDone(petId, userId) {
     var orders = await this.query()
     var res = orders.filter(order => {
@@ -37,15 +23,23 @@ async function isOrderDone(petId, userId) {
     else return false
 }
 
-
-async function saveOrder(newOrder) {
-    // newOrder.createdAt = new Date().toLocaleString() !!!!!!!!
-    console.log('order tosave in orderService', newOrder)
-    const res = await axios.post(`${BASE_URL}`, newOrder)
-    return await res.data
+async function saveOrder(pet, message) {
+    var newOrder = {
+        message: message,
+        pet: {
+            name: pet.name,
+            _id: pet._id,
+            imgUrls: pet.imgUrls
+        },
+        ownerId: pet.host._id,
+        byUser: {
+            _id: '',
+            fullname: ''
+        }
+    }
+   return httpService.post(`order`, newOrder)
 }
 
 async function updOrder(newOrder) {
-    const res = await axios.put(`${BASE_URL}/${newOrder._id}`, newOrder)
-    return await res.data
+    return httpService.put(`order`, newOrder)
 }

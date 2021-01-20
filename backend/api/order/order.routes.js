@@ -10,7 +10,5 @@ const router = express.Router()
 router.get('/', log, getOrders)
 router.post('/', requireAuth, addOrder)
 router.put('/:id', requireAuth, updateOrder)
-// router.post('/',  requireAuth, addOrder)
-// router.put('/:id',  requireAuth, updateOrder)
 
 module.exports = router

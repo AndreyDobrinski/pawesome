@@ -24,7 +24,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 75px;
+    column-gap: 75px;
+    row-gap: 20px;
     @include for-mobile-layout {
         display: block;
     }
@@ -59,7 +60,7 @@
                     border-radius: 50%;
                 }
             }
-            >:last-child{
+            > :last-child {
                 align-self: start;
             }
         }

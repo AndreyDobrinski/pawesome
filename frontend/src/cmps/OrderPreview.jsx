@@ -38,11 +38,14 @@ export class _OrderPreview extends Component {
                     <div className="order-img square-ratio">
                         <img className="order-pet-img" src={order.pet.imgUrls[0]} alt="" />
                     </div>
-                    {order.pet.name}
+                    {/* {order.pet.name} */}
                 </Link>
                 <div className="order-info">
                     <div className="order-from">
-                        From: <Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
+                        <span>From: </span><Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
+                    </div>
+                    <div className="order-from">
+                        <span>About pet: </span><Link className="order-user-name" to={`/pet/${order.pet._id}`}>{order.pet.name}</Link>
                     </div>
 
                     <div className="order-date">

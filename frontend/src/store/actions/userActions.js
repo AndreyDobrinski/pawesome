@@ -16,18 +16,6 @@ export function loadUsers() {
 }
 
 
-export function removeUser(userId) {
-    return async dispatch => {
-        try {
-            await userService.remove(userId)
-            dispatch({ type: 'REMOVE_USER', userId })
-        } catch (err) {
-            console.log('UserActions: err in removeUser', err)
-        }
-    }
-}
-
-
 export function login(userCreds) {
     return async dispatch => {
         try {
