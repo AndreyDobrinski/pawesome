@@ -1077,3 +1077,33 @@
 >>>>>>> a63be534fca6f2bdf121ccaac24be898bea63d39
 >>>>>>> 61e7e16b0d217f5e5701eec846158248783fc90b
 20.01.2021, 11:55:07 - INFO - Server is running on port: 3030 
+1/20/2021, 12:06:57 PM - INFO - Server is running on port: 3030 
+1/20/2021, 12:43:14 PM - DEBUG - auth.service - login with username: admin (sid: 7cTqbxRnSMpssQhO849wDuB0JksgDB10)
+1/20/2021, 12:43:14 PM - ERROR - Failed to Login Invalid username or password (sid: 7cTqbxRnSMpssQhO849wDuB0JksgDB10)
+1/20/2021, 12:51:27 PM - DEBUG - auth.service - login with username: vika (sid: 7cTqbxRnSMpssQhO849wDuB0JksgDB10)
+1/20/2021, 12:51:55 PM - INFO - Req from: Vika Gord (sid: 7cTqbxRnSMpssQhO849wDuB0JksgDB10)
+1/20/2021, 12:53:43 PM - INFO - Server is running on port: 3030 
+1/20/2021, 12:55:59 PM - DEBUG - auth.service - login with username: vika (sid: yAS05ht5-jdaRwXBWt70483XX1_2qrR2)
+1/20/2021, 12:56:11 PM - INFO - Req from: Vika Gord (sid: yAS05ht5-jdaRwXBWt70483XX1_2qrR2)
+1/20/2021, 1:35:42 PM - INFO - Server is running on port: 3030 
+1/20/2021, 1:39:13 PM - INFO - Server is running on port: 3030 
+1/20/2021, 1:49:17 PM - INFO - Server is running on port: 3030 
+1/20/2021, 1:54:55 PM - DEBUG - auth.service - login with username: vika (sid: sYlTc30yABUdC2ngPJ6px-Uz5ifqvoej)
+1/20/2021, 1:55:15 PM - INFO - Req from: Vika Gord (sid: sYlTc30yABUdC2ngPJ6px-Uz5ifqvoej)
+1/20/2021, 1:58:16 PM - INFO - Req from: Vika Gord (sid: sYlTc30yABUdC2ngPJ6px-Uz5ifqvoej)
+1/20/2021, 2:17:07 PM - INFO - Server is running on port: 3030 
+1/20/2021, 2:17:10 PM - INFO - Server is running on port: 3030 
+1/20/2021, 2:18:08 PM - INFO - Server is running on port: 3030 
+1/20/2021, 2:18:15 PM - INFO - Server is running on port: 3030 
+1/20/2021, 2:19:00 PM - INFO - Server is running on port: 3030 
+1/20/2021, 2:46:40 PM - DEBUG - auth.service - login with username: vika (sid: 2y60DM9g-9gI4IMxvLN7B9lvY_hSwzkl)
+1/20/2021, 2:48:36 PM - DEBUG - auth.service - login with username: vika (sid: 1XP3IoCEUawXLMNenc-ogR_iuEmpuu3_)
+1/20/2021, 2:49:03 PM - INFO - Req from: Vika Gord (sid: 1XP3IoCEUawXLMNenc-ogR_iuEmpuu3_)
+1/20/2021, 2:49:22 PM - INFO - Req from: Vika Gord (sid: 1XP3IoCEUawXLMNenc-ogR_iuEmpuu3_)
+1/20/2021, 4:38:52 PM - ERROR - pet.controller : Failed to get pets | {} (sid: 4CJjvqay94jpfcTyhojwHhlz6UHc2JSD)
+1/20/2021, 4:52:25 PM - DEBUG - auth.service - login with username: vika (sid: ZleOcC9so9Bfl6VV8MXW7Y-Pa7iks_He)
+1/20/2021, 4:52:35 PM - INFO - Req from: Vika Gord (sid: ZleOcC9so9Bfl6VV8MXW7Y-Pa7iks_He)
+1/20/2021, 4:55:25 PM - DEBUG - auth.service - login with username: vika (sid: 7ZXhb7sj33dIJJcaEJadOmxdCzbBKT9-)
+1/20/2021, 4:55:36 PM - INFO - Req from: Vika Gord (sid: 7ZXhb7sj33dIJJcaEJadOmxdCzbBKT9-)
+1/20/2021, 4:56:22 PM - DEBUG - auth.service - login with username: vika (sid: 0RAJFK2PVOpR29yPnim_2kMZj-cS91jZ)
+1/20/2021, 4:56:31 PM - INFO - Req from: Vika Gord (sid: 0RAJFK2PVOpR29yPnim_2kMZj-cS91jZ)

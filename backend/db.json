@@ -364,6 +364,71 @@
       },
       "recordDate": "1-Oct-2020",
       "status": "waiting"
+    },
+    {
+      "_id": "20006551",
+      "name": "Lord",
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1610555770410-5d746dd977c1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+      ],
+      "likes": 26,
+      "shortDesc": "A strong, healthy dog",
+      "description": "Real friend, 1.5 year old dog, love play with children",
+      "age": "young",
+      "gender": "male",
+      "kind": "dog",
+      "size": "big",
+      "specialities": [
+        "friendly with children"
+      ],
+      "address": "Ranana",
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "address": "Ranana",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      },
+      "recordDate": "16-Nov-2020",
+      "status": "adopted",
+      "adoptionDate": "5-Jan-2021"
+    },
+    {
+      "_id": "20006553",
+      "name": "Sammy",
+      "imgUrls": [
+        "https://images.unsplash.com/photo-1572360620839-a02312482daf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80"
+      ],
+      "likes": 23,
+      "shortDesc": "Red cat, brings luck",
+      "description": "1 year old cat",
+      "age": "young",
+      "gender": "male",
+      "kind": "cat",
+      "size": "big",
+      "specialities": [
+        "friendly with children"
+      ],
+      "address": "Haifa",
+      "host": {
+        "_id": "51399391",
+        "fullname": "Freedom Farm Sanctuary",
+        "imgUrl": "https://randomuser.me/api/portraits/women/23.jpg",
+        "phone": "054-1122334",
+        "email": "ffsanctuary@save.com",
+        "loc": {
+          "address": "Haifa",
+          "lat": -8.61308,
+          "lng": 41.1413
+        }
+      },
+      "recordDate": "1-Oct-2020",
+      "status": "waiting"
     }
   ],
   "order": [
