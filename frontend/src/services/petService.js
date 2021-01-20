@@ -21,7 +21,6 @@ function query(filterBy) {
       if (filterBy[key] !== 'all') filter[key] = filterBy[key] 
     }
 
-    // return axios.get(baseUrl).then(res => res.data)
     return (!filterBy) ? axios.get(baseUrl).then(res => res.data)
                          :
                          axios.get(baseUrl, { params: filter })

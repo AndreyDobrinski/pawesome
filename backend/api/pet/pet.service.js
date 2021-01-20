@@ -17,9 +17,13 @@ async function query(filterBy = {}) {
     console.log( 'petService : filterBy ', filterBy )
     const criteria = _buildCriteria(filterBy)
     console.log( 'petService : criteria ', criteria )
+    const {sortBy} = filterBy
+    let asc = 1
+    if ( sortBy === 'likes' ) asc = -1
+    if ( sortBy === 'orgname') sortBy = 'host.fullname'
     try {
         const collection = await dbService.getCollection(COLLECTION)
-        var pets = await collection.find(criteria).toArray()
+        var pets = await collection.find(criteria).sort({ [sortBy]: asc }).toArray()
         console.log('PetService : Pets by criteria...', pets)
         return pets
     } catch (err) {
@@ -93,6 +97,7 @@ function _buildCriteria(filterBy) {
 
     const filterCriterias = []
     for ( var key in filterBy ) {
+        if ( key === 'sortBy' ) continue
         filterCriterias.push({[key]: filterBy[key]})
     }
 

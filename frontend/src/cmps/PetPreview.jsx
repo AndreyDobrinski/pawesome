@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { LikeButton } from './btns/LikeBtn'
@@ -9,16 +8,18 @@ import { toggleDarkMode } from '../store/actions/appSettingsActions'
 import { ReactComponent as Female } from "../assets/imgs/femenine.svg"
 import { ReactComponent as Male } from "../assets/imgs/male.svg"
 
+import { CarouselComponent} from './CarouselComponent'
+
 
 export class _PetPreview extends Component {
 
     state = {
-        pet: this.props.pet
+        pet: null
     }
 
     componentDidMount() {
-        const currPet = { ...this.props.pet }
-        this.setState({ ...this.state, currPet })
+        const pet = { ...this.props.pet }
+        this.setState({ ...this.state, pet })
     }
 
     onLike = (diff) => {
@@ -33,20 +34,19 @@ export class _PetPreview extends Component {
     render() {
 
         const { pet } = this.state
-        const imgSrc = pet.imgUrls[0]
+
+        if (!pet) return <div>Loading...</div>
+
+        // const imgSrc = pet.imgUrls[0]
         const gender = this.state.pet.gender === 'female'? <Female/>: <Male/>
 
         return (<li className="pet-preview">
-            <Link to={`/pet/${pet._id}`} >
-                <div className="square-ratio">
-                    <img src={imgSrc} alt="pet" />
-                </div>
-            </Link>
+           
+            <CarouselComponent pet={pet}/>
             <div className="flex">
                 <h2 className={`pet-preview-pet-name flex justify-center align-center ${this.props.isDarkMode ? 'dark-mode-pet-name' : ''}`}>{pet.name}</h2>
                 <h2 className="pet-preview-pet-gender flex justify-center align-center">{gender}</h2>
             </div>
-            {/* <h2>{pet.name} {gender}</h2> */}
             <p className={`${this.props.isDarkMode ? 'dark-mode-pet-short-desc' : ''}`}>{pet.shortDesc}</p>
             <div className="pet-preview-host-and-likes flex justify-between">
                 <h4 className={`pet-preview-host flex justify-center align-center ${this.props.isDarkMode ? 'dark-mode-pet-host' : ''}`}>{pet.host.fullname}</h4>
@@ -55,9 +55,6 @@ export class _PetPreview extends Component {
                 </div>
 
             </div>
-            {/* <Link to={`/user?type=shelter&fullname=${pet.host.fullname}`}>{pet.host.fullname}</Link> */}
-            {/* <Link to={`/pet/${pet._id}` }>Details</Link> | */}
-            {/* <Link to={`/pet/edit/${pet._id}` }>Edit</Link> */}
         </li>)
     }
 }

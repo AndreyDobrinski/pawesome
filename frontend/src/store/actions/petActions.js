@@ -33,13 +33,8 @@ export function deletePet(petId) {
 export function savePet(pet) {
     return async (dispatch) => {
         const res = await petService.save(pet)
-        if (!res) {
-            const action = { type: 'UPD_PET', newPet: pet }
-            return await dispatch(action)
-        } else {
-            const action = { type: 'SAVE_PET', newPet: res }
-            return await dispatch(action)
-        }
+        const action = { type: 'SAVE_PET', newPet: res }
+        return await dispatch(action)
     }
 }
 

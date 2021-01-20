@@ -12,7 +12,7 @@ import { ReactComponent as Disability } from "../assets/imgs/disability.svg"
 import { ReactComponent as Animals } from "../assets/imgs/animals.svg"
 import { ReactComponent as Pawprint } from "../assets/imgs/pawprint.svg"
 import { ReactComponent as Whatsapp } from "../assets/imgs/whatsapp.svg"
-import { OrderCreator } from "../cmps/OrderCreator.jsx";
+import { OrderAdd } from "../cmps/OrderAdd.jsx";
 import { Reviews } from "../cmps/Reviews.jsx";
 
 
@@ -102,7 +102,7 @@ export class _PetDetails extends Component {
                     <p>{pet.description}</p>
                 </div>
                 <div className="pet-details-nav">
-                    <OrderCreator pet={pet} />
+                    <OrderAdd pet={pet} />
                 </div>
             </div>
 

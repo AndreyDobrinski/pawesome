@@ -38,6 +38,9 @@ class _SearchFilterBar extends Component {
         console.log('onSearchPet --- ', filterBy)
         this.props.setFilter(filterBy)
         this.props.loadPets(filterBy)
+        delete filterBy.name
+        delete filterBy.size
+        this.props.setFilter(filterBy)
         this.props.history.push('/pet')
 
     }

@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { withRouter } from 'react-router-dom'
+
 
 import { loadPets, setFilter} from '../../store/actions/petActions.js'
 
@@ -16,6 +16,8 @@ class _FilterNameInput extends Component {
         const filterBy = {...this.props.filterBy, 'name': target.value}
         console.log('Filter by with pet name: ', filterBy)
         this.props.loadPets(filterBy)
+        delete filterBy.name
+        this.props.setFilter(filterBy)
     }
 
     render() {
@@ -37,4 +39,4 @@ const mapDispatchToProps = {
     setFilter
 }
 
-export const FilterNameInput = connect(mapStateToProps, mapDispatchToProps)(withRouter(_FilterNameInput))
+export const FilterNameInput = connect(mapStateToProps, mapDispatchToProps)(_FilterNameInput)

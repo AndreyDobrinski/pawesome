@@ -24,12 +24,12 @@ export class _Pet extends Component {
     return (
       <React.Fragment>
       <div className="pet-list container" style={{"marginTop": "200px"}}>
-        <div className="flex">
+        {/* <div className="flex">
           <FilterBtn field="size" value="big"/>
           <FilterBtn field="size" value="small"/>
           <FilterNameInput />
           <SortByInput />
-        </div>
+        </div> */}
           <PetList pets={pets}/>
       </div>
       </React.Fragment>
