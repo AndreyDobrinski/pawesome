@@ -26,7 +26,7 @@ export class _AppFooter extends Component {
                         <div className="app-footer-name-pawesome"><span className="app-footer-name-paw">Paw</span>eSome</div>
                     </div>
 
-                    <div>© 2020 HomeSeek , Inc. All rights reserved · Privacy · Terms · Sitemap</div>
+                    <div>© 2020 PawSome , Inc. All rights reserved · Privacy · Terms · Sitemap</div>
 
                     <div className="app-footer-social-container flex ">
                         <div className="social-facebook"><Facebook /></div>

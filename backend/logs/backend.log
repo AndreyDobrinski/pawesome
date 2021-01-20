@@ -724,6 +724,7 @@
 18.01.2021, 19:03:14 - INFO - Server is running on port: 3030 
 18.01.2021, 19:09:39 - INFO - Server is running on port: 3030 
 <<<<<<< HEAD
+<<<<<<< HEAD
 1/19/2021, 11:24:44 AM - INFO - Server is running on port: 3030 
 1/19/2021, 11:44:55 AM - INFO - Server is running on port: 3030 
 1/19/2021, 12:13:13 PM - INFO - Server is running on port: 3030 
@@ -814,6 +815,9 @@
 1/19/2021, 1:10:27 PM - INFO - Server is running on port: 3030 
 1/19/2021, 5:03:29 PM - INFO - Server is running on port: 3030 
 1/19/2021, 6:12:51 PM - INFO - Server is running on port: 3030 
+=======
+1/19/2021, 6:05:08 PM - INFO - Server is running on port: 3030 
+>>>>>>> d985f7d8e52b5e59ffdc2977d0a0015a0e2fdd19
 =======
 18.01.2021, 19:22:07 - INFO - Server is running on port: 3030 
 18.01.2021, 23:05:56 - INFO - Server is running on port: 3030 
@@ -1025,6 +1029,7 @@
 19.01.2021, 18:04:42 - INFO - Server is running on port: 3030 
 19.01.2021, 19:47:17 - INFO - Server is running on port: 3030 
 >>>>>>> 8ad9ddd1bcbf017c3586f3c1b44f21a140075b91
+<<<<<<< HEAD
 1/19/2021, 8:06:34 PM - INFO - Server is running on port: 3030 
 1/19/2021, 8:10:03 PM - INFO - Server is running on port: 3030 
 1/19/2021, 8:33:54 PM - INFO - Server is running on port: 3030 
@@ -1047,3 +1052,5 @@
 1/19/2021, 9:43:58 PM - ERROR - pet.controller : Failed to get pets | {} (sid: fwx6a-tSl2CBD4DK2APATI27wbp-WCO7)
 1/19/2021, 10:15:35 PM - INFO - Server is running on port: 3030 
 1/19/2021, 11:35:34 PM - INFO - Server is running on port: 3030 
+=======
+>>>>>>> d985f7d8e52b5e59ffdc2977d0a0015a0e2fdd19
