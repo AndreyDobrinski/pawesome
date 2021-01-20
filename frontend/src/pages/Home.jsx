@@ -30,14 +30,16 @@ export class _Home extends Component {
         <div className="page-home-hero">
 
 
-          <video autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
+          <video  autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
 
 
           <div className="page-home-hero-content ">
-            <div>Find your furry best friend</div>
-            <Link to="/pet"><button className="btn2">Go to pets</button></Link>
+            <div>Find your Pawesome friend</div>
+            {/* <div>Find your</div>
+            <div>PaweSome friend</div> */}
+            {/* <Link to="/pet"><button className="page-home-hero-btn btn2">Go to pets</button></Link> */}
           </div>
 
         </div>

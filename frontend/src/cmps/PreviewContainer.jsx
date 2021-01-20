@@ -46,7 +46,7 @@ export class PreviewContainer extends Component {
     render() {
         const {pets} = this.state
         return <div className={this.props.clsName}>
-            <h1 className="container">{this.props.title}</h1>
+            <h1>{this.props.title}</h1>
             <PetList pets={pets}/>
         </div>
     }

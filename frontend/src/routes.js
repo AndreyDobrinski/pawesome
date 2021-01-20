@@ -18,10 +18,10 @@ export const routes = [
         path: '/profile/:userId',
         component: Profile
     },
-    {
-        path: '/profile/owner/:ownerId',
-        component: OwnerProfile
-    },
+    // {
+    //     path: '/profile/owner/:ownerId',
+    //     component: OwnerProfile
+    // },
     {
         path: '/',
         component: Home

@@ -4,8 +4,10 @@ const orderService = require('./order.service')
 
 async function getOrders(req, res) {
     try {
-        const orders = await orderService.query(req.query)
-        console.log('order.controller orders', orders)
+        console.log('req.session.user._id CONTROLLER', req.session.user._id)
+        
+        const orders = await orderService.query(req.session.user._id)
+        // console.log('order.controller orders', orders)
         res.send(orders)
     } catch (err) {
         logger.error('Cannot get orders', err)

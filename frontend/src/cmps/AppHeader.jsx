@@ -7,6 +7,8 @@ import { ReactComponent as PawBlack } from "../assets/imgs/paw-black-shape.svg"
 import { ReactComponent as PawWhite } from "../assets/imgs/paw-white-shape.svg"
 import { ReactComponent as Search } from "../assets/imgs/magnifying-glass.svg"
 import { ReactComponent as User } from "../assets/imgs/user.svg"
+import { ReactComponent as UserLogedBlack } from "../assets/imgs/user-login-black.svg"
+import { ReactComponent as UserLogedWhite } from "../assets/imgs/user-login-white.svg"
 import { ReactComponent as Light } from "../assets/imgs/sun.svg"
 import { ReactComponent as Dark } from "../assets/imgs/moon.svg"
 
@@ -58,12 +60,14 @@ export class _AppHeader extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('resize', this.handleResize)
         // console.log('Looking for routes', this);
         if (this.isHomePage()) {
             this.setState({
                 isHomePage: true,
             })
         }
+        this.handleResize()
 
     }
 
@@ -95,7 +99,7 @@ export class _AppHeader extends Component {
     }
 
     handleScroll = () => {
-        if (window.pageYOffset === 0 && this.isHomePage()) {
+        if (window.pageYOffset === 0 && window.innerWidth > 1100 && this.isHomePage()) {
             // console.log('test',window.pageYOffset);
             this.setState({
                 isScrolled: false,
@@ -110,6 +114,17 @@ export class _AppHeader extends Component {
         }
     }
 
+
+    handleResize = () =>{
+        if(window.innerWidth < 1100 ){
+            this.setState({
+                isScrolled: true,
+                smallSearchClicked: false,
+
+            })
+        }
+        
+    }
 
 
     doSignup = async (ev) => {
@@ -162,7 +177,8 @@ export class _AppHeader extends Component {
                 loginCred: {
                     username: '',
                     password: ''
-                }
+                },
+                modalSignClicked: false
             })
         } catch (err) {
             this.setState({ msg: 'Login failed, try again.' })
@@ -347,9 +363,6 @@ export class _AppHeader extends Component {
         const { isNewUser } = this.state
 
         return (
-            // <nav className="app-header-container ">
-            // <nav className={!this.state.isScrolled && "app-header-container" } {this.state.isScrolled && "app-header-container-scrolled" }>
-            // <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''}`}>
             <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} ${this.props.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}>
 
                 <div className="app-header-content flex align-center justify-between container">
@@ -357,9 +370,7 @@ export class _AppHeader extends Component {
                     <Link to="/">
                         <div className="app-header-logo flex">
 
-                            {/* <div className="app-header-logo-img"><PawBlack/></div> */}
                             <div className="app-header-logo-img">{!this.props.isDarkMode ? <PawBlack /> : <PawWhite />}</div>
-                            {/* <div className="app-header-logo-img">{!this.state.isDarkMode? <PawWhite/> : ''}</div> */}
                             <div className={`app-header-name-pawesome ${this.props.isDarkMode ? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>eSome</div>
 
                         </div>
@@ -383,13 +394,12 @@ export class _AppHeader extends Component {
 
 
 
-                    <div className="app-header-link-container flex">
+                    <div className="app-header-link-container flex justify-center align-center">
 
                         <Link to="/pet"><div className={`app-header-link-pets ${this.props.isDarkMode ? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
                         <div className={`app-header-link-login ${this.props.isDarkMode ? 'dark-mode-link-login' : ''}`} onClick={this.onOpenSignModal}>
                             {!loggedInUser && <User />}
-                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>Welcome {loggedInUser.fullname}</Link>}
-                            {/* {loggedInUser && `Welcome ${loggedInUser.fullname}`} */}
+                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite/> : <UserLogedBlack/>}</Link>}
                         </div>
                         <div className="app-header-mode" onClick={this.setMode}>{this.props.isDarkMode ? <Dark /> : <Light />}</div>
 
