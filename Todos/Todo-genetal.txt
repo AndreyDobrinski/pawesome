@@ -24,8 +24,10 @@ X 4. Ask about how to add SVG(font awesome)
  5.how to do nice animation for search bar 
  6.how to add scroll bar to modal sighup
 X 7.how to add carusel to pets for each pet (at pets)
- 8.how to hide the search filter on home when narrowed
+X 8.how to hide the search filter on home when narrowed
  9.ask asi about footer
+ 10.when on phone at page home , the animal pic is not centered
+ 11.in phone what to do with the video
 
 ASK Or about:
 X 1.gitignore cant ignore the eslintcache
@@ -44,12 +46,14 @@ X 3.change the sighup modal hight and width to vw and vh
 BUGS FOUND:
 X 1.Problem with header:When clicking to pets then back to home , the header is doing  a strange movement
 X 2.When oppening modal , texts get additional font size
+ 3.On refresh , when logged out , its logging in for you on refresh of website
 
 
 
 
 Needs to be added:
 X? 1.When logging in successful , do an event bus with a nice massege saying 'Logged in successful , Welcome Username'
+ 2.add small shadow to header(like in airBnb)
 
 
 
@@ -57,3 +61,37 @@ TALK TO TEAM ABOUT:
 X 1.Header is now fixed , change div to something like margin-top 100px
 X 2.Talk about known bugs and if they know how to fix it .
 X 3.Ask abut home page.
+
+
+
+
+
+
+
+
+
+
+
+Change:
+
+ms video to hight 100% and width 100% , obj fit 
+
+app-header-filter ; remover marginb top , put pos fixed , top20vh,
+
+
+
+
+
+.ms-slide-bgvideo {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    object-fit: cover;
+}
+
+
+.app-header-filter-home {
+    margin-top: 3%;
+    transition: 0.1s;
+}
