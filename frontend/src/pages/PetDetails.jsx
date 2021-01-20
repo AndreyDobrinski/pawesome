@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder } from '../store/actions/orderActions.js'
 import { MapContainer } from "../cmps/MapContainer.jsx";
+import { ReactComponent as HeartFull } from "../assets/imgs/heart-full.svg"
 import { ReactComponent as Female } from "../assets/imgs/female.svg"
 import { ReactComponent as Male } from "../assets/imgs/male.svg"
 import { ReactComponent as Age } from "../assets/imgs/age.svg"
@@ -49,7 +50,10 @@ export class _PetDetails extends Component {
             <div className="pet-details-main-title">
                 <h2>{pet.name}</h2>
                 <div className="pet-details-block flex center">
-                    <h5>😊 {pet.likes}</h5>
+                    <div className="pet-details-statstics flex">
+                        <HeartFull />
+                        <h5>{pet.likes}</h5>
+                    </div>
                     <h5>·</h5>
                     <h5>{pet.host.fullname}</h5>
                 </div>
@@ -83,7 +87,7 @@ export class _PetDetails extends Component {
                                 case 'friendly with children':
                                     var res = <Child />
                                     break
-                                case 'disability support':
+                                case 'trained as service animal':
                                     var res = <Disability />
                                     break
                                 case 'friendly with other animals':
@@ -99,7 +103,10 @@ export class _PetDetails extends Component {
                             </div>
                         })}
                     </div>
-                    <p>{pet.description}</p>
+                    <div className="pet-details-about">
+                        <h3>{pet.name}'s story</h3>
+                        <p>{pet.description}</p>
+                    </div>
                 </div>
                 <div className="pet-details-nav">
                     <OrderAdd pet={pet} />
@@ -113,7 +120,7 @@ export class _PetDetails extends Component {
                 <p>{pet.host.loc.address}</p>
                 <div className="map-contact flex">
                     <Whatsapp />
-                    <h6>{pet.host.phone}</h6>
+                    <p>{pet.host.phone}</p>
                 </div>
                 <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
             </div>

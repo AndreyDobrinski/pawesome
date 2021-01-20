@@ -33,7 +33,7 @@ export class _MapContainer extends Component {
         google={this.props.google}
         initialCenter={{ lat: hostCreds.lat, lng: hostCreds.lng }}
         onClick={this.onMapClicked}
-        zoom={13}
+        zoom={15}
         style={{ position: 'relative', width: '100%', height: '300px', margin: 'auto' }}>
 
         <Marker

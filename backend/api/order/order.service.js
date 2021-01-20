@@ -53,26 +53,11 @@ async function query() {
 
 }
 
-// async function remove(orderId) {
-//     try {
-//         const store = asyncLocalStorage.getStore()
-//         const { userId, isAdmin } = store
-//         const collection = await dbService.getCollection('order')
-//         // remove only if user is owner/admin
-//         const query = { _id: ObjectId(orderId) }
-//         if (!isAdmin) query.byUserId = ObjectId(userId)
-//         await collection.deleteOne(query)
-//         // return await collection.deleteOne({ _id: ObjectId(orderId), byUserId: ObjectId(userId) })
-//     } catch (err) {
-//         logger.error(`cannot remove order ${orderId}`, err)
-//         throw err
-//     }
-// }
-
 async function update(order) {
     try {
         // peek only updatable fields!
-        const orderToSave = {...order,
+        const orderToSave = {
+            ...order,
             _id: ObjectId(order._id)
         }
         const collection = await dbService.getCollection('order')
@@ -86,18 +71,8 @@ async function update(order) {
 
 async function add(order) {
     try {
-        // peek only updatable fields!
         const orderToAdd = {
             ...order,
-            // byUser: {
-            //     ...order.byUser,
-            //     _id: ObjectId(order.byUser._id)
-            // },
-            // pet: {
-            //     ...order.pet,
-            //     _id: ObjectId(order.pet._id)
-            // },
-            // ownerId: ObjectId(order.ownerId),
             status: 'requested',
             createdAt: new Date().toLocaleString()
         }
@@ -119,7 +94,6 @@ function _buildCriteria() {
 
 module.exports = {
     query,
-    // remove,
     add,
     update
 }

@@ -59,7 +59,7 @@ export class Reviews extends Component {
         var { reviews } = this.state
 
         return <div className="reviews-section">
-            <h3>Reviews</h3>
+            <h3>Reviews about owner</h3>
             <div className="reviews">
                 {reviews.map(review => {
                     return <div className="review">

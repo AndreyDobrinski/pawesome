@@ -17,9 +17,6 @@ async function updateOrder(req, res) {
     try {
         var order = req.body
         order = await orderService.update(order)
-
-        // await orderService.remove(req.params.id)
-        // res.send({ msg: 'Deleted successfully' })
         res.send(order)
     } catch (err) {
         logger.error('Failed to delete order', err)
@@ -35,8 +32,6 @@ async function addOrder(req, res) {
         order.byUser._id = req.session.user._id
         order.byUser.fullname = req.session.user.fullname
         order = await orderService.add(order)
-        // order.byUser = req.session.user
-        // order.aboutUser = await userService.getById(order.aboutUserId)
         res.send(order)
 
     } catch (err) {

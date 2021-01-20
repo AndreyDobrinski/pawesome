@@ -38,9 +38,7 @@ export class _OwnerProfile extends Component {
 
         return (
             <div className="owner-profile container">
-                {orders && <OrderList orders={orders} />}
-                <div className="orders flex column">lololo</div>
-                
+                {orders && <OrderList orders={orders} />}                
             </div>
         )
     }

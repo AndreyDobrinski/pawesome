@@ -48,7 +48,7 @@ class _SearchFilterBar extends Component {
         return <form className="app-header-filter-container flex " onSubmit={this.onSearchPet}>
             <div className="app-header-filte-box flex">
                 <div className="app-header-filte-box-type flex column">
-                    <span className="type-title">Type</span>
+                    <span className="type-title">Pet</span>
                     <select name="kind" value={filterBy.kind} onChange={this.handleInput}>
                         <option value="all">ALL</option>
                         <option value="cat">CATS</option>

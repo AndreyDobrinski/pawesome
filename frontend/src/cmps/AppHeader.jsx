@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { login, logout, signup, removeUser, loadUsers } from '../store/actions/userActions'
+import { login, logout, signup } from '../store/actions/userActions'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
 import { ReactComponent as PawBlack } from "../assets/imgs/paw-black-shape.svg"
 import { ReactComponent as PawWhite } from "../assets/imgs/paw-white-shape.svg"
@@ -52,14 +52,11 @@ export class _AppHeader extends Component {
         isScrolled: false,
         isHomePage: false,
         smallSearchClicked: true,
-        isDarkMode: false
-
     }
 
 
 
     componentDidMount() {
-        this.props.loadUsers()
         window.addEventListener('scroll', this.handleScroll)
         // console.log('Looking for routes', this);
         if (this.isHomePage()) {
@@ -427,7 +424,6 @@ export class _AppHeader extends Component {
 
 const mapStateToProps = state => {
     return {
-        users: state.userModule.users,
         loggedInUser: state.userModule.loggedInUser,
         isDarkMode: state.appSettingsModule.isDarkMode
     }
@@ -436,8 +432,6 @@ const mapDispatchToProps = {
     login,
     logout,
     signup,
-    removeUser,
-    loadUsers,
     toggleDarkMode
 }
 

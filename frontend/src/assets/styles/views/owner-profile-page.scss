@@ -8,25 +8,27 @@
 .orders {
     // display: flex;
     // flex-direction: column;
-    width: 40%;
-    padding: 10px;
+    // width: 40%;
+    // padding: 10px;
+    width: 60%;
+    gap: 10px;
 }
 .order {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    background-color: $clr5;
-    border-radius: rem(9px);
-    border: 1px solid $clr2;
+    border-radius: rem(5px);
+    border: 1px solid $clr4;
     .order-short {
         height: 100px;
         display: flex;
+        margin-bottom: 10px;
 
         .order-pet {
             text-decoration: none;
-            color: $clr2;
+            color: $clr9;
             &:hover {
-                color: $clr9;
+                color: $clr4;
             }
             flex-basis: 30%;
             display: flex;
@@ -35,13 +37,27 @@
             justify-content: center;
             .order-img {
                 width: 80%;
+                background: black;
+
                 img {
                     // width: 60%;
                     // height: 60%;
                     // object-fit: contain;
+                    background: black;
+                    &:hover {
+                        opacity: 0.9;
+                    }
                 }
                 &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.308) 0px 2px 5px !important;
+                    // box-shadow: rgba(0, 0, 0, 0.308) 0px 2px 5px !important;
+                    // background: rgba(0,0,0,.5);
+                    // opacity: 1;
+
+                    // mix-blend-mode: multiply;
+                    // filter: grayscale(1);
+
+                    // background-color: desaturate($clr1, 50);
+                    // opacity: 0.9
                 }
             }
         }
@@ -50,24 +66,31 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            cursor: default;
             .order-from {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
+                color: #3d3d40;
+                gap: 5px;
                 .order-user-name {
                     text-decoration: none;
-                    color: $clr2;
+                    color: $clr9;
                     &:hover {
-                        color: $clr9;
+                        color: $clr4;
                     }
                 }
+            }
+            .order-date {
+                color: #909098;
+                font-size: rem(14px);
             }
         }
         select {
             // width: 30%;
             border: none;
             margin: auto;
-            padding: 5px;
+            padding: 10px;
             outline: none;
             // background-image: linear-gradient(to right, #bbdb7f, #86cb77);
             border-radius: rem(9px);
