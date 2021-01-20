@@ -17,6 +17,11 @@
         @content;
     }
 }
+@mixin for-standart-layout {
+    @media (max-width: $normal-breakpoint) {
+        @content;
+    }
+}
 
 @mixin for-wide-layout {
     @media (min-width: $normal-breakpoint) {

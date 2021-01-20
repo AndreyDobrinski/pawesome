@@ -1,39 +1,29 @@
-// .app-header-nav {
-//   text-align: center;
-//   font-size: 1.5em;
-// }
 
-// .app-header-nav a{
-//     margin-left: 50px;
-//     color: green;
-// }
 
 .app-header-filter-home {
-  // display: none;
-  // margin-bottom: 60px;
+
   margin-top: 100px;
   transition: 0.1s;
-  // height: 88px;
-  // transform-origin: 50% 0 !important;
-  // transform: scale(0.42, 0.69) translateY(-58px) !important;
-  // transition: transform 0.25s ease, opacity 50ms ease 20ms, visibility 0ms 0.15s !important;
+  
+
 }
+
+
 .app-header-filter-normal {
-  // display: none;
-  // height: 88px;
   margin-top: 0px;
   margin-bottom: 20px;
+
 }
 
 .filter-scrolled {
   margin-top: 0px;
   margin-bottom: 20px;
+  
 }
 
 .app-header-container {
   top: 0;
   background-color: rgb(231, 242, 243);
-  // background-color:white;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -42,12 +32,17 @@
     color: black;
     text-decoration: none;
   }
+//   @include for-standart-layout {
+//     display: none;
+// }
 }
 
 .header-for-home {
   background-color: inherit;
   color: white;
   transition: 0.1s;
+
+ 
 
   a {
     color: white;
@@ -57,9 +52,7 @@
 .app-header-container-scrolled {
   transition: 0.4s;
   top: 0;
-  // background-color: rgb(231, 242, 243);
-  // background-color: whitesmoke;
-  // background-color: white;
+
   background-color: #f7f7f7;
   color: black;
   position: fixed;
@@ -70,6 +63,7 @@
     color: $clr2;
     text-decoration: none;
   }
+ 
 }
 
 .app-header-logo {
@@ -128,6 +122,10 @@
 
 ////////////////////////////////// FILTER ////////////////////////////////////////
 .app-header-filter-container {
+//     @include for-standart-layout {
+//       display: none;
+// }
+// display: block;
   overflow: hidden;
 
   border-radius: 50px;

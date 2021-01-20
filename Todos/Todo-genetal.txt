@@ -23,6 +23,9 @@ X 3.ask about the video
 X 4. Ask about how to add SVG(font awesome)
  5.how to do nice animation for search bar 
  6.how to add scroll bar to modal sighup
+X 7.how to add carusel to pets for each pet (at pets)
+ 8.how to hide the search filter on home when narrowed
+ 9.ask asi about footer
 
 ASK Or about:
 X 1.gitignore cant ignore the eslintcache
