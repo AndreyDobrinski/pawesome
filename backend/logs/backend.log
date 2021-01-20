@@ -1272,3 +1272,7 @@
 >>>>>>> ef899b685e915c9d9e5562efbbf8f0d51b934a4d
 1/20/2021, 7:39:49 PM - INFO - Server is running on port: 3030 
 >>>>>>> 68af673358142e975ad7f7c3b70942fbb449d594
+20.01.2021, 19:43:28 - ERROR - Cannot get orders | {} (sid: 8i9cFhctgzbOlcudwyrVMtfUTwgHqFVB)
+20.01.2021, 19:44:09 - ERROR - Cannot get orders | {} (sid: 8i9cFhctgzbOlcudwyrVMtfUTwgHqFVB)
+20.01.2021, 19:44:28 - ERROR - Cannot get orders | {} (sid: 8i9cFhctgzbOlcudwyrVMtfUTwgHqFVB)
+20.01.2021, 19:46:21 - ERROR - Cannot get orders | {} (sid: 8i9cFhctgzbOlcudwyrVMtfUTwgHqFVB)
