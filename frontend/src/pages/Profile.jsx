@@ -2,6 +2,12 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { logout } from '../store/actions/userActions'
 
+import { userService } from '../services/userService.js'
+import { OrderList } from '../cmps/OrderList.jsx'
+import { OrderPreview } from '../cmps/OrderPreview'
+import { loadOrders } from '../store/actions/orderActions.js'
+
+
 
 
 
@@ -11,16 +17,28 @@ import { logout } from '../store/actions/userActions'
 export class _Profile extends Component {
 
     state = {
-
+        user: null,
+        orders: null
     }
 
 
-    componentDidMount() {
+    async componentDidMount() {
+        const { userId } = this.props.match.params;
+        try {
+            var user = await userService.getById(userId)
+            // var { pets } = owner
 
+            await this.props.loadOrders()
+            var { orders } = this.props
+
+            this.setState({ user, orders })
+        } catch (err) {
+            console.log('Error catched in fronf2', err)
+        }
     }
 
 
-    onLogOut = ()=>{
+    onLogOut = () => {
         this.props.logout()
         this.props.history.push('/')
     }
@@ -32,9 +50,12 @@ export class _Profile extends Component {
 
     render() {
         const { loggedInUser } = this.props
+        const { orders, user } = this.state
+        console.log('in state', orders)
 
         return (
             <section className="profile-container container ">
+
                 <div className="profile-row">
 
                     <div className="profile-col-md-4">
@@ -51,17 +72,15 @@ export class _Profile extends Component {
                     </div>
 
                     <div className="profile-col-md-6">
-
                         <div className="profile-head">
                             <h5>{loggedInUser.fullname}</h5>
-                            <h6>Web Developer and Designer</h6>
-                            <div className="profile-about">About me</div>
+                            {/* <h6>Web Developer and Designer</h6> */}
+                            {/* <div className="profile-about">About me</div> */}
                         </div>
-
                     </div>
 
                     <div className="profile-col-md-2">
-                        <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
+                        {/* <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button> */}
                         {/* <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button> */}
                         <button className="profile-logout-btn" onClick={this.onLogOut}>LogOut</button>
                     </div>
@@ -69,9 +88,11 @@ export class _Profile extends Component {
                 </div>
                 <div className="profile-row">
 
-                    <div className="profile-col-md-4">
 
-                        <div className="profile-work">
+                    <div className="profile-col-md-4">
+                    <div className="user-header">About me</div>
+
+                        {/* <div className="profile-work">
                             <p>WORK LINK</p>
                             <span>Website Link</span><br />
                             <span>Bootsnipp Profile</span><br />
@@ -82,63 +103,48 @@ export class _Profile extends Component {
                             <span >WordPress</span><br />
                             <span >WooCommerce</span><br />
                             <span >PHP, .Net</span><br />
+                        </div> */}
+                        <div className="profile-tab" id="myTabContent">
+
+
+                            <div className="profile-row desc">
+                                <div className="profile">
+                                    <label>Fullame</label>
+                                </div>
+                                <div className="profile">
+                                    <p>{loggedInUser.fullname}</p>
+                                </div>
+                            </div>
+
+                            <div className="profile-row desc">
+                                <div className="profile">
+                                    <label>Email</label>
+                                </div>
+                                <div className="profile">
+                                    <p>kshitighelani@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div className="profile-row desc">
+                                <div className="profile">
+                                    <label>Phone</label>
+                                </div>
+                                <div className="profile">
+                                    <p>123 456 7890</p>
+                                </div>
+                            </div>
+
                         </div>
+
+
+                        <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
 
                     </div>
 
 
                     <div className="profile-col-md-8">
-
-                        <div className="profile-tab" id="myTabContent">
-
-
-                            <div className="profile-row">
-                                <div className="profile-col-md-6">
-                                    <label>User Id</label>
-                                </div>
-                                <div className="profile-col-md-6">
-                                    <p>{loggedInUser._id}</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row">
-                                <div className="profile-col-md-6">
-                                    <label>Fullame</label>
-                                </div>
-                                <div className="profile-col-md-6">
-                                    <p>{loggedInUser.fullname}</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row">
-                                <div className="profile-col-md-6">
-                                    <label>Email</label>
-                                </div>
-                                <div className="profile-col-md-6">
-                                    <p>kshitighelani@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row">
-                                <div className="profile-col-md-6">
-                                    <label>Phone</label>
-                                </div>
-                                <div className="profile-col-md-6">
-                                    <p>123 456 7890</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row">
-                                <div className="profile-col-md-6">
-                                    <label>Username</label>
-                                </div>
-                                <div className="profile-col-md-6">
-                                    <p>{loggedInUser.username}</p>
-                                </div>
-                            </div>
-
-                        </div>
-
+                        <div className="user-header">My orders</div>
+                        <OrderList orders={orders} user={user} />
 
                     </div>
                 </div>
@@ -159,10 +165,14 @@ const mapStateToProps = state => {
     return {
         users: state.userModule.users,
         loggedInUser: state.userModule.loggedInUser,
+        orders: state.orderModule.orders
+
     }
 }
 const mapDispatchToProps = {
-    logout
+    logout,
+    loadOrders
+
 }
 
 

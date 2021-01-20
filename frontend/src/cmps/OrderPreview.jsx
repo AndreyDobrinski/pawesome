@@ -9,7 +9,8 @@ export class _OrderPreview extends Component {
 
     state = {
         status: '',
-        moreInfo: false
+        moreInfo: false,
+        isOwner: !!this.props.user.isHost
     }
 
     componentDidMount() {
@@ -22,16 +23,15 @@ export class _OrderPreview extends Component {
     updStatus = ({ target }) => {
         this.setState({ status: target.value }, () => {
             var { order } = this.props
-            var newOrder = {...order, status: target.value}
+            var newOrder = { ...order, status: target.value }
             this.props.updOrder(newOrder)
         })
     }
 
     render() {
-        var { moreInfo, status } = this.state
+        var { moreInfo, status, isOwner } = this.state
         var { order } = this.props
-        console.log('ORDER', order)
-        if(!order) return <div className="order"></div>
+        if (!order) return <div className="order"></div>
         return <div className="order">
             <div className="order-short">
                 <Link className="order-pet" to={`/pet/${order.pet._id}`}>
@@ -41,9 +41,12 @@ export class _OrderPreview extends Component {
                     {/* {order.pet.name} */}
                 </Link>
                 <div className="order-info">
-                    <div className="order-from">
+                    {isOwner && <div className="order-from">
                         <span>From: </span><Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
-                    </div>
+                    </div>}
+                    {!isOwner && <div className="order-from">
+                        <span>To: </span><Link className="order-user-name" to={`/profile/${order.pet.host_id}`}>{order.pet.host_id}</Link>
+                    </div>}
                     <div className="order-from">
                         <span>About pet: </span><Link className="order-user-name" to={`/pet/${order.pet._id}`}>{order.pet.name}</Link>
                     </div>
@@ -56,12 +59,13 @@ export class _OrderPreview extends Component {
                     </div>
                 </div>
                 <div className="order-status">
-                    <select className={status} value={status} name="status" id="" onChange={this.updStatus}>
+                    {isOwner && <select className={status} value={status} name="status" id="" onChange={this.updStatus}>
                         <option className="requested" value="requested">requested</option>
                         <option className="pending" value="pending">pending</option>
                         <option className="accepted" value="accepted">accepted</option>
                         <option className="denied" value="denied">denied</option>
-                    </select>
+                    </select>}        
+                    {!isOwner && <div className={`user-status ${status}`}>{status}</div>}
                 </div>
             </div>
             {moreInfo && <div className="order-more">
