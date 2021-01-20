@@ -14,10 +14,17 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
+    console.log( 'petService : filterBy ', filterBy )
     const criteria = _buildCriteria(filterBy)
+    console.log( 'petService : criteria ', criteria )
+    const {sortBy} = filterBy
+    let asc = 1
+    if ( sortBy === 'likes' ) asc = -1
+    if ( sortBy === 'orgname') sortBy = 'host.fullname'
     try {
         const collection = await dbService.getCollection(COLLECTION)
-        var pets = await collection.find(criteria).toArray()
+        var pets = await collection.find(criteria).sort({ [sortBy]: asc }).toArray()
+        console.log('PetService : Pets by criteria...', pets)
         return pets
     } catch (err) {
         logger.error('no pets were found', err)
@@ -85,20 +92,21 @@ async function add(pet) {
 }
 
 function _buildCriteria(filterBy) {
+
     const criteria = {}
-    // if (filterBy.txt) {
-    //     const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
-    //     criteria.$or = [
-    //         {
-    //             username: txtCriteria
-    //         },
-    //         {
-    //             fullname: txtCriteria
-    //         }
+
+    const filterCriterias = []
+    for ( var key in filterBy ) {
+        if ( key === 'sortBy' ) continue
+        filterCriterias.push({[key]: filterBy[key]})
+    }
+
+    // criteria.$and = [
+    //         {kind: filterBy.kind},
+    //         {age: filterBy.age}
     //     ]
-    // }
-    // if (filterBy.minBalance) {
-    //     criteria.balance = { $gte: filterBy.minBalance }
-    // }
+
+    if (filterCriterias.length) criteria.$and = filterCriterias
+
     return criteria
 }

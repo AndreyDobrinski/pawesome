@@ -724,7 +724,100 @@
 18.01.2021, 19:03:14 - INFO - Server is running on port: 3030 
 18.01.2021, 19:09:39 - INFO - Server is running on port: 3030 
 <<<<<<< HEAD
+<<<<<<< HEAD
+1/19/2021, 11:24:44 AM - INFO - Server is running on port: 3030 
+1/19/2021, 11:44:55 AM - INFO - Server is running on port: 3030 
+1/19/2021, 12:13:13 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:13:18 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:13:18 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:13:25 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:13:25 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:13:31 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:13:31 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: y0DcRrJF6vMDaLzwgFVMUj75sZeF5mSh)
+1/19/2021, 12:14:38 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:14:42 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: kDv_GEUJwxV0M9G4_NQ2AXwWYq98WJ0v)
+1/19/2021, 12:14:42 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: kDv_GEUJwxV0M9G4_NQ2AXwWYq98WJ0v)
+1/19/2021, 12:16:04 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:17:43 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: IWD2d4395pCklqS56CrNShIdMQA_-LIy)
+1/19/2021, 12:17:43 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: IWD2d4395pCklqS56CrNShIdMQA_-LIy)
+1/19/2021, 12:20:06 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:20:49 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:21:19 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:21:47 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:21:50 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: XhV_9s-RxLx-k_yCVOS9hUTxFwthYyKW)
+1/19/2021, 12:21:50 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: XhV_9s-RxLx-k_yCVOS9hUTxFwthYyKW)
+1/19/2021, 12:22:12 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:22:15 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:23:39 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:23:50 PM - ERROR - Not found the pet object with id = kind=cat | {} (sid: m2UAyv-ZmvZ0dJewto_IkNarog86-Q2d)
+1/19/2021, 12:23:50 PM - ERROR - pet.controller : Failed to get a pet | {} (sid: m2UAyv-ZmvZ0dJewto_IkNarog86-Q2d)
+1/19/2021, 12:24:19 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:24:27 PM - ERROR - Not found the pet object with id = kind=cat&age=young | {} (sid: SxRcSwh__rrXwLXH1wB7FwOeimiwVaEL)
+1/19/2021, 12:24:27 PM - ERROR - pet.controller : Failed to get a pet | {} (sid: SxRcSwh__rrXwLXH1wB7FwOeimiwVaEL)
+1/19/2021, 12:24:40 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:26:27 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:30:08 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:30:12 PM - ERROR - Not found the pet object with id = kind=cat&age=young | {} (sid: dtWg2xQjQSVZpvqxv2p75Z1sLqJIJ1bo)
+1/19/2021, 12:30:12 PM - ERROR - pet.controller : Failed to get a pet | {} (sid: dtWg2xQjQSVZpvqxv2p75Z1sLqJIJ1bo)
+1/19/2021, 12:31:26 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:31:39 PM - ERROR - Not found the pet object with id = kind=cat&age=young | {} (sid: FWaCO8bWeK1r_344GvY2RTK-Y8_QBq8n)
+1/19/2021, 12:31:39 PM - ERROR - pet.controller : Failed to get a pet | {} (sid: FWaCO8bWeK1r_344GvY2RTK-Y8_QBq8n)
+1/19/2021, 12:32:34 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:32:38 PM - ERROR - Not found the pet object with id = kind=cat&age=young | {} (sid: vBytbJSP6n3C86KCEJS3WwEXVAVUZUQZ)
+1/19/2021, 12:32:38 PM - ERROR - pet.controller : Failed to get a pet | {} (sid: vBytbJSP6n3C86KCEJS3WwEXVAVUZUQZ)
+1/19/2021, 12:33:40 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:34:02 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:34:07 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: 2MOCgD9P39luXcf8BvcJy4eCSmOor1DP)
+1/19/2021, 12:34:07 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: 2MOCgD9P39luXcf8BvcJy4eCSmOor1DP)
+1/19/2021, 12:34:26 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:37:37 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:38:22 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:38:30 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:39:13 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:39:26 PM - ERROR - pet.controller : Failed to get pets | {} (sid: JviLl5EySsdQAQdP3-vhXSnZaa8KBK7g)
+1/19/2021, 12:40:39 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:40:43 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: iuAMRmnPPxcVXZ4iyjXjeq-FhmGOIrmb)
+1/19/2021, 12:40:43 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: iuAMRmnPPxcVXZ4iyjXjeq-FhmGOIrmb)
+1/19/2021, 12:41:16 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:46:09 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:46:31 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:49:26 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:50:01 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:50:02 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:50:15 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:50:48 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:51:21 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:51:34 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: Bc1oCqe5AanMA6qnWhwFTumH2W8baTr3)
+1/19/2021, 12:51:34 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: Bc1oCqe5AanMA6qnWhwFTumH2W8baTr3)
+1/19/2021, 12:52:15 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:52:20 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: D5cfXUC5_6udIA1jKSzSE5VStfhLq0W5)
+1/19/2021, 12:52:20 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: D5cfXUC5_6udIA1jKSzSE5VStfhLq0W5)
+1/19/2021, 12:52:39 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:52:49 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: AVdtbappEVvjsFL6J3gEqFR7SU9gQ4NR)
+1/19/2021, 12:52:49 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: AVdtbappEVvjsFL6J3gEqFR7SU9gQ4NR)
+1/19/2021, 12:53:18 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:54:32 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:54:34 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:55:45 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:57:22 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: LmCzNPm3wM0dY4RJLkAz2U68S6CBJEXe)
+1/19/2021, 12:57:22 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: LmCzNPm3wM0dY4RJLkAz2U68S6CBJEXe)
+1/19/2021, 12:57:50 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:57:54 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: 9fdHEtaeqhU5nOv7ZA7514U56TomteS5)
+1/19/2021, 12:57:54 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: 9fdHEtaeqhU5nOv7ZA7514U56TomteS5)
+1/19/2021, 12:58:29 PM - INFO - Server is running on port: 3030 
+1/19/2021, 12:58:32 PM - ERROR - no pets were found | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: dohtPP1sjC2Duxxj6hMyOmrVMyJ2bd34)
+1/19/2021, 12:58:32 PM - ERROR - pet.controller : Failed to get pets | {"ok":0,"code":2,"codeName":"BadValue","name":"MongoError"} (sid: dohtPP1sjC2Duxxj6hMyOmrVMyJ2bd34)
+1/19/2021, 12:58:58 PM - INFO - Server is running on port: 3030 
+1/19/2021, 1:03:20 PM - INFO - Server is running on port: 3030 
+1/19/2021, 1:04:59 PM - INFO - Server is running on port: 3030 
+1/19/2021, 1:05:00 PM - INFO - Server is running on port: 3030 
+1/19/2021, 1:09:21 PM - INFO - Server is running on port: 3030 
+1/19/2021, 1:10:27 PM - INFO - Server is running on port: 3030 
+1/19/2021, 5:03:29 PM - INFO - Server is running on port: 3030 
+1/19/2021, 6:12:51 PM - INFO - Server is running on port: 3030 
+=======
 1/19/2021, 6:05:08 PM - INFO - Server is running on port: 3030 
+>>>>>>> d985f7d8e52b5e59ffdc2977d0a0015a0e2fdd19
 =======
 18.01.2021, 19:22:07 - INFO - Server is running on port: 3030 
 18.01.2021, 23:05:56 - INFO - Server is running on port: 3030 
@@ -936,4 +1029,32 @@
 19.01.2021, 18:04:42 - INFO - Server is running on port: 3030 
 19.01.2021, 19:47:17 - INFO - Server is running on port: 3030 
 >>>>>>> 8ad9ddd1bcbf017c3586f3c1b44f21a140075b91
+<<<<<<< HEAD
 1/19/2021, 10:28:41 PM - INFO - Server is running on port: 3030 
+=======
+<<<<<<< HEAD
+1/19/2021, 8:06:34 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:10:03 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:33:54 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:34:38 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:34:56 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:35:22 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:38:26 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:46:21 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:46:42 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:46:49 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:48:21 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:48:59 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:50:08 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:54:13 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:54:26 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:55:49 PM - INFO - Server is running on port: 3030 
+1/19/2021, 8:55:54 PM - INFO - Server is running on port: 3030 
+1/19/2021, 9:34:45 PM - INFO - Server is running on port: 3030 
+1/19/2021, 9:35:06 PM - ERROR - pet.controller : Failed to get pets | {} (sid: fwx6a-tSl2CBD4DK2APATI27wbp-WCO7)
+1/19/2021, 9:43:58 PM - ERROR - pet.controller : Failed to get pets | {} (sid: fwx6a-tSl2CBD4DK2APATI27wbp-WCO7)
+1/19/2021, 10:15:35 PM - INFO - Server is running on port: 3030 
+1/19/2021, 11:35:34 PM - INFO - Server is running on port: 3030 
+=======
+>>>>>>> d985f7d8e52b5e59ffdc2977d0a0015a0e2fdd19
+>>>>>>> a63be534fca6f2bdf121ccaac24be898bea63d39
