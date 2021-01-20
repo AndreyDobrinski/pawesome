@@ -1075,8 +1075,25 @@
 =======
 >>>>>>> d985f7d8e52b5e59ffdc2977d0a0015a0e2fdd19
 >>>>>>> a63be534fca6f2bdf121ccaac24be898bea63d39
+<<<<<<< HEAD
+1/20/2021, 10:17:52 AM - INFO - Server is running on port: 3030 
+1/20/2021, 12:31:47 PM - DEBUG - auth.service - login with username: puki (sid: Mz7Cy08l8yd0HtaSyog5lcHdao1pL_lM)
+1/20/2021, 12:31:47 PM - ERROR - Failed to Login Invalid username or password (sid: Mz7Cy08l8yd0HtaSyog5lcHdao1pL_lM)
+1/20/2021, 12:32:06 PM - DEBUG - auth.service - signup with username: admin, fullname: admin (sid: Mz7Cy08l8yd0HtaSyog5lcHdao1pL_lM)
+1/20/2021, 12:32:06 PM - DEBUG - auth.route - new account created: {"username":"admin","password":"$2b$10$QWUunpKYibs7WbnzZGGCQOF9wW9yRIgt8KATxo/4Q1GNPeyMAe/1C","fullname":"admin","_id":"600806a6531ca61788e67bc9"} (sid: Mz7Cy08l8yd0HtaSyog5lcHdao1pL_lM)
+1/20/2021, 12:32:06 PM - DEBUG - auth.service - login with username: admin (sid: Mz7Cy08l8yd0HtaSyog5lcHdao1pL_lM)
+1/20/2021, 1:03:51 PM - DEBUG - auth.service - signup with username: admin, fullname: admin (sid: SQ5xg9xKmHHzNIIyar0z9x_2xGO1sajY)
+1/20/2021, 1:03:51 PM - DEBUG - auth.route - new account created: {"username":"admin","password":"$2b$10$U9jd8hlWnWEmia.L8JUZxuea2e5C2MzMiYN590IqttfVqDMjpHK7u","fullname":"admin","_id":"60080e17531ca61788e67bca"} (sid: SQ5xg9xKmHHzNIIyar0z9x_2xGO1sajY)
+1/20/2021, 1:03:51 PM - DEBUG - auth.service - login with username: admin (sid: SQ5xg9xKmHHzNIIyar0z9x_2xGO1sajY)
+1/20/2021, 4:38:57 PM - DEBUG - auth.service - login with username: admin (sid: XEoyWqG_7a-v2ZbaEsAvtltTvjZmF_MJ)
+1/20/2021, 4:52:33 PM - DEBUG - auth.service - login with username: admin (sid: Lmbc_W817z5XvsBWWeq33CxZK_6O8mcw)
+1/20/2021, 4:52:36 PM - INFO - Req from: admin (sid: Lmbc_W817z5XvsBWWeq33CxZK_6O8mcw)
+1/20/2021, 4:52:38 PM - INFO - Req from: admin (sid: Lmbc_W817z5XvsBWWeq33CxZK_6O8mcw)
+1/20/2021, 4:52:43 PM - INFO - Req from: admin (sid: Lmbc_W817z5XvsBWWeq33CxZK_6O8mcw)
+=======
 >>>>>>> 61e7e16b0d217f5e5701eec846158248783fc90b
 20.01.2021, 11:55:07 - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 20.01.2021, 12:22:39 - DEBUG - auth.service - login with username: puki (sid: MmmMh96Qz1D9MPOxBzh8sGgsB0Ax6vet)
 20.01.2021, 12:36:05 - INFO - Req from: puki (sid: MmmMh96Qz1D9MPOxBzh8sGgsB0Ax6vet)
 20.01.2021, 12:48:52 - INFO - Req from: puki (sid: MmmMh96Qz1D9MPOxBzh8sGgsB0Ax6vet)
@@ -1251,3 +1268,7 @@
 20.01.2021, 18:01:40 - INFO - Req from: puki (sid: shBguDHHh7c4mIlq1mxsE-jCp4kRlbqi)
 20.01.2021, 18:01:50 - INFO - Req from: puki (sid: shBguDHHh7c4mIlq1mxsE-jCp4kRlbqi)
 20.01.2021, 18:02:07 - INFO - Req from: puki (sid: shBguDHHh7c4mIlq1mxsE-jCp4kRlbqi)
+=======
+>>>>>>> ef899b685e915c9d9e5562efbbf8f0d51b934a4d
+1/20/2021, 7:39:49 PM - INFO - Server is running on port: 3030 
+>>>>>>> 68af673358142e975ad7f7c3b70942fbb449d594

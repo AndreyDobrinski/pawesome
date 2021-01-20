@@ -1,24 +1,16 @@
-
-
 .app-header-filter-home {
-
   margin-top: 100px;
   transition: 0.1s;
-  
-
 }
-
 
 .app-header-filter-normal {
   margin-top: 0px;
   margin-bottom: 20px;
-
 }
 
 .filter-scrolled {
   margin-top: 0px;
   margin-bottom: 20px;
-  
 }
 
 .app-header-container {
@@ -32,17 +24,15 @@
     color: black;
     text-decoration: none;
   }
-//   @include for-standart-layout {
-//     display: none;
-// }
+  //   @include for-standart-layout {
+  //     display: none;
+  // }
 }
 
 .header-for-home {
   background-color: inherit;
   color: white;
   transition: 0.1s;
-
- 
 
   a {
     color: white;
@@ -58,24 +48,52 @@
   position: fixed;
   width: 100%;
   z-index: 1;
-  font-size: rem(50px);
   a {
     color: $clr2;
     text-decoration: none;
+    // display: none;
   }
- 
+
+  // @include for-narrow-layout {
+  //   a {
+  //     display: none;
+  //   }
+  // }
+  // @include for-normal-layout {
+  //   a {
+  //     display: block;
+  //     font-size: rem(34px);
+  //   }
+  // }
 }
 
 .app-header-logo {
   .app-header-logo-img {
-
     margin-right: 10px;
-    width: 40px;
-    height: 40px;
+
+    width: 30px;
+    height: 30px;
+    @include for-narrow-layout {
+      width: 30px;
+      height: 30px;
+    }
+    @include for-normal-layout {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .app-header-name-pawesome {
     transition: 0.4s;
+    display: none;
+
+    @include for-narrow-layout {
+      display: none;
+    }
+    @include for-normal-layout {
+      display: block;
+      font-size: rem(34px);
+    }
   }
 }
 
@@ -99,13 +117,31 @@
   .app-header-link-pets {
     transition: 0.4s;
     margin-right: 20px;
-    font-size: 25px;
+    font-size: 23px;
+    @include for-narrow-layout {
+      font-size: 25px;
+
+    }
+    @include for-normal-layout {
+      font-size: 25px;
+
+    }
   }
 
   .app-header-link-login {
     transition: 0.4s;
     margin-left: 15px;
     font-size: 25px;
+    width: 30px;
+    height: 30px;
+    // @include for-narrow-layout {
+    //   width: 30px;
+    //   height: 30px;
+    // }
+    // @include for-normal-layout {
+    //   width: 30px;
+    //   height: 30px;
+    // }
 
     &:hover {
       cursor: pointer;
@@ -115,43 +151,46 @@
   .app-header-mode {
     cursor: pointer;
     margin-left: 25px;
-    font-size: 25px;
+    // font-size: 25px;
+    width: 30px;
+    height: 30px;
     user-select: none;
   }
 }
 
 ////////////////////////////////// FILTER ////////////////////////////////////////
 .app-header-filter-container {
-//     @include for-standart-layout {
-//       display: none;
-// }
-// display: block;
   overflow: hidden;
-
   border-radius: 50px;
   background-color: #fff;
-  // background-color:inherit;
   color: black;
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
-  // overflow: hidden;
 
   .app-header-filte-box {
     width: 530px;
-    // padding: 10px;
+   
 
     select {
       border: none;
       outline: none;
       background-color: inherit;
-      // &:hover{
-      //   background-color: #eee;
-
-      // }
+      padding: 5px;
+ 
     }
 
     .app-header-filte-box-type {
-      padding: 10px;
+      padding: 10px 0px 10px 10px;
+      width: 86px;
+      @include for-narrow-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+
+      }
+      @include for-normal-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+      }
       margin-left: 10px;
       // margin-left: 10px;
       &:hover {
@@ -160,10 +199,11 @@
 
       .type-title {
         font-weight: 800;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
+       
       }
 
       .type-text {
@@ -173,18 +213,29 @@
         border: none;
         outline: none;
         background-color: inherit;
+       
       }
     }
 
     .app-header-filte-box-age {
-      padding: 10px;
+      padding: 10px 0px 10px 10px;
+      width: 86px;
+      @include for-narrow-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+
+      }
+      @include for-normal-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+      }
       &:hover {
         background-color: #eee;
       }
 
       .age-title {
         font-weight: 800;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
@@ -201,14 +252,24 @@
     }
 
     .app-header-filte-box-gender {
-      padding: 10px;
+      padding: 10px 0px 10px 10px;
+      width: 86px;
+      @include for-narrow-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+
+      }
+      @include for-normal-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+      }
       &:hover {
         background-color: #eee;
       }
 
       .gender-title {
         font-weight: 800;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
@@ -224,14 +285,24 @@
       }
     }
     .app-header-filte-box-location {
-      padding: 10px;
+      padding: 10px 0px 10px 10px;
+      width: 86px;
+      @include for-narrow-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+
+      }
+      @include for-normal-layout {
+        padding: 10px 10px 10px 10px;
+        width: auto;
+      }
       &:hover {
         background-color: #eee;
       }
 
       .location-title {
         font-weight: 800;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
@@ -291,20 +362,42 @@
   cursor: pointer;
 
   .app-header-filte-box-small {
-    width: 270px;
-    padding: 5px;
+    width: 140px;
+    padding: 0px;
+    @include for-narrow-layout {
+      width: 190px;
+      padding: 0px;
+    }
+    @include for-normal-layout {
+      width: 270px;
+      padding: 0px;
+    }
 
     .app-header-filte-box-search-small {
       padding: 10px;
       margin-left: 10px;
       // margin-left: 10px;
+      margin: 5px;
+      @include for-narrow-layout {
+        margin: 5px;
+      }
+      @include for-normal-layout {
+        // margin: 10px;
+      }
 
       .small-search-title {
         font-weight: 500;
-        font-size: 18px;
-        line-height: 16px;
+        font-size: 12px;
+        width: 200px;
+        // line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
+        @include for-narrow-layout {
+          font-size: 12px;
+        }
+        @include for-normal-layout {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -313,12 +406,20 @@
       margin-left: 10px;
       background-color: #ff385c;
       border-radius: 50%;
-      width: 40px !important;
-      height: 40px;
+      width: 35px;
+      height: 35px;
       display: flex;
       justify-content: center;
       align-items: center;
       outline: none;
+      @include for-narrow-layout {
+        width: 40px;
+        height: 40px;
+      }
+      @include for-normal-layout {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }
@@ -352,12 +453,24 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  width: 30vw;
+  width: 80vw;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+  @include for-narrow-layout {
+    width: 80vw;
+
+  }
+  @include for-standart-layout {
+    width: 80vw;
+    
+  }
+  @include for-normal-layout {
+    width: 30vw;
+
+  }
 }
 
 .modal-header {
@@ -452,9 +565,7 @@
   }
 }
 
-
 // Modal //
-.dark-mode-modal-content{
+.dark-mode-modal-content {
   background-color: #9a9a9c;
-  
 }
