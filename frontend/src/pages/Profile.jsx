@@ -38,8 +38,8 @@ export class _Profile extends Component {
     }
 
 
-    onLogOut = () => {
-        this.props.logout()
+    onLogOut = async () => {
+        await this.props.logout()
         this.props.history.push('/')
     }
 
@@ -52,6 +52,7 @@ export class _Profile extends Component {
         const { loggedInUser } = this.props
         const { orders, user } = this.state
         console.log('in state', orders)
+        if(!loggedInUser) return <div>Loading...</div>
 
         return (
             <section className="profile-container container ">
@@ -90,7 +91,7 @@ export class _Profile extends Component {
 
 
                     <div className="profile-col-md-4">
-                    <div className="user-header">About me</div>
+                        <div className="user-header">About me</div>
 
                         {/* <div className="profile-work">
                             <p>WORK LINK</p>
@@ -150,7 +151,7 @@ export class _Profile extends Component {
                 </div>
 
 
-                
+
 
 
 

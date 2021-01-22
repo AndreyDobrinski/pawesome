@@ -83,6 +83,7 @@ export class _AppHeader extends Component {
             } else {
                 this.setState({
                     isHomePage: false,
+                    smallSearchClicked:false
                 })
             }
         }
@@ -253,9 +254,6 @@ export class _AppHeader extends Component {
 
 
     render() {
-
-
-
         let signupSection = (
 
             <div className={`modal-content ${this.props.isDarkMode ? 'dark-mode-modal-content' : ''}`} onClick={(ev) => ev.stopPropagation()}>
@@ -361,9 +359,12 @@ export class _AppHeader extends Component {
 
         const { loggedInUser } = this.props
         const { isNewUser } = this.state
+        const showDarkmode = this.state.isHomePage ? this.props.isDarkMode && this.state.isScrolled : this.props.isDarkMode
 
         return (
-            <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''} ${this.state.isHomePage ? ' header-for-home' : ''} ${this.props.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}>
+            <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''}
+             ${this.state.isHomePage ? ' header-for-home' : ''} ${showDarkmode ? 'dark-mode-header-container' : ''} `}>
+             {/* ${this.state.isHomePage ? ' header-for-home' : ''} ${this.props.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}> */}
 
                 <div className="app-header-content flex align-center justify-between container">
 

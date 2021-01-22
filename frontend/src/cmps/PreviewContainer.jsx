@@ -1,11 +1,15 @@
 import {Component} from 'react'
+import { connect } from 'react-redux'
+
 import { petService } from "../services/petService"
 
 import {PetList} from './PetList'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
 
 const MONTH = 30
 
-export class PreviewContainer extends Component {
+export class _PreviewContainer extends Component {
 
     state = {
         pets: []
@@ -46,8 +50,23 @@ export class PreviewContainer extends Component {
     render() {
         const {pets} = this.state
         return <div className={this.props.clsName}>
-            <h1>{this.props.title}</h1>
+            <h1 className={`pets-preview-subject ${this.props.isDarkMode ? 'dark-mode-preview-subject' : ''}`}>{this.props.title}</h1>
             <PetList pets={pets}/>
         </div>
     }
 }
+
+
+const mapStateToProps = state => {
+    return {
+      isDarkMode: state.appSettingsModule.isDarkMode
+  
+    }
+  }
+  const mapDispatchToProps = {
+    toggleDarkMode
+  }
+  
+  
+  
+  export const PreviewContainer = connect(mapStateToProps, mapDispatchToProps)(_PreviewContainer)

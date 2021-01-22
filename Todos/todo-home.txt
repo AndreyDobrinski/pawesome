@@ -14,3 +14,15 @@ Nice things to add:
 Bugs found:
  1.video sometimes dosent start(When we will have heroku , cheak if this bug still exists)
  X 2.the title and button on video are not aliged to middle properly
+
+
+
+
+
+
+
+
+
+
+Needs to be done:
+ 1.on phone change the title of video to be "Find your" "Pawsome friend" .

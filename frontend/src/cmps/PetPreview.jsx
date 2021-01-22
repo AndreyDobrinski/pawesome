@@ -40,7 +40,7 @@ export class _PetPreview extends Component {
         // const imgSrc = pet.imgUrls[0]
         const gender = this.state.pet.gender === 'female'? <Female/>: <Male/>
 
-        return (<li className="pet-preview">
+        return (<li className={`pet-preview ${this.props.isDarkMode ? 'dark-mode-pet-preview' : ''}`}>
            
             <CarouselComponent pet={pet}/>
             <div className="flex">
@@ -48,7 +48,7 @@ export class _PetPreview extends Component {
                 <h2 className="pet-preview-pet-gender flex justify-center align-center">{gender}</h2>
             </div>
             <p className={`${this.props.isDarkMode ? 'dark-mode-pet-short-desc' : ''}`}>{pet.shortDesc}</p>
-            <div className="pet-preview-host-and-likes flex justify-between">
+            <div className={`pet-preview-host-and-likes ${this.props.isDarkMode ? 'dark-mode-host-and-likes' : ''} flex justify-between `}>
                 <h4 className={`pet-preview-host flex justify-center align-center ${this.props.isDarkMode ? 'dark-mode-pet-host' : ''}`}>{pet.host.fullname}</h4>
                 <div className="pet-preview-likes flex">
                     <LikeButton liked={this.onLike} /><span className={`pet-preview-likes-amount flex justify-center align-center ${this.props.isDarkMode ? 'dark-mode-pet-likes-amount' : ''}`}>{`${pet.likes}`}</span>

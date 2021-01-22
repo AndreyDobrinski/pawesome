@@ -61,6 +61,35 @@ h1{
 }
 
 
+
+////
+
+main{
+    &.main-app{
+        // background-color: red;
+        transition: 0.4s;
+        background-color: inherit;
+    
+    }
+
+}
+// main{
+//         // background-color: red;
+//         transition: 0.4s;
+//         background-color: inherit;
+    
+    
+
+// }
+// .main-app{
+//     // background-color: red;
+//     transition: 0.4s;
+//     background-color: inherit;
+
+// }
+
+//////
+
 button{
   // padding: rem(10px);
 //   padding: 18px 50px;
