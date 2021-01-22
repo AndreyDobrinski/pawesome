@@ -36,8 +36,8 @@ export class _Profile extends Component {
     }
  
 
-    onLogOut = () => {
-        this.props.logout()
+    onLogOut = async () => {
+        await this.props.logout()
         this.props.history.push('/')
     }
 
@@ -50,6 +50,7 @@ export class _Profile extends Component {
         const { loggedInUser } = this.props
         const { orders, user, isOwner } = this.state
         console.log('in state', orders)
+        if(!loggedInUser) return <div>Loading...</div>
 
         return (
             <section className="profile-container container ">

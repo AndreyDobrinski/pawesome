@@ -34,11 +34,13 @@ async function signup(userCred) {
 
 
 async function logout() {
+    sessionStorage.removeItem('loggedinUser')
     return await httpService.post('auth/logout')
 }
 
 
 function _saveLocalUser(user) { 
+    // sessionStorage.setItem('loggedinUser', JSON.stringify(user))
     sessionStorage.setItem('loggedinUser', JSON.stringify(user))
     return user
 }
