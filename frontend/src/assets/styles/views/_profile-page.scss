@@ -95,6 +95,8 @@
     &.desc {
         gap: 10px;
         justify-content: space-between;
+        margin: 0;
+        padding: 0 10%;
     }
 
     .profile-col-md-2 {
@@ -106,9 +108,9 @@
         flex: 0 0 33.333333%;
         max-width: 33.333333%;
         justify-content: center;
-        > * {
-            margin: 0 20%;
-        }
+        // > * {
+        //     margin: 0 20%;
+        // }
     }
 
     .profile-col-md-6 {
@@ -147,4 +149,8 @@
 
 .user-header {
     margin: auto;
+}
+
+.profile-btn-sec {
+    text-align: center;
 }

@@ -14,9 +14,9 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
-    console.log( 'petService : filterBy ', filterBy )
+    // console.log( 'petService : filterBy ', filterBy )
     const criteria = _buildCriteria(filterBy)
-    console.log( 'petService : criteria ', criteria )
+    // console.log( 'petService : criteria ', criteria )
     const {sortBy} = filterBy
     let asc = 1
     if ( sortBy === 'likes' ) asc = -1
@@ -24,7 +24,7 @@ async function query(filterBy = {}) {
     try {
         const collection = await dbService.getCollection(COLLECTION)
         var pets = await collection.find(criteria).sort({ [sortBy]: asc }).toArray()
-        console.log('PetService : Pets by criteria...', pets)
+        // console.log('PetService : Pets by criteria...', pets)
         return pets
     } catch (err) {
         logger.error('no pets were found', err)

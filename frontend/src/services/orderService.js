@@ -42,5 +42,5 @@ async function saveOrder(pet, message) {
 }
 
 async function updOrder(newOrder) {
-    return httpService.put(`order`, newOrder)
+    return httpService.put(`order/:${newOrder._id}`, newOrder)
 }

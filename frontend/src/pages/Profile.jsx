@@ -10,15 +10,12 @@ import { loadOrders } from '../store/actions/orderActions.js'
 
 
 
-
-
-
-
 export class _Profile extends Component {
 
     state = {
         user: null,
-        orders: null
+        orders: null,
+        isOwner: true,
     }
 
 
@@ -26,17 +23,18 @@ export class _Profile extends Component {
         const { userId } = this.props.match.params;
         try {
             var user = await userService.getById(userId)
+            var isOwner = user.isHost ? true : false
             // var { pets } = owner
 
             await this.props.loadOrders()
             var { orders } = this.props
 
-            this.setState({ user, orders })
+            this.setState({ user, orders, isOwner })
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
     }
-
+ 
 
     onLogOut = () => {
         this.props.logout()
@@ -50,7 +48,7 @@ export class _Profile extends Component {
 
     render() {
         const { loggedInUser } = this.props
-        const { orders, user } = this.state
+        const { orders, user, isOwner } = this.state
         console.log('in state', orders)
 
         return (
@@ -59,21 +57,51 @@ export class _Profile extends Component {
                 <div className="profile-row">
 
                     <div className="profile-col-md-4">
-                        <div className="profile-img">
+                        {!isOwner && <div className="profile-img">
 
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
 
-                            <div className="file profile-btn ">
+                            {/* <div className="file profile-btn ">
                                 Change Photo
                                 <input type="file" name="file" />
-                            </div>
+                            </div> */}
 
-                        </div>
+                        </div>}
                     </div>
 
                     <div className="profile-col-md-6">
                         <div className="profile-head">
                             <h5>{loggedInUser.fullname}</h5>
+                            {!isOwner && <div className="profile-tab" id="myTabContent">
+                                <div className="profile-row desc">
+                                    <div className="profile">
+                                        <label>Fullame</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{loggedInUser.fullname}</p>
+                                    </div>
+                                </div>
+
+                                <div className="profile-row desc">
+                                    <div className="profile">
+                                        <label>Email</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{loggedInUser.contactInfo.email}</p>
+                                    </div>
+                                </div>
+
+                                <div className="profile-row desc">
+                                    <div className="profile">
+                                        <label>Phone</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{loggedInUser.contactInfo.phone}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+
                             {/* <h6>Web Developer and Designer</h6> */}
                             {/* <div className="profile-about">About me</div> */}
                         </div>
@@ -89,8 +117,10 @@ export class _Profile extends Component {
                 <div className="profile-row">
 
 
-                    <div className="profile-col-md-4">
-                    <div className="user-header">About me</div>
+                    <div className="profile-col-md-8">
+                        {!isOwner && <div className="user-header">My requests</div>}
+                        {isOwner && <div className="user-header">Requests pending</div>}
+                        <OrderList orders={orders} user={user} />
 
                         {/* <div className="profile-work">
                             <p>WORK LINK</p>
@@ -104,53 +134,20 @@ export class _Profile extends Component {
                             <span >WooCommerce</span><br />
                             <span >PHP, .Net</span><br />
                         </div> */}
-                        <div className="profile-tab" id="myTabContent">
-
-
-                            <div className="profile-row desc">
-                                <div className="profile">
-                                    <label>Fullame</label>
-                                </div>
-                                <div className="profile">
-                                    <p>{loggedInUser.fullname}</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row desc">
-                                <div className="profile">
-                                    <label>Email</label>
-                                </div>
-                                <div className="profile">
-                                    <p>kshitighelani@gmail.com</p>
-                                </div>
-                            </div>
-
-                            <div className="profile-row desc">
-                                <div className="profile">
-                                    <label>Phone</label>
-                                </div>
-                                <div className="profile">
-                                    <p>123 456 7890</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-
-                        <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
-
+                        {/* <div className="profile-btn-sec">
+                            <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
+                        </div> */}
                     </div>
 
 
-                    <div className="profile-col-md-8">
-                        <div className="user-header">My orders</div>
-                        <OrderList orders={orders} user={user} />
+                    <div className="profile-col-md-4">
+
 
                     </div>
                 </div>
 
 
-                
+
 
 
 

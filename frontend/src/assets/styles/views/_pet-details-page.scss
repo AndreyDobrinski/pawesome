@@ -1,5 +1,5 @@
 .pet-details {
-    margin-top: rem(110px);
+    margin-top: rem(80px);
     display: flex;
     flex-direction: column;
     h2 {
@@ -29,6 +29,9 @@
 }
 .pet-details-main-title {
     height: 100%;
+    h2{
+        margin-top: 15px;
+    }
     .pet-details-block {
         gap: 5px;
         align-items: center;
