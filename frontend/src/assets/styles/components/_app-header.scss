@@ -381,13 +381,13 @@
 
       .small-search-title {
         font-weight: 500;
-        font-size: 12px;
+        font-size: 15px;
         width: 200px;
         // line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
         @include for-narrow-layout {
-          font-size: 12px;
+          font-size: 15px;
         }
         @include for-normal-layout {
           font-size: 18px;

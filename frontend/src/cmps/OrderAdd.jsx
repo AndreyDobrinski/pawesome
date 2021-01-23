@@ -2,6 +2,8 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder } from '../store/actions/orderActions.js'
 import { orderService } from "../services/orderService.js";
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
 
 
 
@@ -40,7 +42,8 @@ export class _OrderAdd extends Component {
             {!isOrderDone && <div className="order-not-submitted">
                 <form className="add-order" onSubmit={this.onAddOrder}>
                     <textarea placeholder={`Hello! I want to adopt ${pet.name} ...`} onChange={this.onInputChange} value={message} name="order-txt" rows="8"></textarea>
-                    <button className="add-order-btn btn2">Adopt {pet.name}</button>
+                    {/* <button className="add-order-btn btn2">Adopt {pet.name}</button> */}
+                    <button className={`add-order-btn ${this.props.isDarkMode ? 'dark-mode-add-order-btn' : ''}`}>Adopt {pet.name}</button>
                 </form>
             </div>}
 
@@ -54,12 +57,15 @@ export class _OrderAdd extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        loggedInUser: state.userModule.loggedInUser
+        loggedInUser: state.userModule.loggedInUser,
+        isDarkMode: state.appSettingsModule.isDarkMode
+
     }
 }
 
 const mapDispatchToProps = {
-    saveOrder
+    saveOrder,
+    toggleDarkMode
 }
 
 export const OrderAdd = connect(mapStateToProps, mapDispatchToProps)(_OrderAdd)

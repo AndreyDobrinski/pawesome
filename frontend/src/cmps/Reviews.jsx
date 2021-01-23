@@ -1,14 +1,20 @@
 import { Component } from 'react'
+import { connect } from 'react-redux'
+
 import author01 from '../assets/imgs/author01.jpg'
 import author02 from '../assets/imgs/author02.jpg'
 import author03 from '../assets/imgs/author03.jpg'
 import author04 from '../assets/imgs/author04.jpg'
-import { ReactComponent as Star } from "../assets/imgs/star.svg"
+
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
+import { ReactComponent as StarYellow } from "../assets/imgs/star-yellow.svg"
+import { ReactComponent as StarOrange } from "../assets/imgs/star-orange.svg"
 import { ReactComponent as StarEmpty } from "../assets/imgs/starEmpty.svg"
 
 
 
-export class Reviews extends Component {
+export class _Reviews extends Component {
     state = {
         reviews: [
             {
@@ -49,7 +55,8 @@ export class Reviews extends Component {
     setStars = (mark) => {
         var stars = []
         for (let i = 0; i < mark; i++) {
-            stars.push(<Star/>)
+            // stars.push(<StarYellow/>)
+            stars.push(this.props.isDarkMode ? <StarYellow/> : <StarOrange/>)
         }
         if (stars.length < 5) stars.push(<StarEmpty/>)
         return stars
@@ -59,7 +66,7 @@ export class Reviews extends Component {
         var { reviews } = this.state
 
         return <div className="reviews-section">
-            <h3>Reviews about owner</h3>
+            <h3 className={`reviews-section-title ${this.props.isDarkMode ? 'dark-mode-reviews-section-title' : ''} `}>Reviews about owner</h3>
             <div className="reviews">
                 {reviews.map(review => {
                     return <div className="review">
@@ -68,12 +75,12 @@ export class Reviews extends Component {
                                 <img src={review.imgUrl} alt="" />
                             </div>
                             <div className="review-name-mark">
-                                <h4 className="author">{review.author}</h4>
+                                <h4 className={`author ${this.props.isDarkMode ? 'dark-mode-author' : ''}`}>{review.author}</h4>
                                 <div className="stars">{this.setStars(review.mark)}</div>                                
                             </div>
                             <h5>{review.createdAt}</h5>
                         </div>
-                        <div className="review-txt">{review.txt}</div>
+                        <div className={`review-txt ${this.props.isDarkMode ? 'dark-mode-review-txt' : ''}`}>{review.txt}</div>
                     </div>
                 })}
             </div>
@@ -81,3 +88,16 @@ export class Reviews extends Component {
     }
 }
 
+
+const mapGlobalStateToProps = (state) => {
+    return {
+        isDarkMode: state.appSettingsModule.isDarkMode
+
+    }
+}
+
+const mapDispatchToProps = {
+    toggleDarkMode
+
+}
+export const Reviews = connect(mapGlobalStateToProps, mapDispatchToProps)(_Reviews)

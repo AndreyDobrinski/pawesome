@@ -76,34 +76,7 @@ X 3.Ask abut home page.
 
 
 
+Needs to change:
+ 1.remove the numbers in carusela(1 of 3)
 
 
-
-
-
-
-
-
-Change:
-
-ms video to hight 100% and width 100% , obj fit 
-
-app-header-filter ; remover marginb top , put pos fixed , top20vh,
-
-
-
-
-
-.ms-slide-bgvideo {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    margin-left: 0px;
-    object-fit: cover;
-}
-
-
-.app-header-filter-home {
-    margin-top: 3%;
-    transition: 0.1s;
-}
