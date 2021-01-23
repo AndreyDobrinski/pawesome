@@ -5,6 +5,11 @@ const logger = require('./logger.service');
 
 var gIo = null
 var gSocketBySessionIdMap = {}
+//
+// var gTypingUser = {
+//     username: '',
+//     at: Date.now()
+// }
 
 function emit({ type, data }) {
     gIo.emit(type, data);
@@ -26,6 +31,7 @@ function connectSockets(http, session) {
     gIo.use(sharedSession(session, {
         autoSave: true
     }));
+
     gIo.on('connection', socket => {
         console.log('socket.handshake', socket.handshake)
         gSocketBySessionIdMap[socket.handshake.sessionID] = socket
@@ -49,7 +55,20 @@ function connectSockets(http, session) {
             // gIo.emit('chat addMsg', msg)
             // emits only to sockets in the same room
             gIo.to(socket.myTopic).emit('chat addMsg', msg)
+            socket.broadcast.to(socket.myTopic)
+            // .emit('userTyping', { username: gTypingUser.username, msg: null })
+
         })
+        // socket.on('typing', ({ username, msg }) => {
+        //     console.log('username, msg ', username, msg);
+        //     console.log('time between ', gTypingUser.at + 2000 > Date.now());
+
+        //     if (gTypingUser.at + 2000 > Date.now() && gTypingUser.username !== username) return
+        //     gTypingUser.at = Date.now()
+        //     gTypingUser.username = username
+            
+        //     socket.to(socket.myTopic).emit('userTyping', { username, msg })
+        // })
 
     })
 }

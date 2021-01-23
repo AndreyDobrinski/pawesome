@@ -20,7 +20,9 @@ export function saveOrder(pet, message) {
 }
 export function updOrder(newOrder) {
     return async (dispatch) => {
+        console.log('orderActions, newOrder:', newOrder)
         const res = await orderService.updOrder(newOrder)
+        console.log('orderActions, res:', res)
         const action = { type: 'UPDATE_ORDER', newOrder: res }
         return await dispatch(action)
     }

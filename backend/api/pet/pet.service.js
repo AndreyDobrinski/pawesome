@@ -14,9 +14,9 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
-    console.log( 'petService : filterBy ', filterBy )
+    // console.log( 'petService : filterBy ', filterBy )
     const criteria = _buildCriteria(filterBy)
-    console.log( 'petService : criteria ', criteria )
+    // console.log( 'petService : criteria ', criteria )
     const {sortBy} = filterBy
     let asc = 1
     if ( sortBy === 'likes' ) asc = -1

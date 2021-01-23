@@ -2,7 +2,7 @@ Todo:
 vorder store
 vfunctions (onchange, save...)
 vmap
--add user to order
+vadd user to order
 
 
 UI:
@@ -11,11 +11,36 @@ Need common design(buttons, fonts, colors)
 
 Qs:
 ?users?
-*building of order in frontend?
 
 
 Andrey: 
 -UserProfile: need to get id from query? not loggedInUser => set in Query loggedInUser._id <== for link in order
 
 Bug: 
--every-time-rendering of map??
+v every-time-rendering of map??
+
+
+
+
+
+real data for user (in User Profile) - DB
+Edit Profile - to comments
+"About me" - delete
+"change photo" - comments
+
+User:
+userInfo - в центре, под именем
+orders (!requests) - слева, под фото
+socket - справа 
+
+Owner: 
+только ордеры - в лев часть
+справа - userInfo/socket //3h//
+
+
+v Bug: update order status
+v "To" - owner name
+
+filters - 3h
+
+

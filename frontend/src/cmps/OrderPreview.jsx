@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder, updOrder } from '../store/actions/orderActions.js'
-
+import { userService } from '../services/userService.js'
 import {Chat} from './Chat.jsx'
 
 
@@ -11,11 +11,21 @@ export class _OrderPreview extends Component {
     state = {
         status: '',
         moreInfo: false,
-        isOwner: !!this.props.user.isHost
+        isOwner: !!this.props.user.isHost,
+        ownerName: '',
+        isChatOpen: false
+
     }
 
-    componentDidMount() {
-        this.setState({ status: this.props.order.status })
+    async componentDidMount() {
+        var { order } = this.props
+        var user = await userService.getById(order.ownerId)
+        var ownerName = user.fullname
+        this.setState({ status: order.status, ownerName })
+    }
+
+    onToggleChat = () => {
+        this.setState({ isChatOpen: !this.state.isChatOpen })
     }
 
     changeShow = () => {
@@ -25,13 +35,14 @@ export class _OrderPreview extends Component {
         this.setState({ status: target.value }, () => {
             var { order } = this.props
             var newOrder = { ...order, status: target.value }
+            console.log('OrderPreview:', newOrder)
             this.props.updOrder(newOrder)
         })
     }
 
     render() {
-        var { moreInfo, status, isOwner } = this.state
-        var { order } = this.props
+        var { moreInfo, status, isOwner, ownerName } = this.state
+        var { order, onToggleChat } = this.props
         if (!order) return <div className="order"></div>
         return <div className="order" >
             <div className="order-short">
@@ -46,7 +57,7 @@ export class _OrderPreview extends Component {
                         <span>From: </span><Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
                     </div>}
                     {!isOwner && <div className="order-from">
-                        <span>To: </span><Link className="order-user-name" to={`/profile/${order.pet.host_id}`}>{order.pet.host_id}</Link>
+                        <span>To: </span><Link className="order-user-name" to={`/profile/${order.pet.host_id}`}>{ownerName}</Link>
                     </div>}
                     <div className="order-from">
                         <span>About pet: </span><Link className="order-user-name" to={`/pet/${order.pet._id}`}>{order.pet.name}</Link>
@@ -55,6 +66,8 @@ export class _OrderPreview extends Component {
                     <div className="order-date">
                         {order.createdAt}
                     </div>
+                    <div className="chat-icon" onClick={onToggleChat}>chat</div>
+
                     <div className="order-show-more" onClick={this.changeShow}>
                         ...
                     </div>
@@ -65,7 +78,7 @@ export class _OrderPreview extends Component {
                         <option className="pending" value="pending">pending</option>
                         <option className="accepted" value="accepted">accepted</option>
                         <option className="denied" value="denied">denied</option>
-                    </select>}        
+                    </select>}
                     {!isOwner && <div className={`user-status ${status}`}>{status}</div>}
                 </div>
             </div>

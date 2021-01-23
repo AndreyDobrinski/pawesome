@@ -4,22 +4,17 @@ const asyncLocalStorage = require('../../services/als.service')
 
 async function query(userId) {
     try {
-        
         var collection = await dbService.getCollection('order')
-        var orders = await collection.find().toArray()
-        return orders
-
-        // console.log('USERiD', userId)
-        // var userCollection = await dbService.getCollection('user')
-        // var users = await userCollection.find({ _id: ObjectId(userId) }).toArray()
-        // if (users[0].isHost) {
-        //     var collection = await dbService.getCollection('order')
-        //     var orders = await collection.find({ ownerId: userId }).toArray()
-        //     return orders
-        // } else {
-        //     // criteria = _buildUserCriteria(userId)
-
-        // }
+        if (!userId) {
+            return await collection.find().toArray()
+        }
+        var userCollection = await dbService.getCollection('user')
+        var users = await userCollection.find({ _id: ObjectId(userId) }).toArray()
+        if (users[0].isHost) {
+            return await collection.find({ ownerId: userId }).toArray()
+        } else {
+            return await collection.find({ "byUser._id": userId }).toArray()
+        }
 
         // console.log('order.service orders:', orders)
         // var orders = await collection.aggregate([
@@ -58,7 +53,6 @@ async function query(userId) {
         //     delete order.aboutUserId
         //     return order
         // })
-        return orders
     } catch (err) {
         logger.error('cannot find orders', err)
         throw err
