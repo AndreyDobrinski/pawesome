@@ -6,87 +6,53 @@ class _Chat extends Component {
   state = {
     msg: { txt: '' },
     msgs: [],
-    isBotMode: true,
-    currTypingUser: {
-      username: '',
-      isTyping: false
-    }
+    topic: null,
+    isBotMode: false
   }
 
   componentDidMount() {
-    const savedMsgs = socketService.getMsgsFromStorage() || [];
-    this.setState({ msgs: savedMsgs });
-
     socketService.setup()
-    socketService.emit('chat topic', this.props.order._id)
-
+    socketService.emit('chat topic', this.props.topic)
     socketService.on('chat addMsg', this.addMsg)
-
-    socketService.on('userTyping', this.setUserTyping)
-  }
-
-  componentDidUpdate(prevProps) {
-    const didOrderChange = prevProps.order._id !== this.props.order._id;
-
-    if (didOrderChange) {
-      socketService.emit('chat topic', this.props.order._id)
-    }
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount')
     socketService.off('chat addMsg', this.addMsg)
-    // socketService.off('userTyping', this.setUserTyping)
-
     socketService.terminate()
     clearTimeout(this.timeout)
   }
 
-  setUserTyping = ({ username, msg }) => {
-
-    this.setState({ currTypingUser: { username, isTyping: !!msg } }, () => {
-      console.log('currTypingUser: ', this.state.currTypingUser);
-    })
-  }
-
-
   addMsg = newMsg => {
-    this.setState(prevState => ({ msgs: [...prevState.msgs, newMsg] }), () => {
-
-      socketService.saveMsgsToStorage(this.state.msgs)
-    })
-    if (this.state.isBotMode) this.onSendBotResponse();
-  }
-
-  onSendBotResponse = () => {
-    // Handle case: send single bot response (debounce).
-    this.timeout && clearTimeout(this.timeout)
-
-    this.timeout = setTimeout(this.sendBotResponse, 1500)
+    this.setState(prevState => ({ msgs: [...prevState.msgs, newMsg] }))
+    if (this.state.isBotMode) this.sendBotResponse();
   }
 
   sendBotResponse = () => {
-    this.setState(prevState => ({ msgs: [...prevState.msgs, { from: 'Bot', txt: 'You are amazing!' }] }), () => {
-      socketService.saveMsgsToStorage(this.state.msgs)
-    })
+    // Handle case: send single bot response (debounce).
+    this.timeout && clearTimeout(this.timeout)
+    this.timeout = setTimeout(() => {
+      this.setState(prevState => ({ msgs: [...prevState.msgs, { from: 'Bot', txt: 'You are amazing!' }] }))
+    }, 1500)
   }
+
+  // changeTopic = () => {
+  //   socketService.emit('chat topic', this.state.topic)
+  // }
 
   sendMsg = ev => {
     ev.preventDefault()
-    const from = this.props.loggedinUser?.fullname || this.props.loggedinUser?.username || 'Me'
-
+    const from = this.props.loggedInUser?.fullname || 'Guest'
     socketService.emit('chat newMsg', { from, txt: this.state.msg.txt })
-    this.setState({ msg: { from: 'Me', txt: '' } })
+    this.setState({ msg: { from: 'Guest', txt: '' } })
   }
 
-  msgHandleChange = async ev => {
-    const { name, value } = ev.target
-    const user = {
-      username: this.props.loggedinUser?.fullname || this.props.loggedinUser?.username || 'guest',
-      msg: value
-    }
-    socketService.emit('typing', user)
+  // handleChange = ev => {
+  //   const { name, value } = ev.target
+  //   this.setState({ [name]: value }, this.changeTopic)
+  // }
 
+  msgHandleChange = ev => {
+    const { name, value } = ev.target
     this.setState(prevState => {
       return {
         msg: {
@@ -98,40 +64,24 @@ class _Chat extends Component {
   }
 
   render() {
-    const { currTypingUser, msg } = this.state
-    const { isOpen } = this.props
     return (
-      <div className={`chat ${isOpen && 'active'}`}>
-        <h2 className="chat-topic chat-layout flex space-between">Chat about this order!<i className="fas fa-times" onClick={this.props.onClose}></i></h2>
-        <label>
+      <div className="chat">
+        <h4>chat about {this.props.about}</h4>
+        <form onSubmit={this.sendMsg}>
           <input
-            type="checkbox"
-            name="isBotMode"
-            checked={this.state.isBotMode}
-            onChange={(ev) => this.setState({ isBotMode: ev.target.checked })}
-            className="chat-layout"
+            type="text"
+            value={this.state.msg.txt}
+            onChange={this.msgHandleChange}
+            name="txt"
+            autoComplete="off"
           />
-          Bot Mode
-        </label>
-        <h3>{currTypingUser?.isTyping && currTypingUser.username + ' is typing...'}</h3>
-
-        <div className="chat-main-content">
-          <ul className="chat-msgs chat-layout">
-            {this.state.msgs.map((msg, idx) => (
-              <li key={idx}><span className="from">{msg.from}:</span>{msg.txt}</li>
-            ))}
-          </ul>
-          <form className="msg-form" onSubmit={this.sendMsg}>
-            <input
-              type="text"
-              value={msg.txt}
-              onChange={this.msgHandleChange}
-              name="txt"
-              className="msg-input"
-              autoComplete="off" />
-            <button>Send</button>
-          </form>
-        </div>
+          <button>Send</button>
+        </form>
+        <ul>
+          {this.state.msgs.map((msg, idx) => (
+            <li key={idx}>{msg.from}: {msg.txt}</li>
+          ))}
+        </ul>
       </div>
     )
   }
@@ -139,7 +89,7 @@ class _Chat extends Component {
 
 const mapStateToProps = state => {
   return {
-    loggedinUser: state.userModule.loggedinUser
+    loggedInUser: state.userModule.loggedInUser
   }
 }
 const mapDispatchToProps = {

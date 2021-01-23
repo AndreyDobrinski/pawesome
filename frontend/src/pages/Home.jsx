@@ -1,11 +1,8 @@
 
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { Link, withRouter } from 'react-router-dom'
 import { PreviewContainer } from '../cmps/PreviewContainer'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
-
-
 
 export class _Home extends Component {
 
@@ -16,7 +13,7 @@ export class _Home extends Component {
 
 
   componentDidMount() {
-
+    
     console.log('HOME LOC---', this.props.location)
   }
 

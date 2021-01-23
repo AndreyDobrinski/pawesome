@@ -6,8 +6,9 @@ import { userService } from '../services/userService.js'
 import { OrderList } from '../cmps/OrderList.jsx'
 import { OrderPreview } from '../cmps/OrderPreview'
 import { loadOrders } from '../store/actions/orderActions.js'
+import { socketService } from '../services/socketService'
 
-
+import { Chat } from '../cmps/Chat.jsx'
 
 
 export class _Profile extends Component {
@@ -15,11 +16,14 @@ export class _Profile extends Component {
     state = {
         user: null,
         orders: null,
+        isOnChat: false,
+        chatTopic: null,
         isOwner: true,
     }
 
 
     async componentDidMount() {
+        socketService.setup()
         const { userId } = this.props.match.params;
         try {
             var user = await userService.getById(userId)
@@ -29,28 +33,43 @@ export class _Profile extends Component {
             await this.props.loadOrders()
             var { orders } = this.props
 
-            this.setState({ user, orders, isOwner })
+            const userOrders = this.getUserOrders(user, orders)
+            this.setState({ user, orders: userOrders, isOwner })
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
     }
- 
+
+
+    getUserOrders = (user, orders) => {
+        console.log('Profile ', user)
+        const userOrders = (user.isHost) ? orders.filter(order => order.ownerId === user._id)
+            : orders.filter(order => order.byUser._id === user._id)
+        return userOrders
+    }
 
     onLogOut = async () => {
         await this.props.logout()
         this.props.history.push('/')
     }
 
-
     onModalEditClicked = () => {
         console.log('Edit modal opend');
+    }
+
+    onStartChat = (order) => {
+        console.log('Start chat for order ', order)
+        // if (order._id !== this.state.chatTopic) 
+        // this.setState({...this.state, isOnChat: true, chatTopic : order._id})
+        // console.log( 'Start chat for order ', this.state.chatTopic)
+        // socketService.emit('chat topic',  this.state.chatTopic)
     }
 
     render() {
         const { loggedInUser } = this.props
         const { orders, user, isOwner } = this.state
-        console.log('in state', orders)
-        if(!loggedInUser) return <div>Loading...</div>
+
+        if (!loggedInUser) return <div>Loading...</div>
 
         return (
             <section className="profile-container container ">
@@ -121,7 +140,7 @@ export class _Profile extends Component {
                     <div className="profile-col-md-8">
                         {!isOwner && <div className="user-header">My requests</div>}
                         {isOwner && <div className="user-header">Requests pending</div>}
-                        <OrderList orders={orders} user={user} />
+                        <OrderList orders={orders} user={user} onStartChat={this.onStartChat} />
 
                         {/* <div className="profile-work">
                             <p>WORK LINK</p>
@@ -140,19 +159,11 @@ export class _Profile extends Component {
                         </div> */}
                     </div>
 
-
                     <div className="profile-col-md-4">
-
-
+                        {/* {this.state.isOnChat && <Chat topic={this.state.chatTopic}/>} */}
                     </div>
+
                 </div>
-
-
-
-
-
-
-
 
             </section>
         )
