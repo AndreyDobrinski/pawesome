@@ -1860,3 +1860,8 @@
 22.01.2021, 10:33:06 - INFO - Req from: Andrei (sid: lsKXLeeTwSiBA3JD5_SBTiaZ8ARIF2wG)
 >>>>>>> 4c86ae24e0e6b716351e8b2d0e6da7fc4ca129e9
 1/23/2021, 2:39:03 PM - INFO - Server is running on port: 3030 
+1/23/2021, 3:07:49 PM - ERROR - Cannot get orders | {} (sid: kIKC_VS5Vw7QDDNJRjm_gLzVF94FT8w5)
+1/23/2021, 3:07:54 PM - ERROR - Cannot get orders | {} (sid: kIKC_VS5Vw7QDDNJRjm_gLzVF94FT8w5)
+1/23/2021, 3:10:27 PM - INFO - Server is running on port: 3030 
+1/23/2021, 3:13:25 PM - DEBUG - auth.service - login with username: vika (sid: -pOnFKr0EfJWAt4J-s_PyUcCYY4HcDx3)
+1/23/2021, 3:13:39 PM - INFO - Req from: Vika Gord (sid: -pOnFKr0EfJWAt4J-s_PyUcCYY4HcDx3)
