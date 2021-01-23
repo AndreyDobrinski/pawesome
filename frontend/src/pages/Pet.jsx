@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import { loadPets } from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
-import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
+// import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
 import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
 import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
@@ -27,11 +27,12 @@ export class _Pet extends Component {
       <React.Fragment>
         <div className={`pet-list-page ${this.props.isDarkMode ? 'dark-mode-pet-page' : ''}`}>
           <div className="pet-list container" >
-            <div className="flex justify-between">
-              <div>
+            <div className="pet-list-filter flex justify-between">
+              {/* <div>
                 <FilterBtn field="size" value="big" />
                 <FilterBtn field="size" value="small" />
-              </div>
+              </div> */}
+              <SortByInput />
               <FilterNameInput />
               <SortByInput />
             </div>

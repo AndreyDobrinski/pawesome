@@ -11,4 +11,8 @@
 =======
 [0121/090908.720:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
 [0122/090908.826:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+<<<<<<< HEAD
+[0122/105818.552:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+=======
 >>>>>>> 4c86ae24e0e6b716351e8b2d0e6da7fc4ca129e9
+>>>>>>> 559483f67673fa6b1c6251bf9ebea455ac025585

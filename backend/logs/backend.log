@@ -1858,10 +1858,32 @@
 1/22/2021, 10:11:18 AM - ERROR - pet.controller : Failed to get pets | {} (sid: iiV82ktjbdjfNk0rHChTJNLxU-P-esZq)
 >>>>>>> fc3ea41e1e6df8f3c64b4d409faf34f901e1ab9b
 22.01.2021, 10:33:06 - INFO - Req from: Andrei (sid: lsKXLeeTwSiBA3JD5_SBTiaZ8ARIF2wG)
+<<<<<<< HEAD
+1/22/2021, 10:44:15 AM - INFO - Server is running on port: 3030 
+1/22/2021, 10:48:12 AM - INFO - Server is running on port: 3030 
+1/22/2021, 4:58:44 PM - INFO - Server is running on port: 3030 
+1/22/2021, 7:01:00 PM - INFO - Server is running on port: 3030 
+1/22/2021, 7:02:28 PM - INFO - Server is running on port: 3030 
+1/22/2021, 7:03:12 PM - INFO - Server is running on port: 3030 
+1/22/2021, 7:03:40 PM - INFO - Server is running on port: 3030 
+1/22/2021, 7:43:07 PM - ERROR - pet.controller : Failed to get pets | {} (sid: EsGgYIL5OsYVUA7oM10FB6TTx4NEBq_4)
+1/22/2021, 7:43:26 PM - ERROR - pet.controller : Failed to get pets | {} (sid: EsGgYIL5OsYVUA7oM10FB6TTx4NEBq_4)
+1/22/2021, 7:44:11 PM - DEBUG - auth.service - login with username: admin (sid: EsGgYIL5OsYVUA7oM10FB6TTx4NEBq_4)
+1/22/2021, 7:44:13 PM - INFO - Req from: admin (sid: EsGgYIL5OsYVUA7oM10FB6TTx4NEBq_4)
+1/22/2021, 7:44:22 PM - INFO - Req from: admin (sid: EsGgYIL5OsYVUA7oM10FB6TTx4NEBq_4)
+1/22/2021, 9:12:20 PM - INFO - Server is running on port: 3030 
+1/23/2021, 1:56:40 PM - INFO - Server is running on port: 3030 
+=======
 >>>>>>> 4c86ae24e0e6b716351e8b2d0e6da7fc4ca129e9
 1/23/2021, 2:39:03 PM - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 1/23/2021, 3:07:49 PM - ERROR - Cannot get orders | {} (sid: kIKC_VS5Vw7QDDNJRjm_gLzVF94FT8w5)
 1/23/2021, 3:07:54 PM - ERROR - Cannot get orders | {} (sid: kIKC_VS5Vw7QDDNJRjm_gLzVF94FT8w5)
 1/23/2021, 3:10:27 PM - INFO - Server is running on port: 3030 
 1/23/2021, 3:13:25 PM - DEBUG - auth.service - login with username: vika (sid: -pOnFKr0EfJWAt4J-s_PyUcCYY4HcDx3)
 1/23/2021, 3:13:39 PM - INFO - Req from: Vika Gord (sid: -pOnFKr0EfJWAt4J-s_PyUcCYY4HcDx3)
+=======
+>>>>>>> 559483f67673fa6b1c6251bf9ebea455ac025585
+1/23/2021, 4:24:51 PM - INFO - Server is running on port: 3030 
+1/23/2021, 4:31:11 PM - INFO - Server is running on port: 3030 
+>>>>>>> 5fc272ecdb5133c1850047645e7f30870c22d0b7
