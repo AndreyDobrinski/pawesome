@@ -1650,3 +1650,13 @@
 1/22/2021, 10:11:18 AM - ERROR - pet.controller : Failed to get pets | {} (sid: iiV82ktjbdjfNk0rHChTJNLxU-P-esZq)
 >>>>>>> fc3ea41e1e6df8f3c64b4d409faf34f901e1ab9b
 22.01.2021, 10:33:06 - INFO - Req from: Andrei (sid: lsKXLeeTwSiBA3JD5_SBTiaZ8ARIF2wG)
+22.01.2021, 10:34:36 - INFO - Req from: Andrei (sid: lsKXLeeTwSiBA3JD5_SBTiaZ8ARIF2wG)
+22.01.2021, 10:34:57 - INFO - Req from: Andrei (sid: lsKXLeeTwSiBA3JD5_SBTiaZ8ARIF2wG)
+22.01.2021, 12:34:31 - DEBUG - auth.service - login with username: Andrei (sid: TAj-Ahhk006rZU6qHOGFe9Q1jIiOB-cQ)
+22.01.2021, 12:34:35 - INFO - Req from: Andrei (sid: TAj-Ahhk006rZU6qHOGFe9Q1jIiOB-cQ)
+22.01.2021, 12:35:31 - DEBUG - auth.service - login with username: shelter1 (sid: KU3kO_FvA2xmAypd66WEG9jkXcbnFLm_)
+22.01.2021, 12:35:39 - INFO - Req from: Freedom Farm Sanctuary (sid: KU3kO_FvA2xmAypd66WEG9jkXcbnFLm_)
+22.01.2021, 12:49:59 - INFO - Req from: Freedom Farm Sanctuary (sid: KU3kO_FvA2xmAypd66WEG9jkXcbnFLm_)
+22.01.2021, 13:36:57 - INFO - Req from: Freedom Farm Sanctuary (sid: KU3kO_FvA2xmAypd66WEG9jkXcbnFLm_)
+22.01.2021, 13:37:38 - INFO - Req from: Freedom Farm Sanctuary (sid: KU3kO_FvA2xmAypd66WEG9jkXcbnFLm_)
+22.01.2021, 17:07:46 - INFO - Server is running on port: 3030 
