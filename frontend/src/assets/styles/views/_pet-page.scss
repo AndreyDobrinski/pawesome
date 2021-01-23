@@ -10,4 +10,8 @@
 
 .pet-preview {
     background-color: $clr6;
+
+    div img:hover{
+        cursor: pointer
+    }
 }

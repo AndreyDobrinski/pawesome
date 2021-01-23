@@ -11,18 +11,12 @@ function _CarouselComponent(props) {
         props.history.push(`/pet/${pet._id}`)
     }
 
+    
+
     return (
         <div className="carousel-wrapper">
-            <Carousel showThumbs={false} infiniteLoop={true} onClickItem={onClick}>
-                <div className="square-ratio">
-                    <img src={pet.imgUrls[0]} alt=""/>
-                </div>
-                <div className="square-ratio">
-                    <img src={pet.imgUrls[1]} alt=""/>
-                </div>
-                <div className="square-ratio">
-                    <img src={pet.imgUrls[2]} alt=""/>
-                </div>
+            <Carousel showThumbs={false} infiniteLoop={true} showStatus={false} onClickItem={onClick} >
+                {pet.imgUrls.map( img => <div className="square-ratio" key={pet._id} > <img src={img} alt=""/></div>)}
             </Carousel>
         </div>
     );

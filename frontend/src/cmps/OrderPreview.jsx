@@ -3,6 +3,7 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { saveOrder, updOrder } from '../store/actions/orderActions.js'
 
+import {Chat} from './Chat.jsx'
 
 
 export class _OrderPreview extends Component {
@@ -32,7 +33,7 @@ export class _OrderPreview extends Component {
         var { moreInfo, status, isOwner } = this.state
         var { order } = this.props
         if (!order) return <div className="order"></div>
-        return <div className="order">
+        return <div className="order" >
             <div className="order-short">
                 <Link className="order-pet" to={`/pet/${order.pet._id}`}>
                     <div className="order-img square-ratio">
@@ -70,6 +71,8 @@ export class _OrderPreview extends Component {
             </div>
             {moreInfo && <div className="order-more">
                 <div className="order-msg">{order.message}</div>
+                <Chat topic={this.props.order._id} about={this.props.order.pet.name}/>
+                {/* <button onClick={() => this.props.onStartChat(order)}>chat</button> */}
             </div>}
         </div>
     }

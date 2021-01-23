@@ -6,8 +6,9 @@ import { userService } from '../services/userService.js'
 import { OrderList } from '../cmps/OrderList.jsx'
 import { OrderPreview } from '../cmps/OrderPreview'
 import { loadOrders } from '../store/actions/orderActions.js'
+import { socketService } from '../services/socketService'
 
-
+import {Chat} from '../cmps/Chat.jsx'
 
 
 
@@ -18,11 +19,14 @@ export class _Profile extends Component {
 
     state = {
         user: null,
-        orders: null
+        orders: null,
+        isOnChat: false,
+        chatTopic: null
     }
 
 
     async componentDidMount() {
+        socketService.setup()
         const { userId } = this.props.match.params;
         try {
             var user = await userService.getById(userId)
@@ -31,12 +35,20 @@ export class _Profile extends Component {
             await this.props.loadOrders()
             var { orders } = this.props
 
-            this.setState({ user, orders })
+            const userOrders = this.getUserOrders(user, orders)
+            
+            this.setState({ user, orders : userOrders })
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
     }
 
+    getUserOrders = (user, orders) => {
+        console.log('Profile ', user)
+        const userOrders = (user.isHost) ? orders.filter(order => order.ownerId === user._id)
+                                            : orders.filter(order => order.byUser._id === user._id)
+        return userOrders
+    }
 
     onLogOut = () => {
         this.props.logout()
@@ -48,10 +60,18 @@ export class _Profile extends Component {
         console.log('Edit modal opend');
     }
 
+    onStartChat = (order) => {
+        console.log( 'Start chat for order ', order)
+        // if (order._id !== this.state.chatTopic) 
+        // this.setState({...this.state, isOnChat: true, chatTopic : order._id})
+        // console.log( 'Start chat for order ', this.state.chatTopic)
+        // socketService.emit('chat topic',  this.state.chatTopic)
+    }
+
     render() {
         const { loggedInUser } = this.props
         const { orders, user } = this.state
-        console.log('in state', orders)
+        console.log('Profile.jsx render --- in state', orders)
 
         return (
             <section className="profile-container container ">
@@ -144,12 +164,11 @@ export class _Profile extends Component {
 
                     <div className="profile-col-md-8">
                         <div className="user-header">My orders</div>
-                        <OrderList orders={orders} user={user} />
+                        <OrderList orders={orders} user={user} onStartChat={this.onStartChat}/>
 
                     </div>
+                    {/* {this.state.isOnChat && <Chat topic={this.state.chatTopic}/>} */}
                 </div>
-
-
                 
 
 

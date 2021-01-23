@@ -6,6 +6,7 @@ import { PetList } from '../cmps/PetList.jsx'
 import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
 import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
 import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
+// import {Chat} from '../cmps/Chat.jsx'
 
 export class _Pet extends Component {
 
@@ -32,6 +33,7 @@ export class _Pet extends Component {
           <FilterNameInput />
           <SortByInput />
         </div>
+          {/* <Chat /> */}
           <PetList pets={pets}/>
       </div>
       </React.Fragment>
