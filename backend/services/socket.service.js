@@ -17,16 +17,14 @@ function emit({ type, data }) {
 
 
 function connectSockets(http, session) {
-    gIo = require('socket.io')(http
-    //     , {
-    //     cors: {////
-    //         origin: 'http://localhost:3000',
-    //         methods: ["GET", "POST"],
-    //         allowedHeaders: ["my-custom-header"],
-    //         credentials: true
-    //     }
-    // }
-    );
+    gIo = require('socket.io')(http, {
+        cors: {
+            origin: 'http://localhost:3000',
+            methods: ["GET", "POST"],
+            allowedHeaders: ["my-custom-header"],
+            credentials: true
+        }
+    });
 
     const sharedSession = require('express-socket.io-session');
 
@@ -35,8 +33,9 @@ function connectSockets(http, session) {
     }));
 
     gIo.on('connection', socket => {
-        // console.log('socket.handshake', socket.handshake)
+        console.log('socket.handshake', socket.handshake)
         gSocketBySessionIdMap[socket.handshake.sessionID] = socket
+        console.log('Someone connected')
         socket.on('disconnect', socket => {
             console.log('Someone disconnected')
             if (socket.handshake) {

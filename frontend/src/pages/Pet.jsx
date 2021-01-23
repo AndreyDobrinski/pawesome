@@ -37,7 +37,6 @@ export class _Pet extends Component {
             </div>
             <PetList pets={pets} />
           </div>
-
         </div>
       </React.Fragment>
     )
