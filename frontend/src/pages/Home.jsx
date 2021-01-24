@@ -33,7 +33,7 @@ export class _Home extends Component {
 
 
           <div className="page-home-hero-content ">
-            <div className="page-home-hero-title">Find your <br/> Pawesome friend</div>
+            <div className="page-home-hero-title">Find Your <br/> Pawesome Friend</div>
           </div>
 
         </div>

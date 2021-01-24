@@ -158,11 +158,15 @@
 // }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 .pet-preview {
+  border-radius: 10px;
   border: 1px solid #e5e5e5;
   margin-bottom: 30px;
-
+  
   background-color: inherit;
   .square-ratio {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
     margin-bottom: 10px;
     user-select: none;
     cursor: pointer;

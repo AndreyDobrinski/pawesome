@@ -25,4 +25,4 @@ Bugs found:
 
 
 Needs to be done:
- 1.on phone change the title of video to be "Find your" "Pawsome friend" .
+ X 1.on phone change the title of video to be "Find your" "Pawsome friend" .

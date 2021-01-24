@@ -1,6 +1,8 @@
 import { petService } from "../services/petService.js";
 import { Component } from 'react'
 import { connect } from 'react-redux'
+import { CarouselComponent} from '../cmps/CarouselComponent'
+
 
 import { saveOrder } from '../store/actions/orderActions.js'
 import { OrderAdd } from "../cmps/OrderAdd.jsx";
@@ -33,12 +35,17 @@ import { ReactComponent as WhatsappWhite } from "../assets/imgs/whatsapp-white.s
 
 export class _PetDetails extends Component {
     state = {
-        pet: null
+        pet: null,
+        isPetDetailsResiezed:false
     };
 
     componentDidMount() {
         const { petId } = this.props.match.params;
         this.loadPet(petId)
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize()
+
+
     }
 
     loadPet = async (petId) => {
@@ -52,6 +59,18 @@ export class _PetDetails extends Component {
         // this.setState({ pet })
     }
 
+    handleResize = () =>{
+        if(window.innerWidth < 1100 ){
+            this.setState({
+                isPetDetailsResiezed:true
+            })
+        }else{
+            this.setState({
+                isPetDetailsResiezed:false
+            })
+        }
+        
+    }
 
 
     render() {
@@ -72,12 +91,28 @@ export class _PetDetails extends Component {
                             <h5 className={`pet-details-statstics-host ${this.props.isDarkMode ? 'dark-mode-pet-details-likes' : ''}`}>{pet.host.fullname}</h5>
                         </div>
                     </div>
-                    <div className="pet-details-imgs">
+
+
+
+
+
+
+                    <div className={`pet-details-imgs ${this.state.isPetDetailsResiezed ? 'pet-details-imgs-hide' : ''}`}>
                         {pet.imgUrls.map((img, idx) => {
                             return <img src={img} alt="" key={idx} className='pet-details-img' />
                         })
                         }
                     </div>
+
+
+                    <div className={`pet-details-imgs-carusel ${this.state.isPetDetailsResiezed ? 'pet-details-imgs-show' : ''}`}>
+                        <CarouselComponent pet={pet}/>
+                    </div>
+
+
+
+
+
                     <div className="pet-details-main">
                         <div className="pet-details-pet">
                             <div className="pet-details-title">

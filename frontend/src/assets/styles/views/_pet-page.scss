@@ -6,7 +6,7 @@
     transition: 0.4s;
     .pet-list {
         padding-top: rem(180px);
-        .pet-list-filter {
+        .pet-list-filter{
             margin-bottom: rem(20px);
             flex-direction: column;
             align-items: center;
@@ -16,7 +16,8 @@
             @include for-normal-layout {
                 flex-direction: row;
             }
-            .pet-list-input {
+            .pet-list-input{
+                border-radius: 50px;
                 margin: rem(10px) 0px;
                 width: 90vw;
                 transition: 0.4s;
@@ -24,7 +25,7 @@
                 border: 1px solid rgb(170, 169, 169);
                 padding: rem(10px);
                 font-size: rem(18px);
-                &::placeholder {
+                &::placeholder{
                     transition: 0.4s;
                     color: rgb(167, 163, 163);
                 }
@@ -35,7 +36,7 @@
                 @include for-narrow-layout {
                     width: rem(130px);
                 }
-                @include for-normal-layout {
+                  @include for-normal-layout {
                     width: rem(240px);
                 }
             }
@@ -45,7 +46,7 @@
                 @include for-narrow-layout {
                     width: rem(120px);
                 }
-                @include for-normal-layout {
+                  @include for-normal-layout {
                     width: rem(180px);
                 }
             }

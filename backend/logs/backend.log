@@ -1920,6 +1920,7 @@
 =======
 1/23/2021, 4:24:51 PM - INFO - Server is running on port: 3030 
 1/23/2021, 4:31:11 PM - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 >>>>>>> 5fc272ecdb5133c1850047645e7f30870c22d0b7
 23.01.2021, 16:39:30 - INFO - Req from: Vika Gord (sid: IPPt1V6jd9TZJ8vYctCT27uetUeR4czC)
 23.01.2021, 17:25:33 - INFO - Req from: Vika Gord (sid: IPPt1V6jd9TZJ8vYctCT27uetUeR4czC)
@@ -2304,3 +2305,11 @@
 24.01.2021, 22:17:37 - INFO - Req from: Andrei (sid: dVUOgHlQ0Pfw9NcQZ-DHF2s5GzQcHJl7)
 24.01.2021, 22:20:20 - INFO - Req from: Andrei (sid: dVUOgHlQ0Pfw9NcQZ-DHF2s5GzQcHJl7)
 24.01.2021, 22:21:13 - INFO - Req from: Andrei (sid: dVUOgHlQ0Pfw9NcQZ-DHF2s5GzQcHJl7)
+=======
+1/23/2021, 6:20:23 PM - INFO - Server is running on port: 3030 
+1/24/2021, 11:24:15 AM - INFO - Server is running on port: 3030 
+1/24/2021, 7:02:27 PM - DEBUG - auth.service - login with username: admin (sid: 4m3sdH3wrBeC73lzDsdKL3jPGiqvJXH3)
+1/24/2021, 7:02:28 PM - INFO - Req from: admin (sid: 4m3sdH3wrBeC73lzDsdKL3jPGiqvJXH3)
+1/24/2021, 7:39:59 PM - INFO - Server is running on port: 3030 
+1/24/2021, 8:03:38 PM - INFO - Server is running on port: 3030 
+>>>>>>> fa04538dd49cacacfcad8fdb0d374949efdc7cf8
