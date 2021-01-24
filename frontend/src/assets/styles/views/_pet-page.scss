@@ -6,9 +6,9 @@
     transition: 0.4s;
     
     .pet-list {
-        padding-top: 180px;
+        padding-top: rem(180px);
         .pet-list-filter{
-            margin-bottom: 20px;
+            margin-bottom: rem(20px);
             flex-direction: column;
             align-items: center;
             @include for-narrow-layout {
@@ -18,15 +18,14 @@
                   flex-direction: row;
             }
             .pet-list-input{
-                margin-bottom: 10px;
-                margin-top: 10px;
-
+                border-radius: 50px;
+                margin: rem(10px) 0px;
                 width: 90vw;
                 transition: 0.4s;
                 outline: none;
                 border: 1px solid rgb(170, 169, 169);
-                padding: 10px;
-                font-size: 18px;
+                padding: rem(10px);
+                font-size: rem(18px);
                 &::placeholder{
                     transition: 0.4s;
                     color: rgb(167, 163, 163);
@@ -36,28 +35,26 @@
                     border: 1px solid $clr8;
                 }
                 @include for-narrow-layout {
-                    width: 130px;
+                    width: rem(130px);
                 }
                   @include for-normal-layout {
-                    width: 240px;
+                    width: rem(240px);
                 }
             }
             .pet-list-select{
                 transition: 0.4s;
-
                 width: 72vw;
                 @include for-narrow-layout {
-                    width: 120px;
+                    width: rem(120px);
                 }
                   @include for-normal-layout {
-                    width: 180px;
+                    width: rem(180px);
                 }
             }
             .pet-list-select-title{
                 transition: 0.4s;
                 margin: 0px;
-                margin-right: 10px;
-                
+                margin-right: rem(10px);
             }
         }
     }
