@@ -1885,3 +1885,27 @@
 1/24/2021, 7:02:28 PM - INFO - Req from: admin (sid: 4m3sdH3wrBeC73lzDsdKL3jPGiqvJXH3)
 1/24/2021, 7:39:59 PM - INFO - Server is running on port: 3030 
 1/24/2021, 8:03:38 PM - INFO - Server is running on port: 3030 
+1/24/2021, 10:38:33 PM - DEBUG - auth.service - signup with username: andrey, fullname: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:38:33 PM - DEBUG - auth.route - new account created: {"username":"andrey","password":"$2b$10$Mn7EsLC6yoPOv/dbxQNkD.jfwMRFy7CRRh0DxO.sHUbxr85bkcYEi","fullname":"andrey","_id":"600ddac9e6b6ab10ecbe5bc6"} (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:38:33 PM - DEBUG - auth.service - login with username: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:38:35 PM - INFO - Req from: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:38:51 PM - INFO - Req from: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:39:21 PM - INFO - Req from: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:39:24 PM - INFO - Req from: andrey (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:42:43 PM - DEBUG - auth.service - login with username: Andrei (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:42:43 PM - ERROR - Failed to Login Invalid username or password (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:42:56 PM - DEBUG - auth.service - login with username: Andrei (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:42:56 PM - ERROR - Failed to Login Invalid username or password (sid: dT2QvzSIf64tvo5OOC_D34ti5BV5QBe6)
+1/24/2021, 10:43:12 PM - INFO - Server is running on port: 3030 
+1/24/2021, 10:43:24 PM - DEBUG - auth.service - login with username: Andrei (sid: jB8fZ93jqmmulO8J22q-p7fChIkfXwY5)
+1/24/2021, 10:43:24 PM - ERROR - Failed to Login Invalid username or password (sid: jB8fZ93jqmmulO8J22q-p7fChIkfXwY5)
+1/24/2021, 10:44:08 PM - DEBUG - auth.service - login with username: Andrei (sid: jB8fZ93jqmmulO8J22q-p7fChIkfXwY5)
+1/24/2021, 10:44:08 PM - ERROR - Failed to Login Invalid username or password (sid: jB8fZ93jqmmulO8J22q-p7fChIkfXwY5)
+1/24/2021, 10:44:43 PM - DEBUG - auth.service - login with username: Andrei (sid: _nWaDDpp7Y7GawnPlLX1F8gaQGFkqJdY)
+1/24/2021, 10:44:43 PM - ERROR - Failed to Login Invalid username or password (sid: _nWaDDpp7Y7GawnPlLX1F8gaQGFkqJdY)
+1/24/2021, 10:45:50 PM - DEBUG - auth.service - login with username: Andrei (sid: _nWaDDpp7Y7GawnPlLX1F8gaQGFkqJdY)
+1/24/2021, 10:45:52 PM - INFO - Req from: Andrei (sid: _nWaDDpp7Y7GawnPlLX1F8gaQGFkqJdY)
+1/24/2021, 10:46:47 PM - INFO - Req from: Andrei (sid: _nWaDDpp7Y7GawnPlLX1F8gaQGFkqJdY)
+1/24/2021, 10:47:10 PM - INFO - Server is running on port: 3030 
+1/24/2021, 10:47:21 PM - DEBUG - auth.service - login with username: Andrei (sid: -lDvbDIBHZJtuf8mm0_0xmsHJjXZQH9Y)
+1/24/2021, 10:47:23 PM - INFO - Req from: Andrei (sid: -lDvbDIBHZJtuf8mm0_0xmsHJjXZQH9Y)
