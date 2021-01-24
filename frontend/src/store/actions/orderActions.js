@@ -1,6 +1,6 @@
 import { orderService } from '../../services/orderService.js'
 
-export function loadOrders(ownerId) {
+export function loadOrders() {
     return async (dispatch) => {
         const orders = await orderService.query()
         const action = {

@@ -5,9 +5,6 @@ const asyncLocalStorage = require('../../services/als.service')
 async function query(userId) {
     try {
         var collection = await dbService.getCollection('order')
-        if (!userId) {
-            return await collection.find().toArray()
-        }
         var userCollection = await dbService.getCollection('user')
         var users = await userCollection.find({ _id: ObjectId(userId) }).toArray()
         if (users[0].isHost) {

@@ -19,8 +19,10 @@ export class _OrderPreview extends Component {
 
     async componentDidMount() {
         var { order } = this.props
+        console.log('THIS.PROPS.ORDER', order.status)
         var user = await userService.getById(order.ownerId)
         var ownerName = user.fullname
+        console.log('OWNERNAME', ownerName)
         this.setState({ status: order.status, ownerName })
     }
 
@@ -66,7 +68,6 @@ export class _OrderPreview extends Component {
                     <div className="order-date">
                         {order.createdAt}
                     </div>
-                    <div className="chat-icon" onClick={onToggleChat}>chat</div>
 
                     <div className="order-show-more" onClick={this.changeShow}>
                         ...
@@ -83,7 +84,7 @@ export class _OrderPreview extends Component {
                 </div>
             </div>
             {moreInfo && <div className="order-more">
-                <div className="order-msg">{order.message}</div>
+                <div className="order-msg">"{order.message}"</div>
                 <Chat topic={this.props.order._id} about={this.props.order.pet.name}/>
                 {/* <button onClick={() => this.props.onStartChat(order)}>chat</button> */}
             </div>}

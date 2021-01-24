@@ -34,9 +34,6 @@ export class _Home extends Component {
 
           <div className="page-home-hero-content ">
             <div className="page-home-hero-title">Find your <br/> Pawesome friend</div>
-            {/* <div>Find your</div>
-            <div>PaweSome friend</div> */}
-            {/* <Link to="/pet"><button className="page-home-hero-btn btn2">Go to pets</button></Link> */}
           </div>
 
         </div>

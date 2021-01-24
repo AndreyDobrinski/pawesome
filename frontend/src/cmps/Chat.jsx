@@ -64,12 +64,16 @@ class _Chat extends Component {
   }
 
   render() {
-    console.log('CHAT RENDERING')
     return (
       <div className="chat">
-        <h4>chat about {this.props.about}</h4>
+        {/* <h4>chat about {this.props.about}</h4> */}
 
-        <form onSubmit={this.sendMsg}>
+        <ul>
+          {this.state.msgs.map((msg, idx) => (
+            <li key={idx}>{msg.from}: {msg.txt}</li>
+          ))}
+        </ul>
+        <form className="chat-form" onSubmit={this.sendMsg}>
           <input
             type="text"
             value={this.state.msg.txt}
@@ -79,12 +83,6 @@ class _Chat extends Component {
           />
           <button>Send</button>
         </form>
-        <ul>
-          {this.state.msgs.map((msg, idx) => (
-            <li key={idx}>{msg.from}: {msg.txt}</li>
-          ))}
-        </ul>
-      
       </div>
     )
   }
