@@ -5,6 +5,8 @@ import { petService } from "../services/petService"
 
 import {PetList} from './PetList'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
+import Loader from 'react-loader-spinner'
+
 
 
 const MONTH = 30
@@ -51,7 +53,10 @@ export class _PreviewContainer extends Component {
         const {pets} = this.state
         return <div className={this.props.clsName}>
             <h1 className={`pets-preview-subject ${this.props.isDarkMode ? 'dark-mode-preview-subject' : ''}`}>{this.props.title}</h1>
-            <PetList pets={pets}/>
+
+            {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77"height={100} width={100} timeout={3000} /></div> }
+            {!this.props.isLoading && <PetList pets={pets}/>}
+            {/* <PetList pets={pets}/> */}
         </div>
     }
 }
@@ -59,7 +64,9 @@ export class _PreviewContainer extends Component {
 
 const mapStateToProps = state => {
     return {
-      isDarkMode: state.appSettingsModule.isDarkMode
+      isDarkMode: state.appSettingsModule.isDarkMode,
+      isLoading: state.appSettingsModule.isLoading
+
   
     }
   }

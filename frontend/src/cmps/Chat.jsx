@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { socketService } from '../services/socketService'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
 
 class _Chat extends Component {
   state = {
@@ -65,7 +67,7 @@ class _Chat extends Component {
 
   render() {
     return (
-      <div className="chat">
+      <div className={`chat ${this.props.isDarkMode ? 'dark-mode-profile-chat' : ''}`}>
         {/* <h4>chat about {this.props.about}</h4> */}
 
         <ul>
@@ -90,10 +92,13 @@ class _Chat extends Component {
 
 const mapStateToProps = state => {
   return {
-    loggedInUser: state.userModule.loggedInUser
+    loggedInUser: state.userModule.loggedInUser,
+    isDarkMode: state.appSettingsModule.isDarkMode
+
   }
 }
 const mapDispatchToProps = {
+  toggleDarkMode
 }
 
 export const Chat = connect(mapStateToProps, mapDispatchToProps)(_Chat)
