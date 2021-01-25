@@ -3,14 +3,22 @@ import { petService } from '../../services/petService.js'
 export function loadPets(newFilterBy) {
     console.log('petActions... --- filterBy --- ', newFilterBy)
     return async (dispatch) => {
-        const pets = await petService.query(newFilterBy)
-        const action = {
-            type: 'SET_PETS',
-            pets,
-            newFilterBy
+        try {
+            dispatch({type:'SET_IS_LOADING' , isLoading: true})
+            
+            const pets = await petService.query(newFilterBy)
+            const action = {
+                type: 'LOAD_PETS',
+                pets,
+                newFilterBy
+            }
+            await dispatch(action)
+            dispatch({type:'SET_IS_LOADING' , isLoading: false})
+            
+        } catch (err) {
+            console.log('error load pets', err)
+
         }
-        console.log('action', action)
-        return await dispatch(action)
     }
 }
 
@@ -48,13 +56,3 @@ export function setFilter(filterBy) {
         dispatch(action)
     }
 }
-
-// export function setFilter(newFilterBy) {
-//     return (dispatch) => {
-//         return petService.getPetsForDisplay(newFilterBy)
-//             .then((petsForDisplay) => {
-//                 const action = { type: 'UPDATE_FILTER', newPets: petsForDisplay, newFilterBy }
-//                 dispatch(action)
-//             })
-//     }
-// }

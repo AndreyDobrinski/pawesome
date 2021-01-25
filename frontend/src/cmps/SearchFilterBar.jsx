@@ -16,7 +16,6 @@ class _SearchFilterBar extends Component {
     }
 
     componentDidMount() {
-        console.log('SEARCH BAR --- ', this.props.location )
         this.setState({ filterBy : this.props.filterBy })
     }
 
@@ -53,16 +52,17 @@ class _SearchFilterBar extends Component {
                 <div className="app-header-filte-box-type flex column">
                     <span className="type-title">Pet</span>
                     <select name="kind" value={filterBy.kind} onChange={this.handleInput}>
-                        <option value="all">all</option>
+                        <option value="all">any</option>
                         <option value="cat">cats</option>
                         <option value="dog">dogs</option>
-                        <option value="bird">birds</option>
+                        {/* <option value="bird">birds</option> */}
+                        <option value="other">others</option>
                     </select>
                 </div>
                 <div className="app-header-filte-box-age flex column">
                     <span className="age-title">Age</span>
                     <select name="age" value={filterBy.age} onChange={this.handleInput}>
-                        <option value="all">all</option>
+                        <option value="all">any</option>
                         <option value="young">young</option>
                         <option value="adult">adult</option>
                         <option value="senior">senior</option>
@@ -79,9 +79,9 @@ class _SearchFilterBar extends Component {
                 <div className="app-header-filte-box-location flex column">
                     <span className="location-title">Location</span>
                     <select name="address" value={filterBy.address} onChange={this.handleInput}>
-                        <option value="all">all</option>
+                        <option value="all">any</option>
                         <option value="Haifa">Haifa</option>
-                        <option value="Raanana">Raanana</option>
+                        <option value="Tel Aviv">Tel Aviv</option>
                     </select>
                 </div>
                 <div className="app-header-filte-box-Search flex justify-center align-center ">

@@ -185,8 +185,6 @@ export class _PetDetails extends Component {
 
 const mapGlobalStateToProps = (state) => {
     return {
-        // pets: state.petModule.pets,
-        currPet: state.petModule.currPet,
         isDarkMode: state.appSettingsModule.isDarkMode
 
     }
