@@ -18,12 +18,10 @@ export function saveOrder(pet, message) {
         return await dispatch(action)
     }
 }
-export function updOrder(newOrder) {
+export function updateOrder(order) {
     return async (dispatch) => {
-        console.log('orderActions, newOrder:', newOrder)
-        const res = await orderService.updOrder(newOrder)
-        console.log('orderActions, res:', res)
-        const action = { type: 'UPDATE_ORDER', newOrder: res }
+        const newOrder = await orderService.updateOrder(order)
+        const action = { type: 'UPDATE_ORDER', newOrder }
         return await dispatch(action)
     }
 }

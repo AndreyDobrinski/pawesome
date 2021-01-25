@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Component } from 'react'
 import { connect } from 'react-redux'
-import { saveOrder, updOrder } from '../store/actions/orderActions.js'
+import { saveOrder, updateOrder } from '../store/actions/orderActions.js'
 import { userService } from '../services/userService.js'
 import {Chat} from './Chat.jsx'
 
@@ -13,38 +13,30 @@ export class _OrderPreview extends Component {
         moreInfo: false,
         isOwner: !!this.props.user.isHost,
         ownerName: '',
-        isChatOpen: false
-
     }
 
     async componentDidMount() {
         var { order } = this.props
-        console.log('THIS.PROPS.ORDER', order.status)
         var user = await userService.getById(order.ownerId)
         var ownerName = user.fullname
-        console.log('OWNERNAME', ownerName)
         this.setState({ status: order.status, ownerName })
-    }
-
-    onToggleChat = () => {
-        this.setState({ isChatOpen: !this.state.isChatOpen })
     }
 
     changeShow = () => {
         this.setState({ moreInfo: !this.state.moreInfo })
     }
-    updStatus = ({ target }) => {
+
+    updateStatus = ({ target }) => {
         this.setState({ status: target.value }, () => {
             var { order } = this.props
             var newOrder = { ...order, status: target.value }
-            console.log('OrderPreview:', newOrder)
-            this.props.updOrder(newOrder)
+            this.props.updateOrder(newOrder)
         })
     }
 
     render() {
         var { moreInfo, status, isOwner, ownerName } = this.state
-        var { order, onToggleChat } = this.props
+        var { order } = this.props
         if (!order) return <div className="order"></div>
         return <div className="order" >
             <div className="order-short">
@@ -52,7 +44,6 @@ export class _OrderPreview extends Component {
                     <div className="order-img square-ratio">
                         <img className="order-pet-img" src={order.pet.imgUrls[0]} alt="" />
                     </div>
-                    {/* {order.pet.name} */}
                 </Link>
                 <div className="order-info">
                     {isOwner && <div className="order-from">
@@ -74,7 +65,7 @@ export class _OrderPreview extends Component {
                     </div>
                 </div>
                 <div className="order-status">
-                    {isOwner && <select className={status} value={status} name="status" id="" onChange={this.updStatus}>
+                    {isOwner && <select className={status} value={status} name="status" id="" onChange={this.updateStatus}>
                         <option className="requested" value="requested">requested</option>
                         <option className="pending" value="pending">pending</option>
                         <option className="accepted" value="accepted">accepted</option>
@@ -86,21 +77,15 @@ export class _OrderPreview extends Component {
             {moreInfo && <div className="order-more">
                 <div className="order-msg">"{order.message}"</div>
                 <Chat topic={this.props.order._id} about={this.props.order.pet.name}/>
-                {/* <button onClick={() => this.props.onStartChat(order)}>chat</button> */}
             </div>}
         </div>
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-
-    }
-}
 
 const mapDispatchToProps = {
     saveOrder,
-    updOrder
+    updateOrder
 }
 
-export const OrderPreview = connect(mapStateToProps, mapDispatchToProps)(_OrderPreview)
+export const OrderPreview = connect(null, mapDispatchToProps)(_OrderPreview)
