@@ -20,14 +20,14 @@ export class _Pet extends Component {
   }
 
   componentDidMount() {
-    // console.log('PET CDM --- ', this.props.filterBy)
+    //console.log('PET CDM --- ', this.props.filterBy)
     this.props.loadPets(this.props.filterBy)
   }
 
   render() {
     const { pets } = this.props
     console.log('loading', this.props.isLoading);
-
+    console.log('pets...', pets)
     return (
       <React.Fragment>
         <div className={`pet-list-page ${this.props.isDarkMode ? 'dark-mode-pet-page' : ''}`}>
