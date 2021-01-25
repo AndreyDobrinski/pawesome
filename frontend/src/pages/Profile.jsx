@@ -4,13 +4,11 @@ import { logout } from '../store/actions/userActions'
 
 import { userService } from '../services/userService.js'
 import { OrderList } from '../cmps/OrderList.jsx'
-import { OrderPreview } from '../cmps/OrderPreview'
 import { loadOrders } from '../store/actions/orderActions.js'
 import { socketService } from '../services/socketService'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
 
 
-import { Chat } from '../cmps/Chat.jsx'
 
 
 export class _Profile extends Component {
@@ -52,18 +50,15 @@ export class _Profile extends Component {
                     <div className="profile-row">
 
                         <div className="profile-col-md-4">
+
                             <div className="profile-img">
-
                                 <img src={user.imgUrl} alt="" />
-
-
-
                             </div>
+
                         </div>
 
                         <div className="profile-col-md-6">
                             <div className="profile-head">
-                                {/* <h5>{user.fullname}</h5> */}
                                 {!isOwner && <div className="profile-tab" id="myTabContent">
                                     <div className="profile-row-desc">
                                         <div className="profile">
@@ -162,7 +157,6 @@ export class _Profile extends Component {
                         </div>
 
                         <div className="profile-col-md-2">
-                            {/* {this.state.isOnChat && <Chat topic={this.state.chatTopic}/>} */}
                         </div>
 
                     </div>

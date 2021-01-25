@@ -55,8 +55,6 @@ export class _PetDetails extends Component {
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
-        // var pet = this.props.pets.find(pet => pet._id = petId)
-        // this.setState({ pet })
     }
 
     handleResize = () =>{
@@ -79,7 +77,6 @@ export class _PetDetails extends Component {
         return (
             <div className={`pet-details-page ${this.props.isDarkMode ? 'dark-mode-pet-details-page' : ''}`}>
                 <div className="pet-details container">
-                    {/* <h1 className="page-signup-title">PetDetails</h1> */}
                     <div className="pet-details-main-title">
                         <h2 className={`pet-details-pet-name ${this.props.isDarkMode ? 'dark-mode-pet-details-name' : ''}` }>{pet.name}</h2>
                         <div className="pet-details-block flex center">
@@ -120,7 +117,6 @@ export class _PetDetails extends Component {
                             </div>
                             <div className={`pet-details-info ${this.props.isDarkMode ? 'dark-mode-details-info' : ''}`}>
                                 <div className="pet-char">
-                                    {/* {pet.gender === 'female' ? <FemaleBlack /> : <Male />} */}
                                     {pet.gender === 'female' ? this.props.isDarkMode ? <FemaleWhite /> : <FemaleBlack /> : this.props.isDarkMode ? <MaleWhite /> : <MaleBlack />}
                                     <h4>{pet.gender}</h4>
                                 </div>
@@ -169,8 +165,8 @@ export class _PetDetails extends Component {
                         <h3 className={`pet-details-map-title ${this.props.isDarkMode ? 'dark-mode-map-title' : ''}`}>Location</h3>
                         <p className={`pet-details-map-loc ${this.props.isDarkMode ? 'dark-mode-map-loc' : ''}`}>{pet.host.loc.address}</p>
                         <div className="map-contact flex">
-                            <div className="map-contact-whatsapp">{this.props.isDarkMode ? <WhatsappWhite /> : <WhatsappBlack />} </div>
-                            <p className="map-contact-phone">{pet.host.phone}</p>
+                            <div className="map-contact-whatsapp flex justify-center  align-center">{this.props.isDarkMode ? <WhatsappWhite /> : <WhatsappBlack />} </div>
+                            <p className={`map-contact-phone flex justify-center  align-center ${this.props.isDarkMode ? 'dark-mode-map-loc' : ''}`}>{pet.host.phone}</p>
                         </div>
                         <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
                     </div>
@@ -186,7 +182,6 @@ export class _PetDetails extends Component {
 const mapGlobalStateToProps = (state) => {
     return {
         isDarkMode: state.appSettingsModule.isDarkMode
-
     }
 }
 

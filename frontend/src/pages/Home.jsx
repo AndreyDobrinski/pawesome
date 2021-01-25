@@ -9,15 +9,10 @@ export class _Home extends Component {
 
   state = {
 
-
   }
-
 
   componentDidMount() {
-
-    console.log('HOME LOC---', this.props.location)
   }
-
 
 
   render() {
@@ -31,8 +26,6 @@ export class _Home extends Component {
           </video>
 
           {/* <img className="ms-slide-bgvideo" src="https://wallpapercave.com/wp/wp3171574.jpg" alt=""/> */}
-
-
 
           <div className="page-home-hero-content ">
             <div className="page-home-hero-title">Find Your <br /> Pawesome Friend</div>
@@ -84,8 +77,6 @@ export class _Home extends Component {
           </div>
 
         </div>
-
-
       </div>
     )
   }

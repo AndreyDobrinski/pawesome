@@ -1,15 +1,7 @@
 .app-footer {
   transition: 0.4s;
-  // width: 100vw;
   height: 100px;
   background-color: #f7f7f7;
-  // border-top: 1px solid #ddd;
-  // position: fixed;
-  // bottom: 0;
-  // width: 100%;
-
-
-
 
   .app-footer-container{
     height: 100%;
@@ -18,15 +10,6 @@
       margin-right: 10px;
       width: 30px;
       height: 30px;
-      // @include for-narrow-layout {
-      //   width: 30px;
-      //   height: 30px;
-      // }
-      
-      // @include for-normal-layout {
-      //   width: 30px;
-      //   height: 30px;
-      // }
     }
     
     .app-footer-name-pawesome{
