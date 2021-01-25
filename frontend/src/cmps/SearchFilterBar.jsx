@@ -20,15 +20,12 @@ class _SearchFilterBar extends Component {
     }
 
     handleInput = ({ target }) => {
-       
         const callback = () => {
             
             console.log( 'handleInput, callback --- ', filterBy )
         }
-
         const filterBy = { ...this.state.filterBy, [target.name]: target.value }
         this.setState({ filterBy }, callback)
-
     }
 
     onSearchPet = (ev) => {
@@ -41,7 +38,6 @@ class _SearchFilterBar extends Component {
         delete filterBy.size
         this.props.setFilter(filterBy)
         this.props.history.push('/pet')
-
     }
 
     render() {
@@ -55,7 +51,7 @@ class _SearchFilterBar extends Component {
                         <option value="all">any</option>
                         <option value="cat">cats</option>
                         <option value="dog">dogs</option>
-                        {/* <option value="bird">birds</option> */}
+                        <option value="bird">birds</option>
                         <option value="other">others</option>
                     </select>
                 </div>

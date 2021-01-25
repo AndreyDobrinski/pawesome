@@ -6,8 +6,6 @@ import { toggleDarkMode } from '../store/actions/appSettingsActions'
 
 
 
-
-
 export class _OrderAdd extends Component {
 
     state = {
@@ -25,7 +23,7 @@ export class _OrderAdd extends Component {
     onAddOrder = (ev) => {
         ev.preventDefault()
         let { pet, loggedInUser } = this.props
-        if (!loggedInUser) return ///request to login
+        if (!loggedInUser) return
         let { message } = this.state
         this.props.saveOrder(pet, message)
             .then(() => { this.setState({ isOrderDone: true }) })
@@ -42,13 +40,11 @@ export class _OrderAdd extends Component {
             {!isOrderDone && <div className="order-not-submitted">
                 <form className="add-order" onSubmit={this.onAddOrder}>
                     <textarea placeholder={`Hello! I want to adopt ${pet.name} ...`} onChange={this.onInputChange} value={message} name="order-txt" rows="8"></textarea>
-                    {/* <button className="add-order-btn btn2">Adopt {pet.name}</button> */}
                     <button className={`add-order-btn ${this.props.isDarkMode ? 'dark-mode-add-order-btn' : ''}`}>Adopt {pet.name}</button>
                 </form>
             </div>}
 
             {isOrderDone && <div className="order-submitted">
-                {/* <div className="order-empty">We are immensely thankful for you decision!</div> */}
                 <div className="order-empty">Thank you for your interest in our pet!</div>
                 <div className="order-empty">Your request has been sent to the pet shelter.</div>
                 <div className="order-empty">You can follow request status on your profile page.</div>

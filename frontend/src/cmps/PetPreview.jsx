@@ -1,14 +1,11 @@
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { LikeButton } from './btns/LikeBtn'
-
 import { savePet } from '../store/actions/petActions'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
-
 import { ReactComponent as Female } from "../assets/imgs/femenine.svg"
 import { ReactComponent as Male } from "../assets/imgs/male.svg"
-
-import { CarouselComponent} from './CarouselComponent'
+import { CarouselComponent } from './CarouselComponent'
 
 
 export class _PetPreview extends Component {
@@ -23,25 +20,20 @@ export class _PetPreview extends Component {
     }
 
     onLike = (diff) => {
-
         const likes = (+this.state.pet.likes) + diff
         const pet = { ...this.state.pet, likes }
         this.setState({ ...this.state, pet })
-
         this.props.savePet(pet)
     }
 
     render() {
-
         const { pet } = this.state
-
         if (!pet) return <div>Loading...</div>
-
-        const gender = this.state.pet.gender === 'female'? <Female/>: <Male/>
+        const gender = this.state.pet.gender === 'female' ? <Female /> : <Male />
 
         return (<li className={`pet-preview ${this.props.isDarkMode ? 'dark-mode-pet-preview' : ''}`}>
-           
-            <CarouselComponent pet={pet}/>
+
+            <CarouselComponent pet={pet} />
             <div className="flex">
                 <h2 className={`pet-preview-pet-name flex justify-center align-center ${this.props.isDarkMode ? 'dark-mode-pet-name' : ''}`}>{pet.name}</h2>
                 <h2 className="pet-preview-pet-gender flex justify-center align-center">{gender}</h2>
@@ -62,7 +54,6 @@ const mapStateToProps = (state) => {
     return {
         pets: state.petModule.pets,
         isDarkMode: state.appSettingsModule.isDarkMode
-
     }
 }
 

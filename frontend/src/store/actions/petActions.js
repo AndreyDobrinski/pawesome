@@ -1,11 +1,10 @@
 import { petService } from '../../services/petService.js'
 
 export function loadPets(newFilterBy) {
-    console.log('petActions... --- filterBy --- ', newFilterBy)
     return async (dispatch) => {
         try {
-            dispatch({type:'SET_IS_LOADING' , isLoading: true})
-            
+            dispatch({ type: 'SET_IS_LOADING', isLoading: true })
+
             const pets = await petService.query(newFilterBy)
             const action = {
                 type: 'LOAD_PETS',
@@ -13,8 +12,8 @@ export function loadPets(newFilterBy) {
                 newFilterBy
             }
             await dispatch(action)
-            dispatch({type:'SET_IS_LOADING' , isLoading: false})
-            
+            dispatch({ type: 'SET_IS_LOADING', isLoading: false })
+
         } catch (err) {
             console.log('error load pets', err)
 
@@ -30,13 +29,6 @@ export function deletePet(petId) {
 
     }
 }
-// export function getPet(petId) {
-//     return async (dispatch) => {
-//         const pet = await petService.getPet(petId)
-//         return pet
-
-//     }
-// }
 
 export function savePet(pet) {
     return async (dispatch) => {
@@ -47,7 +39,6 @@ export function savePet(pet) {
 }
 
 export function setFilter(filterBy) {
-    console.log('Actions... setFilter... filter ', filterBy)
     return (dispatch) => {
         const action = {
             type: 'SET_FILTER',

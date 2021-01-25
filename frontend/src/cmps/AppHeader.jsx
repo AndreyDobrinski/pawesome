@@ -11,13 +11,7 @@ import { ReactComponent as UserLogedBlack } from "../assets/imgs/user-login-blac
 import { ReactComponent as UserLogedWhite } from "../assets/imgs/user-login-white.svg"
 import { ReactComponent as Light } from "../assets/imgs/sun.svg"
 import { ReactComponent as Dark } from "../assets/imgs/moon.svg"
-
-
-
 import { SearchFilterBar } from './SearchFilterBar'
-
-
-
 import Container from '@material-ui/core/Container';
 import Avatar from '@material-ui/core/Avatar';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -27,16 +21,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 
-
-
-
-
-
-
-
-
 export class _AppHeader extends Component {
-
 
     state = {
         isNewUser: false,
@@ -56,12 +41,9 @@ export class _AppHeader extends Component {
         smallSearchClicked: true,
     }
 
-
-
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll)
         window.addEventListener('resize', this.handleResize)
-        // console.log('Looking for routes', this);
         if (this.isHomePage()) {
             this.setState({
                 isHomePage: true,
@@ -72,9 +54,6 @@ export class _AppHeader extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        // console.log('prevProps.match:',prevProps.location);
-        // console.log('this.props.match:',this.props.location);
-
         if (prevProps.location.pathname !== this.props.location.pathname) {
             if (this.isHomePage()) {
                 this.setState({
@@ -83,7 +62,7 @@ export class _AppHeader extends Component {
             } else {
                 this.setState({
                     isHomePage: false,
-                    smallSearchClicked:false
+                    smallSearchClicked: false
                 })
             }
         }
@@ -101,7 +80,6 @@ export class _AppHeader extends Component {
 
     handleScroll = () => {
         if (window.pageYOffset === 0 && window.innerWidth > 1100 && this.isHomePage()) {
-            // console.log('test',window.pageYOffset);
             this.setState({
                 isScrolled: false,
                 smallSearchClicked: true
@@ -116,15 +94,15 @@ export class _AppHeader extends Component {
     }
 
 
-    handleResize = () =>{
-        if(window.innerWidth < 1100 ){
+    handleResize = () => {
+        if (window.innerWidth < 1100) {
             this.setState({
                 isScrolled: true,
                 smallSearchClicked: false,
 
             })
         }
-        
+
     }
 
 
@@ -144,8 +122,6 @@ export class _AppHeader extends Component {
             },
             modalSignClicked: false
         })
-        // this.onCloseSignModal()
-
     }
 
 
@@ -157,21 +133,16 @@ export class _AppHeader extends Component {
                 [name]: value
             }
         }))
-
-
     }
 
 
     doLogin = async (ev) => {
         ev.preventDefault()
-
         const { username, password } = this.state.loginCred
         if (!username) {
             return this.setState({ msg: 'Please enter user/password' })
         }
-
         const userCreds = { username, password }
-
         try {
             this.props.login(userCreds)
             this.setState({
@@ -200,15 +171,11 @@ export class _AppHeader extends Component {
 
     }
 
-
     newUser = (ev) => {
         ev.preventDefault()
         const lastAns = this.state.isNewUser
         this.setState({ isNewUser: !lastAns })
     }
-
-
-
 
     onOpenSignModal = () => {
         if (this.props.loggedInUser) return
@@ -232,25 +199,9 @@ export class _AppHeader extends Component {
 
     }
 
-
-    // setMode = () =>{
-    //     if(this.state.isDarkMode === false){
-    //         this.setState({
-    //             isDarkMode: true
-    //         })
-    //     }else{
-    //         this.setState({
-    //             isDarkMode: false
-    //         })
-
-    //     }
-    // }
-
-    setMode =  () => {
-         this.props.toggleDarkMode()
+    setMode = () => {
+        this.props.toggleDarkMode()
     }
-
-
 
 
     render() {
@@ -364,8 +315,6 @@ export class _AppHeader extends Component {
         return (
             <nav className={`app-header-container${this.state.isScrolled ? '-scrolled' : ''}
              ${this.state.isHomePage ? ' header-for-home' : ''} ${showDarkmode ? 'dark-mode-header-container' : ''} `}>
-             {/* ${this.state.isHomePage ? ' header-for-home' : ''} ${this.props.isDarkMode && this.state.isScrolled ? 'dark-mode-header-container' : ''} `}> */}
-
                 <div className="app-header-content flex align-center justify-between container">
 
                     <Link to="/">
@@ -376,9 +325,6 @@ export class _AppHeader extends Component {
 
                         </div>
                     </Link>
-
-                    {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
-
 
                     <div className={`app-header-filter-container-small flex ${this.state.smallSearchClicked ? 'hide-small-search' : ''} ${this.props.isDarkMode ? 'dark-mode-small-search' : ''}`} onClick={this.onOpenBigSearch}>
                         <div className="app-header-filte-box-small flex">
@@ -391,33 +337,21 @@ export class _AppHeader extends Component {
                             <button className="search-btn btn1"><Search /></button>
                         </div>
                     </div>
-                    {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
-
-
 
                     <div className="app-header-link-container flex justify-center align-center">
-
                         <Link to="/pet"><div className={`app-header-link-pets ${this.props.isDarkMode ? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
                         <div className={`app-header-link-login ${this.props.isDarkMode ? 'dark-mode-link-login' : ''}`} onClick={this.onOpenSignModal}>
                             {!loggedInUser && <User />}
-                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite/> : <UserLogedBlack/>}</Link>}
+                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite /> : <UserLogedBlack />}</Link>}
                         </div>
                         <div className="app-header-mode" onClick={this.setMode}>{this.props.isDarkMode ? <Dark /> : <Light />}</div>
-
                     </div>
-
-
                 </div>
-
-                {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
 
                 {this.state.smallSearchClicked && <div className={`${this.state.isHomePage ? 'app-header-filter-home ' : 'app-header-filter-normal '}
                  flex align-center justify-center ${this.state.isScrolled ? 'filter-scrolled' : ''}`}>
                     <SearchFilterBar />
                 </div>}
-                {/*/////////////////////////////Search Filter buttom////////////////////////////////////////////// */}
-
-
 
                 {this.state.modalSignClicked && <div className="modal" onClick={() => this.onCloseSignModal()}>
 

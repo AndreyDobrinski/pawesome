@@ -1,23 +1,13 @@
 import { Component } from 'react'
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-import { MapMarker } from './MapMarker';
+import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 export class _MapContainer extends Component {
   state = {
-    // showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {}
   };
 
-  onMarkerClick = (props, marker, e) => {
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-  }
-
-  onMapClicked = (props) => {
+  onMapClicked = () => {
     if (this.state.showingInfoWindow) {
       this.setState({
         showingInfoWindow: false,
@@ -35,21 +25,9 @@ export class _MapContainer extends Component {
         onClick={this.onMapClicked}
         zoom={15}
         style={{ position: 'relative', width: '100%', height: '300px', margin: 'auto' }}>
-
         <Marker
-          onClick={this.onMarkerClick}
-          // title={'The marker`s title will appear as a tooltip.'}
           name={'Tel-Aviv: dizingov, 23'}
-          position={{lat: hostCreds.lat, lng: hostCreds.lng}}
-          style={{ backgroundImage: 'url(https://www.ixxiyourworld.com/media/2391858/ixxi-paul-fuentes-fashion-lama.jpg?mode=crop&width=562&height=749)' }} />
-
-        {/* <InfoWindow
-          marker={this.state.activeMarker}
-          visible={this.state.showingInfoWindow}>
-          <div>
-            <h1>{this.state.selectedPlace.name}</h1>
-          </div>
-        </InfoWindow> */}
+          position={{ lat: hostCreds.lat, lng: hostCreds.lng }} />
       </Map>
     );
   }

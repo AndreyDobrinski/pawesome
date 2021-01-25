@@ -17,15 +17,16 @@ function query(filterBy) {
         for (var key in filterBy) {
             if (filterBy[key] !== 'all') filter[key] = filterBy[key]
         }
-        if (!filterBy) { return httpService.get(`pet`) }
-        else {
-            return httpService.get(`pet`, filter)
-        }
+        return (!filterBy) ? axios.get('http://localhost:3030/api/pet').then(res => res.data)
+            :
+            axios.get('http://localhost:3030/api/pet', { params: filter })
+                .then(res => res.data)
     } catch (err) {
         console.log('FrontError: getting pets', err)
         throw err
     }
 }
+
 
 function save(itemToSave) {
     try {
