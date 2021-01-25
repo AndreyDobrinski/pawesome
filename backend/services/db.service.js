@@ -2,12 +2,14 @@ const MongoClient = require('mongodb').MongoClient
 
 const config = require('../config')
 
+const logger = require('./logger.service')
+
 module.exports = {
     getCollection
 }
 
 // Database Name
-const dbName = 'dbPaw'
+const dbName = 'pawTestDB'
 
 var dbConn = null
 

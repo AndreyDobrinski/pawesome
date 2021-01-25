@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { loadPets } from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
 // import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
+import {FilterBySize} from '../cmps/filterBar/FilterBySize.jsx'
 import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
 import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
@@ -32,7 +33,7 @@ export class _Pet extends Component {
                 <FilterBtn field="size" value="big" />
                 <FilterBtn field="size" value="small" />
               </div> */}
-              <SortByInput />
+              <FilterBySize />
               <FilterNameInput />
               <SortByInput />
             </div>

@@ -14,16 +14,19 @@ module.exports = {
 }
 
 async function query(filterBy = {}) {
-    // console.log( 'petService : filterBy ', filterBy )
+
     const criteria = _buildCriteria(filterBy)
-    // console.log( 'petService : criteria ', criteria )
-    const {sortBy} = filterBy
+
+    const { sortBy } = filterBy
+    let sortCriteriaKey = sortBy
     let asc = 1
-    if ( sortBy === 'likes' ) asc = -1
-    if ( sortBy === 'orgname') sortBy = 'host.fullname'
+    if (sortBy === 'likes') asc = -1
+    if (sortBy === 'orgname') sortCriteriaKey = 'host.fullname'
+
     try {
         const collection = await dbService.getCollection(COLLECTION)
-        var pets = await collection.find(criteria).sort({ [sortBy]: asc }).toArray()
+        var pets = await collection.find(criteria).sort({ [sortCriteriaKey]: asc }).toArray()
+
         // console.log('PetService : Pets by criteria...', pets)
         return pets
     } catch (err) {
@@ -43,16 +46,6 @@ async function getById(petId) {
         throw err
     }
 }
-// async function getByUsername(username) {
-//     try {
-//         const collection = await dbService.getCollection('user')
-//         const user = await collection.findOne({ username })
-//         return user
-//     } catch (err) {
-//         logger.error(`while finding user ${username}`, err)
-//         throw err
-//     }
-// }
 
 async function remove(petId) {
     try {
@@ -66,8 +59,8 @@ async function remove(petId) {
 
 async function update(pet) {
     try {
-        // peek only updatable fields!
-        const petToSave = {...pet, _id: ObjectId(pet._id)}
+
+        const petToSave = { ...pet, _id: ObjectId(pet._id) }
         const collection = await dbService.getCollection(COLLECTION)
         await collection.updateOne({ '_id': petToSave._id }, { $set: petToSave })
         return petToSave;
@@ -79,8 +72,7 @@ async function update(pet) {
 
 async function add(pet) {
     try {
-        // peek only updatable fields!
-        const petToAdd = {...pet}
+        const petToAdd = { ...pet }
 
         const collection = await dbService.getCollection(COLLECTION)
         await collection.insertOne(petToAdd)
@@ -96,15 +88,20 @@ function _buildCriteria(filterBy) {
     const criteria = {}
 
     const filterCriterias = []
-    for ( var key in filterBy ) {
-        if ( key === 'sortBy' ) continue
-        filterCriterias.push({[key]: filterBy[key]})
+    for (var key in filterBy) {
+        if (key === 'sortBy') continue
+        if (key === 'name') {
+            const nameCriteria = { $regex: `${filterBy.name}`, $options: 'i' }
+            filterCriterias.push({ 'name': nameCriteria })
+            continue
+        }
+        if (key === 'address') {
+            // filterCriterias.push({ 'host.loc.address': filterBy[key] })
+            filterCriterias.push({ 'address': filterBy[key] })
+            continue
+        }
+        filterCriterias.push({ [key]: filterBy[key] })
     }
-
-    // criteria.$and = [
-    //         {kind: filterBy.kind},
-    //         {age: filterBy.age}
-    //     ]
 
     if (filterCriterias.length) criteria.$and = filterCriterias
 

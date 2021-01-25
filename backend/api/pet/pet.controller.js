@@ -14,12 +14,9 @@ async function getPet(req, res) {
 async function getPets(req, res) {
     try {
         const { kind, age } = req.query
-        console.log('Request query with filter...' ,req.query)
-        console.log('controller: from request --- kind --- ', kind)
-        console.log('controller: from request --- age --- ', age)
         const filterBy = req.query
 
-        console.log('petController, filterBy...', filterBy)
+        // console.log('petController, filterBy...', filterBy)
         const pets = await petService.query(filterBy)
         res.send(pets)
     } catch (err) {

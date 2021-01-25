@@ -5,7 +5,7 @@ export function loadPets(newFilterBy) {
     return async (dispatch) => {
         const pets = await petService.query(newFilterBy)
         const action = {
-            type: 'SET_PETS',
+            type: 'LOAD_PETS',
             pets,
             newFilterBy
         }
@@ -48,13 +48,3 @@ export function setFilter(filterBy) {
         dispatch(action)
     }
 }
-
-// export function setFilter(newFilterBy) {
-//     return (dispatch) => {
-//         return petService.getPetsForDisplay(newFilterBy)
-//             .then((petsForDisplay) => {
-//                 const action = { type: 'UPDATE_FILTER', newPets: petsForDisplay, newFilterBy }
-//                 dispatch(action)
-//             })
-//     }
-// }

@@ -6,9 +6,6 @@ import { petService } from "../services/petService"
 import {PetList} from './PetList'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
 
-
-const MONTH = 30
-
 export class _PreviewContainer extends Component {
 
     state = {
@@ -29,15 +26,14 @@ export class _PreviewContainer extends Component {
     getPetsToShow = (pets) => {
        
         const petsToShow = pets.filter(pet => { 
-            console.log(`next pet for check record date --- ${pet.name}, ${pet.recordDate}`)
-
+           
             let actualDays = (new Date().getTime() - new Date(pet.recordDate).getTime()) / 1000 / 60 / 60 / 24
-            console.log('actual days --- ', actualDays)
+           
             if (this.props.daysFromNow && actualDays < +this.props.daysFromNow) return pet
             if (this.props.longerThenDays && actualDays > +this.props.longerThenDays) return pet     
         })
 
-        return petsToShow;
+        return petsToShow.slice(0,4)
     }
 
     getSortedPets = (pets) => {
