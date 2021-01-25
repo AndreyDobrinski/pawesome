@@ -1,10 +1,9 @@
-.page-pet-title{
+.page-pet-title {
     color: $clr4;
 }
 
-.pet-list-page{
+.pet-list-page {
     transition: 0.4s;
-    
     .pet-list {
         padding-top: rem(180px);
         .pet-list-filter{
@@ -15,7 +14,7 @@
                 flex-direction: row;
             }
             @include for-normal-layout {
-                  flex-direction: row;
+                flex-direction: row;
             }
             .pet-list-input{
                 border-radius: 50px;
@@ -30,7 +29,7 @@
                     transition: 0.4s;
                     color: rgb(167, 163, 163);
                 }
-                &:focus{
+                &:focus {
                     transition: 0.4s;
                     border: 1px solid $clr8;
                 }
@@ -41,7 +40,7 @@
                     width: rem(240px);
                 }
             }
-            .pet-list-select{
+            .pet-list-select {
                 transition: 0.4s;
                 width: 72vw;
                 @include for-narrow-layout {
@@ -51,7 +50,7 @@
                     width: rem(180px);
                 }
             }
-            .pet-list-select-title{
+            .pet-list-select-title {
                 transition: 0.4s;
                 margin: 0px;
                 margin-right: rem(10px);
@@ -60,38 +59,33 @@
     }
 }
 
-
-
 /////////////////////// DARK MODE /////////////////////
 
-.dark-mode-pet-page{
+.dark-mode-pet-page {
     transition: 0.4s;
     background-color: #323233;
 }
 
-.dark-mode-pet-list-input{
+.dark-mode-pet-list-input {
     transition: 0.4s;
     background-color: rgb(177, 174, 174);
     border: 1px solid rgb(223, 223, 223);
-    &::placeholder{
+    &::placeholder {
         color: rgb(236, 233, 233) !important;
     }
-    &:focus{
+    &:focus {
         transition: 0.4s;
         border: 1px solid grey !important;
     }
-    
 }
 
-.dark-mode-pet-select-title{
+.dark-mode-pet-select-title {
     transition: 0.4s;
-    color: rgb(236, 233, 233) ;
-    
+    color: rgb(236, 233, 233);
 }
 
-.dark-mode-pet-list-select{
+.dark-mode-pet-list-select {
     transition: 0.4s;
     color: rgb(236, 233, 233) !important;
     // border-bottom: 1px solid red !important;
-
 }

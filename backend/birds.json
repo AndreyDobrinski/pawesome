@@ -1,0 +1,371 @@
+{
+  "pet": [
+    {
+      "_id": "b401",
+      "name": "Chloe",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415689/pets/birds/birdGreen-frm/vivek-doshi-w-0_LjFFY0E-unsplash_x4mltr.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415688/pets/birds/birdGreen-frm/lakshmi-narasimha-gbpD0s-w4lI-unsplash_dvyruj.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415686/pets/birds/birdGreen-frm/renan-brun-MHQm4dFkJEA-unsplash_endlzl.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415662/pets/birds/birdGreen-frm/kristina-g---NRfY2DbHU-unsplash_kqdzvo.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415675/pets/birds/birdGreen-frm/lakshmi-narasimha-ypn0ueRppRw-unsplash_urtoer.jpg"
+      ],
+      "likes": "57",
+      "shortDesc": "Sweet and energetic Quaker",
+      "description": "Chloe loves playing with toys in her cage and shredding whatever she can of them. We do not have verification that Chloe is in fact a female, but she's 100% adorable either way. Like many Quakers, she is protective of her cage and likes to spend time in there, but with patience and treats, she is working on being comfortable out of it. Chloe is working on stepping up and target training in her foster home and doesn't seem to mind being around other birds and dogs. Chloe is fully flighted and needs an owner who understands bird body language and can keep an eye out for potential nips.",
+      "age": "adult",
+      "gender": "female",
+      "kind": "bird",
+      "size": "small (0-6 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Tel Aviv-Yafo, Dizengoff St 50",
+      "host": {
+        "_id": "owner102",
+        "fullname": "Tel-Aviv Animal Rescue",
+        "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+        "phone": "054-2896714",
+        "email": "animalRescue@mail.com",
+        "loc": {
+          "address": "Tel Aviv-Yafo, Dizengoff St 50",
+          "lat": 32.0750224,
+          "lng": 34.7749395
+        }
+      },
+      "recordDate": "5-Aug-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b402",
+      "name": "Strawberry",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415720/pets/birds/birdLYellow-fem-y/joshua-harris-yqy0lDwbC_o-unsplash_mebgkh.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415751/pets/birds/birdLYellow-fem-y/junel-mujar-Pbf3tXWIhjI-unsplash_oyxhdy.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415755/pets/birds/birdLYellow-fem-y/chuttersnap-ap412zRUrPk-unsplash_pifr7c.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415726/pets/birds/birdLYellow-fem-y/loriane-magnenat-_vKdI-HnR3I-unsplash_kblwyh.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415716/pets/birds/birdLYellow-fem-y/joshua-harris-sI6si2hl-ZI-unsplash_wqra5u.jpg"
+      ],
+      "likes": "76",
+      "shortDesc": "Sweet young singer",
+      "description": "Strawberry is sweet bird who spent a lot of time in her old home in a cage. She is slowly getting used to hands and isn't thrilled about being pulled from her cage but is happy to sit near her foster mom. Strawberry is working towards hand taming and would be a great companion for a patient home. She loves to shred toys. Strawberry is a chronic egg-layer so she will need to be a single cockatiel and go home with someone able to provide an environment that discourages egg-laying as well as someone willing to work alongside an Avian vet to help with this, as she will need calcium supplements to stay healthy.",
+      "age": "young",
+      "gender": "female",
+      "kind": "bird",
+      "size": "small (0-6 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Haifa, Derech Simha Golan 54",
+      "host": {
+        "_id": "owner101",
+        "fullname": "Haifa Loves Animals",
+        "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+        "phone": "054-2212351",
+        "email": "haifaLoves@mail.com",
+        "loc": {
+          "address": "Haifa, Derech Simha Golan 54",
+          "lat": 32.789711,
+          "lng": 35.0078224
+        }
+      },
+      "recordDate": "10-Nov-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b403",
+      "name": "Stretch",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415775/pets/birds/birdPink-fem/david-clode-Ve5lvL5zIOA-unsplash_rcqdav.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415744/pets/birds/birdPink-fem/do-photography-Sy95bMYqrP0-unsplash_j3d1qf.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415724/pets/birds/birdPink-fem/alex-eckermann-DYWmtOeTrIs-unsplash_vl4orl.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415732/pets/birds/birdPink-fem/saeed-lajami-2jRiKyDWqi8-unsplash_rtmmg3.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415769/pets/birds/birdPink-fem/david-clode-dyVcLXrC1oo-unsplash_f3ecxb.jpg"
+      ],
+      "likes": "74",
+      "shortDesc": "Sweet and handsome lady",
+      "description": "Stretch is a spunky little Goffins Cockatoo. She needs a female owner and no other pets in the home. Stretch has a habit of flying to attack any other pets in her vicinity. Stretch is estimated to be about 7-8 years old. For the first 6 years of her life she was stuck in a cage with no toys or interaction. She has a history of plucking but is doing much better now. She now loves having toys to play with and she even will play fetch!",
+      "age": "adult",
+      "gender": "female",
+      "kind": "bird",
+      "size": "small (0-6 lbs)",
+      "specialities": [
+        "friendly with children"
+      ],
+      "address": "Tel Aviv-Yafo, Dizengoff St 50",
+      "host": {
+        "_id": "owner102",
+        "fullname": "Tel-Aviv Animal Rescue",
+        "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+        "phone": "054-2896714",
+        "email": "animalRescue@mail.com",
+        "loc": {
+          "address": "Tel Aviv-Yafo, Dizengoff St 50",
+          "lat": 32.0750224,
+          "lng": 34.7749395
+        }
+      },
+      "recordDate": "12-Sep-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b404",
+      "name": "Harper",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415697/pets/birds/birdGreenBl-y/bianca-ackermann-zOKrNguZwKo-unsplash_lp9ng3.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415698/pets/birds/birdGreenBl-y/chris-briggs-aLNJbbrHmpo-unsplash_ym064t.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415699/pets/birds/birdGreenBl-y/sina-katirachi-A3u3X1MDCnA-unsplash_bm6ksh.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415705/pets/birds/birdGreenBl-y/dalton-touchberry-yWfdhaqSAEo-unsplash_xcgjb3.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415698/pets/birds/birdGreenBl-y/david-clode-km2f-EUivRU-unsplash_llk1ib.jpg"
+      ],
+      "likes": "98",
+      "shortDesc": "Has a lot to add to conversations",
+      "description": "Harper is a feisty little guy but would thrive well in a patient environment. Harper is roughly 3 years old and came from a home where he was harassed by a cat and pecked at by another bird. He built up a tough guy exterior, but loves to sing to other birds and his foster mom. Harper is very afraid of hands and has been learning to step up on a perch. He can be aggressive when approached and doesn't like when his foster brother JJ stands too close (a cage with room for personal space is a must). Despite this, he and his brother have begun preening each other and there is affection there. With the right home, these two will be great companions for a home that appreciates them without needing to hold them all the time.",
+      "age": "young",
+      "gender": "male",
+      "kind": "bird",
+      "size": "small (0-6 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Haifa, Derech Simha Golan 54",
+      "host": {
+        "_id": "owner101",
+        "fullname": "Haifa Loves Animals",
+        "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+        "phone": "054-2212351",
+        "email": "haifaLoves@mail.com",
+        "loc": {
+          "address": "Haifa, Derech Simha Golan 54",
+          "lat": 32.789711,
+          "lng": 35.0078224
+        }
+      },
+      "recordDate": "11-Dec-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b405",
+      "name": "Wilfred",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415627/pets/birds/birdBlue-sen-1/roberto-carlos-roman-R2P6oKeuHWs-unsplash_yxwhdm.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415631/pets/birds/birdBlue-sen-1/bob-ghost--ud-LkJOKQY-unsplash_lehu9m.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415628/pets/birds/birdBlue-sen-1/bob-ghost-05OxB8SIW9Q-unsplash_eohjtx.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415632/pets/birds/birdBlue-sen-1/bianca-ackermann-uox6mD_d0jE-unsplash_s9vpiv.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415633/pets/birds/birdBlue-sen-1/bob-ghost-JLg5-p5gu-k-unsplash_kamdnp.jpg"
+      ],
+      "likes": "82",
+      "shortDesc": "Sweet old budgie gentleman",
+      "description": "Wilfred is a sweet old budgie gentleman estimated to be about 7 years old. He was brought to our shelter after his cage mate passed away and his family had to move somewhere that did not allow birds. Parakeets are very social birds that enjoy the company of each other. Although he is older, his quality of life will be much better if he has another friend (or 10!) to spend the rest of his days with. When being introduced to your resident bird, they should be housed separately for a couple of weeks while slowly introducing them, either in a separate cage side by side or in a cage with a divider.",
+      "age": "senior",
+      "gender": "male",
+      "kind": "bird",
+      "size": "small (0-6 lbs)",
+      "specialities": [
+        "friendly with children"
+      ],
+      "address": "Tel Aviv-Yafo, Dizengoff St 50",
+      "host": {
+        "_id": "owner102",
+        "fullname": "Tel-Aviv Animal Rescue",
+        "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+        "phone": "054-2896714",
+        "email": "animalRescue@mail.com",
+        "loc": {
+          "address": "Tel Aviv-Yafo, Dizengoff St 50",
+          "lat": 32.0750224,
+          "lng": 34.7749395
+        }
+      },
+      "recordDate": "12-Jan-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b406",
+      "name": "Moon",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415774/pets/birds/birdWhite-sen/manny-moreno-H0CtXTt15A0-unsplash_uehb9j.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415770/pets/birds/birdWhite-sen/max-smith-fYLQhZxE2Ys-unsplash_dpmoew.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415766/pets/birds/birdWhite-sen/gilles-rolland-monnet-xdd1_AD8whk-unsplash_fcuu3s.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415631/pets/birds/birdWhite-sen/terra-roro-qS_d1WcvUVg-unsplash_rckmzi.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415621/pets/birds/birdWhite-sen/ray-aucott-s0ncfzQb2yI-unsplash_e2bmy9.jpg"
+      ],
+      "likes": "122",
+      "shortDesc": "Beautiful and wonderful friend",
+      "description": "Moon is a very sweet bird that will step up onto your hand or a towel. He loves greet people every time they come to visit and will thoroughly enjoy any head scratch offered. He enjoys the outdoors on a nice day in company of his best friend Nikko. His loves to play with wood, foam, cardboard and if he has a box to destroy will be extremely happy. He is a shy guy, but once he gets to know you, he is a great bird. He loves to sit on your shoulder while you are doing your chores.",
+      "age": "senior",
+      "gender": "male",
+      "kind": "bird",
+      "size": "medium (7-11 lbs)",
+      "specialities": [
+        "friendly with other animals"
+      ],
+      "address": "Haifa, Derech Simha Golan 54",
+      "host": {
+        "_id": "owner101",
+        "fullname": "Haifa Loves Animals",
+        "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+        "phone": "054-2212351",
+        "email": "haifaLoves@mail.com",
+        "loc": {
+          "address": "Haifa, Derech Simha Golan 54",
+          "lat": 32.789711,
+          "lng": 35.0078224
+        }
+      },
+      "recordDate": "31-Dec-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b407",
+      "name": "Peanut",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415652/pets/birds/birdBlYel/david-clode-oC3jw3pMMWw-unsplash_tfeae1.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415669/pets/birds/birdBlYel/andrew-pons-lylCw4zcA7I-unsplash_axs4le.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415665/pets/birds/birdBlYel/matthieu-oger-6t31ejBdv98-unsplash_fp9oqf.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415654/pets/birds/birdBlYel/jean-philippe-delberghe-n0uRXGaHesY-unsplash_otr4rv.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415639/pets/birds/birdBlYel/camilo-ayala-V9VDd-2s3aE-unsplash_ptqukm.jpg"
+      ],
+      "likes": "116",
+      "shortDesc": "Has the biggest personality, says hello and laughs",
+      "description": "Peanut is a beautiful Blue and Gold Macaw that is looking for a special home. He has a scissor beak. Peanuts ideal adopter will be a woman who understands that Peanuts scissor beak will require routine avian vet visits (about every 3 months) to keep it under control. Peanut will also require a new size appropriate cage.",
+      "age": "senior",
+      "gender": "male",
+      "kind": "bird",
+      "size": "medium (7-11 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Tel Aviv-Yafo, Dizengoff St 50",
+      "host": {
+        "_id": "owner102",
+        "fullname": "Tel-Aviv Animal Rescue",
+        "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+        "phone": "054-2896714",
+        "email": "animalRescue@mail.com",
+        "loc": {
+          "address": "Tel Aviv-Yafo, Dizengoff St 50",
+          "lat": 32.0750224,
+          "lng": 34.7749395
+        }
+      },
+      "recordDate": "18-Jan-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b408",
+      "name": "Loyd",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415718/pets/birds/birdGrey/thomas-millot-vg6PZkjL1io-unsplash_dchkbm.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415716/pets/birds/birdGrey/lilian-dibbern-ftwDuke2UgA-unsplash_lpfmip.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415714/pets/birds/birdGrey/hannah-dickens-cdSg4nPkucA-unsplash_rtbbfx.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415704/pets/birds/birdGrey/ovidiu-creanga-EXqgBm93ho4-unsplash_syc9nl.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415703/pets/birds/birdGrey/jana-sabeth-Bg2AtXNmEHI-unsplash_1_sgkfdo.jpg"
+      ],
+      "likes": "53",
+      "shortDesc": "Incredibly social guy",
+      "description": "Loyd is incredibly social and loves to be out of his cage hanging out with his people. He likes to have his head scratched, but he also loves to run around on a table and explore. Like a typical kid, everything he encounters goes in his mouth, so he needs to be supervised closely. He is bold and busy. He prefers to eat when he is around his people. He eats pellets like a champ and loves nutriberries and seeds as treats.",
+      "age": "adult",
+      "gender": "male",
+      "kind": "bird",
+      "size": "medium (7-11 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Haifa, Derech Simha Golan 54",
+      "host": {
+        "_id": "owner101",
+        "fullname": "Haifa Loves Animals",
+        "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+        "phone": "054-2212351",
+        "email": "haifaLoves@mail.com",
+        "loc": {
+          "address": "Haifa, Derech Simha Golan 54",
+          "lat": 32.789711,
+          "lng": 35.0078224
+        }
+      },
+      "recordDate": "14-Jan-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b409",
+      "name": "Pancho",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415770/pets/birds/birdRed/agto-nugroho-Ow0bxNJ4PhE-unsplash_ijbwfm.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415761/pets/birds/birdRed/christopher-alvarenga-3osGqRRtQBE-unsplash_y7jwod.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415770/pets/birds/birdRed/dusan-veverkolog-edrW8VIlJJg-unsplash_iislmi.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415743/pets/birds/birdRed/agto-nugroho-JFd_jD-w7qE-unsplash_crqplz.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415756/pets/birds/birdRed/camille-couvez-N7i0Ye5Qpto-unsplash_mzjsth.jpg"
+      ],
+      "likes": "129",
+      "shortDesc": "Hearty and true talker",
+      "description": "Pancho is a male, 19 year old yellow-naped Amazon who truly enjoys hanging out with people. A true talker, Pancho will wow you with his vocabulary of, “Hey boy, aloha, and oh boy!” Pancho is a hearty and healthy eater who enjoys his share of sugar snap peas, apples, bell peppers, pistachios and corn. He’s great at destroying his toys, has a fascination with bells and loves to get baths on sunny days! Although he doesn’t do well with children, Pancho may be okay with other parrots and pets in the household.",
+      "age": "adult",
+      "gender": "male",
+      "kind": "bird",
+      "size": "medium (7-11 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Tel Aviv-Yafo, Dizengoff St 50",
+      "host": {
+        "_id": "owner102",
+        "fullname": "Tel-Aviv Animal Rescue",
+        "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+        "phone": "054-2896714",
+        "email": "animalRescue@mail.com",
+        "loc": {
+          "address": "Tel Aviv-Yafo, Dizengoff St 50",
+          "lat": 32.0750224,
+          "lng": 34.7749395
+        }
+      },
+      "recordDate": "22-Jan-2020",
+      "status": "waiting"
+    },
+    {
+      "_id": "b410",
+      "name": "Charlie",
+      "imgUrls": [
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415684/pets/birds/birdDBlue/simon-shim-G3_ijrNF_cU-unsplash_lfghbr.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415682/pets/birds/birdDBlue/jose-ignacio-garcia-zajaczkowski-ZkBjtrG7aYg-unsplash_rabaz7.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415678/pets/birds/birdDBlue/dominik-lange-BFsm5vldl2I-unsplash_rwlmlf.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415675/pets/birds/birdDBlue/mingjun-liu-37SScYJW0Rw-unsplash_csm15r.jpg",
+        "https://res.cloudinary.com/viktoria/image/upload/v1611415654/pets/birds/birdDBlue/giovanna-gomes-4Q7_-kpf_MM-unsplash_vjvayz.jpg"
+      ],
+      "likes": "132",
+      "shortDesc": "Very curious boy that loves playing with toys",
+      "description": "Charlie makes kissy noises and loves pomegranate seeds! He can get overstimulated, so may do best in a calm environment, but where he can observe any activity going on in the home. Like all Quakers, he is very protective of his cage, so it is best to interact with him outside of it, and service the cage when he is not inside it. He would do best in a behavior-savvy home that will let him set the pace, respect his body language and walk away when applicable, and just appreciate him for the funny little guy that he is, and treasure every small milestone of his trust that is earned!",
+      "age": "adult",
+      "gender": "male",
+      "kind": "bird",
+      "size": "medium (7-11 lbs)",
+      "specialities": [
+        "friendly with children",
+        "friendly with other animals"
+      ],
+      "address": "Haifa, Derech Simha Golan 54",
+      "host": {
+        "_id": "owner101",
+        "fullname": "Haifa Loves Animals",
+        "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+        "phone": "054-2212351",
+        "email": "haifaLoves@mail.com",
+        "loc": {
+          "address": "Haifa, Derech Simha Golan 54",
+          "lat": 32.789711,
+          "lng": 35.0078224
+        }
+      },
+      "recordDate": "23-Jan-2020",
+      "status": "waiting"
+    }
+  ]
+}

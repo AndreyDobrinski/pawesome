@@ -48,8 +48,10 @@ export class _OrderAdd extends Component {
             </div>}
 
             {isOrderDone && <div className="order-submitted">
-                <div className="order-empty">We are immensely thankful for you decision!</div>
-                <div className="order-empty">We'll contact you soon.</div>
+                {/* <div className="order-empty">We are immensely thankful for you decision!</div> */}
+                <div className="order-empty">Thank you for your interest in our pet!</div>
+                <div className="order-empty">Your request has been sent to the pet shelter.</div>
+                <div className="order-empty">You can follow request status on your profile page.</div>
             </div>}
         </div>
     }

@@ -4,10 +4,13 @@ import { connect } from 'react-redux'
 import { loadPets } from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
 // import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
+import Loader from 'react-loader-spinner'
+
 import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
 import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
 
+// import {} from '../assets/img/spinner-1s-200px.gif'
 
 export class _Pet extends Component {
 
@@ -16,12 +19,13 @@ export class _Pet extends Component {
   }
 
   componentDidMount() {
-    console.log('PET CDM --- ', this.props.filterBy)
+    // console.log('PET CDM --- ', this.props.filterBy)
     this.props.loadPets(this.props.filterBy)
   }
 
   render() {
     const { pets } = this.props
+    console.log('loading', this.props.isLoading);
 
     return (
       <React.Fragment>
@@ -36,7 +40,8 @@ export class _Pet extends Component {
               <FilterNameInput />
               <SortByInput />
             </div>
-            <PetList pets={pets} />
+            {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77"height={100} width={100} timeout={3000} /></div> }
+            {!this.props.isLoading && <PetList pets={pets} />}
           </div>
         </div>
       </React.Fragment>
@@ -48,8 +53,8 @@ const mapStateToProps = (state) => {
   return {
     pets: state.petModule.pets,
     filterBy: state.petModule.filterBy,
-    isDarkMode: state.appSettingsModule.isDarkMode
-
+    isDarkMode: state.appSettingsModule.isDarkMode,
+    isLoading: state.appSettingsModule.isLoading
   }
 }
 
