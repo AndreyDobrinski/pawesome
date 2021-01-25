@@ -24,8 +24,8 @@ export class _PetPreview extends Component {
 
     onLike = (diff) => {
 
-        const likes = (+this.state.pet.likes) + diff
-        const pet = { ...this.state.pet, likes }
+        const likesCount = (+this.state.pet.likes) + diff
+        const pet = { ...this.state.pet, likesCount }
         this.setState({ ...this.state, pet })
 
         this.props.savePet(pet)
@@ -37,7 +37,6 @@ export class _PetPreview extends Component {
 
         if (!pet) return <div>Loading...</div>
 
-        // const imgSrc = pet.imgUrls[0]
         const gender = this.state.pet.gender === 'female'? <Female/>: <Male/>
 
         return (<li className={`pet-preview ${this.props.isDarkMode ? 'dark-mode-pet-preview' : ''}`}>

@@ -18,8 +18,6 @@ export class _Profile extends Component {
     state = {
         user: null,
         orders: null,
-        isOnChat: false, //
-        chatTopic: null,//
         isOwner: true,
     }
 
@@ -32,37 +30,15 @@ export class _Profile extends Component {
             var isOwner = user.isHost ? true : false
             await this.props.loadOrders()
             var { orders } = this.props
-
-            const userOrders = this.getUserOrders(user, orders)
-            this.setState({ user, orders: userOrders, isOwner })
+            this.setState({ user, orders, isOwner })
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
     }
 
-
-    getUserOrders = (user, orders) => {
-        console.log('Profile ', user)
-        const userOrders = (user.isHost) ? orders.filter(order => order.ownerId === user._id)
-            : orders.filter(order => order.byUser._id === user._id)
-        return userOrders
-    }
-
     onLogOut = async () => {
         await this.props.logout()
         this.props.history.push('/')
-    }
-
-    onModalEditClicked = () => {
-        console.log('Edit modal opend');
-    }
-
-    onStartChat = (order) => {
-        console.log('Start chat for order ', order)
-        // if (order._id !== this.state.chatTopic) 
-        // this.setState({...this.state, isOnChat: true, chatTopic : order._id})
-        // console.log( 'Start chat for order ', this.state.chatTopic)
-        // socketService.emit('chat topic',  this.state.chatTopic)
     }
 
     render() {
@@ -201,10 +177,6 @@ export class _Profile extends Component {
 }
 
 
-
-
-
-
 const mapStateToProps = state => {
     return {
         users: state.userModule.users,
@@ -218,7 +190,6 @@ const mapDispatchToProps = {
     toggleDarkMode
 
 }
-
 
 
 export const Profile = connect(mapStateToProps, mapDispatchToProps)(_Profile)

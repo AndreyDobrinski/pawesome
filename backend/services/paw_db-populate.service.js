@@ -1,6 +1,5 @@
-const dbJSON = require('../db.json')
+const dbJSON = require('../pawdb.json')
 const dbService = require('./db.service')
-const userService = require('../api/user/user.service')
 
 const petService = {
     async add(pet) {
@@ -17,45 +16,118 @@ const orderService = {
     }
 }
 
+// const dbUserService = {
+//     async add(user, isTemp = true) {
+//         const collection = await dbService.getCollection(isTemp ? 'temp_user' : 'user')
+//         await collection.insertOne(user)
+//         return user
+//     }
+// }
+
 const dbUserService = {
-    async add(user, isTemp = true) {
-        const collection = await dbService.getCollection(isTemp ? 'temp_user' : 'user')
+    async add(user) {
+        const collection = await dbService.getCollection('user')
         await collection.insertOne(user)
         return user
     }
 }
 
-// userMap: localId  ===> miniUserFromDB
-// userMap: 'u101'  ===> {_id: 'xx12jhjkka22', fullName: 'Mashu', imgUrl: ''}
-
 async function go() {
+    // const users = assignPets2Users()
+    // console.log('users ', users[0])
+    // const userMap = await saveUsers2(users)
     const userMap = await saveUsers()
     const petMap = await savePets(userMap)
-    await saveUsers(petMap)
+    // await saveUsers(petMap)
     console.log('userMap', userMap)
     console.log('petMap', petMap)
-    const saved = await saveOrders(userMap, petMap)
-    console.log('Saved', saved[0])
+    // const saved = await saveOrders(userMap, petMap)
+    // console.log('Saved', saved[0])
 }
 
-async function saveUsers(petMap=null) {
+function assignPets2Users() {
+
+    const pets = dbJSON.pet
+    const users = dbJSON.user
+
+    users.forEach(user => {
+        user.pets = pets.filter(pet => pet.host._id === user._id).map(pet => {
+            const miniPet = {
+                petId: pet._id,
+                name: pet.name,
+                imgUrls: pet.imgUrls
+                // hostId: savedPet.host._id
+            }
+
+            return miniPet
+        })
+    })
+
+    return users
+}
+
+// async function saveUsers(petMap = null) {
+async function saveUsers() {
     console.log('Importing ', dbJSON.user.length, 'Users')
     const localUserIds = []
-    const tempDb = (petMap==null)
+    // const tempDb = (petMap == null)
     const prms = dbJSON.user.map((user) => {
         const localUserId = user._id
         localUserIds.push(localUserId)
         delete user._id
 
-        if (petMap && user.pets) {
-            console.log('Updating users with pets....')
-            const pets = []
-            for ( let i = 0; i < user.pets.length; i++ ) {
-                pets.push(petMap[user.pets[i]._id])
-            }
-            user.pets = pets
-        }
-        
+        // if (petMap) {
+        //     const pets = []
+        //     for (var key in petMap) {
+        //         const pet = petMap[key]
+        //         if (pet.hostId === localUserId) {
+        //             pets.push(pet)
+        //         }
+        //     }
+        //     user.pets = pets
+        // }
+
+        // if (petMap && user.pets) {
+        //     console.log('Updating users with pets....')
+        //     const pets = []
+        //     for (let i = 0; i < user.pets.length; i++) {
+        //         pets.push(petMap[user.pets[i]._id])
+        //     }
+        //     user.pets = pets
+        // }
+
+        return dbUserService.add(user)
+
+        // return dbUserService.add(user, tempDb)
+    })
+
+    return Promise.all(prms)
+        .then((users) => {
+            const userMap = users.reduce((accUserMap, savedUser, idx) => {
+                const miniUser = {
+                    _id: savedUser._id.toString(),
+                    fullname: savedUser.fullname,
+                    imgUrl: savedUser.imgUrl,
+                    phone: savedUser.phone,
+                    email: savedUser.email,
+                    loc: { ...savedUser.loc }
+                }
+                accUserMap[localUserIds[idx]] = miniUser
+                return accUserMap
+            }, {})
+            return userMap
+        })
+}
+
+async function saveUsers2(users) {
+    console.log('Importing ', dbJSON.user.length, 'Users')
+    const localUserIds = []
+    
+    const prms = users.map((user) => {
+        const localUserId = user._id
+        localUserIds.push(localUserId)
+        delete user._id
+
         return dbUserService.add(user, tempDb)
     })
 
@@ -68,7 +140,7 @@ async function saveUsers(petMap=null) {
                     imgUrl: savedUser.imgUrl,
                     phone: savedUser.phone,
                     email: savedUser.email,
-                    loc: {...savedUser.loc}
+                    loc: { ...savedUser.loc }
                 }
                 accUserMap[localUserIds[idx]] = miniUser
                 return accUserMap
@@ -94,7 +166,8 @@ async function savePets(userMap) {
                 const miniPet = {
                     _id: savedPet._id.toString(),
                     name: savedPet.name,
-                    imgUrls: savedPet.imgUrls
+                    imgUrls: savedPet.imgUrls,
+                    hostId: savedPet.host._id
                 }
                 accPetMap[localPetIds[idx]] = miniPet
                 return accPetMap
@@ -109,7 +182,7 @@ function saveOrders(userMap, petMap) {
     const prms = dbJSON.order.map(order => {
         delete order._id
         order.byUser = userMap[order.byUser._id]
-        const pet = {...petMap[order.pet._id]}
+        const pet = { ...petMap[order.pet._id] }
         order.pet = pet
         return orderService.add(order)
     })

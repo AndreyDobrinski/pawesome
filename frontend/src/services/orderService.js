@@ -4,7 +4,7 @@ export const orderService = {
     query,
     saveOrder,
     isOrderDone,
-    updOrder
+    updateOrder
 }
 const BASE_URL = 'http://localhost:3030/api/order'
 // const BASE_URL = (process.env.NODE_ENV !== 'development')
@@ -41,6 +41,6 @@ async function saveOrder(pet, message) {
    return httpService.post(`order`, newOrder)
 }
 
-async function updOrder(newOrder) {
+async function updateOrder(newOrder) {
     return httpService.put(`order/:${newOrder._id}`, newOrder)
 }

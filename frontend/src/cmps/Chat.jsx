@@ -72,7 +72,7 @@ class _Chat extends Component {
 
         <ul>
           {this.state.msgs.map((msg, idx) => (
-            <li key={idx}>{msg.from}: {msg.txt}</li>
+            <li key={idx} className={msg.from ===  this.props.loggedInUser.fullname? 'outcoming-msg':'incoming-msg'}>{msg.from}: {msg.txt}</li>
           ))}
         </ul>
         <form className="chat-form" onSubmit={this.sendMsg}>

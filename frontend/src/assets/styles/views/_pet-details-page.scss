@@ -32,7 +32,7 @@
 }
 .pet-details-main-title {
   height: 100%;
- 
+
   .pet-details-pet-name {
     transition: 0.4s;
     margin-top: 15px;
@@ -43,9 +43,8 @@
     > :last-child {
       color: $clr7;
     }
-    .pet-details-statstics-host{
+    .pet-details-statstics-host {
       transition: 0.4s;
-  
     }
   }
   > * {
@@ -54,7 +53,7 @@
   .pet-details-statstics {
     align-items: end;
     gap: 3px;
-    .pet-details-statstics-likes{
+    .pet-details-statstics-likes {
       transition: 0.4s;
     }
   }
@@ -102,13 +101,11 @@
   @include for-narrow-layout {
     width: 100%;
     padding-right: 0px;
-    
   }
-  
+
   @include for-normal-layout {
     padding-right: 40px;
     width: 70%;
-
   }
   .pet-details-title {
     transition: 0.4s;
@@ -170,6 +167,8 @@
     width: 30%;
   }
   .pet-details-order {
+    position: sticky;
+    top: 110px;
     .order-not-submitted {
       padding: 20px;
       margin-bottom: 40px;
@@ -178,6 +177,7 @@
       border-radius: 12px;
       box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
       text-align: center;
+
       // background-color: $clr8;
       textarea {
         // border-radius: 8px;
@@ -300,7 +300,7 @@
   border-radius: 30px;
   color: #86cb77;
   font-weight: 500;
-//   transition: 0.1s;
+  //   transition: 0.1s;
   outline: none;
 
   a {
@@ -314,18 +314,15 @@
   }
 }
 
-
-.pet-details-imgs-carusel{
+.pet-details-imgs-carusel {
   display: none;
 }
 
-
-.pet-details-imgs-hide{
+.pet-details-imgs-hide {
   display: none;
 }
 
-
-.pet-details-imgs-show{
+.pet-details-imgs-show {
   display: block;
 }
 
@@ -391,12 +388,12 @@
   color: #86cb77;
 }
 
-.dark-mode-pet-details-likes{
+.dark-mode-pet-details-likes {
   transition: 0.4s;
   color: $clr21 !important;
 }
 
-.dark-mode-pet-details-name{
+.dark-mode-pet-details-name {
   transition: 0.4s;
   color: $clr20 !important;
   

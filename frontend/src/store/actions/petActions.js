@@ -8,7 +8,7 @@ export function loadPets(newFilterBy) {
             
             const pets = await petService.query(newFilterBy)
             const action = {
-                type: 'SET_PETS',
+                type: 'LOAD_PETS',
                 pets,
                 newFilterBy
             }
@@ -16,7 +16,7 @@ export function loadPets(newFilterBy) {
             dispatch({type:'SET_IS_LOADING' , isLoading: false})
             
         } catch (err) {
-            // console.log('action', action)
+            console.log('error load pets', err)
 
         }
     }
@@ -56,13 +56,3 @@ export function setFilter(filterBy) {
         dispatch(action)
     }
 }
-
-// export function setFilter(newFilterBy) {
-//     return (dispatch) => {
-//         return petService.getPetsForDisplay(newFilterBy)
-//             .then((petsForDisplay) => {
-//                 const action = { type: 'UPDATE_FILTER', newPets: petsForDisplay, newFilterBy }
-//                 dispatch(action)
-//             })
-//     }
-// }

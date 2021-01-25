@@ -1,65 +1,24 @@
 const dbService = require('../../services/db.service')
 const ObjectId = require('mongodb').ObjectId
-const asyncLocalStorage = require('../../services/als.service')
+const userService = require('../user/user.service')
 
 async function query(userId) {
     try {
-        var collection = await dbService.getCollection('order')
-        var userCollection = await dbService.getCollection('user')
-        var users = await userCollection.find({ _id: ObjectId(userId) }).toArray()
-        if (users[0].isHost) {
+        const collection = await dbService.getCollection('order')
+        const user = await userService.getById(userId)
+        if (user?.isHost) {
             return await collection.find({ ownerId: userId }).toArray()
         } else {
             return await collection.find({ "byUser._id": userId }).toArray()
         }
-
-        // console.log('order.service orders:', orders)
-        // var orders = await collection.aggregate([
-        //     {
-        //         $match: filterBy
-        //     },
-        // {
-        //     $lookup:
-        //     {
-        //         from: 'user',
-        //         localField: 'byUserId',
-        //         foreignField: '_id',
-        //         as: 'byUser'
-        //     }
-        // },
-        // {
-        //     $unwind: '$byUser'
-        // }
-        //     {
-        //         $lookup:
-        //         {
-        //             from: 'user',
-        //             localField: 'aboutUserId',
-        //             foreignField: '_id',
-        //             as: 'aboutUser'
-        //         }
-        //     },
-        //     {
-        //         $unwind: '$aboutUser'
-        //     }
-        // ]).toArray()
-        // orders = orders.map(order => {
-        //     order.byUser = { _id: order.byUser._id, fullname: order.byUser.fullname }
-        //     order.aboutUser = { _id: order.aboutUser._id, fullname: order.aboutUser.fullname }
-        //     delete order.byUserId
-        //     delete order.aboutUserId
-        //     return order
-        // })
     } catch (err) {
         logger.error('cannot find orders', err)
         throw err
     }
-
 }
 
 async function update(order) {
     try {
-        // peek only updatable fields!
         const orderToSave = {
             ...order,
             _id: ObjectId(order._id)
@@ -89,22 +48,6 @@ async function add(order) {
     }
 }
 
-function _buildCriteria() {
-    var criteria = {}
-    // console.log('req.session.user._id', req.session.user._id)
-    return criteria
-}
-
-function _buildOwnerCriteria(userId) {
-    var criteria = {}
-    criteria.ownerId = ObjectId(userId)
-    return criteria
-}
-function _buildUserCriteria(userId) {
-    var criteria = {}
-    criteria.ownerId = ObjectId(userId)
-    return criteria
-}
 
 module.exports = {
     query,
