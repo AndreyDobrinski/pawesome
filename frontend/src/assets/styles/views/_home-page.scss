@@ -97,10 +97,10 @@
     text-decoration: none;
   }
   &:hover {
-    border: 2px solid #86cb77;
+    border: 2px solid #86cb77 !important;
     cursor: pointer;
-    background-image: linear-gradient(to right, #bbdb7f, #86cb77);
-    color: white;
+    background-image: linear-gradient(to right, #bbdb7f, #86cb77) !important;
+    color: white !important;
   }
 }
 
@@ -122,11 +122,10 @@
   .pet-preview-pet-name {
     transition: 0.4s;
     user-select: none;
-    color: black;
     font-size: rem(18px);
     margin-bottom: 10px;
     margin-right: 10px;
-    margin-left: 10px; //
+    margin-left: 10px; 
   }
   .dark-mode-pet-name {
     transition: 0.4s;

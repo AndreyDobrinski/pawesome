@@ -28,10 +28,10 @@ export class _AppFooter extends Component {
                     <div className="app-footer-logo flex">
                         {/* <div className="app-footer-logo-img"><PawDark/></div> */}
                         <div className="app-footer-logo-img">{this.props.isDarkMode?<PawWhite/>:<PawDark/>}</div>
-                        <div className="app-footer-name-pawesome"><span className="app-footer-name-paw">Paw</span>eSome</div>
+                        <div className="app-footer-name-pawesome"><span className="app-footer-name-paw">Paw</span>esome</div>
                     </div>
 
-                    <div className="app-footer-copyright">© 2020 PawSome , Inc. All rights reserved · Privacy · Terms · Sitemap</div>
+                    <div className="app-footer-copyright">© 2020 Pawesome , Inc. All rights reserved · Privacy · Terms · Sitemap</div>
 
                     <div className="app-footer-social-container flex ">
                         <div className="social-facebook">{ this.props.isDarkMode? <FacebookWhite/> : <FacebookBlack/> }</div>

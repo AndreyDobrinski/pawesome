@@ -147,7 +147,7 @@ export class _Profile extends Component {
                         </div>
 
                         <div className="profile-col-md-2">
-                            <button className={`profile-logout-btn ${this.props.isDarkMode ? 'dark-mode-plan-adopt-btn' : ''}`} onClick={this.onLogOut}>LogOut</button>
+                            <button className={`profile-logout-btn ${this.props.isDarkMode ? 'dark-mode-plan-adopt-btn' : ''}`} onClick={this.onLogOut}>Logout</button>
                         </div>
                     </div>
 

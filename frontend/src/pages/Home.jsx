@@ -30,6 +30,9 @@ export class _Home extends Component {
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
 
+          {/* <img className="ms-slide-bgvideo" src="https://wallpapercave.com/wp/wp3171574.jpg" alt=""/> */}
+
+
 
           <div className="page-home-hero-content ">
             <div className="page-home-hero-title">Find Your <br /> Pawesome Friend</div>

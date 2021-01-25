@@ -5,6 +5,9 @@ import { saveOrder, updateOrder } from '../store/actions/orderActions.js'
 import { userService } from '../services/userService.js'
 import {Chat} from './Chat.jsx'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
+import { ReactComponent as ChatBlack } from "../assets/imgs/chat-black.svg"
+import { ReactComponent as ChatWhite } from "../assets/imgs/chat-white.svg"
+
 
 
 
@@ -62,9 +65,9 @@ export class _OrderPreview extends Component {
                         {order.createdAt}
                     </div>
 
-                    <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}>
-                        ...
-                    </div>
+                    {/* <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}>...</div> */}
+                    {/* <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}><ChatBlack/></div> */}
+                    <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}>{this.props.isDarkMode ? <ChatWhite/> : <ChatBlack/>}</div>
                 </div>
                 <div className="order-status">
                     {isOwner && <select className={status} value={status} name="status" id="" onChange={this.updateStatus}>
