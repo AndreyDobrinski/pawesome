@@ -6,17 +6,18 @@ export const orderService = {
     isOrderDone,
     updateOrder
 }
-const BASE_URL = 'http://localhost:3030/api/order'
-// const BASE_URL = (process.env.NODE_ENV !== 'development')
-//     ? '/api/pet'
-//     : '//localhost:3030/api/pet';
+
 function query() {
-    return httpService.get(`order`)
+    try {
+        return httpService.get(`order`)
+    } catch (err) {
+        console.log('FrontError: getting orders', err)
+        throw err
+    }
 }
 
 async function isOrderDone(petId, userId) {
     var orders = await this.query()
-    console.log("orders service --- orders: ", orders)
     var res = orders.filter(order => {
         return order.pet._id === petId && order.byUser._id === userId
     })
@@ -25,22 +26,32 @@ async function isOrderDone(petId, userId) {
 }
 
 async function saveOrder(pet, message) {
-    var newOrder = {
-        message: message,
-        pet: {
-            name: pet.name,
-            _id: pet._id,
-            imgUrls: pet.imgUrls
-        },
-        ownerId: pet.host._id,
-        byUser: {
-            _id: '',
-            fullname: ''
+    try {
+        var newOrder = {
+            message: message,
+            pet: {
+                name: pet.name,
+                _id: pet._id,
+                imgUrls: pet.imgUrls
+            },
+            ownerId: pet.host._id,
+            byUser: {
+                _id: '',
+                fullname: ''
+            }
         }
+        return httpService.post(`order`, newOrder)
+    } catch (err) {
+        console.log('FrontError: saving order', err)
+        throw err
     }
-   return httpService.post(`order`, newOrder)
 }
 
 async function updateOrder(newOrder) {
-    return httpService.put(`order/:${newOrder._id}`, newOrder)
+    try {
+        return httpService.put(`order/:${newOrder._id}`, newOrder)
+    } catch (err) {
+        console.log('FrontError: updating order', err)
+        throw err
+    }
 }

@@ -56,9 +56,9 @@ export class _Reviews extends Component {
         var stars = []
         for (let i = 0; i < mark; i++) {
             // stars.push(<StarYellow/>)
-            stars.push(this.props.isDarkMode ? <StarYellow/> : <StarOrange/>)
+            stars.push(this.props.isDarkMode ? <StarYellow /> : <StarOrange />)
         }
-        if (stars.length < 5) stars.push(<StarEmpty/>)
+        if (stars.length < 5) stars.push(<StarEmpty />)
         return stars
     }
 
@@ -68,15 +68,15 @@ export class _Reviews extends Component {
         return <div className="reviews-section">
             <h3 className={`reviews-section-title ${this.props.isDarkMode ? 'dark-mode-reviews-section-title' : ''} `}>Reviews about owner</h3>
             <div className="reviews">
-                {reviews.map(review => {
-                    return <div className="review">
+                {reviews.map((review, idx) => {
+                    return <div className="review" key={idx}>
                         <div className="review-author">
                             <div className="review-img">
                                 <img src={review.imgUrl} alt="" />
                             </div>
                             <div className="review-name-mark">
                                 <h4 className={`author ${this.props.isDarkMode ? 'dark-mode-author' : ''}`}>{review.author}</h4>
-                                <div className="stars">{this.setStars(review.mark)}</div>                                
+                                <div className="stars">{this.setStars(review.mark)}</div>
                             </div>
                             <h5>{review.createdAt}</h5>
                         </div>
