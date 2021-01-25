@@ -1,5 +1,6 @@
 X //////////////////////////////////////////////WORK ON Dark Mode (for home) ///////////////////////////////////////////////////////
-//////////////////////////////////////////////WORK ON Dark Mode (for pets) ///////////////////////////////////////////////////////
+X //////////////////////////////////////////////WORK ON Dark Mode (for pets) ///////////////////////////////////////////////////////
+X //////////////////////////////////////////////WORK ON Dark Mode (for profile) ///////////////////////////////////////////////////////
 
 
 Nice things to add (css):
@@ -72,11 +73,21 @@ TALK TO TEAM ABOUT:
 X 1.Header is now fixed , change div to something like margin-top 100px
 X 2.Talk about known bugs and if they know how to fix it .
 X 3.Ask abut home page.
- 4.box shadow was added , ask if i should remove the box shadow from 'dark mode' or leave as it is
+X 4.box shadow was added , ask if i should remove the box shadow from 'dark mode' or leave as it is
 
 
 
 Needs to change:
- 1.remove the numbers in carusela(1 of 3)
+X 1.remove the numbers in carusela(1 of 3)
+
+
+FINISHES:
+ 1.at pet detaills, where there are small icons of(age,gender) , letters should start with Capital.
+ 2.the filter of header , change the 'all' maybe ? and again , letters should start with Capital.
+ 3.the filter of header , add matirial ui section.
+
+
+
+
 
 

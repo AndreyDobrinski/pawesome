@@ -9,7 +9,7 @@ module.exports = {
 }
 
 // Database Name
-const dbName = 'pawTestDB'
+const dbName = 'pawDB'
 
 var dbConn = null
 

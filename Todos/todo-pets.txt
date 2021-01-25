@@ -1,4 +1,4 @@
 
 
 Bugs fond :
- 1.When going to page site , search filter normal is automaticly opend
+ X 1.When going to page site , search filter normal is automaticly opend

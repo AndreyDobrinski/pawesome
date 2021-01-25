@@ -3,6 +3,8 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { PreviewContainer } from '../cmps/PreviewContainer'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
+import Loader from 'react-loader-spinner'
+
 
 export class _Home extends Component {
 
@@ -13,7 +15,7 @@ export class _Home extends Component {
 
 
   componentDidMount() {
-    
+
     console.log('HOME LOC---', this.props.location)
   }
 
@@ -27,53 +29,29 @@ export class _Home extends Component {
         <div className="page-home-hero">
 
 
-          <video  autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
+          <video autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
 
 
           <div className="page-home-hero-content ">
-            <div className="page-home-hero-title">Find your <br/> Pawesome friend</div>
+            <div className="page-home-hero-title">Find Your <br /> Pawesome Friend</div>
           </div>
 
         </div>
 
 
-
-        {/* <div className="page-home-please-adopt">
-          <img src="https://www.humanesociety.org/sites/default/files/styles/2000x850/public/2018/08/dog-girl-440625.jpg?h=558430af&itok=R-RS3S6N" alt="" />
-          <div>
-            <h1 className="page-home-adopt-circle flex align-center justify-center text-center">Why Should I Adopt?</h1>
-            <div className="adopt-reasons container flex justify-between">
-              <ul className="adopt-reasons-box1">
-                <li>Because you'll save a life.</li>
-                <li>Because you'll get a great animal.</li>
-                <li>Because it’ll cost you less.</li>
-                <li>Because of the bragging rights.</li>
-                <li>Because it's one way to fight puppy mills.</li>
-              </ul>
-              <ul className="adopt-reasons-box2">
-                <li>Because your home will thank you.</li>
-                <li>Because all pets are good for your health, but adoptees offer an extra boost.</li>
-                <li>Because adoption helps more than just one animal.</li>
-                <li>Because The Shelter Pet Project makes it easy.</li>
-                <li>Because you'll change a homeless animal's whole world.</li>
-              </ul>
-
-            </div>
-
-          </div>
-        </div> */}
+        {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77" height={100} width={100} timeout={3000} /></div>}
+        {!this.props.isLoading && <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" />}
+        {/* <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" /> */}
 
 
 
-        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" />
+        {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77" height={100} width={100} timeout={3000} /></div>}
+        {!this.props.isLoading && <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" />}
+        {/* <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" /> */}
 
 
-
-        <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" />
-
-        
 
 
 
@@ -131,7 +109,9 @@ export class _Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    isDarkMode: state.appSettingsModule.isDarkMode
+    isDarkMode: state.appSettingsModule.isDarkMode,
+    isLoading: state.appSettingsModule.isLoading
+
 
   }
 }

@@ -16,8 +16,8 @@ export class _Profile extends Component {
     state = {
         user: null,
         orders: null,
-        isOnChat: false,
-        chatTopic: null,
+        isOnChat: false, //
+        chatTopic: null,//
         isOwner: true,
     }
 
@@ -28,8 +28,6 @@ export class _Profile extends Component {
         try {
             var user = await userService.getById(userId)
             var isOwner = user.isHost ? true : false
-            // var { pets } = owner
-
             await this.props.loadOrders()
             var { orders } = this.props
 
@@ -66,57 +64,114 @@ export class _Profile extends Component {
     }
 
     render() {
-        const { loggedInUser } = this.props
         const { orders, user, isOwner } = this.state
-
-        if (!loggedInUser) return <div>Loading...</div>
+        if (!user) return <div>Loading...</div>
 
         return (
             <section className="profile-container container ">
 
+                {/* <div className="profile-row">
+                    <div className="profile-col-md-10">
+                        <h3>{user.fullname}</h3>
+                    </div>
+                    <div className="profile-col-md-2">
+                        <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
+                        <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button>
+                    </div>
+                </div> */}
                 <div className="profile-row">
 
                     <div className="profile-col-md-4">
-                        {!isOwner && <div className="profile-img">
+                        <div className="profile-img">
 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
+                            <img src={user.imgUrl} alt="" />
 
                             {/* <div className="file profile-btn ">
                                 Change Photo
                                 <input type="file" name="file" />
                             </div> */}
 
-                        </div>}
+                        </div>
                     </div>
 
                     <div className="profile-col-md-6">
                         <div className="profile-head">
-                            <h5>{loggedInUser.fullname}</h5>
+                            {/* <h5>{user.fullname}</h5> */}
                             {!isOwner && <div className="profile-tab" id="myTabContent">
-                                <div className="profile-row desc">
+                                <div className="profile-row-desc">
                                     <div className="profile">
-                                        <label>Fullame</label>
+                                        <label>Full Name</label>
                                     </div>
                                     <div className="profile">
-                                        <p>{loggedInUser.fullname}</p>
+                                        <p>{user.fullname}</p>
                                     </div>
                                 </div>
-
-                                <div className="profile-row desc">
+                                <div className="profile-row-desc">
                                     <div className="profile">
                                         <label>Email</label>
                                     </div>
                                     <div className="profile">
-                                        <p>{loggedInUser.contactInfo.email}</p>
+                                        <p>{user.contactInfo.email}</p>
                                     </div>
                                 </div>
-
-                                <div className="profile-row desc">
+                                <div className="profile-row-desc">
                                     <div className="profile">
                                         <label>Phone</label>
                                     </div>
                                     <div className="profile">
-                                        <p>{loggedInUser.contactInfo.phone}</p>
+                                        <p>{user.contactInfo.phone}</p>
+                                    </div>
+                                </div>
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>Family status</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.familyStatus}</p>
+                                    </div>
+                                </div>
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>House type</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.houseStatus}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            }
+                            {isOwner && <div className="profile-tab" id="myTabContent">
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>Name</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.fullname}</p>
+                                    </div>
+                                </div>
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>Email</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.contactInfo.email}</p>
+                                    </div>
+                                </div>
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>Phone</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.contactInfo.phone}</p>
+                                    </div>
+                                </div>
+                                <div className="profile-row-desc">
+                                    <div className="profile">
+                                        <label>Address</label>
+                                    </div>
+                                    <div className="profile">
+                                        <p>{user.loc.address}</p>
                                     </div>
                                 </div>
                             </div>
@@ -128,18 +183,16 @@ export class _Profile extends Component {
                     </div>
 
                     <div className="profile-col-md-2">
-                        {/* <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button> */}
-                        {/* <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button> */}
                         <button className="profile-logout-btn" onClick={this.onLogOut}>LogOut</button>
                     </div>
-
                 </div>
+
                 <div className="profile-row">
 
 
-                    <div className="profile-col-md-8">
-                        {!isOwner && <div className="user-header">My requests</div>}
-                        {isOwner && <div className="user-header">Requests pending</div>}
+                    <div className="profile-col-md-10 orders">
+                        {!isOwner && <h4>My requests</h4>}
+                        {isOwner && <h4>Requests pending</h4>}
                         <OrderList orders={orders} user={user} onStartChat={this.onStartChat} />
 
                         {/* <div className="profile-work">
@@ -159,7 +212,7 @@ export class _Profile extends Component {
                         </div> */}
                     </div>
 
-                    <div className="profile-col-md-4">
+                    <div className="profile-col-md-2">
                         {/* {this.state.isOnChat && <Chat topic={this.state.chatTopic}/>} */}
                     </div>
 
@@ -180,9 +233,7 @@ export class _Profile extends Component {
 const mapStateToProps = state => {
     return {
         users: state.userModule.users,
-        loggedInUser: state.userModule.loggedInUser,
         orders: state.orderModule.orders
-
     }
 }
 const mapDispatchToProps = {
