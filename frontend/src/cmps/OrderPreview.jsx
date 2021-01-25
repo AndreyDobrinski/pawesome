@@ -4,6 +4,11 @@ import { connect } from 'react-redux'
 import { saveOrder, updateOrder } from '../store/actions/orderActions.js'
 import { userService } from '../services/userService.js'
 import {Chat} from './Chat.jsx'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+import { ReactComponent as ChatBlack } from "../assets/imgs/chat-black.svg"
+import { ReactComponent as ChatWhite } from "../assets/imgs/chat-white.svg"
+
+
 
 
 export class _OrderPreview extends Component {
@@ -47,22 +52,22 @@ export class _OrderPreview extends Component {
                 </Link>
                 <div className="order-info">
                     {isOwner && <div className="order-from">
-                        <span>From: </span><Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
+                        <span >From: </span><Link className="order-user-name" to={`/profile/${order.byUser._id}`}>{order.byUser.fullname}</Link>
                     </div>}
                     {!isOwner && <div className="order-from">
-                        <span>To: </span><Link className="order-user-name" to={`/profile/${order.pet.host_id}`}>{ownerName}</Link>
+                        <span className={`${this.props.isDarkMode ? 'dark-mode-profile-orders-to' : ''}`}>To: </span><Link className="order-user-name" to={`/profile/${order.pet.host_id}`}>{ownerName}</Link>
                     </div>}
                     <div className="order-from">
-                        <span>About pet: </span><Link className="order-user-name" to={`/pet/${order.pet._id}`}>{order.pet.name}</Link>
+                        <span className={`${this.props.isDarkMode ? 'dark-mode-profile-orders-about-pet' : ''}`}>About pet: </span><Link className="order-user-name" to={`/pet/${order.pet._id}`}>{order.pet.name}</Link>
                     </div>
 
                     <div className="order-date">
                         {order.createdAt}
                     </div>
 
-                    <div className="order-show-more" onClick={this.changeShow}>
-                        ...
-                    </div>
+                    {/* <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}>...</div> */}
+                    {/* <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}><ChatBlack/></div> */}
+                    <div className={`order-show-more ${this.props.isDarkMode ? 'dark-mode-profile-show-more' : ''}`} onClick={this.changeShow}>{this.props.isDarkMode ? <ChatWhite/> : <ChatBlack/>}</div>
                 </div>
                 <div className="order-status">
                     {isOwner && <select className={status} value={status} name="status" id="" onChange={this.updateStatus}>
@@ -75,17 +80,23 @@ export class _OrderPreview extends Component {
                 </div>
             </div>
             {moreInfo && <div className="order-more">
-                <div className="order-msg">"{order.message}"</div>
+                <div className={`order-msg ${this.props.isDarkMode ? 'dark-mode-profile-order-msg' : ''}`}>"{order.message}"</div>
                 <Chat topic={this.props.order._id} about={this.props.order.pet.name}/>
             </div>}
         </div>
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        isDarkMode: state.appSettingsModule.isDarkMode
+    }
+}
 
 const mapDispatchToProps = {
     saveOrder,
-    updateOrder
+    updateOrder,
+    toggleDarkMode
 }
 
-export const OrderPreview = connect(null, mapDispatchToProps)(_OrderPreview)
+export const OrderPreview = connect(mapStateToProps, mapDispatchToProps)(_OrderPreview)

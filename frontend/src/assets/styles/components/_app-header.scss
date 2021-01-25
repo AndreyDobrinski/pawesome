@@ -27,7 +27,7 @@
   z-index: 1;
   font-size: rem(50px);
   a {
-    color: black;
+    color: $clr14;
     text-decoration: none;
   }
   //   @include for-standart-layout {
@@ -50,7 +50,7 @@
   top: 0;
   box-shadow: 0 9px 14px -9px rgba(34,34,34,.13333333333333333);
   background-color: #f7f7f7;
-  color: black;
+  color: $clr14;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -164,7 +164,7 @@
   overflow: hidden;
   border-radius: 50px;
   background-color: #fff;
-  color: black;
+  color: $clr14;
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
 
@@ -350,7 +350,7 @@
   border-radius: 50px;
   background-color: #fff;
   // background-color:inherit;
-  color: black;
+  color: $clr14;
   // font-size: rem(22px);
   margin: 0px 10px 0px 10px;
   // overflow: hidden;
@@ -478,7 +478,7 @@
 }
 
 .modal-header {
-  color: black;
+  color: $clr14;
 }
 
 .modal-body-login {

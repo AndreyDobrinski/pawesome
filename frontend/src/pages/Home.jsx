@@ -3,7 +3,6 @@ import { Component } from 'react'
 import { connect } from 'react-redux'
 import { PreviewContainer } from '../cmps/PreviewContainer'
 import { toggleDarkMode } from '../store/actions/appSettingsActions'
-import Loader from 'react-loader-spinner'
 
 
 export class _Home extends Component {
@@ -25,13 +24,14 @@ export class _Home extends Component {
 
     return (
       <div className={`page-home ${this.props.isDarkMode ? 'dark-mode-page-home' : ''}`}>
-
         <div className="page-home-hero">
-
 
           <video autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
+
+          {/* <img className="ms-slide-bgvideo" src="https://wallpapercave.com/wp/wp3171574.jpg" alt=""/> */}
+
 
 
           <div className="page-home-hero-content ">
@@ -40,21 +40,8 @@ export class _Home extends Component {
 
         </div>
 
-
-        {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77" height={100} width={100} timeout={3000} /></div>}
-        {!this.props.isLoading && <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" />}
-        {/* <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" /> */}
-
-
-
-        {this.props.isLoading && <div className="loader flex justify-center align-center"><Loader type="TailSpin" color="#86cb77" height={100} width={100} timeout={3000} /></div>}
-        {!this.props.isLoading && <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" />}
-        {/* <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" /> */}
-
-
-
-
-
+        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" />
+        <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" />
 
         <div className={`plan-adopt ${this.props.isDarkMode ? 'dark-mode-plan-adopt' : ''} `}>
 
@@ -109,10 +96,7 @@ export class _Home extends Component {
 
 const mapStateToProps = state => {
   return {
-    isDarkMode: state.appSettingsModule.isDarkMode,
-    isLoading: state.appSettingsModule.isLoading
-
-
+    isDarkMode: state.appSettingsModule.isDarkMode
   }
 }
 const mapDispatchToProps = {

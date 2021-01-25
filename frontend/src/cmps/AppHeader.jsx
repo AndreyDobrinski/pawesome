@@ -372,7 +372,7 @@ export class _AppHeader extends Component {
                         <div className="app-header-logo flex">
 
                             <div className="app-header-logo-img">{!this.props.isDarkMode ? <PawBlack /> : <PawWhite />}</div>
-                            <div className={`app-header-name-pawesome ${this.props.isDarkMode ? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>eSome</div>
+                            <div className={`app-header-name-pawesome ${this.props.isDarkMode ? 'dark-mode-name-pawesome' : ''} `}><span className="app-header-name-paw">Paw</span>esome</div>
 
                         </div>
                     </Link>

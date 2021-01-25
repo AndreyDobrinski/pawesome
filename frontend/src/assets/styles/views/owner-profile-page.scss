@@ -50,15 +50,11 @@
             // flex-basis: 30%;
             display: flex;
             flex-direction: column;
-            // align-items: center;
-            // justify-content: center;
             @include for-narrow-layout {
                 align-items: initial;
                 justify-content: initial;
             }
             @include for-normal-layout {
-                // align-items: center;
-                // justify-content: center;
             }
             .order-img {
                 // height: 80%;
@@ -68,25 +64,12 @@
                 height: 100px;
 
                 img {
-                    // width: 60%;
-                    // height: 60%;
-                    // object-fit: contain;
-                    // background: black;
                     border-radius: rem(5px);
                     &:hover {
                         opacity: 0.9;
                     }
                 }
                 &:hover {
-                    // box-shadow: rgba(0, 0, 0, 0.308) 0px 2px 5px !important;
-                    // background: rgba(0,0,0,.5);
-                    // opacity: 1;
-
-                    // mix-blend-mode: multiply;
-                    // filter: grayscale(1);
-
-                    // background-color: desaturate($clr1, 50);
-                    // opacity: 0.9
                 }
             }
         }
@@ -135,29 +118,21 @@
             }
         }
         select {
-            // width: 30%;
             border: none;
             margin: auto;
             padding: 10px;
             outline: none;
-            // background-image: linear-gradient(to right, #bbdb7f, #86cb77);
             border-radius: rem(9px);
             &:hover {
                 box-shadow: rgba(0, 0, 0, 0.308) 0px 2px 5px !important;
             }
             option {
-                // padding: 5px
             }
 
             *:hover {
-                // color: red;
-                // background-color: inherit;
-                // outline: 0 !important;
-                // background: transparent;
             }
         }
         .user-status {
-            // width: 100%;
             border: none;
             margin: auto;
             padding: 10px;
@@ -166,7 +141,6 @@
             display: flex;
             justify-content: center;
             &:hover {
-                // box-shadow: rgba(0, 0, 0, 0.308) 0px 2px 5px !important;
             }
         }
 
