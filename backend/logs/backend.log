@@ -2655,6 +2655,42 @@
 1/25/2021, 12:36:03 PM - INFO - Server is running on port: 3030 
 1/25/2021, 12:49:45 PM - INFO - Server is running on port: 3030 
 1/25/2021, 12:49:52 PM - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
+1/25/2021, 12:58:55 PM - INFO - Server is running on port: 3030 
+1/25/2021, 12:59:20 PM - INFO - Server is running on port: 3030 
+1/25/2021, 1:02:03 PM - INFO - Server is running on port: 3030 
+1/25/2021, 1:04:11 PM - INFO - Server is running on port: 3030 
+1/25/2021, 6:56:15 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:10:49 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:17:25 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:19:05 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:22:51 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:24 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:25 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:50 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:54:01 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:47:01 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:55:00 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:55:22 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:01:12 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:02:59 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:11:55 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:11:58 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:12:32 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:13:34 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:20:39 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:21:15 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:22:11 PM - INFO - Server is running on port: 3030 
+1/26/2021, 12:13:21 PM - DEBUG - auth.service - login with username: shelter1 (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:22 PM - ERROR - Failed to Login Invalid username or password (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:37 PM - DEBUG - auth.service - login with username: shelter1 (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:37 PM - ERROR - Failed to Login Invalid username or password (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:48:54 PM - DEBUG - auth.service - login with username: vika (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:49:13 PM - INFO - Req from: Vika Gor (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:56:48 PM - DEBUG - auth.service - login with username: vika (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
+1/26/2021, 11:02:19 PM - INFO - Req from: Vika Gor (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
+1/26/2021, 11:02:40 PM - INFO - Req from: Vika Gor (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
+=======
 >>>>>>> d4fe2e636a7243d7ff7a5ba2b600021be9c01aba
 25.01.2021, 12:56:11 - INFO - Server is running on port: 3030 
 <<<<<<< HEAD
@@ -3063,6 +3099,7 @@
 =======
 >>>>>>> fcb6a2ef060dda720b6153d25d06a4cff1a900e1
 >>>>>>> 030d21e13ba0fe2ef6c6710137275ae1aac3dedd
+<<<<<<< HEAD
 3/4/2021, 5:24:34 PM - DEBUG - auth.service - signup with username: aaaandrey, fullname: abdrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
 3/4/2021, 5:24:34 PM - DEBUG - auth.route - new account created: {"username":"aaaandrey","password":"$2b$10$FRkxn2mpF8G0MZtit1QqH.hnznamCl2r.D3ZNgGnhci3CxE6l9.Q.","fullname":"abdrey","_id":"6040fbb200215823e84ce6da"} (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
 3/4/2021, 5:24:34 PM - DEBUG - auth.service - login with username: aaaandrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
@@ -3080,3 +3117,11 @@
 3/4/2021, 5:30:11 PM - DEBUG - auth.route - new account created: {"username":"noyou","password":"$2b$10$k4NrGgLp6rTgQF.FZ1.T4eoSxPalr8xH9iBusi9zss2T30K6Vrdku","fullname":"noyou","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6040fd031b612609e8fcb8b8"} (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
 3/4/2021, 5:30:11 PM - DEBUG - auth.service - login with username: noyou (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
 3/4/2021, 5:30:14 PM - INFO - Req from: noyou (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
+=======
+>>>>>>> b8ec677880775dbf96d5842a56b0d5294341b572
+3/4/2021, 5:39:07 PM - INFO - Server is running on port: 3030 
+3/4/2021, 5:44:01 PM - DEBUG - auth.service - signup with username: moka, fullname: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+3/4/2021, 5:44:01 PM - DEBUG - auth.route - new account created: {"username":"moka","password":"$2b$10$AEv9S4sUSFbzR3mIG3SgWuIwdGGMvDXOyge3LAk4z8ZKxthdpcAG6","fullname":"moka","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"60410041eaeee11d680c84c4"} (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+3/4/2021, 5:44:01 PM - DEBUG - auth.service - login with username: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+3/4/2021, 5:44:09 PM - INFO - Req from: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+>>>>>>> aec44b810caa4851fa562a78715b767afc99137b

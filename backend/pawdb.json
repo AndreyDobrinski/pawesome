@@ -40,25 +40,30 @@
         },
         {
             "_id": "u101",
-            "fullname": "Vika Gord",
-            "imgUrl": "/img/img1.jpg",
-            "isAdmin": false,
+            "username": "Andrei",
+            "password": "123",
+            "fullname": "Andrei Dobrinski",
+            "imgUrl": "https://images.unsplash.com/photo-1590031905406-f18a426d772d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAzfHxwcm9maWxlJTIwcGhvdG98ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=30",
+            "contactInfo": {
+                "email": "andrei42@mail.com",
+                "phone": "054-1122334"
+            },
+            "familyStatus": "single",
+            "houseStatus": "apartment",
+            "isHost": false
+        },
+        {
+            "fullname": "Vika Gor",
+            "imgUrl": "https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixid=MXwxMjA...",
             "isHost": false,
             "username": "vika",
             "password": "123",
-            "birthDate": "1999/05/12",
             "familyStatus": "single",
             "contactInfo": {
-                "email": "newone@hah.com",
-                "phone": "054-111235"
+                "email": "vikagor@mail.com",
+                "phone": "054-6622334"
             },
-            "loc": {
-                "address": "Haifa, Derech Simha Golan 54",
-                "lat": -2.61308,
-                "lng": 41.1413
-            },
-            "houseStatus": "apartment",
-            "hasPets": true
+            "houseStatus": "apartment"
         }
     ],
     "pet": [
@@ -66,11 +71,11 @@
             "_id": "101",
             "name": "Max",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1570989086575-503363bb091b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1589952283406-b53a7d1347e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
-                "https://images.unsplash.com/photo-1556838803-cc94986cb631?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80",
-                "https://images.unsplash.com/photo-1516163086467-61308756890a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1533049841378-22c42d434a57?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                "https://images.unsplash.com/photo-1570989086575-503363bb091b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1589952283406-b53a7d1347e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=20",
+                "https://images.unsplash.com/photo-1556838803-cc94986cb631?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=20",
+                "https://images.unsplash.com/photo-1516163086467-61308756890a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=20",
+                "https://images.unsplash.com/photo-1533049841378-22c42d434a57?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=20"
             ],
             "likes": "92",
             "shortDesc": "Fluffy rabbit",
@@ -101,11 +106,11 @@
             "_id": "102",
             "name": "Maika",
             "imgUrls": [
-                "https://images.unsplash.com/flagged/photo-1559784649-d03eea83d082?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2149&q=80",
-                "https://images.unsplash.com/photo-1504310977373-186d29f99322?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1518713337836-f828c91becc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                "https://images.unsplash.com/photo-1563443803769-a5c44bd91e39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1563443807158-f47f7d4d7bfe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
+                "https://images.unsplash.com/flagged/photo-1559784649-d03eea83d082?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1504310977373-186d29f99322?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1518713337836-f828c91becc0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1563443803769-a5c44bd91e39?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1563443807158-f47f7d4d7bfe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20"
             ],
             "likes": "41",
             "shortDesc": "Active and happy horse",
@@ -135,11 +140,11 @@
             "_id": "103",
             "name": "Hammy",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1580015879387-a6a5be9aae3b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1550697851-920b181d8ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1589878530000-ea73bd9ac95f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1353&q=80",
-                "https://images.unsplash.com/photo-1586018265027-da1454cce384?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80",
-                "https://images.unsplash.com/photo-1589878529898-e9dda9435263?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1353&q=80"
+                "https://images.unsplash.com/photo-1580015879387-a6a5be9aae3b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1550697851-920b181d8ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1589878530000-ea73bd9ac95f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1586018265027-da1454cce384?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1589878529898-e9dda9435263?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20"
             ],
             "likes": "29",
             "shortDesc": "Curious young rat",
@@ -170,17 +175,18 @@
             "_id": "104",
             "name": "Risu",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1606024497039-6ab4c177c1c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1598965522855-798540cca225?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1266&q=80",
-                "https://images.unsplash.com/photo-1605205812456-beefdf688353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1405&q=80",
-                "https://images.unsplash.com/photo-1603978284586-c8aee7528e32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1596409677644-77cf3f2dca13?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                "https://images.unsplash.com/photo-1606024497039-6ab4c177c1c3?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1598965522855-798540cca225?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1605205812456-beefdf688353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1603978284586-c8aee7528e32?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1596409677644-77cf3f2dca13?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20"
             ],
             "likes": "77",
             "shortDesc": "Hungry Squirrel",
             "description": "Risu is a very special squirrel , she is very smart and kind , it almost feels like that she understands what you are saying. Risu loves eating alot so make sure to feed her the right amount each day . After eating , she spends her time climbing on trees and play with other animals.",
             "age": "young",
             "gender": "female",
+            "kind": "other",
             "specialities": [
                 "friendly with children",
                 "friendly with other animals"
@@ -204,17 +210,18 @@
             "_id": "105",
             "name": "Snow",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1533514114760-4389f572ae26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=617&q=80",
-                "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1511542229800-663a99ca1817?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1589933094162-a2c3b5ad70fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1559214369-a6b1d7919865?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
+                "https://images.unsplash.com/photo-1533514114760-4389f572ae26?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=617&q=20",
+                "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1511542229800-663a99ca1817?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1589933094162-a2c3b5ad70fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1559214369-a6b1d7919865?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20"
             ],
             "likes": "132",
             "shortDesc": "The sweetest bunny",
             "description": "Ever wanted to feel like a disney princess? Well adopt this cute litle bunny and you can! He is super energetic and very loving. He is obsessed with carrots, feed him a carrot and he will love you forever. You will be so happy with this little guy.",
             "age": "senior",
             "gender": "male",
+            "kind": "other",
             "specialities": [
                 "friendly with children",
                 "friendly with other animals"
@@ -238,17 +245,18 @@
             "_id": "106",
             "name": "Poseidon",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1529763062018-cd9b9ede3a80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1607372322888-cf5d31ba525d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1505038348242-eb3fde2b728c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=679&q=80",
-                "https://images.unsplash.com/reserve/1hyDEofHQ0OX1mRnvhqw_IMG_1324.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1543119148-043bdfd6ce85?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                "https://images.unsplash.com/photo-1529763062018-cd9b9ede3a80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1607372322888-cf5d31ba525d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1505038348242-eb3fde2b728c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=679&q=20",
+                "https://images.unsplash.com/reserve/1hyDEofHQ0OX1mRnvhqw_IMG_1324.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1543119148-043bdfd6ce85?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20"
             ],
             "likes": "11",
             "shortDesc": "A fiesty little one",
             "description": "We got Poseidon from a farmer that went bankrupt and sold his farm. He wanted to make sure that his animals would end up in a caring home and live out their ramaining years on a farm. He's got some personality this one! You will never be bored with him around.",
             "age": "adult",
             "gender": "male",
+            "kind": "other",
             "specialities": [
                 "friendly with other animals"
             ],
@@ -271,17 +279,18 @@
             "_id": "107",
             "name": "Leonardo",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1499114794761-d2743d4eb6f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1457504865919-3249f1605501?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1402&q=80",
-                "https://images.unsplash.com/photo-1591753245634-ba78d7f50499?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1363&q=80",
-                "https://images.unsplash.com/photo-1496070242169-b672c576566b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1241&q=80",
-                "https://images.unsplash.com/photo-1600882158603-1f44b02a4f47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                "https://images.unsplash.com/photo-1499114794761-d2743d4eb6f2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1457504865919-3249f1605501?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1591753245634-ba78d7f50499?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1496070242169-b672c576566b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=900&q=20",
+                "https://images.unsplash.com/photo-1600882158603-1f44b02a4f47?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=20"
             ],
             "likes": "34",
             "shortDesc": "Tinniest little green man",
             "description": "We got Leonardo from a family who's kids weren't careful with him. He is awfuly adorable but very fragile because he is so small. A person that has experience with raising reptiles is preffered. Leonardo can't wait to find his forever home!",
             "age": "young",
             "gender": "male",
+            "kind": "other",
             "specialities": [
                 "friendly with other animals"
             ],
@@ -304,17 +313,18 @@
             "_id": "108",
             "name": "Donald",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1542843403-822499a967ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1347&q=80",
-                "https://images.unsplash.com/photo-1548802097-8db374f1b849?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1595707012809-0fdf633d5dca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-                "https://images.unsplash.com/photo-1546272989-40c92939c6c2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80",
-                "https://images.unsplash.com/photo-1576438657110-60fc4448217f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+                "https://images.unsplash.com/photo-1542843403-822499a967ae?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1548802097-8db374f1b849?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1595707012809-0fdf633d5dca?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1546272989-40c92939c6c2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1576438657110-60fc4448217f?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20"
             ],
             "likes": "31",
             "shortDesc": "Ball of fluff",
             "description": "Donald is the cutest little ball of fur. He needs a responsible owner! Baby chicks need a lot of care and monitoring, and very specific conditions. We want to find the best farm for him.",
             "age": "young",
             "gender": "male",
+            "kind": "other",
             "specialities": [
                 "friendly with children"
             ],
@@ -337,11 +347,11 @@
             "_id": "d301",
             "name": "Lenny",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1554079501-d62bfb6f3567?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80",
-                "https://images.unsplash.com/photo-1521498328641-2ddda2dec7a4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80",
-                "https://images.unsplash.com/photo-1578857182382-c6f9c4dc5bad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=80",
-                "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1578856800682-f4430c6598e1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=979&q=80"
+                "https://images.unsplash.com/photo-1554079501-d62bfb6f3567?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=20",
+                "https://images.unsplash.com/photo-1521498328641-2ddda2dec7a4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=20",
+                "https://images.unsplash.com/photo-1578857182382-c6f9c4dc5bad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=967&q=20",
+                "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1578856800682-f4430c6598e1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=979&q=20"
             ],
             "likes": "107",
             "shortDesc": "Curious young dog",
@@ -374,11 +384,11 @@
             "_id": "d302",
             "name": "Mitch",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328557/pets/dogs/01/jay-short-5V4gcwizvAM-unsplash_1_sczsn5.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328550/pets/dogs/01/jay-short-4zrPKBS5SfQ-unsplash_sbuj0v.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328570/pets/dogs/01/jay-short-3OVdc4P_OfA-unsplash_nvcqfa.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328561/pets/dogs/01/jay-short-WcYfx0RJaLk-unsplash_euzmom.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328548/pets/dogs/01/jay-short-GygpszmYzog-unsplash_j6raoz.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328557/pets/dogs/01/jay-short-5V4gcwizvAM-unsplash_1_sczsn5.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328550/pets/dogs/01/jay-short-4zrPKBS5SfQ-unsplash_sbuj0v.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328570/pets/dogs/01/jay-short-3OVdc4P_OfA-unsplash_nvcqfa.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328561/pets/dogs/01/jay-short-WcYfx0RJaLk-unsplash_euzmom.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328548/pets/dogs/01/jay-short-GygpszmYzog-unsplash_j6raoz.jpg"
             ],
             "likes": "82",
             "shortDesc": "Calm and brave senior dog",
@@ -411,11 +421,11 @@
             "_id": "d303",
             "name": "Sheia",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328659/pets/dogs/07/amy-baugess-dEtvMzcbYiA-unsplash_yu2aah.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328622/pets/dogs/07/christopher-stark-ilYiCxBf-m0-unsplash_fb7adg.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328647/pets/dogs/07/kanashi-pbjcPSXUI2M-unsplash_ntaoop.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328634/pets/dogs/07/amy-baugess-whzChaB-HEo-unsplash_quialf.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328633/pets/dogs/07/kanashi-8BVfC39HNwo-unsplash_jpbahr.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328659/pets/dogs/07/amy-baugess-dEtvMzcbYiA-unsplash_yu2aah.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328622/pets/dogs/07/christopher-stark-ilYiCxBf-m0-unsplash_fb7adg.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328647/pets/dogs/07/kanashi-pbjcPSXUI2M-unsplash_ntaoop.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328634/pets/dogs/07/amy-baugess-whzChaB-HEo-unsplash_quialf.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328633/pets/dogs/07/kanashi-8BVfC39HNwo-unsplash_jpbahr.jpg"
             ],
             "likes": "76",
             "shortDesc": "Wise lady full of love and kind",
@@ -448,11 +458,11 @@
             "_id": "d304",
             "name": "Mitch",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328566/pets/dogs/05/photo-1590604888706-d31814d4d93c_jz7jxj.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611333535/pets/dogs/05/photo-1520741412100-24cd6c2832e5_ukislj.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328566/pets/dogs/05/photo-1590604894653-1b0541ed87c1_c3zb5e.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328595/pets/dogs/05/austin-kirk-QZenflkkwt0-unsplash_z4ezys.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328569/pets/dogs/05/photo-1600500398321-8c4fb92df5d8_vwqnhp.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328566/pets/dogs/05/photo-1590604888706-d31814d4d93c_jz7jxj.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611333535/pets/dogs/05/photo-1520741412100-24cd6c2832e5_ukislj.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328566/pets/dogs/05/photo-1590604894653-1b0541ed87c1_c3zb5e.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328595/pets/dogs/05/austin-kirk-QZenflkkwt0-unsplash_z4ezys.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328569/pets/dogs/05/photo-1600500398321-8c4fb92df5d8_vwqnhp.jpg"
             ],
             "likes": "93",
             "shortDesc": "Fun-loving and energetic little boy",
@@ -484,11 +494,11 @@
             "_id": "d305",
             "name": "Sheia",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328609/pets/dogs/06/joe-caione-qO-PIF84Vxg-unsplash_ieaviq.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328619/pets/dogs/06/joe-caione-KVeogBZzl4M-unsplash_bxpaka.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328599/pets/dogs/06/mabel-kwok-eApu3K8gix8-unsplash_bzorr4.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328589/pets/dogs/06/joe-caione-CrJUOROfOAM-unsplash_qqfkps.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328615/pets/dogs/06/dena-simard-fq4mvA-xJak-unsplash_t61pvk.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328609/pets/dogs/06/joe-caione-qO-PIF84Vxg-unsplash_ieaviq.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328619/pets/dogs/06/joe-caione-KVeogBZzl4M-unsplash_bxpaka.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328599/pets/dogs/06/mabel-kwok-eApu3K8gix8-unsplash_bzorr4.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328589/pets/dogs/06/joe-caione-CrJUOROfOAM-unsplash_qqfkps.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328615/pets/dogs/06/dena-simard-fq4mvA-xJak-unsplash_t61pvk.jpg"
             ],
             "likes": "46",
             "shortDesc": "Gorgeous funny girl",
@@ -520,11 +530,11 @@
             "_id": "d306",
             "name": "Darcy",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328553/pets/dogs/03/photo-1554235386-82e08c80c3ef_tr5iji.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328554/pets/dogs/03/photo-1503256207526-0d5d80fa2f47_birqng.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328556/pets/dogs/03/photo-1589974084326-d5a93ebec28b_gvidkz.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328585/pets/dogs/03/chung-nguyen-kJlk-jW2nLI-unsplash_rtjwhg.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328558/pets/dogs/03/photo-1559469779-1c6ceaab042c_dbfh3b.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328553/pets/dogs/03/photo-1554235386-82e08c80c3ef_tr5iji.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328554/pets/dogs/03/photo-1503256207526-0d5d80fa2f47_birqng.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328556/pets/dogs/03/photo-1589974084326-d5a93ebec28b_gvidkz.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328585/pets/dogs/03/chung-nguyen-kJlk-jW2nLI-unsplash_rtjwhg.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328558/pets/dogs/03/photo-1559469779-1c6ceaab042c_dbfh3b.jpg"
             ],
             "likes": "112",
             "shortDesc": "Polite and the most lovable friend",
@@ -557,14 +567,14 @@
             "_id": "d307",
             "name": "Winnie",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328674/pets/dogs/08/rafael-forseck-51Nmk7trUGI-unsplash_uhvio5.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328648/pets/dogs/08/jutta-kamp-NnKGG4wBERk-unsplash_obk6zk.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328684/pets/dogs/08/alora-griffiths-7aRQZtLsvqw-unsplash_yjg7q7.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328662/pets/dogs/08/michael-kilcoyne-7R5lMVvz5-M-unsplash_f1tha2.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328639/pets/dogs/08/alireza-roudbarmohammadi-aXtTMrOoqkg-unsplash_b0m22w.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328674/pets/dogs/08/rafael-forseck-51Nmk7trUGI-unsplash_uhvio5.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328648/pets/dogs/08/jutta-kamp-NnKGG4wBERk-unsplash_obk6zk.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328684/pets/dogs/08/alora-griffiths-7aRQZtLsvqw-unsplash_yjg7q7.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328662/pets/dogs/08/michael-kilcoyne-7R5lMVvz5-M-unsplash_f1tha2.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328639/pets/dogs/08/alireza-roudbarmohammadi-aXtTMrOoqkg-unsplash_b0m22w.jpg"
             ],
             "likes": "98",
-            "shortDesc": "Affectionate, obedient, and playful lady",
+            "shortDesc": "Obedient, and playful lady",
             "description": "Whatever bed Winnie’s offered she'll treat as her home base, hanging out there, napping and playing on it. Then she's an adventurous girl who likes to sniff and explore the yard, wiggling around on her back. She's a smart, treat-motivated lady who is an easy-peasy leash walker. She already understands 'sit' and won't jump on furniture until invited to. A house-trained girl, she knows to ask to go outside, and she's readily entered a crate. And she'll ride in a car like it's her job! With her snaggly smile, Tessa should fit well in most homes. She plays well with other dogs and would enjoy a playful cuddle mate. She can be a bit mouthy, so should do best with older kids. Come meet this well-mannered girl, she'll give you kisses and follow you home.",
             "age": "adult",
             "gender": "female",
@@ -594,11 +604,11 @@
             "_id": "d308",
             "name": "Rowan",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328726/pets/dogs/10/josephine-amalie-paysen--XW35nYkRnk-unsplash_r3bky8.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328686/pets/dogs/10/alex-8hoXEsi2gpo-unsplash_v6fkfu.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328733/pets/dogs/10/kieran-white-NKN25UfGfkQ-unsplash_ztypjs.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328695/pets/dogs/10/clayton-caldwell-yMTb07aTw3I-unsplash_ta3cvd.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328730/pets/dogs/10/karl-anderson-jKDFcXwk5Cw-unsplash_scejyt.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328726/pets/dogs/10/josephine-amalie-paysen--XW35nYkRnk-unsplash_r3bky8.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328686/pets/dogs/10/alex-8hoXEsi2gpo-unsplash_v6fkfu.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328733/pets/dogs/10/kieran-white-NKN25UfGfkQ-unsplash_ztypjs.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328695/pets/dogs/10/clayton-caldwell-yMTb07aTw3I-unsplash_ta3cvd.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328730/pets/dogs/10/karl-anderson-jKDFcXwk5Cw-unsplash_scejyt.jpg"
             ],
             "likes": "85",
             "shortDesc": "Energetic, athletic and happy dog",
@@ -631,14 +641,14 @@
             "_id": "d309",
             "name": "Yolo",
             "imgUrls": [
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328560/pets/dogs/04/photo-1506551109886-6101f48c1ab9_qvrfpb.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328564/pets/dogs/04/photo-1530126483408-aa533e55bdb2_vo3mkq.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328586/pets/dogs/04/anna-dudkova-urs_y9NwFcc-unsplash_zsuroo.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328563/pets/dogs/04/photo-1587300003388-59208cc962cb_kudjhe.jpg",
-                "https://res.cloudinary.com/viktoria/image/upload/v1611328562/pets/dogs/04/photo-1513263196760-c38dee051d18_wwgiao.jpg"
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328560/pets/dogs/04/photo-1506551109886-6101f48c1ab9_qvrfpb.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328564/pets/dogs/04/photo-1530126483408-aa533e55bdb2_vo3mkq.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328586/pets/dogs/04/anna-dudkova-urs_y9NwFcc-unsplash_zsuroo.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328563/pets/dogs/04/photo-1587300003388-59208cc962cb_kudjhe.jpg",
+                "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611328562/pets/dogs/04/photo-1513263196760-c38dee051d18_wwgiao.jpg"
             ],
             "likes": "98",
-            "shortDesc": "The sweetest dog who loves to cuddle and play fetch",
+            "shortDesc": "Loves to cuddle and play fetch",
             "description": "Yolo is an energetic and cuddly, athletic and happy dog that enjoys paddle boarding and swimming, running around and any other forms of activity. He is a great nap partner and activity partner alike. Yolo likes riding in the car, but not so much getting shots. Yolo is very strong. He needs training to walk nicely on leash. He jumps up on people out of excitement, Teens great dog manners will be best due to Yolo's size and jumping. This good boy loves to play with other big dogs, but can overwhelm a small dog and he has not lived with cats, so no cats or small dogs. Yolo was living a sad life until his rescuers saved him and taught him love, paddle boarding, napping and the good life. Because they live in a studio with no yard, they want to find a great home in which Yolo has plenty of room to run as well as people to love, protect and show him fun forever.",
             "age": "adult",
             "gender": "male",
@@ -676,7 +686,7 @@
                 "https://res.cloudinary.com/viktoria/image/upload/v1611328707/pets/dogs/09/william-moreland-_m-vmfUV-4g-unsplash_f86zkz.jpg"
             ],
             "likes": "65",
-            "shortDesc": "Very handsome, smart and loving boy",
+            "shortDesc": "Handsome, smart, loving boy",
             "description": "Booker is crate trained, house broken, has house manners, sleeps through the night, enjoys his walks and rides perfectly in the car! With all of that, what else can I say about Booker? He loves his people! Booker would do perfectly with someone who works from home. He is currently in a foster home with two huskies and he is absolutely dog-friendly. Booker would do best in a home where he has a canine friend, preferably a confident female. Booker is a low energy lab, but he does get excited when he knows we are going for a walk or a ride in the car, but he is easily calmed. He knows his basic commands too! He is 99.9% PERFECT!",
             "age": "adult",
             "gender": "male",
@@ -708,10 +718,10 @@
             "name": "Margo",
             "imgUrls": [
                 "https://res.cloudinary.com/elnova/image/upload/v1610555795/photo-1610420389164-789fc4060fc4_tiy9mx.jpg",
-                "https://images.unsplash.com/photo-1610420389255-1350357e8f1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
+                "https://images.unsplash.com/photo-1610420389255-1350357e8f1d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20",
                 "https://res.cloudinary.com/elnova/image/upload/v1611397775/photo-1561716892-f541194eb1d7_bbqr2v.jpg",
-                "https://images.unsplash.com/photo-1590937537570-88edbf6f6352?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1578680558605-1a3ec7fa8b17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDQ0fHx3aGl0ZSUyMGNhdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                "https://images.unsplash.com/photo-1590937537570-88edbf6f6352?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDIwfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1578680558605-1a3ec7fa8b17?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDQ0fHx3aGl0ZSUyMGNhdHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20"
             ],
             "likes": 70,
             "shortDesc": "A calm funny cat",
@@ -744,11 +754,11 @@
             "_id": "cat02",
             "name": "Miki",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80&h=300&q=80",
-                "https://images.unsplash.com/photo-1481139024422-2e4ce2f87975?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1542736143-29a8432162bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1605276300288-373d44b1cafd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80",
-                "https://images.unsplash.com/photo-1506755855567-92ff770e8d00?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80"
+                "https://images.unsplash.com/photo-1601217155528-4ef2912a8589?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=20&h=300&q=20",
+                "https://images.unsplash.com/photo-1481139024422-2e4ce2f87975?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1542736143-29a8432162bc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1605276300288-373d44b1cafd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1506755855567-92ff770e8d00?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20"
             ],
             "likes": 130,
             "shortDesc": "Sweet kitty cat",
@@ -817,11 +827,11 @@
             "_id": "cat04",
             "name": "Silky",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1605926822067-4aa60984a453?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2134&q=80",
-                "https://images.unsplash.com/photo-1604964489488-52e2080d86c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=676&q=80",
-                "https://images.unsplash.com/photo-1605926822214-d41152e92cdd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1605926822072-82a6a9bff8d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=80&w=300"
+                "https://images.unsplash.com/photo-1605926822067-4aa60984a453?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1604964489488-52e2080d86c3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=676&q=20",
+                "https://images.unsplash.com/photo-1605926822214-d41152e92cdd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1605926822072-82a6a9bff8d7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1610136490419-fe720eeaca60?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixlib=rb-1.2.1&q=20&w=300"
             ],
             "likes": 23,
             "shortDesc": "Nice cat",
@@ -853,11 +863,11 @@
             "_id": "cat05",
             "name": "Spotty",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1589556849352-b57c7bb2453f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
-                "https://ihttps://images.unsplash.com/photo-1586508713435-54edfb12de57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1603216041976-154a4eae63bf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1593026876677-1b2bcf4eeb41?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1592514778340-ec938b4945dd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80"
+                "https://images.unsplash.com/photo-1589556849352-b57c7bb2453f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1586508713435-54edfb12de57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1603216041976-154a4eae63bf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1593026876677-1b2bcf4eeb41?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1592514778340-ec938b4945dd?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20"
             ],
             "likes": 35,
             "shortDesc": "Sweet one month old 3 color kitten",
@@ -889,11 +899,11 @@
             "_id": "cat06",
             "name": "Blessy",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1610013996880-e6437ea8b95f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80",
-                "https://images.unsplash.com/photo-1597576364579-075da59e710d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80",
-                "https://images.unsplash.com/photo-1585060821378-a7dad4f4087b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80",
-                "https://images.unsplash.com/photo-1604253402257-4ebdf00368f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80",
-                "https://images.unsplash.com/photo-1604697901716-785579718fab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1352&q=80"
+                "https://images.unsplash.com/photo-1610013996880-e6437ea8b95f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1597576364579-075da59e710d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1585060821378-a7dad4f4087b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1604253402257-4ebdf00368f7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1604697901716-785579718fab?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=20"
             ],
             "likes": 38,
             "shortDesc": "A calm funny cat",
@@ -926,12 +936,12 @@
             "_id": "cat07",
             "name": "Sam",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1597869678203-9b7c7fa16d8d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2152&q=80",
-                "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-                "https://images.unsplash.com/photo-1600871965373-0946522552a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-                "https://images.unsplash.com/photo-1605033383177-1f8b48db2c0e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1581590289461-df5e0e97dbb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80",
-                "https://images.unsplash.com/photo-1568043210943-0e8aac4b9734?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                "https://images.unsplash.com/photo-1597869678203-9b7c7fa16d8d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1600871965373-0946522552a2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1605033383177-1f8b48db2c0e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1581590289461-df5e0e97dbb9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1568043210943-0e8aac4b9734?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20"
             ],
             "likes": 40,
             "shortDesc": "A calm funny cat",
@@ -964,13 +974,11 @@
             "_id": "cat08",
             "name": "Bisly",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1546459094-0b7758695a4b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1547468137-1ad02f558bec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1487160342031-439ea29c3c7b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1476199075104-1e4a700052ee?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80",
-                "https://images.unsplash.com/photo-1443610762694-d993e81f69d9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1426759585741-21bb406023ff?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                "https://images.unsplash.com/photo-1546459094-0b7758695a4b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1547468137-1ad02f558bec?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1487160342031-439ea29c3c7b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1476199075104-1e4a700052ee?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=20",
+                "https://images.unsplash.com/photo-1443610762694-d993e81f69d9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20"
             ],
             "likes": 38,
             "shortDesc": "A calm funny cat",
@@ -1003,12 +1011,12 @@
             "_id": "cat09",
             "name": "Theo",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1586369730051-51b4f2ad9ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1586512924515-d24f331002c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-                "https://images.unsplash.com/photo-1586687854758-530dff181d35?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1586467369067-76a38b4f6660?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1586512924515-d24f331002c6?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1569619543238-3c81d8ab78a8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzMjQ0OTIxMHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                "https://images.unsplash.com/photo-1586369730051-51b4f2ad9ca8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1586512924515-d24f331002c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1586687854758-530dff181d35?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1586467369067-76a38b4f6660?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1586512924515-d24f331002c6?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1569619543238-3c81d8ab78a8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwzMjQ0OTIxMHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=20"
             ],
             "likes": 55,
             "shortDesc": "Very smart large cat",
@@ -1041,11 +1049,11 @@
             "_id": "cat10",
             "name": "Markiza",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1570725583091-09fba102e5d6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzN8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1570435944324-5e52f98ab6b5?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1570534536531-c3def02ad855?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1570204265807-e7cf73f4a0ff?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1570131669750-8003614b97f6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60"
+                "https://images.unsplash.com/photo-1570725583091-09fba102e5d6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzN8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1570435944324-5e52f98ab6b5?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzV8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1570534536531-c3def02ad855?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MzR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1570204265807-e7cf73f4a0ff?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzd8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1570131669750-8003614b97f6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Mzh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=20"
             ],
             "likes": 55,
             "shortDesc": "Beatiful large female cat",
@@ -1078,11 +1086,11 @@
             "_id": "cat11",
             "name": "Boss",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1601729698173-c2efca20219a?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1601729698173-c2efca20219a?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1601729715637-4d08d4867e6c?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1601729781366-79b1dee3eeb6?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1601729739086-7a0eb3274973?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                "https://images.unsplash.com/photo-1601729698173-c2efca20219a?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1601729698173-c2efca20219a?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8Nnx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1601729715637-4d08d4867e6c?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1601729781366-79b1dee3eeb6?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8OXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1601729739086-7a0eb3274973?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTB8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20"
             ],
             "likes": 65,
             "shortDesc": "Beatiful large female cat",
@@ -1115,11 +1123,11 @@
             "_id": "cat12",
             "name": "Murka",
             "imgUrls": [
-                "https://images.unsplash.com/photo-1549458452-964cbc892864?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=80",
-                "https://images.unsplash.com/photo-1552944150-6dd1180e5999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1225&q=80",
-                "https://images.unsplash.com/photo-1552944249-481c99e23e97?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1467213787150-b124b42f0dd8?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTR8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-                "https://images.unsplash.com/photo-1565593478738-eba687e8dab6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1209&q=80"
+                "https://images.unsplash.com/photo-1549458452-964cbc892864?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=564&q=20",
+                "https://images.unsplash.com/photo-1552944150-6dd1180e5999?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20",
+                "https://images.unsplash.com/photo-1552944249-481c99e23e97?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1467213787150-b124b42f0dd8?ixid=MXwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MTR8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=20",
+                "https://images.unsplash.com/photo-1565593478738-eba687e8dab6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=20"
             ],
             "likes": 60,
             "shortDesc": "Beatiful large female cat",
@@ -1147,6 +1155,373 @@
             },
             "recordDate": "23-08-2020",
             "status": "waiting"
-        }
+        },
+        {
+            "_id": "b401",
+            "name": "Chloe",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415689/pets/birds/birdGreen-frm/vivek-doshi-w-0_LjFFY0E-unsplash_x4mltr.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415688/pets/birds/birdGreen-frm/lakshmi-narasimha-gbpD0s-w4lI-unsplash_dvyruj.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415686/pets/birds/birdGreen-frm/renan-brun-MHQm4dFkJEA-unsplash_endlzl.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415662/pets/birds/birdGreen-frm/kristina-g---NRfY2DbHU-unsplash_kqdzvo.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415675/pets/birds/birdGreen-frm/lakshmi-narasimha-ypn0ueRppRw-unsplash_urtoer.jpg"
+            ],
+            "likes": "57",
+            "shortDesc": "Sweet and energetic Quaker",
+            "description": "Chloe loves playing with toys in her cage and shredding whatever she can of them. We do not have verification that Chloe is in fact a female, but she's 100% adorable either way. Like many Quakers, she is protective of her cage and likes to spend time in there, but with patience and treats, she is working on being comfortable out of it. Chloe is working on stepping up and target training in her foster home and doesn't seem to mind being around other birds and dogs. Chloe is fully flighted and needs an owner who understands bird body language and can keep an eye out for potential nips.",
+            "age": "adult",
+            "gender": "female",
+            "kind": "bird",
+            "size": "small (0-6 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Tel Aviv-Yafo, Dizengoff St 50",
+            "host": {
+              "_id": "owner102",
+              "fullname": "Tel-Aviv Animal Rescue",
+              "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+              "phone": "054-2896714",
+              "email": "animalRescue@mail.com",
+              "loc": {
+                "address": "Tel Aviv-Yafo, Dizengoff St 50",
+                "lat": 32.0750224,
+                "lng": 34.7749395
+              }
+            },
+            "recordDate": "5-Aug-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b402",
+            "name": "Strawberry",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415720/pets/birds/birdLYellow-fem-y/joshua-harris-yqy0lDwbC_o-unsplash_mebgkh.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415751/pets/birds/birdLYellow-fem-y/junel-mujar-Pbf3tXWIhjI-unsplash_oyxhdy.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415755/pets/birds/birdLYellow-fem-y/chuttersnap-ap412zRUrPk-unsplash_pifr7c.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415726/pets/birds/birdLYellow-fem-y/loriane-magnenat-_vKdI-HnR3I-unsplash_kblwyh.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415716/pets/birds/birdLYellow-fem-y/joshua-harris-sI6si2hl-ZI-unsplash_wqra5u.jpg"
+            ],
+            "likes": "76",
+            "shortDesc": "Sweet young singer",
+            "description": "Strawberry is sweet bird who spent a lot of time in her old home in a cage. She is slowly getting used to hands and isn't thrilled about being pulled from her cage but is happy to sit near her foster mom. Strawberry is working towards hand taming and would be a great companion for a patient home. She loves to shred toys. Strawberry is a chronic egg-layer so she will need to be a single cockatiel and go home with someone able to provide an environment that discourages egg-laying as well as someone willing to work alongside an Avian vet to help with this, as she will need calcium supplements to stay healthy.",
+            "age": "young",
+            "gender": "female",
+            "kind": "bird",
+            "size": "small (0-6 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Haifa, Derech Simha Golan 54",
+            "host": {
+              "_id": "owner101",
+              "fullname": "Haifa Loves Animals",
+              "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+              "phone": "054-2212351",
+              "email": "haifaLoves@mail.com",
+              "loc": {
+                "address": "Haifa, Derech Simha Golan 54",
+                "lat": 32.789711,
+                "lng": 35.0078224
+              }
+            },
+            "recordDate": "10-Nov-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b403",
+            "name": "Stretch",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415775/pets/birds/birdPink-fem/david-clode-Ve5lvL5zIOA-unsplash_rcqdav.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415744/pets/birds/birdPink-fem/do-photography-Sy95bMYqrP0-unsplash_j3d1qf.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415724/pets/birds/birdPink-fem/alex-eckermann-DYWmtOeTrIs-unsplash_vl4orl.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415732/pets/birds/birdPink-fem/saeed-lajami-2jRiKyDWqi8-unsplash_rtmmg3.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415769/pets/birds/birdPink-fem/david-clode-dyVcLXrC1oo-unsplash_f3ecxb.jpg"
+            ],
+            "likes": "74",
+            "shortDesc": "Sweet and handsome lady",
+            "description": "Stretch is a spunky little Goffins Cockatoo. She needs a female owner and no other pets in the home. Stretch has a habit of flying to attack any other pets in her vicinity. Stretch is estimated to be about 7-8 years old. For the first 6 years of her life she was stuck in a cage with no toys or interaction. She has a history of plucking but is doing much better now. She now loves having toys to play with and she even will play fetch!",
+            "age": "adult",
+            "gender": "female",
+            "kind": "bird",
+            "size": "small (0-6 lbs)",
+            "specialities": [
+              "friendly with children"
+            ],
+            "address": "Tel Aviv-Yafo, Dizengoff St 50",
+            "host": {
+              "_id": "owner102",
+              "fullname": "Tel-Aviv Animal Rescue",
+              "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+              "phone": "054-2896714",
+              "email": "animalRescue@mail.com",
+              "loc": {
+                "address": "Tel Aviv-Yafo, Dizengoff St 50",
+                "lat": 32.0750224,
+                "lng": 34.7749395
+              }
+            },
+            "recordDate": "12-Sep-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b404",
+            "name": "Harper",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415697/pets/birds/birdGreenBl-y/bianca-ackermann-zOKrNguZwKo-unsplash_lp9ng3.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415698/pets/birds/birdGreenBl-y/chris-briggs-aLNJbbrHmpo-unsplash_ym064t.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415699/pets/birds/birdGreenBl-y/sina-katirachi-A3u3X1MDCnA-unsplash_bm6ksh.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415705/pets/birds/birdGreenBl-y/dalton-touchberry-yWfdhaqSAEo-unsplash_xcgjb3.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415698/pets/birds/birdGreenBl-y/david-clode-km2f-EUivRU-unsplash_llk1ib.jpg"
+            ],
+            "likes": "98",
+            "shortDesc": "Has a lot to add to conversations",
+            "description": "Harper is a feisty little guy but would thrive well in a patient environment. Harper is roughly 3 years old and came from a home where he was harassed by a cat and pecked at by another bird. He built up a tough guy exterior, but loves to sing to other birds and his foster mom. Harper is very afraid of hands and has been learning to step up on a perch. He can be aggressive when approached and doesn't like when his foster brother JJ stands too close (a cage with room for personal space is a must). Despite this, he and his brother have begun preening each other and there is affection there. With the right home, these two will be great companions for a home that appreciates them without needing to hold them all the time.",
+            "age": "young",
+            "gender": "male",
+            "kind": "bird",
+            "size": "small (0-6 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Haifa, Derech Simha Golan 54",
+            "host": {
+              "_id": "owner101",
+              "fullname": "Haifa Loves Animals",
+              "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+              "phone": "054-2212351",
+              "email": "haifaLoves@mail.com",
+              "loc": {
+                "address": "Haifa, Derech Simha Golan 54",
+                "lat": 32.789711,
+                "lng": 35.0078224
+              }
+            },
+            "recordDate": "11-Dec-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b405",
+            "name": "Wilfred",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415627/pets/birds/birdBlue-sen-1/roberto-carlos-roman-R2P6oKeuHWs-unsplash_yxwhdm.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415631/pets/birds/birdBlue-sen-1/bob-ghost--ud-LkJOKQY-unsplash_lehu9m.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415628/pets/birds/birdBlue-sen-1/bob-ghost-05OxB8SIW9Q-unsplash_eohjtx.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415632/pets/birds/birdBlue-sen-1/bianca-ackermann-uox6mD_d0jE-unsplash_s9vpiv.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415633/pets/birds/birdBlue-sen-1/bob-ghost-JLg5-p5gu-k-unsplash_kamdnp.jpg"
+            ],
+            "likes": "82",
+            "shortDesc": "Sweet old budgie gentleman",
+            "description": "Wilfred is a sweet old budgie gentleman estimated to be about 7 years old. He was brought to our shelter after his cage mate passed away and his family had to move somewhere that did not allow birds. Parakeets are very social birds that enjoy the company of each other. Although he is older, his quality of life will be much better if he has another friend (or 10!) to spend the rest of his days with. When being introduced to your resident bird, they should be housed separately for a couple of weeks while slowly introducing them, either in a separate cage side by side or in a cage with a divider.",
+            "age": "senior",
+            "gender": "male",
+            "kind": "bird",
+            "size": "small (0-6 lbs)",
+            "specialities": [
+              "friendly with children"
+            ],
+            "address": "Tel Aviv-Yafo, Dizengoff St 50",
+            "host": {
+              "_id": "owner102",
+              "fullname": "Tel-Aviv Animal Rescue",
+              "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+              "phone": "054-2896714",
+              "email": "animalRescue@mail.com",
+              "loc": {
+                "address": "Tel Aviv-Yafo, Dizengoff St 50",
+                "lat": 32.0750224,
+                "lng": 34.7749395
+              }
+            },
+            "recordDate": "12-Jan-2021",
+            "status": "waiting"
+          },
+          {
+            "_id": "b406",
+            "name": "Moon",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415774/pets/birds/birdWhite-sen/manny-moreno-H0CtXTt15A0-unsplash_uehb9j.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415770/pets/birds/birdWhite-sen/max-smith-fYLQhZxE2Ys-unsplash_dpmoew.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415766/pets/birds/birdWhite-sen/gilles-rolland-monnet-xdd1_AD8whk-unsplash_fcuu3s.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415631/pets/birds/birdWhite-sen/terra-roro-qS_d1WcvUVg-unsplash_rckmzi.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415621/pets/birds/birdWhite-sen/ray-aucott-s0ncfzQb2yI-unsplash_e2bmy9.jpg"
+            ],
+            "likes": "122",
+            "shortDesc": "Beautiful and wonderful friend",
+            "description": "Moon is a very sweet bird that will step up onto your hand or a towel. He loves greet people every time they come to visit and will thoroughly enjoy any head scratch offered. He enjoys the outdoors on a nice day in company of his best friend Nikko. His loves to play with wood, foam, cardboard and if he has a box to destroy will be extremely happy. He is a shy guy, but once he gets to know you, he is a great bird. He loves to sit on your shoulder while you are doing your chores.",
+            "age": "senior",
+            "gender": "male",
+            "kind": "bird",
+            "size": "medium (7-11 lbs)",
+            "specialities": [
+              "friendly with other animals"
+            ],
+            "address": "Haifa, Derech Simha Golan 54",
+            "host": {
+              "_id": "owner101",
+              "fullname": "Haifa Loves Animals",
+              "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+              "phone": "054-2212351",
+              "email": "haifaLoves@mail.com",
+              "loc": {
+                "address": "Haifa, Derech Simha Golan 54",
+                "lat": 32.789711,
+                "lng": 35.0078224
+              }
+            },
+            "recordDate": "31-Dec-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b407",
+            "name": "Peanut",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415652/pets/birds/birdBlYel/david-clode-oC3jw3pMMWw-unsplash_tfeae1.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415669/pets/birds/birdBlYel/andrew-pons-lylCw4zcA7I-unsplash_axs4le.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415665/pets/birds/birdBlYel/matthieu-oger-6t31ejBdv98-unsplash_fp9oqf.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415654/pets/birds/birdBlYel/jean-philippe-delberghe-n0uRXGaHesY-unsplash_otr4rv.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415639/pets/birds/birdBlYel/camilo-ayala-V9VDd-2s3aE-unsplash_ptqukm.jpg"
+            ],
+            "likes": "116",
+            "shortDesc": "Says hello and laughs",
+            "description": "Peanut is a beautiful Blue and Gold Macaw that is looking for a special home. He has a scissor beak. Peanuts ideal adopter will be a woman who understands that Peanuts scissor beak will require routine avian vet visits (about every 3 months) to keep it under control. Peanut will also require a new size appropriate cage.",
+            "age": "senior",
+            "gender": "male",
+            "kind": "bird",
+            "size": "medium (7-11 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Tel Aviv-Yafo, Dizengoff St 50",
+            "host": {
+              "_id": "owner102",
+              "fullname": "Tel-Aviv Animal Rescue",
+              "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+              "phone": "054-2896714",
+              "email": "animalRescue@mail.com",
+              "loc": {
+                "address": "Tel Aviv-Yafo, Dizengoff St 50",
+                "lat": 32.0750224,
+                "lng": 34.7749395
+              }
+            },
+            "recordDate": "18-Jun-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b408",
+            "name": "Loyd",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415718/pets/birds/birdGrey/thomas-millot-vg6PZkjL1io-unsplash_dchkbm.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415716/pets/birds/birdGrey/lilian-dibbern-ftwDuke2UgA-unsplash_lpfmip.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415714/pets/birds/birdGrey/hannah-dickens-cdSg4nPkucA-unsplash_rtbbfx.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415704/pets/birds/birdGrey/ovidiu-creanga-EXqgBm93ho4-unsplash_syc9nl.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415703/pets/birds/birdGrey/jana-sabeth-Bg2AtXNmEHI-unsplash_1_sgkfdo.jpg"
+            ],
+            "likes": "53",
+            "shortDesc": "Incredibly social guy",
+            "description": "Loyd is incredibly social and loves to be out of his cage hanging out with his people. He likes to have his head scratched, but he also loves to run around on a table and explore. Like a typical kid, everything he encounters goes in his mouth, so he needs to be supervised closely. He is bold and busy. He prefers to eat when he is around his people. He eats pellets like a champ and loves nutriberries and seeds as treats.",
+            "age": "adult",
+            "gender": "male",
+            "kind": "bird",
+            "size": "medium (7-11 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Haifa, Derech Simha Golan 54",
+            "host": {
+              "_id": "owner101",
+              "fullname": "Haifa Loves Animals",
+              "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+              "phone": "054-2212351",
+              "email": "haifaLoves@mail.com",
+              "loc": {
+                "address": "Haifa, Derech Simha Golan 54",
+                "lat": 32.789711,
+                "lng": 35.0078224
+              }
+            },
+            "recordDate": "14-Jul-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b409",
+            "name": "Pancho",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415770/pets/birds/birdRed/agto-nugroho-Ow0bxNJ4PhE-unsplash_ijbwfm.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415761/pets/birds/birdRed/christopher-alvarenga-3osGqRRtQBE-unsplash_y7jwod.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415770/pets/birds/birdRed/dusan-veverkolog-edrW8VIlJJg-unsplash_iislmi.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415743/pets/birds/birdRed/agto-nugroho-JFd_jD-w7qE-unsplash_crqplz.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415756/pets/birds/birdRed/camille-couvez-N7i0Ye5Qpto-unsplash_mzjsth.jpg"
+            ],
+            "likes": "129",
+            "shortDesc": "Hearty and true talker",
+            "description": "Pancho is a male, 19 year old yellow-naped Amazon who truly enjoys hanging out with people. A true talker, Pancho will wow you with his vocabulary of, “Hey boy, aloha, and oh boy!” Pancho is a hearty and healthy eater who enjoys his share of sugar snap peas, apples, bell peppers, pistachios and corn. He’s great at destroying his toys, has a fascination with bells and loves to get baths on sunny days! Although he doesn’t do well with children, Pancho may be okay with other parrots and pets in the household.",
+            "age": "adult",
+            "gender": "male",
+            "kind": "bird",
+            "size": "medium (7-11 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Tel Aviv-Yafo, Dizengoff St 50",
+            "host": {
+              "_id": "owner102",
+              "fullname": "Tel-Aviv Animal Rescue",
+              "imgUrl": "https://www.kindpng.com/picc/m/463-4631441_animal-welfare-animal-shelter-clipart-hd-png-download.png",
+              "phone": "054-2896714",
+              "email": "animalRescue@mail.com",
+              "loc": {
+                "address": "Tel Aviv-Yafo, Dizengoff St 50",
+                "lat": 32.0750224,
+                "lng": 34.7749395
+              }
+            },
+            "recordDate": "22-Jan-2020",
+            "status": "waiting"
+          },
+          {
+            "_id": "b410",
+            "name": "Charlie",
+            "imgUrls": [
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415684/pets/birds/birdDBlue/simon-shim-G3_ijrNF_cU-unsplash_lfghbr.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415682/pets/birds/birdDBlue/jose-ignacio-garcia-zajaczkowski-ZkBjtrG7aYg-unsplash_rabaz7.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415678/pets/birds/birdDBlue/dominik-lange-BFsm5vldl2I-unsplash_rwlmlf.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415675/pets/birds/birdDBlue/mingjun-liu-37SScYJW0Rw-unsplash_csm15r.jpg",
+              "https://res.cloudinary.com/viktoria/image/upload/c_scale,h_800,q_30/v1611415654/pets/birds/birdDBlue/giovanna-gomes-4Q7_-kpf_MM-unsplash_vjvayz.jpg"
+            ],
+            "likes": "132",
+            "shortDesc": "Loves playing with toys",
+            "description": "Charlie makes kissy noises and loves pomegranate seeds! He can get overstimulated, so may do best in a calm environment, but where he can observe any activity going on in the home. Like all Quakers, he is very protective of his cage, so it is best to interact with him outside of it, and service the cage when he is not inside it. He would do best in a behavior-savvy home that will let him set the pace, respect his body language and walk away when applicable, and just appreciate him for the funny little guy that he is, and treasure every small milestone of his trust that is earned!",
+            "age": "adult",
+            "gender": "male",
+            "kind": "bird",
+            "size": "medium (7-11 lbs)",
+            "specialities": [
+              "friendly with children",
+              "friendly with other animals"
+            ],
+            "address": "Haifa, Derech Simha Golan 54",
+            "host": {
+              "_id": "owner101",
+              "fullname": "Haifa Loves Animals",
+              "imgUrl": "https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png",
+              "phone": "054-2212351",
+              "email": "haifaLoves@mail.com",
+              "loc": {
+                "address": "Haifa, Derech Simha Golan 54",
+                "lat": 32.789711,
+                "lng": 35.0078224
+              }
+            },
+            "recordDate": "23-Jan-2020",
+            "status": "waiting"
+          }
     ]
 }

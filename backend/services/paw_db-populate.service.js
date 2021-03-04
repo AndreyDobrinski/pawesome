@@ -108,8 +108,8 @@ async function saveUsers() {
                     _id: savedUser._id.toString(),
                     fullname: savedUser.fullname,
                     imgUrl: savedUser.imgUrl,
-                    phone: savedUser.phone,
-                    email: savedUser.email,
+                    phone: savedUser.contactInfo.phone,
+                    email: savedUser.contactInfo.email,
                     loc: { ...savedUser.loc }
                 }
                 accUserMap[localUserIds[idx]] = miniUser
