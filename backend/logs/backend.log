@@ -2955,6 +2955,7 @@
 1/25/2021, 9:20:25 PM - INFO - Req from: Andrei Dobrinski (sid: AsshzVJXncTsxEKBttaQyTEf3zT5ZppT)
 1/25/2021, 9:20:25 PM - ERROR - Cannot get orders | {} (sid: AsshzVJXncTsxEKBttaQyTEf3zT5ZppT)
 >>>>>>> 906052e4c370f97eac2af88615edc75539c6d4fe
+<<<<<<< HEAD
 26.01.2021, 09:08:51 - DEBUG - auth.service - login with username: vika (sid: NlVlzHfta7Q_w_AKqUMYcB0Dmj1ttwbj)
 26.01.2021, 09:09:38 - INFO - Req from: Vika Gor (sid: NlVlzHfta7Q_w_AKqUMYcB0Dmj1ttwbj)
 26.01.2021, 09:50:35 - ERROR - Failed to get user | {} (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
@@ -3040,3 +3041,6 @@
 04.03.2021, 14:41:44 - INFO - Req from: Vika Gor (sid: 9bna-Jb5Lkn_IElKQFgDiOAe2_sGjxhw)
 04.03.2021, 14:42:06 - DEBUG - auth.service - login with username: jojo (sid: Tmk1cYwWM12vMH942XLffqAxqXGbEMS6)
 04.03.2021, 14:42:12 - INFO - Req from: jojo (sid: Tmk1cYwWM12vMH942XLffqAxqXGbEMS6)
+=======
+1/25/2021, 9:28:29 PM - INFO - Server is running on port: 3030 
+>>>>>>> fcb6a2ef060dda720b6153d25d06a4cff1a900e1
