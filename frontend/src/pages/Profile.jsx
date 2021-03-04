@@ -52,7 +52,8 @@ export class _Profile extends Component {
                         <div className="profile-col-md-4">
 
                             <div className="profile-img">
-                                <img src={user.imgUrl} alt="" />
+                                {user.imgUrl && <img src={user.imgUrl} alt="" />}
+                                {!user.imgUrl && <img src='https://icons-for-free.com/iconfiles/png/512/avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290.png' alt="" />}
                             </div>
 
                         </div>
@@ -73,7 +74,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Email</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>
+                                            {user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>}
+                                            {!user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                     <div className="profile-row-desc">
@@ -81,7 +83,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Phone</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>
+                                            {user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>}
+                                            {!user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                     <div className="profile-row-desc">
@@ -89,7 +92,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Family status</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.familyStatus}</p>
+                                            {user.familyStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.familyStatus}</p>}
+                                            {!user.familyStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                     <div className="profile-row-desc">
@@ -97,7 +101,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>House type</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.houseStatus}</p>
+                                            {user.houseStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.houseStatus}</p>}
+                                            {!user.houseStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
 
@@ -117,7 +122,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Email</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>
+                                            {user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>}
+                                            {!user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                     <div className="profile-row-desc">
@@ -125,7 +131,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Phone</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>
+                                            {user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>}
+                                            {!user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                     <div className="profile-row-desc">
@@ -133,7 +140,8 @@ export class _Profile extends Component {
                                             <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Address</label>
                                         </div>
                                         <div className="profile">
-                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.loc.address}</p>
+                                            {user.loc.address && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.loc.address}</p>}
+                                            {!user.loc.address && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
                                         </div>
                                     </div>
                                 </div>
