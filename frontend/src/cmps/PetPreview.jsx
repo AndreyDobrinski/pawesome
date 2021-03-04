@@ -24,8 +24,8 @@ export class _PetPreview extends Component {
 
     onLike = (diff) => {
 
-        const likesCount = (+this.state.pet.likes) + diff
-        const pet = { ...this.state.pet, likesCount }
+        const likes = (+this.state.pet.likes) + diff
+        const pet = { ...this.state.pet, likes }
         this.setState({ ...this.state, pet })
 
         this.props.savePet(pet)

@@ -2547,3 +2547,37 @@
 1/25/2021, 12:36:03 PM - INFO - Server is running on port: 3030 
 1/25/2021, 12:49:45 PM - INFO - Server is running on port: 3030 
 1/25/2021, 12:49:52 PM - INFO - Server is running on port: 3030 
+1/25/2021, 12:58:55 PM - INFO - Server is running on port: 3030 
+1/25/2021, 12:59:20 PM - INFO - Server is running on port: 3030 
+1/25/2021, 1:02:03 PM - INFO - Server is running on port: 3030 
+1/25/2021, 1:04:11 PM - INFO - Server is running on port: 3030 
+1/25/2021, 6:56:15 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:10:49 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:17:25 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:19:05 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:22:51 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:24 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:25 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:37:50 PM - INFO - Server is running on port: 3030 
+1/25/2021, 7:54:01 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:47:01 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:55:00 PM - INFO - Server is running on port: 3030 
+1/25/2021, 8:55:22 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:01:12 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:02:59 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:11:55 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:11:58 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:12:32 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:13:34 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:20:39 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:21:15 PM - INFO - Server is running on port: 3030 
+1/25/2021, 9:22:11 PM - INFO - Server is running on port: 3030 
+1/26/2021, 12:13:21 PM - DEBUG - auth.service - login with username: shelter1 (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:22 PM - ERROR - Failed to Login Invalid username or password (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:37 PM - DEBUG - auth.service - login with username: shelter1 (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 12:13:37 PM - ERROR - Failed to Login Invalid username or password (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:48:54 PM - DEBUG - auth.service - login with username: vika (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:49:13 PM - INFO - Req from: Vika Gor (sid: E713KKZcLmvslWOvonMZSWrNd7leUtQ1)
+1/26/2021, 10:56:48 PM - DEBUG - auth.service - login with username: vika (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
+1/26/2021, 11:02:19 PM - INFO - Req from: Vika Gor (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
+1/26/2021, 11:02:40 PM - INFO - Req from: Vika Gor (sid: iKp08Khy6UqlIelRkEKCbbLlKZBy3LKK)
