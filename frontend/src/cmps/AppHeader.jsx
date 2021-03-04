@@ -309,6 +309,8 @@ export class _AppHeader extends Component {
 
 
         const { loggedInUser } = this.props
+        console.log('loggedInUser', loggedInUser);
+        // if(!loggedInUser) return <div></div>
         const { isNewUser } = this.state
         const showDarkmode = this.state.isHomePage ? this.props.isDarkMode && this.state.isScrolled : this.props.isDarkMode
 
@@ -342,9 +344,11 @@ export class _AppHeader extends Component {
                         <Link to="/pet"><div className={`app-header-link-pets ${this.props.isDarkMode ? 'dark-mode-link-pets' : ''}`}>Pets</div></Link>
                         <div className={`app-header-link-login ${this.props.isDarkMode ? 'dark-mode-link-login' : ''}`} onClick={this.onOpenSignModal}>
                             {!loggedInUser && <User />}
-                            {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite /> : <UserLogedBlack />}</Link>}
+                            {loggedInUser && loggedInUser.imgUrl && <Link to={`/profile/${loggedInUser._id}`}><img src={this.props.loggedInUser.imgUrl} alt=""/></Link>}
+                            {loggedInUser && !loggedInUser.imgUrl && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite /> : <UserLogedBlack />}</Link>}
+                            {/* {loggedInUser && <Link to={`/profile/${loggedInUser._id}`}>{this.props.isDarkMode ? <UserLogedWhite /> : <UserLogedBlack />}</Link>} */}
                         </div>
-                        <div className="app-header-mode" onClick={this.setMode}>{this.props.isDarkMode ? <Dark /> : <Light />}</div>
+                        <div className="app-header-mode flex" onClick={this.setMode}>{this.props.isDarkMode ? <Dark /> : <Light />}</div>
                     </div>
                 </div>
 

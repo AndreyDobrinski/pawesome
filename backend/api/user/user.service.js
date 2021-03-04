@@ -97,7 +97,23 @@ async function add(user) {
             username: user.username,
             password: user.password,
             fullname: user.fullname,
-            imgUrl: user.imgUrl
+            imgUrl: null,
+            // imgUrl: 'https://icons-for-free.com/iconfiles/png/512/avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290.png',
+            isAdmin: false,
+            isHost: false,
+            birthDate: null,
+            familyStatus: null,
+            contactInfo: {
+                email: null,
+                phone: null
+            },
+            loc: {
+                address: null,
+                lat: null,
+                lng: null
+            },
+            houseStatus: null,
+            hasPets: true
         }
         const collection = await dbService.getCollection('user')
         await collection.insertOne(userToAdd)

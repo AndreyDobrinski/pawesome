@@ -2955,7 +2955,95 @@
 1/25/2021, 9:20:25 PM - INFO - Req from: Andrei Dobrinski (sid: AsshzVJXncTsxEKBttaQyTEf3zT5ZppT)
 1/25/2021, 9:20:25 PM - ERROR - Cannot get orders | {} (sid: AsshzVJXncTsxEKBttaQyTEf3zT5ZppT)
 >>>>>>> 906052e4c370f97eac2af88615edc75539c6d4fe
+<<<<<<< HEAD
+26.01.2021, 09:08:51 - DEBUG - auth.service - login with username: vika (sid: NlVlzHfta7Q_w_AKqUMYcB0Dmj1ttwbj)
+26.01.2021, 09:09:38 - INFO - Req from: Vika Gor (sid: NlVlzHfta7Q_w_AKqUMYcB0Dmj1ttwbj)
+26.01.2021, 09:50:35 - ERROR - Failed to get user | {} (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:50:55 - ERROR - Failed to get user | {} (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:01 - DEBUG - auth.service - login with username: shelter1 (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:01 - ERROR - Failed to Login Invalid username or password (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:11 - DEBUG - auth.service - login with username: telaviv (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:13 - INFO - Req from: Tel-Aviv Animal Rescue (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:17 - INFO - Req from: Tel-Aviv Animal Rescue (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:51:22 - INFO - Req from: Tel-Aviv Animal Rescue (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+26.01.2021, 09:52:00 - INFO - Req from: Tel-Aviv Animal Rescue (sid: GvnLDZaZ6poPfYGhj-pXGifrt-4nhW9e)
+15.02.2021, 17:52:57 - INFO - Server is running on port: 3030 
+04.03.2021, 11:55:50 - INFO - Server is running on port: 3030 
+04.03.2021, 12:14:26 - DEBUG - auth.service - signup with username: katy, fullname: katy (sid: sxreI2Jz42FqcFrsEQrihbwMCSKUXZkg)
+04.03.2021, 12:14:26 - DEBUG - auth.route - new account created: {"username":"katy","password":"$2b$10$d1Fh2aNnEVbNKcKs9/w.7OADhSv09Kiw324NztBcMxrUVLEgfGt6C","fullname":"katy","_id":"6040b30232e56f4baccf00c7"} (sid: sxreI2Jz42FqcFrsEQrihbwMCSKUXZkg)
+04.03.2021, 12:14:26 - DEBUG - auth.service - login with username: katy (sid: sxreI2Jz42FqcFrsEQrihbwMCSKUXZkg)
+04.03.2021, 12:14:33 - INFO - Req from: katy (sid: sxreI2Jz42FqcFrsEQrihbwMCSKUXZkg)
+04.03.2021, 12:25:53 - INFO - Server is running on port: 3030 
+04.03.2021, 12:26:16 - ERROR - Cannot get orders | {} (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:26:24 - ERROR - Cannot get orders | {} (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:26:27 - ERROR - Cannot get orders | {} (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:27:12 - DEBUG - auth.service - signup with username: poly, fullname: poly (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:27:12 - DEBUG - auth.route - new account created: {"username":"poly","password":"$2b$10$PKv2GGWJbkYOiLH.OVfPoOAj7RRDZwtW9x9aZbGc0ztWsqS6R23O.","fullname":"poly","imgUrl":"https://www.pngkit.com/png/detail/282-2828820_awi-logo-animal-welfare-institute-logo.png","isAdmin":false,"isHost":false,"birthDate":"1999/05/12","familyStatus":"single","contactInfo":{"email":"newone@hah.com","phone":"054-111235"},"loc":{"address":"Haifa, Derech Simha Golan 54","lat":-2.61308,"lng":41.1413},"houseStatus":"apartment","hasPets":true,"_id":"6040b60057fc3552001bf1af"} (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:27:12 - DEBUG - auth.service - login with username: poly (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:27:16 - INFO - Req from: poly (sid: Q14xEfpjs6AwIzojEtRcT7zIAljyTqvq)
+04.03.2021, 12:55:53 - INFO - Server is running on port: 3030 
+04.03.2021, 12:58:38 - INFO - Server is running on port: 3030 
+04.03.2021, 13:06:59 - ERROR - Cannot get orders | {} (sid: WcFYvmMh2Ryn9ipzyDD4oTm1I8hdhdTa)
+04.03.2021, 13:07:14 - ERROR - Cannot get orders | {} (sid: WcFYvmMh2Ryn9ipzyDD4oTm1I8hdhdTa)
+04.03.2021, 13:07:30 - ERROR - Cannot get orders | {} (sid: WcFYvmMh2Ryn9ipzyDD4oTm1I8hdhdTa)
+04.03.2021, 13:07:45 - DEBUG - auth.service - login with username: vika (sid: WcFYvmMh2Ryn9ipzyDD4oTm1I8hdhdTa)
+04.03.2021, 13:07:49 - INFO - Req from: Vika Gor (sid: WcFYvmMh2Ryn9ipzyDD4oTm1I8hdhdTa)
+04.03.2021, 13:08:07 - DEBUG - auth.service - signup with username: loki, fullname: loki (sid: oeYxGe70_NzRSqGTuajTfbunHUHF6sNa)
+04.03.2021, 13:08:07 - DEBUG - auth.route - new account created: {"username":"loki","password":"$2b$10$oh3Lpvizw54oyV7e7kuGk.WFM1PzGyIsRoxcoUIUz1BuMvrz2j5YK","fullname":"loki","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6040bf9773d2860ec447c139"} (sid: oeYxGe70_NzRSqGTuajTfbunHUHF6sNa)
+04.03.2021, 13:08:07 - DEBUG - auth.service - login with username: loki (sid: oeYxGe70_NzRSqGTuajTfbunHUHF6sNa)
+04.03.2021, 13:08:12 - INFO - Req from: loki (sid: oeYxGe70_NzRSqGTuajTfbunHUHF6sNa)
+04.03.2021, 13:09:41 - DEBUG - auth.service - login with username: vika (sid: xQm55ZxLLxjCn428yysWyhztfR06VxXy)
+04.03.2021, 13:09:52 - INFO - Req from: Vika Gor (sid: xQm55ZxLLxjCn428yysWyhztfR06VxXy)
+04.03.2021, 13:10:21 - DEBUG - auth.service - login with username: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:10:25 - INFO - Req from: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:16:38 - INFO - Req from: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:25:45 - INFO - Req from: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:26:06 - INFO - Req from: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:26:08 - INFO - Req from: loki (sid: 18-MCsrOF1Sh1Fg86etdlivnAB11k94m)
+04.03.2021, 13:26:54 - DEBUG - auth.service - login with username: vika (sid: uFcmQhzlf0OY1X9EHM_mWICXPLCn0jID)
+04.03.2021, 13:26:59 - INFO - Req from: Vika Gor (sid: uFcmQhzlf0OY1X9EHM_mWICXPLCn0jID)
+04.03.2021, 13:28:02 - INFO - Req from: Vika Gor (sid: uFcmQhzlf0OY1X9EHM_mWICXPLCn0jID)
+04.03.2021, 13:28:11 - DEBUG - auth.service - login with username: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:28:15 - INFO - Req from: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:36:12 - INFO - Req from: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:38:45 - INFO - Req from: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:48:59 - INFO - Req from: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:49:05 - INFO - Req from: loki (sid: le0znQS_GSjZ7JK2HzDFuLQVB924lUkp)
+04.03.2021, 13:50:50 - INFO - Server is running on port: 3030 
+04.03.2021, 13:51:09 - ERROR - Cannot get orders | {} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:51:15 - ERROR - Cannot get orders | {} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:51:29 - ERROR - Cannot get orders | {} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:51:42 - ERROR - Cannot get orders | {} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:51:48 - ERROR - Cannot get orders | {} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:51:59 - DEBUG - auth.service - signup with username: koko, fullname: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:52:00 - DEBUG - auth.route - new account created: {"username":"koko","password":"$2b$10$8bcFKjS/zg20sBjO9oYbB.qzuQNhG5sZkUwymNXMTOqvObse.y7DW","fullname":"koko","imgUrl":"https://icons-for-free.com/iconfiles/png/512/avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290.png","isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6040c9e07648b211ac8fad00"} (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:52:00 - DEBUG - auth.service - login with username: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:52:04 - INFO - Req from: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:55:01 - INFO - Req from: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:58:00 - INFO - Req from: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:58:50 - INFO - Req from: koko (sid: AorPLygt7pGGgOD9GwUIUQo6tpYV7XiG)
+04.03.2021, 13:59:09 - DEBUG - auth.service - login with username: vika (sid: x9y33CP8KzwO5oZ5ihTQlSix6IfXb7RD)
+04.03.2021, 14:22:59 - INFO - Req from: Vika Gor (sid: x9y33CP8KzwO5oZ5ihTQlSix6IfXb7RD)
+04.03.2021, 14:23:19 - DEBUG - auth.service - login with username: koko (sid: Swm-Erh3wLZaJ6t9dGUHLO6aaMx0nhAP)
+04.03.2021, 14:25:42 - INFO - Server is running on port: 3030 
+04.03.2021, 14:29:33 - ERROR - Cannot get orders | {} (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:31:53 - DEBUG - auth.service - login with username: vika123 (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:31:53 - ERROR - Failed to Login Invalid username or password (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:31:59 - DEBUG - auth.service - login with username: vika (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:32:45 - DEBUG - auth.service - login with username: koko (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:36:33 - DEBUG - auth.service - login with username: koko (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:36:46 - INFO - Req from: koko (sid: n_-Hr30MBssCvIZqTWJ2thdhFaOOcpOh)
+04.03.2021, 14:37:31 - DEBUG - auth.service - signup with username: jojo, fullname: jojo (sid: Eef9mUS1QusinVoQq8IOuzQRFHNdccvi)
+04.03.2021, 14:37:32 - DEBUG - auth.route - new account created: {"username":"jojo","password":"$2b$10$8iIoikK3M.OSF.FiNYYqzuot7keKeoFwB8WvuSA.KrxU2b6AMScG6","fullname":"jojo","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6040d48c73d7d126a82f9b32"} (sid: Eef9mUS1QusinVoQq8IOuzQRFHNdccvi)
+04.03.2021, 14:37:32 - DEBUG - auth.service - login with username: jojo (sid: Eef9mUS1QusinVoQq8IOuzQRFHNdccvi)
+04.03.2021, 14:37:37 - INFO - Req from: jojo (sid: Eef9mUS1QusinVoQq8IOuzQRFHNdccvi)
+04.03.2021, 14:41:39 - DEBUG - auth.service - login with username: vika (sid: 9bna-Jb5Lkn_IElKQFgDiOAe2_sGjxhw)
+04.03.2021, 14:41:44 - INFO - Req from: Vika Gor (sid: 9bna-Jb5Lkn_IElKQFgDiOAe2_sGjxhw)
+04.03.2021, 14:42:06 - DEBUG - auth.service - login with username: jojo (sid: Tmk1cYwWM12vMH942XLffqAxqXGbEMS6)
+04.03.2021, 14:42:12 - INFO - Req from: jojo (sid: Tmk1cYwWM12vMH942XLffqAxqXGbEMS6)
+=======
 1/25/2021, 9:28:29 PM - INFO - Server is running on port: 3030 
+<<<<<<< HEAD
 1/25/2021, 9:31:57 PM - ERROR - Failed to get user | {} (sid: 6hRq-OJyTFVM62B2msr9YfT5znWiSlYJ)
 1/25/2021, 9:32:40 PM - DEBUG - auth.service - login with username: Andrei (sid: 6hRq-OJyTFVM62B2msr9YfT5znWiSlYJ)
 1/25/2021, 9:32:43 PM - INFO - Req from: Andrei Dobrinski (sid: 6hRq-OJyTFVM62B2msr9YfT5znWiSlYJ)
@@ -2972,3 +3060,6 @@
 2/13/2021, 8:24:48 PM - INFO - Server is running on port: 3030 
 2/15/2021, 5:10:31 PM - INFO - Server is running on port: 3030 
 3/4/2021, 5:12:20 PM - INFO - Server is running on port: 3030 
+=======
+>>>>>>> fcb6a2ef060dda720b6153d25d06a4cff1a900e1
+>>>>>>> 030d21e13ba0fe2ef6c6710137275ae1aac3dedd

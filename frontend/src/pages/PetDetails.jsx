@@ -168,7 +168,9 @@ export class _PetDetails extends Component {
                             <div className="map-contact-whatsapp flex justify-center  align-center">{this.props.isDarkMode ? <WhatsappWhite /> : <WhatsappBlack />} </div>
                             <p className={`map-contact-phone flex justify-center  align-center ${this.props.isDarkMode ? 'dark-mode-map-loc' : ''}`}>{pet.host.phone}</p>
                         </div>
-                        <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} />
+
+                        <iframe className="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3380.774375029796!2d34.773206115548874!3d32.0753507267356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4b80606b804b%3A0x697250962d76bb21!2sDizengoff%2050%2C%20Tel%20Aviv-Yafo!5e0!3m2!1sru!2sil!4v1613405310300!5m2!1sen!2sil"></iframe>
+                        {/* <MapContainer hostCreds={{ lat: pet.host.loc.lat, lng: pet.host.loc.lng }} /> */}
                     </div>
 
                 </div>
