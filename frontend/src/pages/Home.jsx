@@ -21,11 +21,15 @@ export class _Home extends Component {
       <div className={`page-home ${this.props.isDarkMode ? 'dark-mode-page-home' : ''}`}>
         <div className="page-home-hero">
 
-          <video autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop>
+          <video autoPlay="" loop="" muted="" playsInline="" data-loop="true" data-autopause="false" data-mute="true" data-fill-mode="fill" className="ms-slide-bgvideo" autoPlay loop muted >
             <source src="https://www.petfinder.co.il/wp-content/uploads/2019/09/petfinder.mp4" type="video/mp4" />
           </video>
 
-          {/* <img className="ms-slide-bgvideo" src="https://wallpapercave.com/wp/wp3171574.jpg" alt=""/> */}
+
+          {/* <img className="ms-slide-bgvideo" src="https://images.hdqwalls.com/download/kids-and-dogs-qhd-1920x1080.jpg" alt=""/> */}
+          {/* <img className="ms-slide-bgvideo" src="https://i.pinimg.com/originals/c2/e3/e1/c2e3e1b69e339c2e1b56f602ba429f24.jpg" alt=""/> */}
+          {/* <img className="ms-slide-bgvideo" src="https://media4.s-nbcnews.com/i/newscms/2016_52/1185083/little-kids-big-dogs-today-161230-tease_bcd1582f4ad296838401a664f777589f.jpg" alt=""/> */}
+          {/* <img className="ms-slide-bgvideo" src="https://s1.1zoom.me/b6058/448/Dogs_Svetlana_Shelemeteva_Hug_Little_girls_568770_1920x1080.jpg" alt=""/> */}
 
           <div className="page-home-hero-content ">
             <div className="page-home-hero-title">Find Your <br /> Pawesome Friend</div>

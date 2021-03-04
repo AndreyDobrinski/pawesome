@@ -4,6 +4,9 @@ const axios = Axios.create({
     withCredentials: true
 })
 
+const BASE_URL = process.env.NODE_ENV === 'production'
+    ? '/api/pet'
+    : '//localhost:3030/api/pet'
 
 export const petService = {
     query,
@@ -17,9 +20,9 @@ function query(filterBy) {
         for (var key in filterBy) {
             if (filterBy[key] !== 'all') filter[key] = filterBy[key]
         }
-        return (!filterBy) ? axios.get('http://localhost:3030/api/pet').then(res => res.data)
+        return (!filterBy) ? axios.get(BASE_URL).then(res => res.data)
             :
-            axios.get('http://localhost:3030/api/pet', { params: filter })
+            axios.get(BASE_URL, { params: filter })
                 .then(res => res.data)
     } catch (err) {
         console.log('FrontError: getting pets', err)

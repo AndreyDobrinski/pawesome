@@ -28,11 +28,15 @@ export class _MapContainer extends Component {
         <Marker
           name={'Tel-Aviv: dizingov, 23'}
           position={{ lat: hostCreds.lat, lng: hostCreds.lng }} />
-      </Map>
+      </Map>      
     );
   }
 }
 
 export const MapContainer = GoogleApiWrapper({
-  apiKey: ('AIzaSyCH-jmqS38VxKTB2yaaz9xPB95yW3TyeG4')
+  apiKey: ('YOUR API KEY FOR MAP')
 })(_MapContainer)
+// export const MapContainer = GoogleApiWrapper({
+//   apiKey: ('AIzaSyCH-jmqS38VxKTB2yaaz9xPB95yW3TyeG4')
+// })(_MapContainer)
+
