@@ -4,11 +4,11 @@ import { logout } from '../store/actions/userActions'
 
 import { userService } from '../services/userService.js'
 import { OrderList } from '../cmps/OrderList.jsx'
-import { OrderPreview } from '../cmps/OrderPreview'
 import { loadOrders } from '../store/actions/orderActions.js'
 import { socketService } from '../services/socketService'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
 
-import { Chat } from '../cmps/Chat.jsx'
+
 
 
 export class _Profile extends Component {
@@ -16,8 +16,6 @@ export class _Profile extends Component {
     state = {
         user: null,
         orders: null,
-        isOnChat: false, //
-        chatTopic: null,//
         isOwner: true,
     }
 
@@ -30,20 +28,10 @@ export class _Profile extends Component {
             var isOwner = user.isHost ? true : false
             await this.props.loadOrders()
             var { orders } = this.props
-
-            const userOrders = this.getUserOrders(user, orders)
-            this.setState({ user, orders: userOrders, isOwner })
+            this.setState({ user, orders, isOwner })
         } catch (err) {
             console.log('Error catched in fronf2', err)
         }
-    }
-
-
-    getUserOrders = (user, orders) => {
-        console.log('Profile ', user)
-        const userOrders = (user.isHost) ? orders.filter(order => order.ownerId === user._id)
-            : orders.filter(order => order.byUser._id === user._id)
-        return userOrders
     }
 
     onLogOut = async () => {
@@ -51,172 +39,137 @@ export class _Profile extends Component {
         this.props.history.push('/')
     }
 
-    onModalEditClicked = () => {
-        console.log('Edit modal opend');
-    }
-
-    onStartChat = (order) => {
-        console.log('Start chat for order ', order)
-        // if (order._id !== this.state.chatTopic) 
-        // this.setState({...this.state, isOnChat: true, chatTopic : order._id})
-        // console.log( 'Start chat for order ', this.state.chatTopic)
-        // socketService.emit('chat topic',  this.state.chatTopic)
-    }
-
     render() {
         const { orders, user, isOwner } = this.state
         if (!user) return <div>Loading...</div>
 
         return (
-            <section className="profile-container container ">
+            <section className={`profile-page ${this.props.isDarkMode ? 'dark-mode-profile-container' : ''}`}>
+                <div className="profile-container container">
 
-                {/* <div className="profile-row">
-                    <div className="profile-col-md-10">
-                        <h3>{user.fullname}</h3>
-                    </div>
-                    <div className="profile-col-md-2">
-                        <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
-                        <button className="profile-logout-btn" onClick={this.props.logout}>LogOut</button>
-                    </div>
-                </div> */}
-                <div className="profile-row">
+                    <div className="profile-row">
 
-                    <div className="profile-col-md-4">
-                        <div className="profile-img">
+                        <div className="profile-col-md-4">
 
-                            <img src={user.imgUrl} alt="" />
+                            <div className="profile-img">
+                                {user.imgUrl && <img src={user.imgUrl} alt="" />}
+                                {!user.imgUrl && <img src='https://icons-for-free.com/iconfiles/png/512/avatar+human+male+man+people+person+profile+user+users+icon-1320190727966457290.png' alt="" />}
+                            </div>
 
-                            {/* <div className="file profile-btn ">
-                                Change Photo
-                                <input type="file" name="file" />
-                            </div> */}
+                        </div>
 
+                        <div className="profile-col-md-6">
+                            <div className="profile-head">
+                                {!isOwner && <div className="profile-tab" id="myTabContent">
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Full Name</label>
+                                        </div>
+                                        <div className="profile">
+                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.fullname}</p>
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Email</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>}
+                                            {!user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Phone</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>}
+                                            {!user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Family status</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.familyStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.familyStatus}</p>}
+                                            {!user.familyStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>House type</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.houseStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.houseStatus}</p>}
+                                            {!user.houseStatus && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+
+                                </div>
+                                }
+                                {isOwner && <div className="profile-tab" id="myTabContent">
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Name</label>
+                                        </div>
+                                        <div className="profile">
+                                            <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.fullname}</p>
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Email</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.email}</p>}
+                                            {!user.contactInfo.email && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Phone</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.contactInfo.phone}</p>}
+                                            {!user.contactInfo.phone && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                    <div className="profile-row-desc">
+                                        <div className="profile">
+                                            <label className={`profile-desc-title ${this.props.isDarkMode ? 'dark-mode-profile-desc-title' : ''}`}>Address</label>
+                                        </div>
+                                        <div className="profile">
+                                            {user.loc.address && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}>{user.loc.address}</p>}
+                                            {!user.loc.address && <p className={`profile-desc-title-desc ${this.props.isDarkMode ? 'dark-mode-profile-desc-title-desc' : ''}`}></p>}
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div className="profile-col-md-2">
+                            <button className={`profile-logout-btn ${this.props.isDarkMode ? 'dark-mode-plan-adopt-btn' : ''}`} onClick={this.onLogOut}>Logout</button>
                         </div>
                     </div>
 
-                    <div className="profile-col-md-6">
-                        <div className="profile-head">
-                            {/* <h5>{user.fullname}</h5> */}
-                            {!isOwner && <div className="profile-tab" id="myTabContent">
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Full Name</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.fullname}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Email</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.contactInfo.email}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Phone</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.contactInfo.phone}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Family status</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.familyStatus}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>House type</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.houseStatus}</p>
-                                    </div>
-                                </div>
+                    <div className="profile-row">
 
-                            </div>
-                            }
-                            {isOwner && <div className="profile-tab" id="myTabContent">
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Name</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.fullname}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Email</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.contactInfo.email}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Phone</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.contactInfo.phone}</p>
-                                    </div>
-                                </div>
-                                <div className="profile-row-desc">
-                                    <div className="profile">
-                                        <label>Address</label>
-                                    </div>
-                                    <div className="profile">
-                                        <p>{user.loc.address}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            }
 
-                            {/* <h6>Web Developer and Designer</h6> */}
-                            {/* <div className="profile-about">About me</div> */}
+                        <div className="profile-col-md-10 orders">
+                            {!isOwner && <h4 className={`${this.props.isDarkMode ? 'dark-mode-profile-orders-title' : ''}`}>My requests</h4>}
+                            {isOwner && <h4>Requests pending</h4>}
+                            <OrderList orders={orders} user={user} onStartChat={this.onStartChat} />
+
                         </div>
-                    </div>
 
-                    <div className="profile-col-md-2">
-                        <button className="profile-logout-btn" onClick={this.onLogOut}>LogOut</button>
+                        <div className="profile-col-md-2">
+                        </div>
+
                     </div>
                 </div>
 
-                <div className="profile-row">
-
-
-                    <div className="profile-col-md-10 orders">
-                        {!isOwner && <h4>My requests</h4>}
-                        {isOwner && <h4>Requests pending</h4>}
-                        <OrderList orders={orders} user={user} onStartChat={this.onStartChat} />
-
-                        {/* <div className="profile-work">
-                            <p>WORK LINK</p>
-                            <span>Website Link</span><br />
-                            <span>Bootsnipp Profile</span><br />
-                            <span >Bootply Profile</span>
-                            <p>SKILLS</p>
-                            <span>Web Designer</span><br />
-                            <span >Web Developer</span><br />
-                            <span >WordPress</span><br />
-                            <span >WooCommerce</span><br />
-                            <span >PHP, .Net</span><br />
-                        </div> */}
-                        {/* <div className="profile-btn-sec">
-                            <button className="profile-edit-btn" onClick={this.onModalEditClicked}>Edit Profile</button>
-                        </div> */}
-                    </div>
-
-                    <div className="profile-col-md-2">
-                        {/* {this.state.isOnChat && <Chat topic={this.state.chatTopic}/>} */}
-                    </div>
-
-                </div>
 
             </section>
         )
@@ -226,22 +179,19 @@ export class _Profile extends Component {
 }
 
 
-
-
-
-
 const mapStateToProps = state => {
     return {
         users: state.userModule.users,
-        orders: state.orderModule.orders
+        orders: state.orderModule.orders,
+        isDarkMode: state.appSettingsModule.isDarkMode
     }
 }
 const mapDispatchToProps = {
     logout,
-    loadOrders
+    loadOrders,
+    toggleDarkMode
 
 }
-
 
 
 export const Profile = connect(mapStateToProps, mapDispatchToProps)(_Profile)

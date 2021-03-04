@@ -1,7 +1,12 @@
+import { httpService } from './httpService'
 import Axios from 'axios';
 const axios = Axios.create({
     withCredentials: true
 })
+
+const BASE_URL = process.env.NODE_ENV === 'production'
+    ? '/api/pet'
+    : '//localhost:3030/api/pet'
 
 export const petService = {
     query,
@@ -9,48 +14,42 @@ export const petService = {
     getById
 }
 
-const baseUrl = 'http://localhost:3030/api/pet';
-
-
 function query(filterBy) {
-    console.log('petService --- get pets query, filter -- ', filterBy)
-    
-    let filter = {}
-
-    for ( var key in filterBy ) {
-      if (filterBy[key] !== 'all') filter[key] = filterBy[key] 
+    try {
+        let filter = {}
+        for (var key in filterBy) {
+            if (filterBy[key] !== 'all') filter[key] = filterBy[key]
+        }
+        return (!filterBy) ? axios.get(BASE_URL).then(res => res.data)
+            :
+            axios.get(BASE_URL, { params: filter })
+                .then(res => res.data)
+    } catch (err) {
+        console.log('FrontError: getting pets', err)
+        throw err
     }
-
-    return (!filterBy) ? axios.get(baseUrl).then(res => res.data)
-                         :
-                         axios.get(baseUrl, { params: filter })
-                         .then(res => { console.log('result of filtered query --- ', res.data); return res.data })
-                         
 }
-
-// function deleteItem(itemId) {
-//     return axios.delete(`${baseUrl}/${itemId}`)
-//         .then(res => res.data)
-// }
 
 
 function save(itemToSave) {
-    if (itemToSave._id) {
-        //IF it has id , UPDATE
-        return axios.put(`${baseUrl}/${itemToSave._id}`, itemToSave)
-            .then(res => { console.log('result of update pet --- ', res.data); return res.data})
-    } else {
-        // THEN , CREATE
-        return axios.post(baseUrl, itemToSave)
-            .then(res => { console.log('result of add pet --- ', res.data); return res.data})
+    try {
+        if (itemToSave._id) {
+            return httpService.put(`pet/:${itemToSave._id}`, itemToSave)
+
+        } else {
+            return httpService.post(`pet`, itemToSave)
+        }
+    } catch (err) {
+        console.log('FrontError: saving pet', err)
+        throw err
     }
 }
 
 
 async function getById(petId) {
     try {
-        const res = await axios.get(`${baseUrl}/${petId}`)
-        return await res.data
+        return httpService.get(`pet/${petId}`)
+
     } catch (err) {
         console.log('FrontError: getting by Id', err)
         throw err

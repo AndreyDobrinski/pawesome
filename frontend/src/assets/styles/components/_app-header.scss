@@ -1,10 +1,6 @@
 .app-header-filter-home {
-  // position: fixed;
   margin-top: 10vh;
   width: 100%;
-  // top: calc(50vh - 226px);
-
-  // margin-top: 100px;
   transition: 0.1s;
 }
 
@@ -20,19 +16,15 @@
 
 .app-header-container {
   top: 0;
-  // background-color: rgb(231, 242, 243);
   background-color: #f7f7f7;
   position: fixed;
   width: 100%;
   z-index: 1;
   font-size: rem(50px);
   a {
-    color: black;
+    color: $clr14;
     text-decoration: none;
   }
-  //   @include for-standart-layout {
-  //     display: none;
-  // }
 }
 
 .header-for-home {
@@ -48,9 +40,9 @@
 .app-header-container-scrolled {
   transition: 0.4s;
   top: 0;
-  box-shadow: 0 9px 14px -9px rgba(34,34,34,.13333333333333333);
+  box-shadow: 0 9px 14px -9px rgba(34, 34, 34, 0.13333333333333333);
   background-color: #f7f7f7;
-  color: black;
+  color: $clr14;
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -58,7 +50,6 @@
     color: $clr2;
     text-decoration: none;
   }
-
 }
 
 .app-header-logo {
@@ -92,12 +83,7 @@
 }
 
 .app-header-name-paw {
-  // color:#f90;
   color: $clr9;
-
-  // &:hover {
-  //   color: $clr1;
-  // }
 }
 
 .app-header-content {
@@ -110,7 +96,6 @@
 
   .app-header-link-pets {
     transition: 0.4s;
-    // margin-right: 20px;
     font-size: 23px;
     @include for-narrow-layout {
       font-size: 25px;
@@ -126,17 +111,19 @@
     transition: 0.4s;
     margin-left: 15px;
     font-size: 25px;
-    width: 30px;
-    height: 30px;
-    // @include for-narrow-layout {
-    //   width: 30px;
-    //   height: 30px;
-    // }
-    // @include for-normal-layout {
-    //   width: 30px;
-    //   height: 30px;
-    // }
+    width: 35px;
+    height: 35px;
 
+    a {
+      width: 100%;
+      height: 100%;
+      img {
+        height: 35px;
+        width: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
     &:hover {
       cursor: pointer;
     }
@@ -144,11 +131,7 @@
 
   .app-header-mode {
     cursor: pointer;
-    // margin-left: 25px;
-    // font-size: 25px;
-    width: 30px;
     margin-left: 10px;
-    height: 30px;
     user-select: none;
     @include for-narrow-layout {
       margin-left: 25px;
@@ -164,19 +147,17 @@
   overflow: hidden;
   border-radius: 50px;
   background-color: #fff;
-  color: black;
+  color: $clr14;
   font-size: rem(17px);
   margin: 0px 10px 0px 10px;
 
   .app-header-filte-box {
     width: 535px;
-    // padding: 3px;
 
     select {
       border: none;
       outline: none;
       background-color: inherit;
-      // padding: 5px;
     }
 
     .app-header-filte-box-type {
@@ -191,7 +172,6 @@
         width: auto;
       }
       margin-left: 10px;
-      // margin-left: 10px;
       &:hover {
         background-color: #eee;
       }
@@ -205,7 +185,6 @@
       }
 
       .type-text {
-        // color: #afafaf;
         font-size: 14px;
         line-height: 18px;
         border: none;
@@ -238,7 +217,6 @@
       }
 
       .age-text {
-        // color: #afafaf;
         font-size: 14px;
         line-height: 18px;
         border: none;
@@ -250,14 +228,17 @@
     .app-header-filte-box-gender {
       padding: 10px 0px 10px 10px;
       width: 86px;
+
       @include for-narrow-layout {
         padding: 10px 10px 10px 10px;
         width: auto;
       }
+
       @include for-normal-layout {
         padding: 10px 10px 10px 10px;
         width: auto;
       }
+
       &:hover {
         background-color: #eee;
       }
@@ -271,7 +252,6 @@
       }
 
       .gender-text {
-        // color: #afafaf;
         font-size: 14px;
         line-height: 18px;
         border: none;
@@ -303,7 +283,6 @@
       }
 
       .location-text {
-        // color: #afafaf;
         font-size: 14px;
         line-height: 18px;
         border: none;
@@ -336,7 +315,6 @@
     border-radius: 32px !important;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px !important;
     margin-top: 12px !important;
-    // max-height: calc(100vh - 220px) !important;
     overflow: hidden auto !important;
     padding: 16px 32px !important;
   }
@@ -349,11 +327,8 @@
 
   border-radius: 50px;
   background-color: #fff;
-  // background-color:inherit;
-  color: black;
-  // font-size: rem(22px);
+  color: $clr14;
   margin: 0px 10px 0px 10px;
-  // overflow: hidden;
   cursor: pointer;
 
   .app-header-filte-box-small {
@@ -371,20 +346,17 @@
     .app-header-filte-box-search-small {
       padding: 10px;
       margin-left: 10px;
-      // margin-left: 10px;
       margin: 5px;
       @include for-narrow-layout {
         margin: 5px;
       }
       @include for-normal-layout {
-        // margin: 10px;
       }
 
       .small-search-title {
         font-weight: 500;
         font-size: 15px;
         width: 200px;
-        // line-height: 16px;
         padding-bottom: 2px;
         padding-inline-end: 60px;
         @include for-narrow-layout {
@@ -440,24 +412,19 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   @include for-narrow-layout {
     padding-top: 200px; /* Location of the box */
-
   }
   @include for-normal-layout {
     padding-top: 200px; /* Location of the box */
-
   }
-  
 }
 
 /* Modal Content */
 .modal-content {
-  // transition: 0.4;
   position: relative;
   background-color: #fefefe;
   margin: auto;
   padding: 0;
   border: 1px solid #888;
-  // width: 80vw;
   width: 100vw;
   height: 100vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -468,17 +435,16 @@
 
   @include for-narrow-layout {
     width: 80vw;
-    height:auto
-
+    height: auto;
   }
   @include for-normal-layout {
     width: 40vw;
-    height:auto
+    height: auto;
   }
 }
 
 .modal-header {
-  color: black;
+  color: $clr14;
 }
 
 .modal-body-login {
@@ -516,9 +482,6 @@
 /* The Close Button */
 .close {
   color: $clr8;
-
-  // color: rgb(117, 114, 114);
-  // color: $clr1;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -527,7 +490,6 @@
   &:hover,
   &:focus {
     color: $clr3;
-
     text-decoration: none;
     cursor: pointer;
   }
@@ -544,7 +506,7 @@
 
 // Header container //
 .dark-mode-header-container {
-  box-shadow: 0 9px 14px -16px rgba(214, 214, 214,  13);
+  box-shadow: 0 9px 14px -16px rgba(214, 214, 214, 13);
 
   transition: 0.4s;
   background-color: #222223;
@@ -557,7 +519,6 @@
   transition: 0.4s;
   color: white;
 }
-
 
 // Link Pets //
 .dark-mode-link-pets {

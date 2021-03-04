@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { socketService } from '../services/socketService'
+import { toggleDarkMode } from '../store/actions/appSettingsActions'
+
 
 class _Chat extends Component {
   state = {
@@ -28,16 +30,11 @@ class _Chat extends Component {
   }
 
   sendBotResponse = () => {
-    // Handle case: send single bot response (debounce).
     this.timeout && clearTimeout(this.timeout)
     this.timeout = setTimeout(() => {
       this.setState(prevState => ({ msgs: [...prevState.msgs, { from: 'Bot', txt: 'You are amazing!' }] }))
     }, 1500)
   }
-
-  // changeTopic = () => {
-  //   socketService.emit('chat topic', this.state.topic)
-  // }
 
   sendMsg = ev => {
     ev.preventDefault()
@@ -45,11 +42,6 @@ class _Chat extends Component {
     socketService.emit('chat newMsg', { from, txt: this.state.msg.txt })
     this.setState({ msg: { from: 'Guest', txt: '' } })
   }
-
-  // handleChange = ev => {
-  //   const { name, value } = ev.target
-  //   this.setState({ [name]: value }, this.changeTopic)
-  // }
 
   msgHandleChange = ev => {
     const { name, value } = ev.target
@@ -65,12 +57,10 @@ class _Chat extends Component {
 
   render() {
     return (
-      <div className="chat">
-        {/* <h4>chat about {this.props.about}</h4> */}
-
+      <div className={`chat ${this.props.isDarkMode ? 'dark-mode-profile-chat' : ''}`}>
         <ul>
           {this.state.msgs.map((msg, idx) => (
-            <li key={idx}>{msg.from}: {msg.txt}</li>
+            <li key={idx} className={msg.from === this.props.loggedInUser.fullname ? 'outcoming-msg' : 'incoming-msg'}><span>{msg.from}</span><span>{msg.txt}</span></li>
           ))}
         </ul>
         <form className="chat-form" onSubmit={this.sendMsg}>
@@ -90,10 +80,12 @@ class _Chat extends Component {
 
 const mapStateToProps = state => {
   return {
-    loggedInUser: state.userModule.loggedInUser
+    loggedInUser: state.userModule.loggedInUser,
+    isDarkMode: state.appSettingsModule.isDarkMode
   }
 }
 const mapDispatchToProps = {
+  toggleDarkMode
 }
 
 export const Chat = connect(mapStateToProps, mapDispatchToProps)(_Chat)

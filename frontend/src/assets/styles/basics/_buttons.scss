@@ -6,7 +6,7 @@
 
   a {
     text-decoration: none;
-    color: black;
+    color: $clr14;
   }
 
   &:hover {
@@ -16,7 +16,6 @@
 }
 
 .btn2 {
-  // padding: rem(10px);
   padding: 18px 50px;
   border: none;
   outline: none;

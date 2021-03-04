@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import { loadPets } from '../store/actions/petActions.js'
 import { PetList } from '../cmps/PetList.jsx'
-// import { FilterBtn } from '../cmps/btns/FilterBtn.jsx'
 import {FilterBySize} from '../cmps/filterBar/FilterBySize.jsx'
 import { SortByInput } from '../cmps/filterBar/SortByInput.jsx'
 import { FilterNameInput } from '../cmps/filterBar/FilterNameInput.jsx'
@@ -11,7 +10,6 @@ import { toggleDarkMode } from '../store/actions/appSettingsActions'
 import Loader from 'react-loader-spinner'
 
 
-// import {} from '../assets/img/spinner-1s-200px.gif'
 
 export class _Pet extends Component {
 
@@ -20,23 +18,26 @@ export class _Pet extends Component {
   }
 
   componentDidMount() {
-    //console.log('PET CDM --- ', this.props.filterBy)
+    window.addEventListener('scroll', this.handleScroll)
     this.props.loadPets(this.props.filterBy)
+    this.handleScroll()
+
   }
+
+  
+  handleScroll = () => {
+    return window.pageYOffset === 0
+}
 
   render() {
     const { pets } = this.props
-    console.log('loading', this.props.isLoading);
-    console.log('pets...', pets)
+    // console.log('loading', this.props.isLoading);
+    // console.log('pets...', pets)
     return (
       <React.Fragment>
         <div className={`pet-list-page ${this.props.isDarkMode ? 'dark-mode-pet-page' : ''}`}>
           <div className="pet-list container" >
             <div className="pet-list-filter flex justify-between">
-              {/* <div>
-                <FilterBtn field="size" value="big" />
-                <FilterBtn field="size" value="small" />
-              </div> */}
               <FilterBySize />
               <FilterNameInput />
               <SortByInput />
