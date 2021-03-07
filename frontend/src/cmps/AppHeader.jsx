@@ -309,7 +309,7 @@ export class _AppHeader extends Component {
 
 
         const { loggedInUser } = this.props
-        console.log('loggedInUser', loggedInUser);
+        // console.log('loggedInUser', loggedInUser);
         // if(!loggedInUser) return <div></div>
         const { isNewUser } = this.state
         const showDarkmode = this.state.isHomePage ? this.props.isDarkMode && this.state.isScrolled : this.props.isDarkMode

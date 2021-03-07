@@ -3129,3 +3129,13 @@
 =======
 >>>>>>> aec44b810caa4851fa562a78715b767afc99137b
 >>>>>>> bb1c4de91c81f7b55df631118289bf40012cb91a
+3/7/2021, 2:43:33 PM - INFO - Server is running on port: 3030 
+3/7/2021, 2:50:11 PM - DEBUG - auth.service - login with username: andrey (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:11 PM - ERROR - Failed to Login Invalid username or password (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:19 PM - DEBUG - auth.service - login with username: andrey (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:19 PM - ERROR - Failed to Login Invalid username or password (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:28 PM - DEBUG - auth.service - signup with username: aa, fullname: aa (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:28 PM - DEBUG - auth.route - new account created: {"username":"aa","password":"$2b$10$x91rQe9gSxnNEhg.TQotX.Tv0azpYNoOnLUaYkXN0v3fmapiWBHQ2","fullname":"aa","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6044cc145edbb408dc58354f"} (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:28 PM - DEBUG - auth.service - login with username: aa (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:31 PM - INFO - Req from: aa (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)
+3/7/2021, 2:50:40 PM - INFO - Req from: aa (sid: yk6akh6eQGUXVHz-JI5qynoTdACnx5Hz)

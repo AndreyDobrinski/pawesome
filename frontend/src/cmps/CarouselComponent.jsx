@@ -7,7 +7,7 @@ function _CarouselComponent(props) {
     const { pet } = props
 
     function onClick() {
-        console.log('props---', props)
+        // console.log('props---', props)
         props.history.push(`/pet/${pet._id}`)
     }
 
