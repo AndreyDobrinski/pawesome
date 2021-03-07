@@ -3105,3 +3105,4 @@
 3/4/2021, 5:44:01 PM - DEBUG - auth.route - new account created: {"username":"moka","password":"$2b$10$AEv9S4sUSFbzR3mIG3SgWuIwdGGMvDXOyge3LAk4z8ZKxthdpcAG6","fullname":"moka","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"60410041eaeee11d680c84c4"} (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
 3/4/2021, 5:44:01 PM - DEBUG - auth.service - login with username: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
 3/4/2021, 5:44:09 PM - INFO - Req from: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+3/7/2021, 11:47:55 AM - INFO - Server is running on port: 3030 

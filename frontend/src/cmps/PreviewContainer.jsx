@@ -17,26 +17,27 @@ export class _PreviewContainer extends Component {
         this.loadPets()
     }
 
-    loadPets = () => {
-        petService.query({}).then(pets => {
-            return this.getPetsToShow(pets)
-        }).then(pets => this.setState({ pets }))
+    loadPets = async () => {
+        const pets = await petService.query({})
+        
+        const petsToShow = this.getPetsToShow(pets)
+        this.setState({ pets: petsToShow })
     }
+
+    // getPetsToShow = (pets) => {
+    //     const petsToShow = pets.filter(pet => {
+    //         let actualDays = (new Date().getTime() - new Date(pet.recordDate).getTime()) / 1000 / 60 / 60 / 24
+    //         if (this.props.daysFromNow && actualDays < +this.props.daysFromNow) return pet
+    //         if (this.props.longerThenDays && actualDays > +this.props.longerThenDays) return pet
+    //     })
+    //     return petsToShow.slice(0, 4)
+    // }
 
     getPetsToShow = (pets) => {
-        const petsToShow = pets.filter(pet => {
-            let actualDays = (new Date().getTime() - new Date(pet.recordDate).getTime()) / 1000 / 60 / 60 / 24
-            if (this.props.daysFromNow && actualDays < +this.props.daysFromNow) return pet
-            if (this.props.longerThenDays && actualDays > +this.props.longerThenDays) return pet
-        })
-        return petsToShow.slice(0, 4)
-    }
 
-    getSortedPets = (pets) => {
         const sorted = pets.sort((pet1, pet2) => new Date(pet1.recordDate) - new Date(pet2.recordDate))
-        const show = pets.map(pet => { return { "name": pet.name, "recordDate": pet.recordDate } })
-        console.log("After sort --- ", show)
-        return sorted
+        if (this.props.petsToShow === 'new') return sorted.slice(0,4)
+        else return sorted.slice(sorted.length-4,sorted.length)
     }
 
     render() {

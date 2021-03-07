@@ -37,8 +37,8 @@ export class _Home extends Component {
 
         </div>
 
-        <PreviewContainer title="Meet our new sweet girls and boys" daysFromNow="30" clsName="container  pets-preview-container new-pets-preview" />
-        <PreviewContainer title="They are waiting too long" longerThenDays="30" clsName="container pets-preview-container long-waiting-pets-preview" />
+        <PreviewContainer title="Meet our new sweet girls and boys" petsToShow="new" clsName="container  pets-preview-container new-pets-preview" />
+        <PreviewContainer title="They are waiting too long" petsToShow="longWaiting" clsName="container pets-preview-container long-waiting-pets-preview" />
 
         <div className={`plan-adopt ${this.props.isDarkMode ? 'dark-mode-plan-adopt' : ''} `}>
 
