@@ -3099,10 +3099,33 @@
 =======
 >>>>>>> fcb6a2ef060dda720b6153d25d06a4cff1a900e1
 >>>>>>> 030d21e13ba0fe2ef6c6710137275ae1aac3dedd
+<<<<<<< HEAD
+3/4/2021, 5:24:34 PM - DEBUG - auth.service - signup with username: aaaandrey, fullname: abdrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:24:34 PM - DEBUG - auth.route - new account created: {"username":"aaaandrey","password":"$2b$10$FRkxn2mpF8G0MZtit1QqH.hnznamCl2r.D3ZNgGnhci3CxE6l9.Q.","fullname":"abdrey","_id":"6040fbb200215823e84ce6da"} (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:24:34 PM - DEBUG - auth.service - login with username: aaaandrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:24:36 PM - INFO - Req from: abdrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:25:29 PM - INFO - Req from: abdrey (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:26:11 PM - DEBUG - auth.service - signup with username: you, fullname: you (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:26:11 PM - DEBUG - auth.route - new account created: {"username":"you","password":"$2b$10$oy3ZiFC0tnTVjwoikfy.vuYdT6DZVILG2d6OfXxQ4eKhdAPhbXU4C","fullname":"you","_id":"6040fc1300215823e84ce6db"} (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:26:11 PM - DEBUG - auth.service - login with username: you (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:26:16 PM - INFO - Req from: you (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:27:17 PM - INFO - Req from: you (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:28:06 PM - INFO - Req from: you (sid: 47Jd4lHT9r-PqGe_55FkgPwVfdQ2lRGq)
+3/4/2021, 5:29:45 PM - INFO - Server is running on port: 3030 
+3/4/2021, 5:29:52 PM - ERROR - Cannot get orders | {} (sid: KpZ5oZ8dLbsR2qvxrPS7ASQdkjGZao60)
+3/4/2021, 5:30:11 PM - DEBUG - auth.service - signup with username: noyou, fullname: noyou (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
+3/4/2021, 5:30:11 PM - DEBUG - auth.route - new account created: {"username":"noyou","password":"$2b$10$k4NrGgLp6rTgQF.FZ1.T4eoSxPalr8xH9iBusi9zss2T30K6Vrdku","fullname":"noyou","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"6040fd031b612609e8fcb8b8"} (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
+3/4/2021, 5:30:11 PM - DEBUG - auth.service - login with username: noyou (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
+3/4/2021, 5:30:14 PM - INFO - Req from: noyou (sid: q34bZUUHCpuiZagD_XuhLXke3Wp6cZGe)
+=======
 >>>>>>> b8ec677880775dbf96d5842a56b0d5294341b572
 3/4/2021, 5:39:07 PM - INFO - Server is running on port: 3030 
 3/4/2021, 5:44:01 PM - DEBUG - auth.service - signup with username: moka, fullname: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
 3/4/2021, 5:44:01 PM - DEBUG - auth.route - new account created: {"username":"moka","password":"$2b$10$AEv9S4sUSFbzR3mIG3SgWuIwdGGMvDXOyge3LAk4z8ZKxthdpcAG6","fullname":"moka","imgUrl":null,"isAdmin":false,"isHost":false,"birthDate":null,"familyStatus":null,"contactInfo":{"email":null,"phone":null},"loc":{"address":null,"lat":null,"lng":null},"houseStatus":null,"hasPets":true,"_id":"60410041eaeee11d680c84c4"} (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
 3/4/2021, 5:44:01 PM - DEBUG - auth.service - login with username: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
 3/4/2021, 5:44:09 PM - INFO - Req from: moka (sid: RtO9nO00eWBRnNFSMfTclHLqgRnqCb7C)
+<<<<<<< HEAD
 3/7/2021, 11:47:55 AM - INFO - Server is running on port: 3030 
+=======
+>>>>>>> aec44b810caa4851fa562a78715b767afc99137b
+>>>>>>> bb1c4de91c81f7b55df631118289bf40012cb91a
